@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5F49B7D1C7EBBC600AF7606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7C1C7EBBC600AF7606 /* main.m */; };
+		A5F49B801C7EBBC600AF7606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */; };
+		A5F49B861C7EBBC600AF7606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B841C7EBBC600AF7606 /* Main.storyboard */; };
+		A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B871C7EBBC600AF7606 /* Images.xcassets */; };
+		A5F49B8B1C7EBBC600AF7606 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */; };
+		A5F49B971C7EBBC600AF7606 /* MathForKidsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */; };
+		A5F49BB01C7EDBD300AF7606 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */; };
+		A5F49BB11C7EDBD300AF7606 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */; };
+		A5F49BB41C7EDC0E00AF7606 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */; };
+		A5F49BB51C7EDC0E00AF7606 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5F49B911C7EBBC600AF7606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A5F49B6F1C7EBBC500AF7606 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A5F49B761C7EBBC500AF7606;
+			remoteInfo = MathForKids;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5F49B771C7EBBC500AF7606 /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F49B7B1C7EBBC600AF7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F49B7C1C7EBBC600AF7606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A5F49B7E1C7EBBC600AF7606 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A5F49B851C7EBBC600AF7606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A5F49B871C7EBBC600AF7606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A5F49B8A1C7EBBC600AF7606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5F49B951C7EBBC600AF7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsTests.m; sourceTree = "<group>"; };
+		A5F49BAE1C7EDBD300AF7606 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
+		A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
+		A5F49BB21C7EDC0E00AF7606 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
+		A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A5F49B741C7EBBC500AF7606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F49B8D1C7EBBC600AF7606 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A5F49B6E1C7EBBC500AF7606 = {
+			isa = PBXGroup;
+			children = (
+				A5F49B791C7EBBC500AF7606 /* MathForKids */,
+				A5F49B931C7EBBC600AF7606 /* MathForKidsTests */,
+				A5F49B781C7EBBC500AF7606 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A5F49B781C7EBBC500AF7606 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A5F49B771C7EBBC500AF7606 /* MathForKids.app */,
+				A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A5F49B791C7EBBC500AF7606 /* MathForKids */ = {
+			isa = PBXGroup;
+			children = (
+				A5F49B7E1C7EBBC600AF7606 /* AppDelegate.h */,
+				A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */,
+				A5F49BAE1C7EDBD300AF7606 /* rootViewController.h */,
+				A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */,
+				A5F49BB21C7EDC0E00AF7606 /* homeViewController.h */,
+				A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */,
+				A5F49B841C7EBBC600AF7606 /* Main.storyboard */,
+				A5F49B871C7EBBC600AF7606 /* Images.xcassets */,
+				A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */,
+				A5F49B7A1C7EBBC500AF7606 /* Supporting Files */,
+			);
+			path = MathForKids;
+			sourceTree = "<group>";
+		};
+		A5F49B7A1C7EBBC500AF7606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5F49B7B1C7EBBC600AF7606 /* Info.plist */,
+				A5F49B7C1C7EBBC600AF7606 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A5F49B931C7EBBC600AF7606 /* MathForKidsTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */,
+				A5F49B941C7EBBC600AF7606 /* Supporting Files */,
+			);
+			path = MathForKidsTests;
+			sourceTree = "<group>";
+		};
+		A5F49B941C7EBBC600AF7606 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A5F49B951C7EBBC600AF7606 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A5F49B761C7EBBC500AF7606 /* MathForKids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F49B9A1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKids" */;
+			buildPhases = (
+				A5F49B731C7EBBC500AF7606 /* Sources */,
+				A5F49B741C7EBBC500AF7606 /* Frameworks */,
+				A5F49B751C7EBBC500AF7606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MathForKids;
+			productName = MathForKids;
+			productReference = A5F49B771C7EBBC500AF7606 /* MathForKids.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A5F49B8F1C7EBBC600AF7606 /* MathForKidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5F49B9D1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKidsTests" */;
+			buildPhases = (
+				A5F49B8C1C7EBBC600AF7606 /* Sources */,
+				A5F49B8D1C7EBBC600AF7606 /* Frameworks */,
+				A5F49B8E1C7EBBC600AF7606 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5F49B921C7EBBC600AF7606 /* PBXTargetDependency */,
+			);
+			name = MathForKidsTests;
+			productName = MathForKidsTests;
+			productReference = A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A5F49B6F1C7EBBC500AF7606 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = 398group16;
+				TargetAttributes = {
+					A5F49B761C7EBBC500AF7606 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					A5F49B8F1C7EBBC600AF7606 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = A5F49B761C7EBBC500AF7606;
+					};
+				};
+			};
+			buildConfigurationList = A5F49B721C7EBBC500AF7606 /* Build configuration list for PBXProject "MathForKids" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A5F49B6E1C7EBBC500AF7606;
+			productRefGroup = A5F49B781C7EBBC500AF7606 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5F49B761C7EBBC500AF7606 /* MathForKids */,
+				A5F49B8F1C7EBBC600AF7606 /* MathForKidsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A5F49B751C7EBBC500AF7606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F49B861C7EBBC600AF7606 /* Main.storyboard in Resources */,
+				A5F49B8B1C7EBBC600AF7606 /* LaunchScreen.xib in Resources */,
+				A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F49B8E1C7EBBC600AF7606 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A5F49B731C7EBBC500AF7606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F49B801C7EBBC600AF7606 /* AppDelegate.m in Sources */,
+				A5F49BB01C7EDBD300AF7606 /* rootViewController.m in Sources */,
+				A5F49B7D1C7EBBC600AF7606 /* main.m in Sources */,
+				A5F49BB41C7EDC0E00AF7606 /* homeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5F49B8C1C7EBBC600AF7606 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5F49BB11C7EDBD300AF7606 /* rootViewController.m in Sources */,
+				A5F49B971C7EBBC600AF7606 /* MathForKidsTests.m in Sources */,
+				A5F49BB51C7EDC0E00AF7606 /* homeViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5F49B921C7EBBC600AF7606 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A5F49B761C7EBBC500AF7606 /* MathForKids */;
+			targetProxy = A5F49B911C7EBBC600AF7606 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A5F49B841C7EBBC600AF7606 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5F49B851C7EBBC600AF7606 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A5F49B8A1C7EBBC600AF7606 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A5F49B981C7EBBC600AF7606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A5F49B991C7EBBC600AF7606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A5F49B9B1C7EBBC600AF7606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MathForKids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A5F49B9C1C7EBBC600AF7606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MathForKids/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A5F49B9E1C7EBBC600AF7606 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MathForKidsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
+			};
+			name = Debug;
+		};
+		A5F49B9F1C7EBBC600AF7606 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MathForKidsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A5F49B721C7EBBC500AF7606 /* Build configuration list for PBXProject "MathForKids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F49B981C7EBBC600AF7606 /* Debug */,
+				A5F49B991C7EBBC600AF7606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5F49B9A1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F49B9B1C7EBBC600AF7606 /* Debug */,
+				A5F49B9C1C7EBBC600AF7606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A5F49B9D1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKidsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5F49B9E1C7EBBC600AF7606 /* Debug */,
+				A5F49B9F1C7EBBC600AF7606 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A5F49B6F1C7EBBC500AF7606 /* Project object */;
+}
