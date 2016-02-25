@@ -2,11 +2,10 @@
 //  MathForKidsTests.m
 //  MathForKidsTests
 //
-//  Created by Shuo Yuan on 2016-02-24.
-//  Copyright (c) 2016 398group16. All rights reserved.
+//  Created by Shuo Yuan on 2016-02-25.
+//  Copyright © 2016 398group16. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
 @interface MathForKidsTests : XCTestCase
@@ -27,7 +26,7 @@
 
 - (void)testExample {
     // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+    // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
 - (void)testPerformanceExample {

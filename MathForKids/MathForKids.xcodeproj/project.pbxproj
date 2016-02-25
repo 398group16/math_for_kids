@@ -7,55 +7,96 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A58CE53A1C7F0331002B876E /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5391C7F0331002B876E /* main.storyboard */; };
-		A5F49B7D1C7EBBC600AF7606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7C1C7EBBC600AF7606 /* main.m */; };
-		A5F49B801C7EBBC600AF7606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */; };
-		A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B871C7EBBC600AF7606 /* Images.xcassets */; };
-		A5F49B8B1C7EBBC600AF7606 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */; };
-		A5F49B971C7EBBC600AF7606 /* MathForKidsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */; };
-		A5F49BB01C7EDBD300AF7606 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */; };
-		A5F49BB11C7EDBD300AF7606 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */; };
-		A5F49BB41C7EDC0E00AF7606 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */; };
-		A5F49BB51C7EDC0E00AF7606 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */; };
+		A58CE5491C7F041B002B876E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5481C7F041B002B876E /* main.m */; };
+		A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54B1C7F041B002B876E /* AppDelegate.m */; };
+		A58CE5521C7F041B002B876E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5501C7F041B002B876E /* Main.storyboard */; };
+		A58CE5541C7F041B002B876E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5531C7F041B002B876E /* Assets.xcassets */; };
+		A58CE5571C7F041B002B876E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */; };
+		A58CE5621C7F041B002B876E /* MathForKidsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5611C7F041B002B876E /* MathForKidsTests.m */; };
+		A58CE56D1C7F041B002B876E /* MathForKidsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE56C1C7F041B002B876E /* MathForKidsUITests.m */; };
+		A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57B1C7F0460002B876E /* RootViewController.m */; };
+		A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57E1C7F0672002B876E /* HomeViewController.m */; };
+		A58CE58A1C7F1415002B876E /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5881C7F1415002B876E /* TutorialViewController.m */; };
+		A58CE58B1C7F1415002B876E /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5891C7F1415002B876E /* TutorialViewController.xib */; };
+		A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE58D1C7F196F002B876E /* CountingViewController.m */; };
+		A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE58E1C7F196F002B876E /* CountingViewController.xib */; };
+		A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5921C7F199E002B876E /* AdditionViewController.m */; };
+		A58CE5951C7F199E002B876E /* AdditionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5931C7F199E002B876E /* AdditionViewController.xib */; };
+		A58CE5991C7F1A12002B876E /* SubtractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5971C7F1A12002B876E /* SubtractionViewController.m */; };
+		A58CE59A1C7F1A12002B876E /* SubtractionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */; };
+		A58CE59E1C7F1A2D002B876E /* ShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */; };
+		A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A5F49B911C7EBBC600AF7606 /* PBXContainerItemProxy */ = {
+		A58CE55E1C7F041B002B876E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = A5F49B6F1C7EBBC500AF7606 /* Project object */;
+			containerPortal = A58CE53C1C7F041B002B876E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A5F49B761C7EBBC500AF7606;
+			remoteGlobalIDString = A58CE5431C7F041B002B876E;
+			remoteInfo = MathForKids;
+		};
+		A58CE5691C7F041B002B876E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A58CE53C1C7F041B002B876E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A58CE5431C7F041B002B876E;
 			remoteInfo = MathForKids;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A58CE5391C7F0331002B876E /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
-		A5F49B771C7EBBC500AF7606 /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5F49B7B1C7EBBC600AF7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5F49B7C1C7EBBC600AF7606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A5F49B7E1C7EBBC600AF7606 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A5F49B871C7EBBC600AF7606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A5F49B8A1C7EBBC600AF7606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5F49B951C7EBBC600AF7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsTests.m; sourceTree = "<group>"; };
-		A5F49BAE1C7EDBD300AF7606 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
-		A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
-		A5F49BB21C7EDC0E00AF7606 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
-		A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		A58CE5441C7F041B002B876E /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE5481C7F041B002B876E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A58CE54A1C7F041B002B876E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A58CE54B1C7F041B002B876E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A58CE5511C7F041B002B876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A58CE5531C7F041B002B876E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A58CE5561C7F041B002B876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A58CE5581C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE5611C7F041B002B876E /* MathForKidsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsTests.m; sourceTree = "<group>"; };
+		A58CE5631C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE56C1C7F041B002B876E /* MathForKidsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsUITests.m; sourceTree = "<group>"; };
+		A58CE56E1C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A58CE57A1C7F0460002B876E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A58CE57B1C7F0460002B876E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A58CE57D1C7F0672002B876E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A58CE57E1C7F0672002B876E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A58CE5871C7F1415002B876E /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
+		A58CE5881C7F1415002B876E /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
+		A58CE5891C7F1415002B876E /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
+		A58CE58C1C7F196F002B876E /* CountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingViewController.h; sourceTree = "<group>"; };
+		A58CE58D1C7F196F002B876E /* CountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingViewController.m; sourceTree = "<group>"; };
+		A58CE58E1C7F196F002B876E /* CountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingViewController.xib; sourceTree = "<group>"; };
+		A58CE5911C7F199E002B876E /* AdditionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionViewController.h; sourceTree = "<group>"; };
+		A58CE5921C7F199E002B876E /* AdditionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdditionViewController.m; sourceTree = "<group>"; };
+		A58CE5931C7F199E002B876E /* AdditionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdditionViewController.xib; sourceTree = "<group>"; };
+		A58CE5961C7F1A12002B876E /* SubtractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtractionViewController.h; sourceTree = "<group>"; };
+		A58CE5971C7F1A12002B876E /* SubtractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtractionViewController.m; sourceTree = "<group>"; };
+		A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubtractionViewController.xib; sourceTree = "<group>"; };
+		A58CE59B1C7F1A2D002B876E /* ShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeViewController.h; sourceTree = "<group>"; };
+		A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeViewController.m; sourceTree = "<group>"; };
+		A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A5F49B741C7EBBC500AF7606 /* Frameworks */ = {
+		A58CE5411C7F041B002B876E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5F49B8D1C7EBBC600AF7606 /* Frameworks */ = {
+		A58CE55A1C7F041B002B876E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58CE5651C7F041B002B876E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -65,77 +106,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5F49B6E1C7EBBC500AF7606 = {
+		A58CE53B1C7F041B002B876E = {
 			isa = PBXGroup;
 			children = (
-				A5F49B791C7EBBC500AF7606 /* MathForKids */,
-				A5F49B931C7EBBC600AF7606 /* MathForKidsTests */,
-				A5F49B781C7EBBC500AF7606 /* Products */,
+				A58CE5461C7F041B002B876E /* MathForKids */,
+				A58CE5601C7F041B002B876E /* MathForKidsTests */,
+				A58CE56B1C7F041B002B876E /* MathForKidsUITests */,
+				A58CE5451C7F041B002B876E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A5F49B781C7EBBC500AF7606 /* Products */ = {
+		A58CE5451C7F041B002B876E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5F49B771C7EBBC500AF7606 /* MathForKids.app */,
-				A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */,
+				A58CE5441C7F041B002B876E /* MathForKids.app */,
+				A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */,
+				A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A5F49B791C7EBBC500AF7606 /* MathForKids */ = {
+		A58CE5461C7F041B002B876E /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
-				A5F49B7E1C7EBBC600AF7606 /* AppDelegate.h */,
-				A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */,
-				A5F49BAE1C7EDBD300AF7606 /* rootViewController.h */,
-				A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */,
-				A5F49BB21C7EDC0E00AF7606 /* homeViewController.h */,
-				A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */,
-				A58CE5391C7F0331002B876E /* main.storyboard */,
-				A5F49B871C7EBBC600AF7606 /* Images.xcassets */,
-				A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */,
-				A5F49B7A1C7EBBC500AF7606 /* Supporting Files */,
+				A58CE5911C7F199E002B876E /* AdditionViewController.h */,
+				A58CE5921C7F199E002B876E /* AdditionViewController.m */,
+				A58CE5931C7F199E002B876E /* AdditionViewController.xib */,
+				A58CE5871C7F1415002B876E /* TutorialViewController.h */,
+				A58CE5881C7F1415002B876E /* TutorialViewController.m */,
+				A58CE5891C7F1415002B876E /* TutorialViewController.xib */,
+				A58CE58C1C7F196F002B876E /* CountingViewController.h */,
+				A58CE58D1C7F196F002B876E /* CountingViewController.m */,
+				A58CE58E1C7F196F002B876E /* CountingViewController.xib */,
+				A58CE5961C7F1A12002B876E /* SubtractionViewController.h */,
+				A58CE5971C7F1A12002B876E /* SubtractionViewController.m */,
+				A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */,
+				A58CE59B1C7F1A2D002B876E /* ShapeViewController.h */,
+				A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */,
+				A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */,
+				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
+				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
+				A58CE57D1C7F0672002B876E /* HomeViewController.h */,
+				A58CE57E1C7F0672002B876E /* HomeViewController.m */,
+				A58CE57A1C7F0460002B876E /* RootViewController.h */,
+				A58CE57B1C7F0460002B876E /* RootViewController.m */,
+				A58CE5501C7F041B002B876E /* Main.storyboard */,
+				A58CE5531C7F041B002B876E /* Assets.xcassets */,
+				A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */,
+				A58CE5581C7F041B002B876E /* Info.plist */,
+				A58CE5471C7F041B002B876E /* Supporting Files */,
 			);
 			path = MathForKids;
 			sourceTree = "<group>";
 		};
-		A5F49B7A1C7EBBC500AF7606 /* Supporting Files */ = {
+		A58CE5471C7F041B002B876E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A5F49B7B1C7EBBC600AF7606 /* Info.plist */,
-				A5F49B7C1C7EBBC600AF7606 /* main.m */,
+				A58CE5481C7F041B002B876E /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A5F49B931C7EBBC600AF7606 /* MathForKidsTests */ = {
+		A58CE5601C7F041B002B876E /* MathForKidsTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5F49B961C7EBBC600AF7606 /* MathForKidsTests.m */,
-				A5F49B941C7EBBC600AF7606 /* Supporting Files */,
+				A58CE5611C7F041B002B876E /* MathForKidsTests.m */,
+				A58CE5631C7F041B002B876E /* Info.plist */,
 			);
 			path = MathForKidsTests;
 			sourceTree = "<group>";
 		};
-		A5F49B941C7EBBC600AF7606 /* Supporting Files */ = {
+		A58CE56B1C7F041B002B876E /* MathForKidsUITests */ = {
 			isa = PBXGroup;
 			children = (
-				A5F49B951C7EBBC600AF7606 /* Info.plist */,
+				A58CE56C1C7F041B002B876E /* MathForKidsUITests.m */,
+				A58CE56E1C7F041B002B876E /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = MathForKidsUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5F49B761C7EBBC500AF7606 /* MathForKids */ = {
+		A58CE5431C7F041B002B876E /* MathForKids */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5F49B9A1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKids" */;
+			buildConfigurationList = A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKids" */;
 			buildPhases = (
-				A5F49B731C7EBBC500AF7606 /* Sources */,
-				A5F49B741C7EBBC500AF7606 /* Frameworks */,
-				A5F49B751C7EBBC500AF7606 /* Resources */,
+				A58CE5401C7F041B002B876E /* Sources */,
+				A58CE5411C7F041B002B876E /* Frameworks */,
+				A58CE5421C7F041B002B876E /* Resources */,
 			);
 			buildRules = (
 			);
@@ -143,46 +202,68 @@
 			);
 			name = MathForKids;
 			productName = MathForKids;
-			productReference = A5F49B771C7EBBC500AF7606 /* MathForKids.app */;
+			productReference = A58CE5441C7F041B002B876E /* MathForKids.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A5F49B8F1C7EBBC600AF7606 /* MathForKidsTests */ = {
+		A58CE55C1C7F041B002B876E /* MathForKidsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5F49B9D1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKidsTests" */;
+			buildConfigurationList = A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */;
 			buildPhases = (
-				A5F49B8C1C7EBBC600AF7606 /* Sources */,
-				A5F49B8D1C7EBBC600AF7606 /* Frameworks */,
-				A5F49B8E1C7EBBC600AF7606 /* Resources */,
+				A58CE5591C7F041B002B876E /* Sources */,
+				A58CE55A1C7F041B002B876E /* Frameworks */,
+				A58CE55B1C7F041B002B876E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A5F49B921C7EBBC600AF7606 /* PBXTargetDependency */,
+				A58CE55F1C7F041B002B876E /* PBXTargetDependency */,
 			);
 			name = MathForKidsTests;
 			productName = MathForKidsTests;
-			productReference = A5F49B901C7EBBC600AF7606 /* MathForKidsTests.xctest */;
+			productReference = A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A58CE5671C7F041B002B876E /* MathForKidsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */;
+			buildPhases = (
+				A58CE5641C7F041B002B876E /* Sources */,
+				A58CE5651C7F041B002B876E /* Frameworks */,
+				A58CE5661C7F041B002B876E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A58CE56A1C7F041B002B876E /* PBXTargetDependency */,
+			);
+			name = MathForKidsUITests;
+			productName = MathForKidsUITests;
+			productReference = A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A5F49B6F1C7EBBC500AF7606 /* Project object */ = {
+		A58CE53C1C7F041B002B876E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = 398group16;
 				TargetAttributes = {
-					A5F49B761C7EBBC500AF7606 = {
-						CreatedOnToolsVersion = 6.4;
+					A58CE5431C7F041B002B876E = {
+						CreatedOnToolsVersion = 7.2.1;
 					};
-					A5F49B8F1C7EBBC600AF7606 = {
-						CreatedOnToolsVersion = 6.4;
-						TestTargetID = A5F49B761C7EBBC500AF7606;
+					A58CE55C1C7F041B002B876E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A58CE5431C7F041B002B876E;
+					};
+					A58CE5671C7F041B002B876E = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = A58CE5431C7F041B002B876E;
 					};
 				};
 			};
-			buildConfigurationList = A5F49B721C7EBBC500AF7606 /* Build configuration list for PBXProject "MathForKids" */;
+			buildConfigurationList = A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathForKids" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,29 +271,42 @@
 				en,
 				Base,
 			);
-			mainGroup = A5F49B6E1C7EBBC500AF7606;
-			productRefGroup = A5F49B781C7EBBC500AF7606 /* Products */;
+			mainGroup = A58CE53B1C7F041B002B876E;
+			productRefGroup = A58CE5451C7F041B002B876E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5F49B761C7EBBC500AF7606 /* MathForKids */,
-				A5F49B8F1C7EBBC600AF7606 /* MathForKidsTests */,
+				A58CE5431C7F041B002B876E /* MathForKids */,
+				A58CE55C1C7F041B002B876E /* MathForKidsTests */,
+				A58CE5671C7F041B002B876E /* MathForKidsUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A5F49B751C7EBBC500AF7606 /* Resources */ = {
+		A58CE5421C7F041B002B876E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F49B8B1C7EBBC600AF7606 /* LaunchScreen.xib in Resources */,
-				A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */,
-				A58CE53A1C7F0331002B876E /* main.storyboard in Resources */,
+				A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */,
+				A58CE5951C7F199E002B876E /* AdditionViewController.xib in Resources */,
+				A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */,
+				A58CE5571C7F041B002B876E /* LaunchScreen.storyboard in Resources */,
+				A58CE5541C7F041B002B876E /* Assets.xcassets in Resources */,
+				A58CE59A1C7F1A12002B876E /* SubtractionViewController.xib in Resources */,
+				A58CE58B1C7F1415002B876E /* TutorialViewController.xib in Resources */,
+				A58CE5521C7F041B002B876E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5F49B8E1C7EBBC600AF7606 /* Resources */ = {
+		A58CE55B1C7F041B002B876E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58CE5661C7F041B002B876E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -222,50 +316,74 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A5F49B731C7EBBC500AF7606 /* Sources */ = {
+		A58CE5401C7F041B002B876E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F49B801C7EBBC600AF7606 /* AppDelegate.m in Sources */,
-				A5F49BB01C7EDBD300AF7606 /* rootViewController.m in Sources */,
-				A5F49B7D1C7EBBC600AF7606 /* main.m in Sources */,
-				A5F49BB41C7EDC0E00AF7606 /* homeViewController.m in Sources */,
+				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
+				A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */,
+				A58CE5491C7F041B002B876E /* main.m in Sources */,
+				A58CE59E1C7F1A2D002B876E /* ShapeViewController.m in Sources */,
+				A58CE5991C7F1A12002B876E /* SubtractionViewController.m in Sources */,
+				A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */,
+				A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */,
+				A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */,
+				A58CE58A1C7F1415002B876E /* TutorialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A5F49B8C1C7EBBC600AF7606 /* Sources */ = {
+		A58CE5591C7F041B002B876E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F49BB11C7EDBD300AF7606 /* rootViewController.m in Sources */,
-				A5F49B971C7EBBC600AF7606 /* MathForKidsTests.m in Sources */,
-				A5F49BB51C7EDC0E00AF7606 /* homeViewController.m in Sources */,
+				A58CE5621C7F041B002B876E /* MathForKidsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A58CE5641C7F041B002B876E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A58CE56D1C7F041B002B876E /* MathForKidsUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		A5F49B921C7EBBC600AF7606 /* PBXTargetDependency */ = {
+		A58CE55F1C7F041B002B876E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5F49B761C7EBBC500AF7606 /* MathForKids */;
-			targetProxy = A5F49B911C7EBBC600AF7606 /* PBXContainerItemProxy */;
+			target = A58CE5431C7F041B002B876E /* MathForKids */;
+			targetProxy = A58CE55E1C7F041B002B876E /* PBXContainerItemProxy */;
+		};
+		A58CE56A1C7F041B002B876E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A58CE5431C7F041B002B876E /* MathForKids */;
+			targetProxy = A58CE5691C7F041B002B876E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */ = {
+		A58CE5501C7F041B002B876E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A5F49B8A1C7EBBC600AF7606 /* Base */,
+				A58CE5511C7F041B002B876E /* Base */,
 			);
-			name = LaunchScreen.xib;
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A58CE5561C7F041B002B876E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A5F49B981C7EBBC600AF7606 /* Debug */ = {
+		A58CE56F1C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -284,8 +402,9 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -294,21 +413,20 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		A5F49B991C7EBBC600AF7606 /* Release */ = {
+		A58CE5701C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -338,98 +456,120 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		A5F49B9B1C7EBBC600AF7606 /* Debug */ = {
+		A58CE5721C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		A5F49B9C1C7EBBC600AF7606 /* Release */ = {
+		A58CE5731C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathForKids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKids";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
-		A5F49B9E1C7EBBC600AF7606 /* Debug */ = {
+		A58CE5751C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
 			};
 			name = Debug;
 		};
-		A5F49B9F1C7EBBC600AF7606 /* Release */ = {
+		A58CE5761C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
+			};
+			name = Release;
+		};
+		A58CE5781C7F041B002B876E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MathForKids;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A58CE5791C7F041B002B876E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MathForKids;
+				USES_XCTRUNNER = YES;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5F49B721C7EBBC500AF7606 /* Build configuration list for PBXProject "MathForKids" */ = {
+		A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathForKids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5F49B981C7EBBC600AF7606 /* Debug */,
-				A5F49B991C7EBBC600AF7606 /* Release */,
+				A58CE56F1C7F041B002B876E /* Debug */,
+				A58CE5701C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5F49B9A1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKids" */ = {
+		A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5F49B9B1C7EBBC600AF7606 /* Debug */,
-				A5F49B9C1C7EBBC600AF7606 /* Release */,
+				A58CE5721C7F041B002B876E /* Debug */,
+				A58CE5731C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		A5F49B9D1C7EBBC600AF7606 /* Build configuration list for PBXNativeTarget "MathForKidsTests" */ = {
+		A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A5F49B9E1C7EBBC600AF7606 /* Debug */,
-				A5F49B9F1C7EBBC600AF7606 /* Release */,
+				A58CE5751C7F041B002B876E /* Debug */,
+				A58CE5761C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A58CE5781C7F041B002B876E /* Debug */,
+				A58CE5791C7F041B002B876E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A5F49B6F1C7EBBC500AF7606 /* Project object */;
+	rootObject = A58CE53C1C7F041B002B876E /* Project object */;
 }

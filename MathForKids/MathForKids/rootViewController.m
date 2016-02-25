@@ -1,18 +1,19 @@
 //
-//  rootViewController.m
+//  RootViewController.m
 //  MathForKids
 //
 //  Created by Shuo Yuan on 2016-02-25.
-//  Copyright (c) 2016 398group16. All rights reserved.
+//  Copyright © 2016 398group16. All rights reserved.
 //
 
-#import "rootViewController.h"
+#import "RootViewController.h"
+#import "HomeViewController.h"
 
-@interface rootViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation rootViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -32,17 +33,19 @@
     usrImage3.layer.cornerRadius = 45;
     usrImage3.layer.borderColor = [UIColor lightGrayColor].CGColor;
     usrImage3.layer.borderWidth = 1.0f;
-    
-    
 }
 
 -(IBAction)toSignUpView:(id)sender{
     
 }
 
--(IBAction)imageToHomeView:(id)sender{
+-(IBAction)skipToHomeView:(id)sender{
+    HomeViewController* myHome = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
     
+    UINavigationController* enclosingNav = [ [ UINavigationController alloc ] initWithRootViewController: myHome ];
     
+    [ self presentViewController: enclosingNav animated: YES
+                      completion: nil ];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,9 +62,5 @@
     // Pass the selected object to the new view controller.
 }
 */
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
-}
 
 @end

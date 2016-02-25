@@ -1,173 +1,138 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="EO0-hM-2Hp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--Math For Kids-->
-        <scene sceneID="9sO-XU-4HR">
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="GaN-tU-QPb" customClass="rootViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nz9-i4-UHh"/>
-                        <viewControllerLayoutGuide type="bottom" id="hiU-sg-Aro"/>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="b5h-hp-gyf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pGF-4k-UDm">
-                                <rect key="frame" x="125" y="319" width="124" height="30"/>
-                                <state key="normal" title="Sign Up">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pA3-tQ-8iC">
+                                <rect key="frame" x="162" y="158" width="90" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-VO-bXA">
+                                <rect key="frame" x="20" y="158" width="90" height="90"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfu-F4-I8p">
+                                <rect key="frame" x="304" y="158" width="90" height="90"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6g9-qw-xQw">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Math For Kids" id="aQb-gK-xvT">
+                                        <barButtonItem key="rightBarButtonItem" title="Skip" id="IQb-67-DYo">
+                                            <connections>
+                                                <action selector="skipToHomeView:" destination="BYZ-38-t0r" id="zNk-AO-Wzz"/>
+                                                <segue destination="kIa-qG-Rn5" kind="show" id="tZD-mI-Ctv"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <connections>
+                                            <outlet property="rightBarButtonItem" destination="IQb-67-DYo" id="gE3-Fv-90c"/>
+                                        </connections>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzk-2G-GBb">
+                                <rect key="frame" x="130" y="460" width="154" height="30"/>
+                                <state key="normal" title="Sign Up"/>
                                 <connections>
-                                    <action selector="toSignUpView:" destination="GaN-tU-QPb" eventType="touchUpInside" id="bEr-Mo-sVC"/>
+                                    <action selector="toSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vww-Ay-il4"/>
                                 </connections>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MTS-ql-845">
-                                <rect key="frame" x="142" y="135" width="90" height="90"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qAh-jl-hOf">
-                                <rect key="frame" x="256" y="135" width="90" height="90"/>
-                            </imageView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12L-rY-e4o">
-                                <rect key="frame" x="33" y="135" width="90" height="90"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="signB" destination="Dzk-2G-GBb" id="hXY-HZ-aLL"/>
+                        <outlet property="usrImage1" destination="pA3-tQ-8iC" id="bei-NI-yFu"/>
+                        <outlet property="usrImage2" destination="Yfu-F4-I8p" id="yPX-Hq-9kI"/>
+                        <outlet property="usrImage3" destination="GHu-VO-bXA" id="zwC-yO-eYL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253" y="429"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="314-yp-Zib">
+            <objects>
+                <viewController id="kIa-qG-Rn5" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ivE-iz-7lk"/>
+                        <viewControllerLayoutGuide type="bottom" id="xxh-2t-JYZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vPr-Jp-Oj7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CE3-XR-ZtK">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Math For Kids" id="PaK-jv-Ukg">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt;back" id="gen-LB-2xy"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Setting" id="5Tv-Ie-DGb">
+                                            <connections>
+                                                <action selector="skipToHomeView:" destination="BYZ-38-t0r" id="GG8-aH-GM5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <connections>
+                                            <outlet property="rightBarButtonItem" destination="5Tv-Ie-DGb" id="miE-qf-Yi6"/>
+                                        </connections>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="kIa-qG-Rn5" id="pYP-Gd-JvI"/>
+                                </connections>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-Pk-pUh">
+                                <rect key="frame" x="118" y="265" width="179" height="30"/>
+                                <state key="normal" title="Start Game"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGO-SL-lNG">
+                                <rect key="frame" x="118" y="372" width="179" height="30"/>
+                                <state key="normal" title="Tutorial"/>
+                                <connections>
+                                    <action selector="toTutorialView:" destination="kIa-qG-Rn5" eventType="touchUpInside" id="MIo-Po-fPl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seM-CJ-ger">
+                                <rect key="frame" x="118" y="474" width="179" height="30"/>
+                                <state key="normal" title="Scores"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-kf-xfx">
+                                <rect key="frame" x="118" y="578" width="179" height="30"/>
+                                <state key="normal" title="Exit"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k53-L0-KXf">
+                                <rect key="frame" x="29" y="92" width="90" height="90"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Math For Kids" id="8if-49-kUb">
-                        <barButtonItem key="rightBarButtonItem" title="Skip" id="803-0Y-Uk9">
-                            <connections>
-                                <segue destination="1tP-sS-Y1b" kind="showDetail" id="kOf-Dx-hHS"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
-                        <outlet property="signB" destination="pGF-4k-UDm" id="892-eC-57l"/>
-                        <outlet property="usrImage1" destination="MTS-ql-845" id="AYy-fL-oNC"/>
-                        <outlet property="usrImage2" destination="12L-rY-e4o" id="LL0-2N-v5E"/>
-                        <outlet property="usrImage3" destination="qAh-jl-hOf" id="7Wq-T4-pal"/>
+                        <outlet property="exit" destination="ZCZ-kf-xfx" id="75S-Nb-7LF"/>
+                        <outlet property="score" destination="seM-CJ-ger" id="KWH-CK-hgQ"/>
+                        <outlet property="start" destination="TbE-Pk-pUh" id="zz9-g9-kux"/>
+                        <outlet property="toolbar" destination="CE3-XR-ZtK" id="Jbd-a7-gme"/>
+                        <outlet property="tut" destination="fGO-SL-lNG" id="fBW-x8-sy8"/>
+                        <outlet property="usrImage" destination="k53-L0-KXf" id="Ybd-g9-MSm"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FLs-kS-M6W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgG-bw-a8r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="772.5" y="434.5"/>
-        </scene>
-        <!--Math For Kids-->
-        <scene sceneID="fNZ-nl-034">
-            <objects>
-                <viewController id="1tP-sS-Y1b" customClass="homeViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="d2R-j6-wo2"/>
-                        <viewControllerLayoutGuide type="bottom" id="JZW-PA-oZM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DyP-Bb-oin">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gtz-8k-fk8">
-                                <rect key="frame" x="87" y="191" width="200" height="30"/>
-                                <state key="normal" title="Start Game">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="yBS-5p-bfX" kind="push" id="XoO-hk-ASD"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZx-So-56x">
-                                <rect key="frame" x="87" y="274" width="200" height="30"/>
-                                <state key="normal" title="Tutorial">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Sna-By-1mT" kind="push" id="qhv-t5-e52"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu6-Wi-wZI">
-                                <rect key="frame" x="87" y="359" width="200" height="30"/>
-                                <state key="normal" title="Scores">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rQ-wK-eOe">
-                                <rect key="frame" x="87" y="446" width="200" height="30"/>
-                                <state key="normal" title="Exit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Math For Kids" id="anj-B6-CWR">
-                        <barButtonItem key="rightBarButtonItem" title="Setting" id="Pvt-Ha-eZU"/>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xSW-Kt-OzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1230.5" y="434.5"/>
-        </scene>
-        <!--Math For Kids-->
-        <scene sceneID="A9N-Wf-ABR">
-            <objects>
-                <viewController id="yBS-5p-bfX" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MAK-s4-T1U"/>
-                        <viewControllerLayoutGuide type="bottom" id="h63-0F-lYa"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Okd-Qy-hqv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Math For Kids" id="tR1-jo-ANE"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dhr-R4-jgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1059.5" y="1197.5"/>
-        </scene>
-        <!--Math For Kids-->
-        <scene sceneID="Ygj-gn-4tr">
-            <objects>
-                <viewController id="Sna-By-1mT" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="z63-x2-3eQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="Zua-wY-ZVr"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tjx-Wv-HZW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Math For Kids" id="JvK-qu-yvJ"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pKx-8p-Qgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1508.5" y="1197.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dAU-vo-wB5">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EO0-hM-2Hp" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1rP-uu-awF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GaN-tU-QPb" kind="relationship" relationship="rootViewController" id="eFm-mV-A0q"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Li0-0E-6cj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="270" y="435"/>
+            <point key="canvasLocation" x="730" y="429"/>
         </scene>
     </scenes>
 </document>
