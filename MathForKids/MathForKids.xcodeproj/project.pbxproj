@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A58CE5381C7F0293002B876E /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5371C7F0293002B876E /* main.storyboard */; };
+		A58CE53A1C7F0331002B876E /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5391C7F0331002B876E /* main.storyboard */; };
 		A5F49B7D1C7EBBC600AF7606 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7C1C7EBBC600AF7606 /* main.m */; };
 		A5F49B801C7EBBC600AF7606 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F49B7F1C7EBBC600AF7606 /* AppDelegate.m */; };
 		A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5F49B871C7EBBC600AF7606 /* Images.xcassets */; };
@@ -30,7 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A58CE5371C7F0293002B876E /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		A58CE5391C7F0331002B876E /* main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		A5F49B771C7EBBC500AF7606 /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F49B7B1C7EBBC600AF7606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A5F49B7C1C7EBBC600AF7606 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,10 +92,10 @@
 				A5F49BAF1C7EDBD300AF7606 /* rootViewController.m */,
 				A5F49BB21C7EDC0E00AF7606 /* homeViewController.h */,
 				A5F49BB31C7EDC0E00AF7606 /* homeViewController.m */,
+				A58CE5391C7F0331002B876E /* main.storyboard */,
 				A5F49B871C7EBBC600AF7606 /* Images.xcassets */,
 				A5F49B891C7EBBC600AF7606 /* LaunchScreen.xib */,
 				A5F49B7A1C7EBBC500AF7606 /* Supporting Files */,
-				A58CE5371C7F0293002B876E /* main.storyboard */,
 			);
 			path = MathForKids;
 			sourceTree = "<group>";
@@ -207,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5F49B8B1C7EBBC600AF7606 /* LaunchScreen.xib in Resources */,
-				A58CE5381C7F0293002B876E /* main.storyboard in Resources */,
 				A5F49B881C7EBBC600AF7606 /* Images.xcassets in Resources */,
+				A58CE53A1C7F0331002B876E /* main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
