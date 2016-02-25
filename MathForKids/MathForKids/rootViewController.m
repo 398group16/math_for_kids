@@ -61,9 +61,7 @@
 */
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if([]){
-        
-    }
+    
 }
 
 @end

@@ -40,7 +40,7 @@
                     <navigationItem key="navigationItem" title="Math For Kids" id="8if-49-kUb">
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="803-0Y-Uk9">
                             <connections>
-                                <segue destination="1tP-sS-Y1b" kind="push" id="9Wa-30-UKi"/>
+                                <segue destination="1tP-sS-Y1b" kind="showDetail" id="kOf-Dx-hHS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -73,12 +73,18 @@
                                 <state key="normal" title="Start Game">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yBS-5p-bfX" kind="push" id="XoO-hk-ASD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZx-So-56x">
                                 <rect key="frame" x="87" y="274" width="200" height="30"/>
                                 <state key="normal" title="Tutorial">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Sna-By-1mT" kind="push" id="qhv-t5-e52"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu6-Wi-wZI">
                                 <rect key="frame" x="87" y="359" width="200" height="30"/>
@@ -103,6 +109,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xSW-Kt-OzG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1230.5" y="434.5"/>
+        </scene>
+        <!--Math For Kids-->
+        <scene sceneID="A9N-Wf-ABR">
+            <objects>
+                <viewController id="yBS-5p-bfX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAK-s4-T1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="h63-0F-lYa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Okd-Qy-hqv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Math For Kids" id="tR1-jo-ANE"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dhr-R4-jgf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1059.5" y="1197.5"/>
+        </scene>
+        <!--Math For Kids-->
+        <scene sceneID="Ygj-gn-4tr">
+            <objects>
+                <viewController id="Sna-By-1mT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z63-x2-3eQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zua-wY-ZVr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tjx-Wv-HZW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Math For Kids" id="JvK-qu-yvJ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pKx-8p-Qgh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508.5" y="1197.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dAU-vo-wB5">
