@@ -54,27 +54,30 @@
 }
 
 -(IBAction)toCountView:(id)sender{
-    CountingViewController* myCount = [[CountingViewController alloc] initWithNibName:@"CountingViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myCount animated: YES];
+    //    CountingViewController* myCount = [[CountingViewController alloc] initWithNibName:@"CountingViewController" bundle:nil];
+    //
+    //    [ self.navigationController pushViewController:myCount animated: YES];
+    self.navigationItem.title = @"Count";
 }
 
 -(IBAction)toAddView:(id)sender{
-    AdditionViewController* myAdd = [[AdditionViewController alloc] initWithNibName:@"AdditionViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myAdd animated: YES];
+    //    AdditionViewController* myAdd = [[AdditionViewController alloc] initWithNibName:@"AdditionViewController" bundle:nil];
+    //
+    //    [ self.navigationController pushViewController:myAdd animated: YES];
+    self.navigationItem.title = @"Addition";
 }
 
 -(IBAction)toSubView:(id)sender{
-    SubtractionViewController* mySub = [[SubtractionViewController alloc] initWithNibName:@"SubtractionViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:mySub animated: YES];
-}
+    //    SubtractionViewController* mySub = [[SubtractionViewController alloc] initWithNibName:@"SubtractionViewController" bundle:nil];
+    //
+    //    [ self.navigationController pushViewController:mySub animated: YES];
+    self.navigationItem.title = @"Subtraction";}
 
 -(IBAction)toShapeView:(id)sender{
-    ShapeViewController* myShape = [[ShapeViewController alloc] initWithNibName:@"ShapeViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myShape animated: YES];
+    //    ShapeViewController* myShape = [[ShapeViewController alloc] initWithNibName:@"ShapeViewController" bundle:nil];
+    //
+    //    [ self.navigationController pushViewController:myShape animated: YES];
+    self.navigationItem.title = @"Shape";
 }
 
 -(IBAction)toHomeView:(id)sender{

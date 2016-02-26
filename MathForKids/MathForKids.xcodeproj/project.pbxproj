@@ -17,7 +17,6 @@
 		A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57B1C7F0460002B876E /* RootViewController.m */; };
 		A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57E1C7F0672002B876E /* HomeViewController.m */; };
 		A58CE58A1C7F1415002B876E /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5881C7F1415002B876E /* TutorialViewController.m */; };
-		A58CE58B1C7F1415002B876E /* TutorialViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5891C7F1415002B876E /* TutorialViewController.xib */; };
 		A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE58D1C7F196F002B876E /* CountingViewController.m */; };
 		A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE58E1C7F196F002B876E /* CountingViewController.xib */; };
 		A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5921C7F199E002B876E /* AdditionViewController.m */; };
@@ -26,6 +25,13 @@
 		A58CE59A1C7F1A12002B876E /* SubtractionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */; };
 		A58CE59E1C7F1A2D002B876E /* ShapeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */; };
 		A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */; };
+		A5B43B341C7FDAA600A85215 /* TutDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B43B321C7FDAA600A85215 /* TutDetailViewController.m */; };
+		A5B43B471C7FEE5E00A85215 /* VideosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B43B461C7FEE5E00A85215 /* VideosTableViewController.m */; };
+		A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */; };
+		A5B43B541C806C3100A85215 /* add_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B501C806C3100A85215 /* add_links.json */; };
+		A5B43B551C806C3100A85215 /* count_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B511C806C3100A85215 /* count_links.json */; };
+		A5B43B561C806C3100A85215 /* shape_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B521C806C3100A85215 /* shape_links.json */; };
+		A5B43B571C806C3100A85215 /* sub_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B531C806C3100A85215 /* sub_links.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +72,6 @@
 		A58CE57E1C7F0672002B876E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A58CE5871C7F1415002B876E /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		A58CE5881C7F1415002B876E /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
-		A58CE5891C7F1415002B876E /* TutorialViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialViewController.xib; sourceTree = "<group>"; };
 		A58CE58C1C7F196F002B876E /* CountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingViewController.h; sourceTree = "<group>"; };
 		A58CE58D1C7F196F002B876E /* CountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingViewController.m; sourceTree = "<group>"; };
 		A58CE58E1C7F196F002B876E /* CountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingViewController.xib; sourceTree = "<group>"; };
@@ -79,6 +84,16 @@
 		A58CE59B1C7F1A2D002B876E /* ShapeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapeViewController.h; sourceTree = "<group>"; };
 		A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapeViewController.m; sourceTree = "<group>"; };
 		A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShapeViewController.xib; sourceTree = "<group>"; };
+		A5B43B311C7FDAA500A85215 /* TutDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutDetailViewController.h; sourceTree = "<group>"; };
+		A5B43B321C7FDAA600A85215 /* TutDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutDetailViewController.m; sourceTree = "<group>"; };
+		A5B43B451C7FEE5E00A85215 /* VideosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosTableViewController.h; sourceTree = "<group>"; };
+		A5B43B461C7FEE5E00A85215 /* VideosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosTableViewController.m; sourceTree = "<group>"; };
+		A5B43B4B1C803EE700A85215 /* YoutubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YoutubeViewController.h; sourceTree = "<group>"; };
+		A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeViewController.m; sourceTree = "<group>"; };
+		A5B43B501C806C3100A85215 /* add_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = add_links.json; path = MathForKids/add_links.json; sourceTree = "<group>"; };
+		A5B43B511C806C3100A85215 /* count_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = count_links.json; path = MathForKids/count_links.json; sourceTree = "<group>"; };
+		A5B43B521C806C3100A85215 /* shape_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = shape_links.json; path = MathForKids/shape_links.json; sourceTree = "<group>"; };
+		A5B43B531C806C3100A85215 /* sub_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sub_links.json; path = MathForKids/sub_links.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +124,10 @@
 		A58CE53B1C7F041B002B876E = {
 			isa = PBXGroup;
 			children = (
+				A5B43B501C806C3100A85215 /* add_links.json */,
+				A5B43B511C806C3100A85215 /* count_links.json */,
+				A5B43B521C806C3100A85215 /* shape_links.json */,
+				A5B43B531C806C3100A85215 /* sub_links.json */,
 				A58CE5461C7F041B002B876E /* MathForKids */,
 				A58CE5601C7F041B002B876E /* MathForKidsTests */,
 				A58CE56B1C7F041B002B876E /* MathForKidsUITests */,
@@ -129,21 +148,14 @@
 		A58CE5461C7F041B002B876E /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
-				A58CE5911C7F199E002B876E /* AdditionViewController.h */,
-				A58CE5921C7F199E002B876E /* AdditionViewController.m */,
-				A58CE5931C7F199E002B876E /* AdditionViewController.xib */,
+				A5B43B4B1C803EE700A85215 /* YoutubeViewController.h */,
+				A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */,
+				A5B43B451C7FEE5E00A85215 /* VideosTableViewController.h */,
+				A5B43B461C7FEE5E00A85215 /* VideosTableViewController.m */,
+				A5B43B311C7FDAA500A85215 /* TutDetailViewController.h */,
+				A5B43B321C7FDAA600A85215 /* TutDetailViewController.m */,
 				A58CE5871C7F1415002B876E /* TutorialViewController.h */,
 				A58CE5881C7F1415002B876E /* TutorialViewController.m */,
-				A58CE5891C7F1415002B876E /* TutorialViewController.xib */,
-				A58CE58C1C7F196F002B876E /* CountingViewController.h */,
-				A58CE58D1C7F196F002B876E /* CountingViewController.m */,
-				A58CE58E1C7F196F002B876E /* CountingViewController.xib */,
-				A58CE5961C7F1A12002B876E /* SubtractionViewController.h */,
-				A58CE5971C7F1A12002B876E /* SubtractionViewController.m */,
-				A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */,
-				A58CE59B1C7F1A2D002B876E /* ShapeViewController.h */,
-				A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */,
-				A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */,
 				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
 				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
 				A58CE57D1C7F0672002B876E /* HomeViewController.h */,
@@ -162,6 +174,18 @@
 		A58CE5471C7F041B002B876E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A58CE5911C7F199E002B876E /* AdditionViewController.h */,
+				A58CE5921C7F199E002B876E /* AdditionViewController.m */,
+				A58CE5931C7F199E002B876E /* AdditionViewController.xib */,
+				A58CE58C1C7F196F002B876E /* CountingViewController.h */,
+				A58CE58D1C7F196F002B876E /* CountingViewController.m */,
+				A58CE58E1C7F196F002B876E /* CountingViewController.xib */,
+				A58CE5961C7F1A12002B876E /* SubtractionViewController.h */,
+				A58CE5971C7F1A12002B876E /* SubtractionViewController.m */,
+				A58CE5981C7F1A12002B876E /* SubtractionViewController.xib */,
+				A58CE59B1C7F1A2D002B876E /* ShapeViewController.h */,
+				A58CE59C1C7F1A2D002B876E /* ShapeViewController.m */,
+				A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */,
 				A58CE5481C7F041B002B876E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -288,13 +312,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5B43B541C806C3100A85215 /* add_links.json in Resources */,
+				A5B43B551C806C3100A85215 /* count_links.json in Resources */,
+				A5B43B561C806C3100A85215 /* shape_links.json in Resources */,
+				A5B43B571C806C3100A85215 /* sub_links.json in Resources */,
 				A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */,
 				A58CE5951C7F199E002B876E /* AdditionViewController.xib in Resources */,
 				A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */,
 				A58CE5571C7F041B002B876E /* LaunchScreen.storyboard in Resources */,
 				A58CE5541C7F041B002B876E /* Assets.xcassets in Resources */,
 				A58CE59A1C7F1A12002B876E /* SubtractionViewController.xib in Resources */,
-				A58CE58B1C7F1415002B876E /* TutorialViewController.xib in Resources */,
 				A58CE5521C7F041B002B876E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,6 +356,9 @@
 				A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */,
 				A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */,
 				A58CE58A1C7F1415002B876E /* TutorialViewController.m in Sources */,
+				A5B43B341C7FDAA600A85215 /* TutDetailViewController.m in Sources */,
+				A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */,
+				A5B43B471C7FEE5E00A85215 /* VideosTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +582,7 @@
 				A58CE5731C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +591,7 @@
 				A58CE5761C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */ = {
 			isa = XCConfigurationList;
@@ -568,6 +600,7 @@
 				A58CE5791C7F041B002B876E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

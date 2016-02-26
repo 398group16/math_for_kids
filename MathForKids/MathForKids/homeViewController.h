@@ -17,6 +17,6 @@
     IBOutlet UINavigationBar* toolbar;
 }
 
--(IBAction)toTutorialView:(id)sender;
+//-(IBAction)toTutorialView:(id)sender;
 
 @end

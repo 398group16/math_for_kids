@@ -37,17 +37,20 @@
     [[exit layer] setCornerRadius:4.0f];
     [[exit layer] setBorderWidth:1.0f];
     [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
+    self.navigationItem.title = @"Math For Kids";
+    self.navigationItem.backBarButtonItem.title = @"< Back";
 
 }
 
--(IBAction)toTutorialView:(id)sender{
-    TutorialViewController* myTut = [[TutorialViewController alloc] initWithNibName:@"TutorialViewController" bundle:nil];
-    
-    UINavigationController* enclosingNav = [ [ UINavigationController alloc ] initWithRootViewController: myTut ];
-    
-    [ self presentViewController: enclosingNav animated: YES
-                      completion: nil ];
-}
+//-(IBAction)toTutorialView:(id)sender{
+//    TutorialViewController* myTut = [[TutorialViewController alloc] initWithNibName:@"TutorialViewController" bundle:nil];
+//    
+//    UINavigationController* enclosingNav = [ [ UINavigationController alloc ] initWithRootViewController: myTut ];
+//    
+//    [ self presentViewController: enclosingNav animated: YES
+//                      completion: nil ];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -56,14 +59,17 @@
     
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"tutDetail"]) {
+        TutorialViewController* dest = segue.destinationViewController;
+        dest.title = @"Tutorial";
+    }
 }
-*/
 
 @end

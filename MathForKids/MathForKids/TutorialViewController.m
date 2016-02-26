@@ -7,10 +7,7 @@
 //
 
 #import "TutorialViewController.h"
-#import "AdditionViewController.h"
-#import "CountingViewController.h"
-#import "SubtractionViewController.h"
-#import "ShapeViewController.h"
+#import "TutDetailViewController.h"
 
 
 @interface TutorialViewController ()
@@ -23,7 +20,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    field.editable = NO;
     [[field layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [[field layer] setBorderWidth:1.0f];
     
@@ -47,54 +43,30 @@
     [[shape layer] setBorderWidth:1.0f];
     [[shape layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
-    [[Home layer] setCornerRadius:4.0f];
-    [[Home layer] setBorderWidth:1.0f];
-    [[Home layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    self.navigationItem.title = @"Tutorial";
-    
-}
-
--(IBAction)toCountView:(id)sender{
-    CountingViewController* myCount = [[CountingViewController alloc] initWithNibName:@"CountingViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myCount animated: YES];
-}
-
--(IBAction)toAddView:(id)sender{
-    AdditionViewController* myAdd = [[AdditionViewController alloc] initWithNibName:@"AdditionViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myAdd animated: YES];
-}
-
--(IBAction)toSubView:(id)sender{
-    SubtractionViewController* mySub = [[SubtractionViewController alloc] initWithNibName:@"SubtractionViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:mySub animated: YES];
-}
-
--(IBAction)toShapeView:(id)sender{
-    ShapeViewController* myShape = [[ShapeViewController alloc] initWithNibName:@"ShapeViewController" bundle:nil];
-    
-    [ self.navigationController pushViewController:myShape animated: YES];
-}
-
--(IBAction)toHomeView:(id)sender{
-    [ self dismissViewControllerAnimated: YES completion: nil ];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    TutDetailViewController* dest = segue.destinationViewController;
+    if ([[segue identifier] isEqualToString:@"countDetail"]) {
+        dest.title = @"Counting";
+    }else if ([[segue identifier] isEqualToString:@"addDetail"]){
+        dest.title = @"Addition";
+    }else if ([[segue identifier] isEqualToString:@"subDetail"]){
+        dest.title = @"Subtraction";
+    }else if ([[segue identifier] isEqualToString:@"shapeDetail"]){
+        dest.title = @"Shape";
+    }
 }
-*/
+
 
 @end

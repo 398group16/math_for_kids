@@ -1,5 +1,5 @@
 //
-//  TutorialViewController.h
+//  TutDetailViewController.h
 //  MathForKids
 //
 //  Created by Shuo Yuan on 2016-02-25.
@@ -8,16 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TutorialViewController : UIViewController{
+@interface TutDetailViewController : UIViewController{
     IBOutlet UIButton* Count;
     IBOutlet UIButton* add;
     IBOutlet UIButton* sub;
     IBOutlet UIButton* shape;
     IBOutlet UIButton* ytv;
     IBOutlet UIScrollView* field;
-
 }
 
+-(IBAction)toCountView:(id)sender;
+-(IBAction)toAddView:(id)sender;
+-(IBAction)toSubView:(id)sender;
+-(IBAction)toShapeView:(id)sender;
 
 
 @end

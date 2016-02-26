@@ -33,6 +33,8 @@
     usrImage3.layer.cornerRadius = 45;
     usrImage3.layer.borderColor = [UIColor lightGrayColor].CGColor;
     usrImage3.layer.borderWidth = 1.0f;
+    
+    self.navigationItem.title = @"Math For Kids";
 }
 
 -(IBAction)toSignUpView:(id)sender{
@@ -46,6 +48,12 @@
     
     [ self presentViewController: enclosingNav animated: YES
                       completion: nil ];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"homeDetail"]) {
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {

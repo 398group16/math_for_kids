@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  VideosTableViewController.h
 //  MathForKids
 //
 //  Created by Shuo Yuan on 2016-02-25.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface VideosTableViewController : UITableViewController
 
 @end
-
