@@ -119,32 +119,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-3M-7XG">
-                                <rect key="frame" x="8" y="72" width="398" height="292"/>
+                                <rect key="frame" x="8" y="72" width="398" height="596"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-jA-acI">
-                                <rect key="frame" x="8" y="440" width="142" height="30"/>
+                                <rect key="frame" x="13" y="686" width="90" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="countDetail" id="Jix-6c-0li"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO8-jn-npj">
-                                <rect key="frame" x="8" y="569" width="142" height="30"/>
-                                <state key="normal" title="Subtraction"/>
+                                <rect key="frame" x="233" y="686" width="70" height="30"/>
+                                <state key="normal" title="-"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="subDetail" id="2Ww-6r-dFF"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-b5-4vt">
-                                <rect key="frame" x="8" y="638" width="142" height="30"/>
+                                <rect key="frame" x="337" y="686" width="70" height="30"/>
                                 <state key="normal" title="Shapes"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="shapeDetail" id="mxj-HG-eC7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-Jf-3xt">
-                                <rect key="frame" x="8" y="503" width="142" height="30"/>
-                                <state key="normal" title="Addition"/>
+                                <rect key="frame" x="132" y="686" width="70" height="30"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="addDetail" id="kQh-v8-h5q"/>
                                 </connections>
@@ -178,38 +178,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-DR-1ag">
-                                <rect key="frame" x="8" y="72" width="398" height="292"/>
+                                <rect key="frame" x="8" y="123" width="398" height="544"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-cV-wu0">
-                                <rect key="frame" x="8" y="437" width="142" height="30"/>
+                                <rect key="frame" x="8" y="686" width="80" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <action selector="toCountView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="UKc-We-ITz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93B-12-IzT">
-                                <rect key="frame" x="8" y="500" width="142" height="30"/>
-                                <state key="normal" title="Addition"/>
+                                <rect key="frame" x="125" y="686" width="70" height="30"/>
+                                <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="toAddView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="Emz-Gg-11Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4q-4U-OLG">
-                                <rect key="frame" x="8" y="566" width="142" height="30"/>
-                                <state key="normal" title="Subtraction"/>
+                                <rect key="frame" x="231" y="686" width="70" height="30"/>
+                                <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="toSubView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="ZTL-A4-Jud"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-jE-zz7">
-                                <rect key="frame" x="8" y="635" width="142" height="30"/>
+                                <rect key="frame" x="336" y="686" width="70" height="30"/>
                                 <state key="normal" title="Shapes"/>
                                 <connections>
                                     <action selector="toShapeView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="jBD-pW-gE0"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-cC-Oc8">
-                                <rect key="frame" x="224" y="408" width="161" height="30"/>
+                                <rect key="frame" x="245" y="80" width="161" height="30"/>
                                 <state key="normal" title="YouTube Video"/>
                                 <connections>
                                     <segue destination="N8v-Kd-8JJ" kind="show" identifier="videoDetail" id="80i-IY-Xnr"/>
@@ -277,7 +277,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOU-M1-krh">
-                                <rect key="frame" x="0.0" y="71" width="414" height="665"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="R7a-t3-uGZ" id="hi7-ya-3KE"/>
