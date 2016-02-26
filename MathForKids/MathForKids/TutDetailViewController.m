@@ -43,6 +43,43 @@
     [[shape layer] setCornerRadius:4.0f];
     [[shape layer] setBorderWidth:1.0f];
     [[shape layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
+    NSString* str = self.navigationItem.title;
+    
+    if ([str  isEqual: @"Counting"]) {
+        str = @"count_links";
+    }else if([str  isEqual: @"Addition"]){
+        UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 233)];
+        [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add1"]]];
+        [field addSubview: imageView1];
+        
+        UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 283, 350, 175)];
+        [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add2"]]];
+        [field addSubview: imageView2];
+        
+        UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 508, 350, 152)];
+        [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add3"]]];
+        [field addSubview: imageView3];
+        
+        UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 710, 350, 315)];
+        [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add4"]]];
+        [field addSubview: imageView4];
+        
+        UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1075, 350, 270)];
+        [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add5"]]];
+        [field addSubview: imageView5];
+        
+        UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1395, 350, 257)];
+        [imageView6 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add6"]]];
+        [field addSubview: imageView6];
+        
+        field.contentSize = CGSizeMake(398, 1700);
+        
+    }else if([str  isEqual: @"Subtraction"]){
+        str = @"sub_links";
+    }else if([str  isEqual: @"Shape"]){
+        str = @"shape_links";
+    }
 
 }
 
