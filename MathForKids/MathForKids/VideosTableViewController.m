@@ -92,6 +92,7 @@
     id pairValue = self.objects[indexPath.row];
     
     cell.textLabel.text = pairValue[@"name"];
+    cell.imageView.image = [ UIImage imageNamed: @"youtubeIcon.jpeg" ];
     //    cell.detailTextLabel.text=[NSString stringWithFormat:@"URL: %@", pairValue[@"url"]];
     
     // Configure the cell...
