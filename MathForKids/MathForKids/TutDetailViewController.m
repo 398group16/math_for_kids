@@ -47,8 +47,27 @@
     NSString* str = self.navigationItem.title;
     
     if ([str  isEqual: @"Counting"]) {
-        str = @"count_links";
+        
+        UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 50)];
+        [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count1"]]];
+        [field addSubview: imageView1];
+        
+        UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 100, 350, 320)];
+        [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count2"]]];
+        [field addSubview: imageView2];
+        
+        UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 470, 360, 180)];
+        [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count3"]]];
+        [field addSubview: imageView3];
+        
+        UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 700, 350, 224)];
+        [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count4"]]];
+        [field addSubview: imageView4];
+        
+        field.contentSize = CGSizeMake(398, 1000);
+        
     }else if([str  isEqual: @"Addition"]){
+        
         UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 233)];
         [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add1"]]];
         [field addSubview: imageView1];
@@ -76,9 +95,56 @@
         field.contentSize = CGSizeMake(398, 1700);
         
     }else if([str  isEqual: @"Subtraction"]){
-        str = @"sub_links";
+        
+        UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 175)];
+        [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub1"]]];
+        [field addSubview: imageView1];
+        
+        UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 225, 360, 293)];
+        [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub2"]]];
+        [field addSubview: imageView2];
+        
+        UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 565, 350, 185)];
+        [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub3"]]];
+        [field addSubview: imageView3];
+        
+        UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 800, 350, 100)];
+        [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub4"]]];
+        [field addSubview: imageView4];
+        
+        UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 950, 350, 280)];
+        [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub5"]]];
+        [field addSubview: imageView5];
+        
+        field.contentSize = CGSizeMake(398, 1250);
+        
     }else if([str  isEqual: @"Shape"]){
-        str = @"shape_links";
+        
+        UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 360)];
+        [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape1"]]];
+        [field addSubview: imageView1];
+        
+        UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 400, 350, 350)];
+        [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape2"]]];
+        [field addSubview: imageView2];
+        
+        UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 800, 360, 350)];
+        [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape3"]]];
+        [field addSubview: imageView3];
+        
+        UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1200, 350, 225)];
+        [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape4"]]];
+        [field addSubview: imageView4];
+        
+        UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1475, 330, 345)];
+        [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape5"]]];
+        [field addSubview: imageView5];
+        
+        UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1820, 330, 345)];
+        [imageView6 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape6"]]];
+        [field addSubview: imageView6];
+        
+        field.contentSize = CGSizeMake(398, 2170);
     }
 
 }
@@ -88,6 +154,31 @@
     //
     //    [ self.navigationController pushViewController:myCount animated: YES];
     self.navigationItem.title = @"Counting";
+    
+    for (UIImageView *view in field.subviews) {
+        
+        [view removeFromSuperview];
+        
+    }
+    
+    UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 50)];
+    [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count1"]]];
+    [field addSubview: imageView1];
+    
+    UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 100, 350, 320)];
+    [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count2"]]];
+    [field addSubview: imageView2];
+    
+    UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 470, 360, 180)];
+    [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count3"]]];
+    [field addSubview: imageView3];
+    
+    UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 700, 350, 224)];
+    [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"count4"]]];
+    [field addSubview: imageView4];
+    
+    field.contentSize = CGSizeMake(398, 1000);
+    
 }
 
 -(IBAction)toAddView:(id)sender{
@@ -95,6 +186,38 @@
     //
     //    [ self.navigationController pushViewController:myAdd animated: YES];
     self.navigationItem.title = @"Addition";
+    
+    for (UIImageView *view in field.subviews) {
+        
+        [view removeFromSuperview];
+        
+    }
+    
+    UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 233)];
+    [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add1"]]];
+    [field addSubview: imageView1];
+    
+    UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 283, 350, 175)];
+    [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add2"]]];
+    [field addSubview: imageView2];
+    
+    UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 508, 350, 152)];
+    [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add3"]]];
+    [field addSubview: imageView3];
+    
+    UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 710, 350, 315)];
+    [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add4"]]];
+    [field addSubview: imageView4];
+    
+    UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1075, 350, 270)];
+    [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add5"]]];
+    [field addSubview: imageView5];
+    
+    UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1395, 350, 257)];
+    [imageView6 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"add6"]]];
+    [field addSubview: imageView6];
+    
+    field.contentSize = CGSizeMake(398, 1700);
 }
 
 -(IBAction)toSubView:(id)sender{
@@ -102,6 +225,32 @@
     //
     //    [ self.navigationController pushViewController:mySub animated: YES];
     self.navigationItem.title = @"Subtraction";
+    
+    for (UIImageView *view in field.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 175)];
+    [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub1"]]];
+    [field addSubview: imageView1];
+    
+    UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 225, 360, 293)];
+    [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub2"]]];
+    [field addSubview: imageView2];
+    
+    UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 565, 350, 185)];
+    [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub3"]]];
+    [field addSubview: imageView3];
+    
+    UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 800, 350, 100)];
+    [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub4"]]];
+    [field addSubview: imageView4];
+    
+    UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 950, 350, 280)];
+    [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"sub5"]]];
+    [field addSubview: imageView5];
+    
+    field.contentSize = CGSizeMake(398, 1250);
 }
 
 -(IBAction)toShapeView:(id)sender{
@@ -109,6 +258,36 @@
     //
     //    [ self.navigationController pushViewController:myShape animated: YES];
     self.navigationItem.title = @"Shape";
+    
+    for (UIImageView *view in field.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    UIImageView* imageView1 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 0, 350, 360)];
+    [imageView1 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape1"]]];
+    [field addSubview: imageView1];
+    
+    UIImageView* imageView2 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 400, 350, 350)];
+    [imageView2 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape2"]]];
+    [field addSubview: imageView2];
+    
+    UIImageView* imageView3 = [[UIImageView alloc] initWithFrame: CGRectMake(19, 800, 360, 350)];
+    [imageView3 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape3"]]];
+    [field addSubview: imageView3];
+    
+    UIImageView* imageView4 = [[UIImageView alloc] initWithFrame: CGRectMake(24, 1200, 350, 225)];
+    [imageView4 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape4"]]];
+    [field addSubview: imageView4];
+    
+    UIImageView* imageView5 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1475, 330, 345)];
+    [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape5"]]];
+    [field addSubview: imageView5];
+    
+    UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1820, 330, 345)];
+    [imageView6 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape6"]]];
+    [field addSubview: imageView6];
+    
+    field.contentSize = CGSizeMake(398, 2170);
 }
 
 //-(IBAction)toYtVideoView:(id)sender{
