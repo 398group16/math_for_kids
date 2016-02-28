@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "TutorialViewController.h"
+#import "GameCategoryViewController.h"
 
 @interface HomeViewController ()
 
@@ -38,7 +39,7 @@
     [[exit layer] setBorderWidth:1.0f];
     [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
-    self.navigationItem.title = @"Math For Kids";
+    self.navigationItem.title = @"Menu";
     self.navigationItem.backBarButtonItem.title = @"< Back";
 
 }
@@ -69,6 +70,9 @@
     if ([[segue identifier] isEqualToString:@"tutDetail"]) {
         TutorialViewController* dest = segue.destinationViewController;
         dest.title = @"Tutorial";
+    }else if([[segue identifier] isEqualToString:@"gameCateDetail"]){
+        GameCategoryViewController* dest = segue.destinationViewController;
+        dest.title = @"Game Category";
     }
 }
 

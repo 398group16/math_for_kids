@@ -102,7 +102,7 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"1111");
+
     if ([[segue identifier] isEqualToString:@"youtubeDetail"]){
         YoutubeViewController* dest = segue.destinationViewController;
         dest.title = @"YouTube";

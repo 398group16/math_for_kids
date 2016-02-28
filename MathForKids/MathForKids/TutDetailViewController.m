@@ -140,11 +140,11 @@
         [imageView5 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape5"]]];
         [field addSubview: imageView5];
         
-        UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1820, 330, 345)];
+        UIImageView* imageView6 = [[UIImageView alloc] initWithFrame: CGRectMake(34, 1770, 330, 345)];
         [imageView6 setImage: [UIImage imageNamed:[NSString stringWithFormat:@"shape6"]]];
         [field addSubview: imageView6];
         
-        field.contentSize = CGSizeMake(398, 2170);
+        field.contentSize = CGSizeMake(398, 2115);
     }
 
 }

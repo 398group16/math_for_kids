@@ -32,6 +32,8 @@
 		A5B43B551C806C3100A85215 /* count_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B511C806C3100A85215 /* count_links.json */; };
 		A5B43B561C806C3100A85215 /* shape_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B521C806C3100A85215 /* shape_links.json */; };
 		A5B43B571C806C3100A85215 /* sub_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B531C806C3100A85215 /* sub_links.json */; };
+		A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */; };
+		A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,10 @@
 		A5B43B511C806C3100A85215 /* count_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = count_links.json; path = MathForKids/count_links.json; sourceTree = "<group>"; };
 		A5B43B521C806C3100A85215 /* shape_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = shape_links.json; path = MathForKids/shape_links.json; sourceTree = "<group>"; };
 		A5B43B531C806C3100A85215 /* sub_links.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sub_links.json; path = MathForKids/sub_links.json; sourceTree = "<group>"; };
+		A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCategoryViewController.h; sourceTree = "<group>"; };
+		A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCategoryViewController.m; sourceTree = "<group>"; };
+		A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,10 @@
 		A58CE5461C7F041B002B876E /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
+				A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */,
+				A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */,
+				A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */,
 				A5B43B4B1C803EE700A85215 /* YoutubeViewController.h */,
 				A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */,
 				A5B43B451C7FEE5E00A85215 /* VideosTableViewController.h */,
@@ -348,6 +358,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
+				A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */,
+				A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */,
 				A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */,
 				A58CE5491C7F041B002B876E /* main.m in Sources */,
 				A58CE59E1C7F1A2D002B876E /* ShapeViewController.m in Sources */,
