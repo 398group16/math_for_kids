@@ -18,6 +18,7 @@
     IBOutlet UIButton* button3;
     IBOutlet UIButton* button4;
     IBOutlet UIButton* next;
+    IBOutlet UIButton* finish;
     NSTimer* timer;
 }
 @property (strong, nonatomic) NSString* name;
@@ -27,5 +28,6 @@
 -(IBAction)button3action:(id)sender;
 -(IBAction)button4action:(id)sender;
 -(IBAction)nextAction:(id)sender;
+
 
 @end

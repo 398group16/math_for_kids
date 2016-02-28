@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "ScoreViewController.h"
 
 @interface GameViewController (){
     int scoreTime;
@@ -51,8 +52,14 @@
     [[next layer] setBorderWidth:1.0f];
     [[next layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
+    [[finish layer] setCornerRadius:4.0f];
+    [[finish layer] setBorderWidth:1.0f];
+    [[finish layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
     next.hidden = YES;
     next.enabled = NO;
+    finish.hidden = YES;
+    finish.enabled = NO;
 
     [self setQuestion];
     [self setButtons];
@@ -85,7 +92,10 @@
         int x = arc4random_uniform(21);
         bool repeat = false;
         if (lastNum.count != 0) {
-            while(repeat == false && x == 0){
+            while(x == 0){
+                x = arc4random_uniform(21);
+            }
+            while(repeat == false ){
                 repeat = true;
                 for(int i=0; i<lastNum.count; i++){
                     if(x == [[lastNum objectAtIndex:i] integerValue]){
@@ -184,8 +194,13 @@
         button4.enabled = NO;
         
         imageField.hidden = YES;
-        next.hidden = NO;
-        next.enabled = YES;
+        if(gameCount+1 < 10){
+            next.hidden = NO;
+            next.enabled = YES;
+        }else{
+            finish.hidden = NO;
+            finish.enabled = YES;
+        }
         
         [UIView commitAnimations];
     
@@ -211,6 +226,21 @@
         button2.enabled = YES;
         button3.enabled = YES;
         button4.enabled = YES;
+    }else{
+        score = (score*100)/500;
+        NSLog(@"Your Score is: %d", score);
+        
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle: @"Your Score:"
+                                                                            message: [NSString stringWithFormat:@"%d", score]
+                                                                     preferredStyle: UIAlertControllerStyleAlert];
+        UIAlertAction *alertAction = [UIAlertAction actionWithTitle: @"OK"
+                                                              style: UIAlertActionStyleDestructive
+                                                            handler: ^(UIAlertAction *action) {
+                                                                NSLog(@"OK button tapped!");
+                                                            }];
+        [controller addAction: alertAction];
+        
+        [self presentViewController: controller animated: YES completion: nil];
     }
 
 }
@@ -233,14 +263,21 @@
     [timer invalidate];
     scoreTime = timeCount;
     imageField.hidden = YES;
-    next.hidden = NO;
-    next.enabled = YES;
+    if(gameCount+1 < 10){
+        next.hidden = NO;
+        next.enabled = YES;
+    }else{
+        finish.hidden = NO;
+        finish.enabled = YES;
+    }
     
     if(correct == 0){
         [[button1 layer] setBackgroundColor:[UIColor greenColor].CGColor];
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button3 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button4 layer] setBackgroundColor:[UIColor redColor].CGColor];
+        
+        score = score+scoreTime+40;
     }else if(correct == 1){
         [[button1 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button2 layer] setBackgroundColor:[UIColor greenColor].CGColor];
@@ -280,8 +317,13 @@
     scoreTime = timeCount;
     
     imageField.hidden = YES;
-    next.hidden = NO;
-    next.enabled = YES;
+    if(gameCount+1 < 10){
+        next.hidden = NO;
+        next.enabled = YES;
+    }else{
+        finish.hidden = NO;
+        finish.enabled = YES;
+    }
     
     if(correct == 0){
         [[button1 layer] setBackgroundColor:[UIColor greenColor].CGColor];
@@ -293,6 +335,8 @@
         [[button2 layer] setBackgroundColor:[UIColor greenColor].CGColor];
         [[button3 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button4 layer] setBackgroundColor:[UIColor redColor].CGColor];
+        
+        score = score+scoreTime+40;
     }else if(correct == 2){
         [[button1 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
@@ -325,8 +369,13 @@
     scoreTime = timeCount;
     
     imageField.hidden = YES;
-    next.hidden = NO;
-    next.enabled = YES;
+    if(gameCount+1 < 10){
+        next.hidden = NO;
+        next.enabled = YES;
+    }else{
+        finish.hidden = NO;
+        finish.enabled = YES;
+    }
     
     if(correct == 0){
         [[button1 layer] setBackgroundColor:[UIColor greenColor].CGColor];
@@ -343,6 +392,8 @@
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button3 layer] setBackgroundColor:[UIColor greenColor].CGColor];
         [[button4 layer] setBackgroundColor:[UIColor redColor].CGColor];
+        
+        score = score+scoreTime+40;
     }else{
         [[button1 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
@@ -370,8 +421,13 @@
     scoreTime = timeCount;
     
     imageField.hidden = YES;
-    next.hidden = NO;
-    next.enabled = YES;
+    if(gameCount+1 < 10){
+        next.hidden = NO;
+        next.enabled = YES;
+    }else{
+        finish.hidden = NO;
+        finish.enabled = YES;
+    }
     
     if(correct == 0){
         [[button1 layer] setBackgroundColor:[UIColor greenColor].CGColor];
@@ -393,6 +449,8 @@
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button3 layer] setBackgroundColor:[UIColor redColor].CGColor];
         [[button4 layer] setBackgroundColor:[UIColor greenColor].CGColor];
+        
+        score = score+scoreTime+40;
     }
     button1.enabled = NO;
     button2.enabled = NO;
@@ -415,14 +473,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    score = (score*100)/500;
+    NSLog(@"Score: %d", score);
+    if([[segue identifier] isEqualToString:@"scoreDetail"]){
+        ScoreViewController* dest = segue.destinationViewController;
+        dest.title = @"Score";
+        NSString* temp = [NSString stringWithFormat:@"%d", score];
+        [[segue destinationViewController] setScore: temp];
+        
+    }
 }
-*/
+
 
 @end

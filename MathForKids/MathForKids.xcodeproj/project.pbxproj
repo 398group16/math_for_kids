@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A56CD79F1C830BD7007001F7 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56CD79E1C830BD7007001F7 /* ScoreViewController.m */; };
 		A58CE5491C7F041B002B876E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5481C7F041B002B876E /* main.m */; };
 		A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54B1C7F041B002B876E /* AppDelegate.m */; };
 		A58CE5521C7F041B002B876E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5501C7F041B002B876E /* Main.storyboard */; };
@@ -54,6 +55,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A56CD79D1C830BD7007001F7 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
+		A56CD79E1C830BD7007001F7 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
 		A58CE5441C7F041B002B876E /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CE5481C7F041B002B876E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A58CE54A1C7F041B002B876E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 		A58CE5461C7F041B002B876E /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				A56CD79D1C830BD7007001F7 /* ScoreViewController.h */,
+				A56CD79E1C830BD7007001F7 /* ScoreViewController.m */,
 				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
 				A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */,
 				A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */,
@@ -357,6 +362,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56CD79F1C830BD7007001F7 /* ScoreViewController.m in Sources */,
 				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
 				A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */,
 				A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */,

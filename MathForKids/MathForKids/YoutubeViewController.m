@@ -21,6 +21,7 @@
 }
 
 - (void)setDetailItem:(NSString*)newDetailItem {
+    NSLog(@"%@", newDetailItem);
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
     }
