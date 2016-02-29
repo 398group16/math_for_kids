@@ -22,6 +22,7 @@
     NSTimer* timer;
 }
 @property (strong, nonatomic) NSString* name;
+@property (strong, nonatomic) NSString* usrName;
 
 -(IBAction)button1action:(id)sender;
 -(IBAction)button2action:(id)sender;

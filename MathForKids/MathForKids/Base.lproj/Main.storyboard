@@ -14,20 +14,20 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pA3-tQ-8iC">
-                                <rect key="frame" x="162" y="158" width="90" height="90"/>
+                                <rect key="frame" x="144" y="156" width="90" height="90"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GHu-VO-bXA">
-                                <rect key="frame" x="20" y="158" width="90" height="90"/>
+                                <rect key="frame" x="20" y="156" width="90" height="90"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfu-F4-I8p">
-                                <rect key="frame" x="304" y="158" width="90" height="90"/>
+                                <rect key="frame" x="265" y="156" width="90" height="90"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzk-2G-GBb">
-                                <rect key="frame" x="130" y="460" width="154" height="30"/>
+                                <rect key="frame" x="112" y="444" width="154" height="30"/>
                                 <state key="normal" title="Sign Up"/>
                                 <connections>
                                     <action selector="toSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vww-Ay-il4"/>
@@ -40,11 +40,11 @@
                         <barButtonItem key="rightBarButtonItem" title="Skip" id="Z5w-CK-fzm">
                             <connections>
                                 <action selector="skipToHomeView:" destination="BYZ-38-t0r" id="kHW-zx-iun"/>
-                                <segue destination="kIa-qG-Rn5" kind="show" identifier="homeDetail" id="pBW-8k-QY4"/>
+                                <segue destination="kIa-qG-Rn5" kind="show" identifier="homeDetail" id="1dC-GU-1Rd"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="signB" destination="Dzk-2G-GBb" id="hXY-HZ-aLL"/>
                         <outlet property="usrImage1" destination="pA3-tQ-8iC" id="bei-NI-yFu"/>
@@ -65,29 +65,29 @@
                         <viewControllerLayoutGuide type="bottom" id="xxh-2t-JYZ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="vPr-Jp-Oj7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k53-L0-KXf">
+                                <rect key="frame" x="29" y="92" width="90" height="90"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGO-SL-lNG">
-                                <rect key="frame" x="118" y="372" width="179" height="30"/>
+                                <rect key="frame" x="98" y="348" width="179" height="30"/>
                                 <state key="normal" title="Tutorial"/>
                                 <connections>
                                     <segue destination="epW-Pm-Rsk" kind="show" identifier="tutDetail" id="Tc7-Fa-CTP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seM-CJ-ger">
-                                <rect key="frame" x="118" y="474" width="179" height="30"/>
+                                <rect key="frame" x="98" y="450" width="179" height="30"/>
                                 <state key="normal" title="Scores"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-kf-xfx">
-                                <rect key="frame" x="118" y="578" width="179" height="30"/>
+                                <rect key="frame" x="98" y="554" width="179" height="30"/>
                                 <state key="normal" title="Exit"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k53-L0-KXf">
-                                <rect key="frame" x="29" y="92" width="90" height="90"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbE-Pk-pUh">
-                                <rect key="frame" x="118" y="265" width="179" height="30"/>
+                                <rect key="frame" x="98" y="241" width="179" height="30"/>
                                 <state key="normal" title="Start Game"/>
                                 <connections>
                                     <segue destination="sFb-if-nPL" kind="show" identifier="gameCateDtailed" id="UbL-lc-ssf"/>
@@ -96,7 +96,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="exit" destination="ZCZ-kf-xfx" id="75S-Nb-7LF"/>
                         <outlet property="score" destination="seM-CJ-ger" id="KWH-CK-hgQ"/>
@@ -118,44 +118,44 @@
                         <viewControllerLayoutGuide type="bottom" id="hPY-ex-t9H"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CAm-Sb-q90">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-jA-acI">
-                                <rect key="frame" x="13" y="686" width="90" height="30"/>
+                                <rect key="frame" x="14" y="629" width="90" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="countDetail" id="Jix-6c-0li"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO8-jn-npj">
-                                <rect key="frame" x="233" y="686" width="70" height="30"/>
+                                <rect key="frame" x="207" y="629" width="70" height="30"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="subDetail" id="2Ww-6r-dFF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-b5-4vt">
-                                <rect key="frame" x="337" y="686" width="70" height="30"/>
-                                <state key="normal" title="Shapes"/>
-                                <connections>
-                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="shapeDetail" id="mxj-HG-eC7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-Jf-3xt">
-                                <rect key="frame" x="132" y="686" width="70" height="30"/>
+                                <rect key="frame" x="122" y="629" width="70" height="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <segue destination="Ndc-Hq-UtD" kind="show" identifier="addDetail" id="kQh-v8-h5q"/>
                                 </connections>
                             </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-3M-7XG">
-                                <rect key="frame" x="0.0" y="64" width="414" height="604"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="551"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-b5-4vt">
+                                <rect key="frame" x="290" y="629" width="70" height="30"/>
+                                <state key="normal" title="Shapes"/>
+                                <connections>
+                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="shapeDetail" id="mxj-HG-eC7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Count" destination="pxT-jA-acI" id="5H9-KW-k4S"/>
                         <outlet property="add" destination="MLS-Jf-3xt" id="zSl-dQ-phX"/>
@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kZe-IX-scd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1817" y="429"/>
+            <point key="canvasLocation" x="1816.5" y="428.5"/>
         </scene>
         <!--Tut Detail View Controller-->
         <scene sceneID="fTj-MF-Q7h">
@@ -177,51 +177,51 @@
                         <viewControllerLayoutGuide type="bottom" id="Tg1-tc-HjD"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gwl-jU-d9e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-DR-1ag">
-                                <rect key="frame" x="0.0" y="123" width="414" height="544"/>
+                                <rect key="frame" x="0.0" y="123" width="375" height="493"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-cV-wu0">
-                                <rect key="frame" x="8" y="686" width="80" height="30"/>
+                                <rect key="frame" x="16" y="629" width="80" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <action selector="toCountView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="UKc-We-ITz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93B-12-IzT">
-                                <rect key="frame" x="125" y="686" width="70" height="30"/>
+                                <rect key="frame" x="110" y="629" width="70" height="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
                                     <action selector="toAddView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="Emz-Gg-11Q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4q-4U-OLG">
-                                <rect key="frame" x="231" y="686" width="70" height="30"/>
+                                <rect key="frame" x="194" y="629" width="70" height="30"/>
                                 <state key="normal" title="-"/>
                                 <connections>
                                     <action selector="toSubView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="ZTL-A4-Jud"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-jE-zz7">
-                                <rect key="frame" x="336" y="686" width="70" height="30"/>
-                                <state key="normal" title="Shapes"/>
-                                <connections>
-                                    <action selector="toShapeView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="jBD-pW-gE0"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-cC-Oc8">
-                                <rect key="frame" x="245" y="80" width="161" height="30"/>
+                                <rect key="frame" x="194" y="80" width="161" height="30"/>
                                 <state key="normal" title="YouTube Video"/>
                                 <connections>
                                     <segue destination="N8v-Kd-8JJ" kind="show" identifier="videoDetail" id="80i-IY-Xnr"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-jE-zz7">
+                                <rect key="frame" x="291" y="629" width="70" height="30"/>
+                                <state key="normal" title="Shapes"/>
+                                <connections>
+                                    <action selector="toShapeView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="jBD-pW-gE0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Count" destination="Aq0-cV-wu0" id="vlN-x8-Vyl"/>
                         <outlet property="add" destination="93B-12-IzT" id="vx8-rv-9rc"/>
@@ -233,22 +233,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o1F-GB-9hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2300" y="429"/>
+            <point key="canvasLocation" x="2299.5" y="428.5"/>
         </scene>
         <!--Videos Table View Controller-->
         <scene sceneID="CtY-Rj-tSK">
             <objects>
                 <tableViewController id="N8v-Kd-8JJ" customClass="VideosTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drl-4I-ynV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5kA-0i-PxH">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kA-0i-PxH" id="jTE-HP-mda">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -261,7 +261,7 @@
                             <outlet property="delegate" destination="N8v-Kd-8JJ" id="IqA-GZ-w1S"/>
                         </connections>
                     </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-da-i87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -276,11 +276,11 @@
                         <viewControllerLayoutGuide type="bottom" id="RJG-Qn-Z61"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6W1-2t-cKG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QOU-M1-krh">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <outlet property="delegate" destination="R7a-t3-uGZ" id="hi7-ya-3KE"/>
@@ -289,14 +289,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myWebView" destination="QOU-M1-krh" id="JjH-vK-JeN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efC-wx-Y3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3256" y="429"/>
+            <point key="canvasLocation" x="3255.5" y="428.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qQ1-x9-Ajt">
@@ -329,35 +329,35 @@
                         <viewControllerLayoutGuide type="bottom" id="5FY-QD-UhM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="0my-Lp-9qZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-Z2-8Lq">
+                                <rect key="frame" x="33" y="99" width="90" height="90"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faf-NM-fTv">
-                                <rect key="frame" x="118" y="274" width="179" height="30"/>
+                                <rect key="frame" x="98" y="255" width="179" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="countGdetail" id="J5B-oZ-Wfp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npl-3O-MRO">
-                                <rect key="frame" x="118" y="378" width="179" height="30"/>
+                                <rect key="frame" x="98" y="359" width="179" height="30"/>
                                 <state key="normal" title="Addition"/>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="addGdetail" id="7kS-wa-OmH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-tw-inD">
-                                <rect key="frame" x="118" y="481" width="179" height="30"/>
+                                <rect key="frame" x="98" y="462" width="179" height="30"/>
                                 <state key="normal" title="Subtraction"/>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="subGdetail" id="Tqc-I1-99O"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-Z2-8Lq">
-                                <rect key="frame" x="33" y="99" width="90" height="90"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-la-COB">
-                                <rect key="frame" x="118" y="585" width="179" height="30"/>
+                                <rect key="frame" x="98" y="566" width="179" height="30"/>
                                 <state key="normal" title="shape"/>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="shapeGdetail" id="CVU-i4-B3c"/>
@@ -387,27 +387,17 @@
                         <viewControllerLayoutGuide type="bottom" id="k8I-RM-chs"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="47G-AD-hMn">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8in-29-SNb">
-                                <rect key="frame" x="27" y="95" width="151" height="21"/>
+                                <rect key="frame" x="20" y="95" width="151" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4V-Oa-ed5">
-                                <rect key="frame" x="28" y="612" width="130" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="button3action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="H8G-YK-ZxU"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTB-wm-BS6">
-                                <rect key="frame" x="257" y="612" width="130" height="30"/>
+                                <rect key="frame" x="225" y="583" width="130" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -417,7 +407,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-4K-pJ4">
-                                <rect key="frame" x="257" y="529" width="130" height="30"/>
+                                <rect key="frame" x="225" y="514" width="130" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -427,13 +417,13 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-bb-2BI">
-                                <rect key="frame" x="28" y="201" width="359" height="54"/>
+                                <rect key="frame" x="20" y="171" width="335" height="54"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-e2-WMB">
-                                <rect key="frame" x="28" y="529" width="130" height="30"/>
+                                <rect key="frame" x="20" y="514" width="130" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -443,13 +433,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remian Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-cJ-u1P">
-                                <rect key="frame" x="241" y="95" width="146" height="21"/>
+                                <rect key="frame" x="213" y="95" width="146" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-ar-tcH">
-                                <rect key="frame" x="112" y="317" width="190" height="101"/>
+                                <rect key="frame" x="92" y="283" width="190" height="101"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -459,7 +449,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-Vm-UXm">
-                                <rect key="frame" x="150" y="328" width="113" height="80"/>
+                                <rect key="frame" x="131" y="294" width="113" height="80"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Finish"/>
                                 <connections>
@@ -467,13 +457,23 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wCC-H9-twI">
-                                <rect key="frame" x="27" y="293" width="359" height="168"/>
+                                <rect key="frame" x="24" y="250" width="326" height="168"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4V-Oa-ed5">
+                                <rect key="frame" x="20" y="583" width="130" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button3action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="H8G-YK-ZxU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="button1" destination="J05-e2-WMB" id="fbi-pP-GWq"/>
                         <outlet property="button2" destination="R6W-4K-pJ4" id="TKy-We-ZRz"/>
@@ -489,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYm-hd-Khf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1863" y="1300"/>
+            <point key="canvasLocation" x="1862.5" y="1299.5"/>
         </scene>
         <!--Score View Controller-->
         <scene sceneID="gSd-Uk-BKc">
@@ -500,42 +500,42 @@
                         <viewControllerLayoutGuide type="bottom" id="Lum-70-BLu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QZ0-ST-csQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPe-Cx-dbP">
-                                <rect key="frame" x="101" y="194" width="213" height="70"/>
+                                <rect key="frame" x="81" y="170" width="213" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38p-d4-qFX">
-                                <rect key="frame" x="101" y="306" width="213" height="75"/>
+                                <rect key="frame" x="81" y="288" width="213" height="75"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-h1-5J7">
-                                <rect key="frame" x="37" y="496" width="91" height="30"/>
-                                <state key="normal" title="Share"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r1L-mP-8Xd">
-                                <rect key="frame" x="162" y="496" width="91" height="30"/>
+                                <rect key="frame" x="142" y="469" width="91" height="30"/>
                                 <state key="normal" title="Home"/>
                                 <connections>
                                     <segue destination="kIa-qG-Rn5" kind="show" identifier="homeDetail" id="HBY-Vd-UFC"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-t6-Wcw">
-                                <rect key="frame" x="284" y="496" width="91" height="30"/>
+                                <rect key="frame" x="264" y="469" width="91" height="30"/>
                                 <state key="normal" title="Compare"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-h1-5J7">
+                                <rect key="frame" x="20" y="469" width="91" height="30"/>
+                                <state key="normal" title="Share"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="compare" destination="J3T-t6-Wcw" id="Fa8-mR-Zen"/>
                         <outlet property="home" destination="r1L-mP-8Xd" id="rpx-LU-xkg"/>
@@ -550,8 +550,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="1dC-GU-1Rd"/>
         <segue reference="mxj-HG-eC7"/>
-        <segue reference="HBY-Vd-UFC"/>
         <segue reference="J5B-oZ-Wfp"/>
     </inferredMetricsTieBreakers>
 </document>

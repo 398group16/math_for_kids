@@ -15,5 +15,6 @@
     IBOutlet UIButton* sub;
     IBOutlet UIButton* shape;
 }
+@property (strong, nonatomic) NSString* usrName;
 
 @end

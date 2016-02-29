@@ -15,6 +15,7 @@
     IBOutlet UIImageView* usrImage3;
 }
 
+
 //-(IBAction)imageToHomeView:(id)sender;
 -(IBAction)toSignUpView:(id)sender;
 

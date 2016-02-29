@@ -64,13 +64,18 @@
     [self setQuestion];
     [self setButtons];
     
-    [UIView beginAnimations: nil context: nil];
-    [UIView setAnimationDuration:0.75];
+    /*set animation*/
+//    [UIView beginAnimations: nil context: nil];
+//    [UIView setAnimationDuration:0.75];
+//    [UIView commitAnimations];
     
     time.text = [NSString stringWithFormat:@"Remain Time: %d", timeCount];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
-    [UIView commitAnimations];
+}
+
+-(void)saveScoreToLocalLib:(int) score{
+    
 }
 
 -(void)setQuestion{
@@ -92,7 +97,7 @@
         int x = arc4random_uniform(21);
         bool repeat = false;
         if (lastNum.count != 0) {
-            while(x == 0){
+            while(x == 0){ // make sure there is no zero in our question
                 x = arc4random_uniform(21);
             }
             while(repeat == false ){
@@ -100,6 +105,9 @@
                 for(int i=0; i<lastNum.count; i++){
                     if(x == [[lastNum objectAtIndex:i] integerValue]){
                         x = arc4random_uniform(21);
+                        while(x == 0){ // make sure there is no zero in our question
+                            x = arc4random_uniform(21);
+                        }
                         repeat = false;
                     }
                 }
@@ -108,6 +116,7 @@
         [lastNum addObject:[NSNumber numberWithInteger:x]];
         NSLog(@"%d", x);
         
+        /*randomly set each buttons title*/
         if(x > 7 && x <= 14){
             x1 = x-3;
             x2 = x+2;
@@ -242,7 +251,12 @@
         
         [self presentViewController: controller animated: YES completion: nil];
     }
+}
 
+-(void)setUsrName:(NSString *)newName{
+    if(_usrName != newName){
+        _usrName = newName;
+    }
 }
 
 -(void)setCategory:(NSString*)cateName{
@@ -485,7 +499,9 @@
         ScoreViewController* dest = segue.destinationViewController;
         dest.title = @"Score";
         NSString* temp = [NSString stringWithFormat:@"%d", score];
+        [[segue destinationViewController] setCategoryG:_name];
         [[segue destinationViewController] setScore: temp];
+        [[segue destinationViewController] setUsrName:_usrName];
         
     }
 }

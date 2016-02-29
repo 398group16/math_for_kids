@@ -9,7 +9,9 @@
 #import "RootViewController.h"
 #import "HomeViewController.h"
 
-@interface RootViewController ()
+@interface RootViewController (){
+    NSString* userName;
+}
 
 @end
 
@@ -52,7 +54,8 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"homeDetail"]) {
-        
+
+        [[segue destinationViewController] setUsrName: userName];
     }
 }
 

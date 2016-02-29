@@ -40,8 +40,21 @@
     [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
     self.navigationItem.title = @"Menu";
-    self.navigationItem.backBarButtonItem.title = @"< Back";
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
 
+
+    self.navigationItem.leftBarButtonItem = backButton;
+
+}
+
+-(void)setUsrName:(NSString*)newName{
+    if(_usrName != newName){
+        _usrName = newName;
+    }
+}
+
+-(void)handleBack:(id) sender{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 //-(IBAction)toTutorialView:(id)sender{
@@ -73,6 +86,7 @@
     }else if([[segue identifier] isEqualToString:@"gameCateDetail"]){
         GameCategoryViewController* dest = segue.destinationViewController;
         dest.title = @"Game Category";
+        [[segue destinationViewController] setUsrName: _usrName];
     }
 }
 

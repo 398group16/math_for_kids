@@ -13,7 +13,6 @@
     IBOutlet UIButton* add;
     IBOutlet UIButton* sub;
     IBOutlet UIButton* shape;
-    IBOutlet UIButton* ytv;
     IBOutlet UIScrollView* field;
 
 }

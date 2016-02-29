@@ -39,6 +39,12 @@
     [[shape layer] setBorderColor:[UIColor lightGrayColor].CGColor];
 }
 
+-(void)setUsrName:(NSString *)newName{
+    if(_usrName != newName){
+        _usrName = newName;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -55,21 +61,25 @@
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Counting Game";
         [[segue destinationViewController] setCategory:@"Counting"];
+        [[segue destinationViewController] setUsrName:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"addGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Addtion Game";
         [[segue destinationViewController] setCategory:@"Addition"];
+        [[segue destinationViewController] setUsrName:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"subGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Subtraction Game";
         [[segue destinationViewController] setCategory:@"Subtraction"];
+        [[segue destinationViewController] setUsrName:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"shapeGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Shape Game";
         [[segue destinationViewController] setCategory:@"Shape"];
+        [[segue destinationViewController] setUsrName:_usrName];
     }
 }
 
