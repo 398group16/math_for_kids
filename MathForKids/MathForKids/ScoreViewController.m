@@ -8,15 +8,47 @@
 
 #import "ScoreViewController.h"
 #import "scoreObjects.h"
+#import "categoryList.h"
 
-@interface ScoreViewController (){
-    NSMutableArray* scoreArr;
-}
-@property scoreObjects* scoreObj;
+@interface ScoreViewController ()
+
+@property (nonatomic, strong) categoryList* cateList;
 
 @end
 
 @implementation ScoreViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        //intialize our data to be stored in the json file
+        [self loadScoreData];
+    }
+    return self;
+}
+
+-(void)loadScoreData{
+    
+    self.cateList = [[categoryList alloc] init];
+    
+    NSMutableArray* scoreList = [[NSMutableArray alloc] init];
+    
+    //convert NSString to NSNumber
+    NSNumberFormatter *f = [[NSNumberFormatter alloc] init];
+    f.numberStyle = NSNumberFormatterDecimalStyle;
+    NSNumber* num = [f numberFromString:_score];
+    
+    scoreObjects* score = [[scoreObjects alloc] initWithName:_usrName score:num];
+    NSLog(@"33   %@, %@", score.name, score.score);
+    [scoreList addObject:score];
+    
+    categoryList* cate = [[categoryList alloc] init];
+    cate.category = self.navigationItem.title;
+    NSLog(@"22   %@", cate.category);
+    cate.scoreList = scoreList;
+    self.cateList = cate;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -39,30 +71,40 @@
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
-    self.scoreObj.usrName = _usrName;
-    self.scoreObj.score = 10;
+    /*write json file*/
+    [self loadScoreData];
+    
+    NSMutableDictionary* dict = [self.cateList toNSDictionary];
     
     
+    NSError* error = nil;
+    NSData* jsonData = [NSJSONSerialization
+                        dataWithJSONObject:dict
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
     
-    
-}
-
--(void)setCategoryG:(NSString *)newCategory{
-    NSLog(@"%@", newCategory);
-    if(_category != newCategory){
-        _category = newCategory;
+    if ([jsonData length] > 0 && error == nil) {
+        NSString *str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+        NSLog(@"11  %@", str);
+    }else if ([jsonData length] == 0 &&
+              error == nil){
+        NSLog(@"No data was returned after serialization.");
+    }else if (error != nil){
+        NSLog(@"An error happened = %@", error);
     }
+    
+
 }
 
 -(void)setUsrName:(NSString*)newName{
-    NSLog(@"%@", newName);
+//    NSLog(@"%@", newName);
     if(_usrName != newName){
         _usrName = newName;
     }
 }
 
 - (void)setScore:(NSString*)newScore{
-    NSLog(@"%@", newScore);
+//    NSLog(@"%@", newScore);
     if (_score != newScore) {
         _score = newScore;
     }

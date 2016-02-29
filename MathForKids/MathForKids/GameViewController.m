@@ -487,8 +487,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
@@ -497,11 +495,11 @@
     NSLog(@"Score: %d", score);
     if([[segue identifier] isEqualToString:@"scoreDetail"]){
         ScoreViewController* dest = segue.destinationViewController;
-        dest.title = @"Score";
+        dest.title = [NSString stringWithFormat:@"%@", _name];
         NSString* temp = [NSString stringWithFormat:@"%d", score];
-        [[segue destinationViewController] setCategoryG:_name];
         [[segue destinationViewController] setScore: temp];
         [[segue destinationViewController] setUsrName:_usrName];
+        
         
     }
 }

@@ -17,6 +17,5 @@
 }
 @property (strong, nonatomic) NSString* score;
 @property (strong, nonatomic) NSString* usrName;
-@property (strong, nonatomic) NSString* category;
 
 @end

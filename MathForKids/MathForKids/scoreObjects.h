@@ -9,8 +9,14 @@
 #import <Foundation/Foundation.h>
 
 @interface scoreObjects : NSObject
-@property int score;
-@property NSString* usrName;
-@property NSString* category;
+
+@property (nonatomic, strong) NSNumber* score;
+@property (nonatomic, strong) NSString* name;
+
+
+-(id)initWithName:(NSString*)name_
+            score:(NSNumber*)score_;
+
+-(NSMutableDictionary*)toNSDictionary;
 
 @end

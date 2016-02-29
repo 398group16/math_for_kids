@@ -22,11 +22,7 @@
     
     [[field layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [[field layer] setBorderWidth:1.0f];
-    
-    [[ytv layer] setCornerRadius:4.0f];
-    [[ytv layer] setBorderWidth:1.0f];
-    [[ytv layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
+        
     [[Count layer] setCornerRadius:4.0f];
     [[Count layer] setBorderWidth:1.0f];
     [[Count layer] setBorderColor:[UIColor lightGrayColor].CGColor];
