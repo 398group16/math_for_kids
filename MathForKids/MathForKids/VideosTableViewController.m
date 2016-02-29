@@ -50,7 +50,7 @@
 }
 
 -(void)readJsonFromFile{
-    NSString* str = self.verify;
+    NSString* str = [self verify];
     NSString* filePath = [[NSBundle mainBundle] pathForResource: str ofType:@"json"];
 //    NSLog(@"file path: %@", filePath);
     NSError* error;

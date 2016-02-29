@@ -21,7 +21,7 @@
         if(name_ == nil){
             self.name = @"Empty";
             self.score = score_;
-            NSLog(@"%@, %@", self.name, self.score);
+//            NSLog(@"%@, %@", self.name, self.score);
         }else{
             self.score = score_;
             self.name = name_;

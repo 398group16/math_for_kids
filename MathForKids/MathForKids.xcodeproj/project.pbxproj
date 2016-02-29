@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41AAB924C47F0FEC976CB3D6 /* libPods-MathForKidsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF7697CAB967570C6FB364 /* libPods-MathForKidsUITests.a */; };
+		54459F668FAF640E3C401359 /* libPods-MathForKids.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */; };
+		6EF6B635BB132D50DD7E5350 /* libPods-MathForKidsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */; };
 		A54D34741C8458EC008453CF /* categoryList.m in Sources */ = {isa = PBXBuildFile; fileRef = A54D34731C8458EC008453CF /* categoryList.m */; };
 		A56CD79F1C830BD7007001F7 /* ScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A56CD79E1C830BD7007001F7 /* ScoreViewController.m */; };
+		A587F7591C84E1CB00376AE6 /* sub_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B531C806C3100A85215 /* sub_links.json */; };
 		A58CE5491C7F041B002B876E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5481C7F041B002B876E /* main.m */; };
 		A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54B1C7F041B002B876E /* AppDelegate.m */; };
 		A58CE5521C7F041B002B876E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58CE5501C7F041B002B876E /* Main.storyboard */; };
@@ -33,7 +37,6 @@
 		A5B43B541C806C3100A85215 /* add_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B501C806C3100A85215 /* add_links.json */; };
 		A5B43B551C806C3100A85215 /* count_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B511C806C3100A85215 /* count_links.json */; };
 		A5B43B561C806C3100A85215 /* shape_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B521C806C3100A85215 /* shape_links.json */; };
-		A5B43B571C806C3100A85215 /* sub_links.json in Resources */ = {isa = PBXBuildFile; fileRef = A5B43B531C806C3100A85215 /* sub_links.json */; };
 		A5C6F2321C83B2FC00D2668D /* scoreObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C6F2311C83B2FC00D2668D /* scoreObjects.m */; };
 		A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */; };
 		A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */; };
@@ -57,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B54DAA7FB08C6640AD9F320 /* Pods-MathForKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		5075CDB475CE891CF651FF7D /* Pods-MathForKidsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsUITests/Pods-MathForKidsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKidsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECF7697CAB967570C6FB364 /* libPods-MathForKidsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKidsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		97A09B642523EB99AABA8CD1 /* Pods-MathForKidsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsUITests/Pods-MathForKidsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A54D34721C8458EC008453CF /* categoryList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = categoryList.h; sourceTree = "<group>"; };
 		A54D34731C8458EC008453CF /* categoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = categoryList.m; sourceTree = "<group>"; };
 		A56CD79D1C830BD7007001F7 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
@@ -109,6 +118,9 @@
 		A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCategoryViewController.m; sourceTree = "<group>"; };
 		A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		B2079AD1898A03B341308E14 /* Pods-MathForKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids.debug.xcconfig"; sourceTree = "<group>"; };
+		BF58B7517D101E07C376B76B /* Pods-MathForKidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED2E3DFB5F1E698F6828E885 /* Pods-MathForKids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKids.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54459F668FAF640E3C401359 /* libPods-MathForKids.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +136,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF6B635BB132D50DD7E5350 /* libPods-MathForKidsTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,12 +144,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41AAB924C47F0FEC976CB3D6 /* libPods-MathForKidsUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18ACE7E3F00C2E8D225D973E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2079AD1898A03B341308E14 /* Pods-MathForKids.debug.xcconfig */,
+				ED2E3DFB5F1E698F6828E885 /* Pods-MathForKids.release.xcconfig */,
+				BF58B7517D101E07C376B76B /* Pods-MathForKidsTests.debug.xcconfig */,
+				0B54DAA7FB08C6640AD9F320 /* Pods-MathForKidsTests.release.xcconfig */,
+				5075CDB475CE891CF651FF7D /* Pods-MathForKidsUITests.debug.xcconfig */,
+				97A09B642523EB99AABA8CD1 /* Pods-MathForKidsUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7F92094DD6B5E0A22838D1FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */,
+				6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */,
+				8ECF7697CAB967570C6FB364 /* libPods-MathForKidsUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A58CE53B1C7F041B002B876E = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +185,8 @@
 				A58CE5601C7F041B002B876E /* MathForKidsTests */,
 				A58CE56B1C7F041B002B876E /* MathForKidsUITests */,
 				A58CE5451C7F041B002B876E /* Products */,
+				18ACE7E3F00C2E8D225D973E /* Pods */,
+				7F92094DD6B5E0A22838D1FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,9 +281,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKids" */;
 			buildPhases = (
+				B9B802021D4C33AAA4A92226 /* Check Pods Manifest.lock */,
 				A58CE5401C7F041B002B876E /* Sources */,
 				A58CE5411C7F041B002B876E /* Frameworks */,
 				A58CE5421C7F041B002B876E /* Resources */,
+				DEF114FEF10E742879A27AD0 /* Embed Pods Frameworks */,
+				2CB0ECD676D7533735E2752F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -258,9 +301,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */;
 			buildPhases = (
+				3943401C5D7BE77166C3DBA8 /* Check Pods Manifest.lock */,
 				A58CE5591C7F041B002B876E /* Sources */,
 				A58CE55A1C7F041B002B876E /* Frameworks */,
 				A58CE55B1C7F041B002B876E /* Resources */,
+				14AD670CE475755FA7A806B1 /* Embed Pods Frameworks */,
+				A678C06DB5DC56FDAE8480E0 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -276,9 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */;
 			buildPhases = (
+				4C256EC2A43572A3C8F18791 /* Check Pods Manifest.lock */,
 				A58CE5641C7F041B002B876E /* Sources */,
 				A58CE5651C7F041B002B876E /* Frameworks */,
 				A58CE5661C7F041B002B876E /* Resources */,
+				8BD86448A4CB30DF507A4B75 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -340,7 +388,7 @@
 				A5B43B541C806C3100A85215 /* add_links.json in Resources */,
 				A5B43B551C806C3100A85215 /* count_links.json in Resources */,
 				A5B43B561C806C3100A85215 /* shape_links.json in Resources */,
-				A5B43B571C806C3100A85215 /* sub_links.json in Resources */,
+				A587F7591C84E1CB00376AE6 /* sub_links.json in Resources */,
 				A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */,
 				A58CE5951C7F199E002B876E /* AdditionViewController.xib in Resources */,
 				A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */,
@@ -366,6 +414,129 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		14AD670CE475755FA7A806B1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CB0ECD676D7533735E2752F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3943401C5D7BE77166C3DBA8 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C256EC2A43572A3C8F18791 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD86448A4CB30DF507A4B75 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathForKidsUITests/Pods-MathForKidsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A678C06DB5DC56FDAE8480E0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9B802021D4C33AAA4A92226 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DEF114FEF10E742879A27AD0 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A58CE5401C7F041B002B876E /* Sources */ = {
@@ -525,6 +696,7 @@
 		};
 		A58CE5721C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2079AD1898A03B341308E14 /* Pods-MathForKids.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathForKids/Info.plist;
@@ -536,6 +708,7 @@
 		};
 		A58CE5731C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED2E3DFB5F1E698F6828E885 /* Pods-MathForKids.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MathForKids/Info.plist;
@@ -547,6 +720,7 @@
 		};
 		A58CE5751C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF58B7517D101E07C376B76B /* Pods-MathForKidsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
@@ -559,6 +733,7 @@
 		};
 		A58CE5761C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B54DAA7FB08C6640AD9F320 /* Pods-MathForKidsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
@@ -571,6 +746,7 @@
 		};
 		A58CE5781C7F041B002B876E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5075CDB475CE891CF651FF7D /* Pods-MathForKidsUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -583,6 +759,7 @@
 		};
 		A58CE5791C7F041B002B876E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97A09B642523EB99AABA8CD1 /* Pods-MathForKidsUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
