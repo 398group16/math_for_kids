@@ -95,11 +95,11 @@
         /*set random correct answers and random wrong answers, make sure no repeat questions*/
         int x1, x2, x3;
         int x = arc4random_uniform(21);
+        while(x == 0){ // make sure there is no zero in our question
+            x = arc4random_uniform(21);
+        }
         bool repeat = false;
         if (lastNum.count != 0) {
-            while(x == 0){ // make sure there is no zero in our question
-                x = arc4random_uniform(21);
-            }
             while(repeat == false ){
                 repeat = true;
                 for(int i=0; i<lastNum.count; i++){
