@@ -117,18 +117,45 @@
     NSError* error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[oldJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:[dict count]];
-    /*format old json*/
-    for (NSDictionary* one in dict)
-    {
-        [array addObject:one];
-    }
     
-    /*add new json*/
     error = nil;
     NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[newJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    [array addObject:newDict];
+     /*combine old and new*/
+    bool found = false;
+    for (NSDictionary* one in dict){
+        NSString* tempCate = [one valueForKey:@"category"];
+        NSString* newCate = [newDict valueForKey:@"category"];
+        
+        if ([tempCate isEqualToString:newCate]) {
+            found = true;
+            NSDictionary* tempScore = [one valueForKey:@"scoreList"];
+            NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
+            
+            for(NSDictionary* s in tempScore){
+                [arrayS addObject:s];
+            }
+            
+            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
+            for(NSDictionary* s in tempS){
+                [arrayS addObject:s];
+            }
+//            NSLog(@"22222");
+            NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
+            [tempDict setValue:tempCate forKey:@"category"];
+            [tempDict setValue:arrayS forKey:@"scoreList"];
+//            NSLog(@"11111");
+            [array addObject:tempDict];
+        }else{
+            [array addObject:one];
+        }
+        
+        
+    }
+    /*if new json have a new value of category, then add new json*/
+    if (!found) {
+        [array addObject:newDict];
+    }
     
-    /*combine old and new*/
     error = nil;
     NSData* jsonData = [NSJSONSerialization
                         dataWithJSONObject:array

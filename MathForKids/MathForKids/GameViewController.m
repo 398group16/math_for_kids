@@ -285,6 +285,7 @@
         finish.enabled = YES;
     }
     
+    
     if(correct == 0){
         [[button1 layer] setBackgroundColor:[UIColor greenColor].CGColor];
         [[button2 layer] setBackgroundColor:[UIColor redColor].CGColor];
@@ -366,6 +367,8 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
+    
+    
 
     if(correct == 1){
         [question setText:@"Correct Answer! Congratulations!"];
