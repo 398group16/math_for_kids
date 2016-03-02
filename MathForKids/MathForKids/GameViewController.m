@@ -432,6 +432,7 @@
 }
 
 -(IBAction)skipAction:(id)sender{
+    [timer invalidate];
     [self refreshView];
 }
 
