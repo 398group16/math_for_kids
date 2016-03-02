@@ -356,7 +356,6 @@
         button3.enabled = NO;
         button4.enabled = NO;
         
-        imageField.hidden = YES;
         if(gameCount+1 < 10){
             next.hidden = NO;
             next.enabled = YES;
@@ -430,7 +429,7 @@
 -(IBAction)button1action:(id)sender{
     [timer invalidate];
     scoreTime = timeCount;
-    imageField.hidden = YES;
+
     if(gameCount+1 < 10){
         next.hidden = NO;
         next.enabled = YES;
@@ -485,7 +484,6 @@
     [timer invalidate];
     scoreTime = timeCount;
     
-    imageField.hidden = YES;
     if(gameCount+1 < 10){
         next.hidden = NO;
         next.enabled = YES;
@@ -539,7 +537,6 @@
     [timer invalidate];
     scoreTime = timeCount;
     
-    imageField.hidden = YES;
     if(gameCount+1 < 10){
         next.hidden = NO;
         next.enabled = YES;
@@ -591,7 +588,6 @@
     [timer invalidate];
     scoreTime = timeCount;
     
-    imageField.hidden = YES;
     if(gameCount+1 < 10){
         next.hidden = NO;
         next.enabled = YES;
