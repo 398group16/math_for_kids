@@ -463,13 +463,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-M8-ZUU">
-                                <rect key="frame" x="250" y="454" width="105" height="38"/>
+                                <rect key="frame" x="250" y="458" width="105" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" red="1" green="0.03014565537" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="nextAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="6CK-Mn-LCT"/>
+                                    <action selector="skipAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="CcP-nm-yZm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-Vm-UXm">
@@ -494,6 +494,7 @@
                         <outlet property="kind" destination="8in-29-SNb" id="ltw-u7-AyQ"/>
                         <outlet property="next" destination="yWs-ar-tcH" id="oF3-YO-HX1"/>
                         <outlet property="question" destination="uO9-bb-2BI" id="N23-pm-Od1"/>
+                        <outlet property="skip" destination="8FE-M8-ZUU" id="N4P-Da-sHz"/>
                         <outlet property="time" destination="XMV-cJ-u1P" id="Ssz-Se-J8L"/>
                     </connections>
                 </viewController>

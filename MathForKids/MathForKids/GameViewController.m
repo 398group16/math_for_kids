@@ -57,6 +57,10 @@
     [[finish layer] setBorderWidth:1.0f];
     [[finish layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
+    [[skip layer] setCornerRadius:4.0f];
+    [[skip layer] setBorderWidth:1.0f];
+    [[skip layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
     next.hidden = YES;
     next.enabled = NO;
     finish.hidden = YES;
@@ -101,7 +105,7 @@
 }
 
 -(void)setButtons{
-    
+    skip.enabled = YES;
     int s = 999;
     int s1 = s;
     int s2 = s;
@@ -355,6 +359,7 @@
         button2.enabled = NO;
         button3.enabled = NO;
         button4.enabled = NO;
+        skip.enabled = NO;
         
         if(gameCount+1 < 10){
             next.hidden = NO;
@@ -391,18 +396,18 @@
     }else{
         score = (score*100)/500;
         NSLog(@"Your Score is: %d", score);
-        
-        UIAlertController *controller = [UIAlertController alertControllerWithTitle: @"Your Score:"
-                                                                            message: [NSString stringWithFormat:@"%d", score]
-                                                                     preferredStyle: UIAlertControllerStyleAlert];
-        UIAlertAction *alertAction = [UIAlertAction actionWithTitle: @"OK"
-                                                              style: UIAlertActionStyleDestructive
-                                                            handler: ^(UIAlertAction *action) {
-                                                                NSLog(@"OK button tapped!");
-                                                            }];
-        [controller addAction: alertAction];
-        
-        [self presentViewController: controller animated: YES completion: nil];
+        skip.enabled = NO;
+//        UIAlertController *controller = [UIAlertController alertControllerWithTitle: @"Your Score:"
+//                                                                            message: [NSString stringWithFormat:@"%d", score]
+//                                                                     preferredStyle: UIAlertControllerStyleAlert];
+//        UIAlertAction *alertAction = [UIAlertAction actionWithTitle: @"OK"
+//                                                              style: UIAlertActionStyleDestructive
+//                                                            handler: ^(UIAlertAction *action) {
+//                                                                NSLog(@"OK button tapped!");
+//                                                            }];
+//        [controller addAction: alertAction];
+//        
+//        [self presentViewController: controller animated: YES completion: nil];
     }
 }
 
@@ -424,6 +429,10 @@
     next.enabled = NO;
     [self refreshView];
     
+}
+
+-(IBAction)skipAction:(id)sender{
+    [self refreshView];
 }
 
 -(IBAction)button1action:(id)sender{
@@ -466,6 +475,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
+    skip.enabled = NO;
     
     if(correct == 0){
         [question setText:@"Correct Answer! Congratulations!"];
@@ -519,7 +529,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    
+    skip.enabled = NO;
     
 
     if(correct == 1){
@@ -572,6 +582,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
+    skip.enabled = NO;
 
     if(correct == 2){
         [question setText:@"Correct Answer! Congratulations!"];
@@ -623,6 +634,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
+    skip.enabled = NO;
 
     if(correct == 3){
         [question setText:@"Correct Answer! Congratulations!"];

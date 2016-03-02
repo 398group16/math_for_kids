@@ -19,6 +19,7 @@
     IBOutlet UIButton* button4;
     IBOutlet UIButton* next;
     IBOutlet UIButton* finish;
+    IBOutlet UIButton* skip;
     NSTimer* timer;
 }
 @property (strong, nonatomic) NSString* name;
@@ -29,6 +30,7 @@
 -(IBAction)button3action:(id)sender;
 -(IBAction)button4action:(id)sender;
 -(IBAction)nextAction:(id)sender;
+-(IBAction)skipAction:(id)sender;
 
 
 @end
