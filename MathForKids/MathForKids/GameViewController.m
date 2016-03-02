@@ -15,7 +15,8 @@
     int gameCount;
     int timeCount;
     int correct;
-    NSMutableArray* lastNum;
+    NSMutableArray* lastNumX;
+    NSMutableArray* lastNumY;
 }
 
 @end
@@ -28,7 +29,7 @@
     scoreTime = 0;
     gameCount = 0;
     timeCount = 10;
-    lastNum = [[NSMutableArray alloc] init];
+    lastNumX = [[NSMutableArray alloc] init];
     
     kind.text = [NSString stringWithFormat:@"Category: %@", _name];
     
@@ -79,12 +80,33 @@
 }
 
 -(void)setQuestion{
-    [question setText:@"Please count how many items in picture: "];
-    [question setTextColor:[UIColor blackColor]];
-    [question setFont:[UIFont boldSystemFontOfSize:18]];
+    if([_name isEqual:@"Counting"]){
+        [question setText:@"Please count how many items in picture: "];
+        [question setTextColor:[UIColor blackColor]];
+        [question setFont:[UIFont boldSystemFontOfSize:18]];
+    }else if([_name isEqual:@"Addition"]){
+        [question setText:@"Please choose the answer of blow 2 numbers addition: "];
+        [question setTextColor:[UIColor blackColor]];
+        [question setFont:[UIFont boldSystemFontOfSize:18]];
+    }else if([_name isEqual:@"Subtraction"]){
+        [question setText:@"Please choose the answer of blow 2 numbers subtraction: "];
+        [question setTextColor:[UIColor blackColor]];
+        [question setFont:[UIFont boldSystemFontOfSize:18]];
+    }else if([_name isEqual:@"Shape"]){
+        [question setText:@"Please choose the name of shape: "];
+        [question setTextColor:[UIColor blackColor]];
+        [question setFont:[UIFont boldSystemFontOfSize:18]];
+    }
+    
 }
 
 -(void)setButtons{
+    
+    int s = 999;
+    int s1 = s;
+    int s2 = s;
+    int s3 = s;
+    int x, y;
     
     if([_name isEqual:@"Counting"]){
         [[button1 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
@@ -93,17 +115,17 @@
         [[button4 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
         
         /*set random correct answers and random wrong answers, make sure no repeat questions*/
-        int x1, x2, x3;
-        int x = arc4random_uniform(21);
+        
+        x = arc4random_uniform(21);
         while(x == 0){ // make sure there is no zero in our question
             x = arc4random_uniform(21);
         }
         bool repeat = false;
-        if (lastNum.count != 0) {
+        if (lastNumX.count != 0) {
             while(repeat == false ){
                 repeat = true;
-                for(int i=0; i<lastNum.count; i++){
-                    if(x == [[lastNum objectAtIndex:i] integerValue]){
+                for(int i=0; i<lastNumX.count; i++){
+                    if(x == [[lastNumX objectAtIndex:i] integerValue]){
                         x = arc4random_uniform(21);
                         while(x == 0){ // make sure there is no zero in our question
                             x = arc4random_uniform(21);
@@ -113,56 +135,188 @@
                 }
             }
         }
-        [lastNum addObject:[NSNumber numberWithInteger:x]];
+        [lastNumX addObject:[NSNumber numberWithInteger:x]];
         NSLog(@"%d", x);
-        
+        s = x;
         /*randomly set each buttons title*/
-        if(x > 7 && x <= 14){
-            x1 = x-3;
-            x2 = x+2;
-            x3 = x-1;
-        }else if(x <= 7){
-            x1 = x+1;
-            x2 = x+2;
-            x3 = x+3;
+        if(s > 7 && s <= 14){
+            s1 = s-3;
+            s2 = s+2;
+            s3 = s-1;
+        }else if(s <= 7){
+            s1 = s+1;
+            s2 = s+2;
+            s3 = s+3;
         }else{
-            x1 = x-3;
-            x2 = x-2;
-            x3 = x-1;
+            s1 = s-3;
+            s2 = s-2;
+            s3 = s-1;
         }
-        
-        
 //        NSLog(@"%d, %d, %d, %d", x, x1, x2, x3);
-        int y = arc4random_uniform(4);
-        
-        correct = y;
+        correct = arc4random_uniform(4);
     
-        if(y == 0){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", x] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", x2] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", x1] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", x3] forState:UIControlStateNormal];
-            
-        }else if(y == 1){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", x1] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", x] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", x2] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", x3] forState:UIControlStateNormal];
-            
-        }else if(y == 2){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", x2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", x1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", x] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", x3] forState:UIControlStateNormal];
-            
-        }else{
-            [button1 setTitle:[NSString stringWithFormat:@"%d", x2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", x1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", x3] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", x] forState:UIControlStateNormal];
+    }else if([_name isEqual:@"Addition"]){
+        [[button1 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button2 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button3 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button4 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        
+        /*set random correct answers and random wrong answers, make sure no repeat questions*/
+        x = arc4random_uniform(21);
+        y = arc4random_uniform(21);
+        while(x == 0 || y == 0){ // make sure there is no zero in our question
+            x = arc4random_uniform(21);
+            y = arc4random_uniform(21);
         }
+        bool repeat = false;
+        if (lastNumX.count != 0) {
+            while(repeat == false ){
+                repeat = true;
+                for(int i=0; i<lastNumX.count; i++){
+                    if(x == [[lastNumX objectAtIndex:i] integerValue]){
+                        x = arc4random_uniform(21);
+                        while(x == 0){ // make sure there is no zero in our question
+                            x = arc4random_uniform(21);
+                        }
+                        repeat = false;
+                    }
+                }
+            }
+        }
+        [lastNumX addObject:[NSNumber numberWithInteger:x]];
+        
+        if (lastNumY.count != 0) {
+            while(repeat == false ){
+                repeat = true;
+                for(int i=0; i<lastNumY.count; i++){
+                    if(y == [[lastNumY objectAtIndex:i] integerValue]){
+                        y = arc4random_uniform(21);
+                        while(y == 0){ // make sure there is no zero in our question
+                            y = arc4random_uniform(21);
+                        }
+                        repeat = false;
+                    }
+                }
+            }
+        }
+        [lastNumY addObject:[NSNumber numberWithInteger:y]];
+        
+        
+        s = x+y;
+        NSLog(@"%d + %d = %d", x, y, s);
+    
+        if (s <= 13) {
+            s1 = s+1;
+            s2 = s+2;
+            s3 = s+3;
+        }else if (s > 13 && s <= 26){
+            s1 = s+1;
+            s2 = s-1;
+            s3 = s-2;
+        }else{
+            s1 = s-1;
+            s2 = s-2;
+            s3 = s-3;
+        }
+        
+        correct = arc4random_uniform(4);
+        
+        
+    }else if([_name isEqual:@"Subtraction"]){
+        [[button1 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button2 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button3 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        [[button4 layer] setBackgroundColor:[UIColor whiteColor].CGColor];
+        
+        /*set random correct answers and random wrong answers, make sure no repeat questions*/
+        x = arc4random_uniform(21);
+        y = arc4random_uniform(21);
+        while(x == 0 || y == 0){ // make sure there is no zero in our question
+            x = arc4random_uniform(21);
+            y = arc4random_uniform(21);
+        }
+        bool repeat = false;
+        if (lastNumX.count != 0) {
+            while(repeat == false ){
+                repeat = true;
+                for(int i=0; i<lastNumX.count; i++){
+                    if(x == [[lastNumX objectAtIndex:i] integerValue]){
+                        x = arc4random_uniform(21);
+                        while(x == 0){ // make sure there is no zero in our question
+                            x = arc4random_uniform(21);
+                        }
+                        repeat = false;
+                    }
+                }
+            }
+        }
+        [lastNumX addObject:[NSNumber numberWithInteger:x]];
+        
+        if (lastNumY.count != 0) {
+            while(repeat == false ){
+                repeat = true;
+                for(int i=0; i<lastNumY.count; i++){
+                    if(y == [[lastNumY objectAtIndex:i] integerValue]){
+                        y = arc4random_uniform(21);
+                        while(y == 0){ // make sure there is no zero in our question
+                            y = arc4random_uniform(21);
+                        }
+                        repeat = false;
+                    }
+                }
+            }
+        }
+        [lastNumY addObject:[NSNumber numberWithInteger:y]];
+        
+        if(x>y){
+            s = x-y;
+        }else{
+            s = y-x;
+        }
+        
+        NSLog(@"%d, %d = %d", x, y, s);
+        
+        if (s <= 13) {
+            s1 = s+1;
+            s2 = s+2;
+            s3 = s+3;
+        }else if (s > 13 && s <= 26){
+            s1 = s+1;
+            s2 = s-1;
+            s3 = s-2;
+        }else{
+            s1 = s-1;
+            s2 = s-2;
+            s3 = s-3;
+        }
+        
+        correct = arc4random_uniform(4);
     }
-
+    
+    if(correct == 0){
+        [button1 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+        [button2 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+        [button3 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+        
+    }else if(correct == 1){
+        [button1 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+        [button2 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+        [button3 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+        
+    }else if(correct == 2){
+        [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+        [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+        [button3 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+        
+    }else{
+        [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+        [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+        [button3 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+        [button4 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+    }
 }
 
 -(void)countDown{
