@@ -92,7 +92,7 @@
         if (nil == temp) {
             [self writeToFile:str];
         }else{
-            NSLog(@"%@", temp);
+//            NSLog(@"%@", temp);
             NSString* combine = [self appendJsonFile:temp newJson:str];
             NSLog(@"Combine: %@", combine);
             [self writeToFile:combine];
@@ -165,7 +165,7 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    NSLog(@"Combine JSON: %@", str);
+//    NSLog(@"Combine JSON: %@", str);
     return str;
 }
 
