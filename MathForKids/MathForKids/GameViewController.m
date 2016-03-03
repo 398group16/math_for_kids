@@ -39,6 +39,7 @@
     
     
     kind.text = [NSString stringWithFormat:@"Category: %@", _name];
+    [kind setFont:[UIFont boldSystemFontOfSize:18]];
     
     [[button1 layer] setCornerRadius:4.0f];
     [[button1 layer] setBorderWidth:1.0f];
@@ -94,7 +95,11 @@
 //    [UIView setAnimationDuration:0.75];
 //    [UIView commitAnimations];
     
-    time.text = [NSString stringWithFormat:@"Remain Time: %d", timeCount];
+    time.text = [NSString stringWithFormat:@"%d", timeCount];
+    [time setFont:[UIFont boldSystemFontOfSize:18]];
+    [[time layer] setCornerRadius:time.frame.size.width/2];
+    [[time layer] setBorderWidth:2.0f];
+    [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
 }
@@ -338,7 +343,7 @@
 
 -(void)countDown{
     timeCount -= 1;
-    time.text = [NSString stringWithFormat:@"Remain Time: %d", timeCount];
+    time.text = [NSString stringWithFormat:@"%d", timeCount];
     if(timeCount == 0){
         [UIView beginAnimations: nil context: nil];
         [UIView setAnimationDuration:0.75];
@@ -478,6 +483,8 @@
         finish.enabled = YES;
     }
     
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.75];
     
     if(correct == 0){
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -516,11 +523,6 @@
         [button4  setBackgroundColor:[UIColor greenColor]];
         
     }
-    button1.enabled = NO;
-    button2.enabled = NO;
-    button3.enabled = NO;
-    button4.enabled = NO;
-    skip.enabled = NO;
     
     if(correct == 0){
         [question setText:@"Correct Answer! Congratulations!"];
@@ -532,6 +534,13 @@
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
     
+    [UIView commitAnimations];
+    
+    button1.enabled = NO;
+    button2.enabled = NO;
+    button3.enabled = NO;
+    button4.enabled = NO;
+    skip.enabled = NO;
     
 }
 
@@ -547,6 +556,10 @@
         finish.enabled = YES;
     }
     
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.75];
+    
+    
     if(correct == 0){
         [button1  setBackgroundColor:[UIColor greenColor]];
         [button2  setBackgroundColor:[UIColor redColor]];
@@ -581,13 +594,7 @@
         [button2 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }
-    button1.enabled = NO;
-    button2.enabled = NO;
-    button3.enabled = NO;
-    button4.enabled = NO;
-    skip.enabled = NO;
     
-
     if(correct == 1){
         [question setText:@"Correct Answer! Congratulations!"];
         [question setTextColor:[UIColor greenColor]];
@@ -597,6 +604,14 @@
         [question setTextColor:[UIColor redColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
+    
+    [UIView commitAnimations];
+    
+    button1.enabled = NO;
+    button2.enabled = NO;
+    button3.enabled = NO;
+    button4.enabled = NO;
+    skip.enabled = NO;
 }
 
 -(IBAction)button3action:(id)sender3{
@@ -610,6 +625,10 @@
         finish.hidden = NO;
         finish.enabled = YES;
     }
+    
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.75];
+    
     
     if(correct == 0){
         [button1 setBackgroundColor:[UIColor greenColor]];
@@ -645,12 +664,7 @@
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }
-    button1.enabled = NO;
-    button2.enabled = NO;
-    button3.enabled = NO;
-    button4.enabled = NO;
-    skip.enabled = NO;
-
+    
     if(correct == 2){
         [question setText:@"Correct Answer! Congratulations!"];
         [question setTextColor:[UIColor greenColor]];
@@ -660,6 +674,14 @@
         [question setTextColor:[UIColor redColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
+    
+    [UIView commitAnimations];
+    
+    button1.enabled = NO;
+    button2.enabled = NO;
+    button3.enabled = NO;
+    button4.enabled = NO;
+    skip.enabled = NO;
 }
 
 -(IBAction)button4action:(id)sender{
@@ -673,6 +695,10 @@
         finish.hidden = NO;
         finish.enabled = YES;
     }
+    
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.75];
+    
     
     if(correct == 0){
         [button1 setBackgroundColor:[UIColor greenColor]];
@@ -708,11 +734,7 @@
         
         score = score+scoreTime+40;
     }
-    button1.enabled = NO;
-    button2.enabled = NO;
-    button3.enabled = NO;
-    button4.enabled = NO;
-    skip.enabled = NO;
+    
 
     if(correct == 3){
         [question setText:@"Correct Answer! Congratulations!"];
@@ -723,6 +745,14 @@
         [question setTextColor:[UIColor redColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
+    
+    [UIView commitAnimations];
+    
+    button1.enabled = NO;
+    button2.enabled = NO;
+    button3.enabled = NO;
+    button4.enabled = NO;
+    skip.enabled = NO;
 }
 
 - (void)didReceiveMemoryWarning {
