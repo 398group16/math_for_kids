@@ -11,7 +11,9 @@
 @interface GameViewController : UIViewController{
     IBOutlet UILabel* kind;
     IBOutlet UILabel* time;
-    IBOutlet UIView* imageField;
+//    IBOutlet UIView* imageField;
+    IBOutlet UIImageView* imageField;
+    IBOutlet UITextView* txtField;
     IBOutlet UITextView* question;
     IBOutlet UIButton* button1;
     IBOutlet UIButton* button2;
