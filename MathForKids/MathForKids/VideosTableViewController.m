@@ -109,7 +109,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         id pairValue = self.objects[indexPath.row];
         NSString* object = pairValue[@"url"];
-        [[segue destinationViewController] setDetailItem:object];
+//        [[segue destinationViewController] setDetailItem:object];
     }
 }
 
