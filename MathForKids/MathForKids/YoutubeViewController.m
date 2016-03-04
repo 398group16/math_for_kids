@@ -26,7 +26,7 @@
 // sets video parameters
 - (NSDictionary *)setVidPara {
     NSDictionary *playerVars = @{
-                                 @"playsinline": @1,
+                                 @"playsinline": @0,
                                  @"loop": @1,
                                  @"controls": @0,
                                  @"nologo": @1,

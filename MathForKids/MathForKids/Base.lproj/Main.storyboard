@@ -238,7 +238,6 @@
         <!--Videos Table View Controller-->
         <scene sceneID="CtY-Rj-tSK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-da-i87" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="N8v-Kd-8JJ" customClass="VideosTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drl-4I-ynV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -264,13 +263,13 @@
                     </tableView>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-da-i87" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2776" y="429"/>
         </scene>
         <!--Youtube View Controller-->
         <scene sceneID="boj-iO-V6z">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="efC-wx-Y3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="R7a-t3-uGZ" customClass="YoutubeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J0k-EH-asF"/>
@@ -345,6 +344,7 @@
                         <outlet property="playlistSubtractionButton" destination="cVM-Pi-Vcl" id="WUm-e2-Yz6"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efC-wx-Y3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3255.5" y="428.5"/>
         </scene>

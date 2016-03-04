@@ -208,13 +208,13 @@
 		A58CE5461C7F041B002B876E /* MathForKids */ = {
 			isa = PBXGroup;
 			children = (
+				353030E71C897E9E004E4BA6 /* Assets.bundle */,
 				353030E31C89482E004E4BA6 /* YTPlayerView.h */,
 				353030E41C89482E004E4BA6 /* YTPlayerView.m */,
 				A54D34721C8458EC008453CF /* categoryList.h */,
 				A54D34731C8458EC008453CF /* categoryList.m */,
 				A5C6F2301C83B2FC00D2668D /* scoreObjects.h */,
 				A5C6F2311C83B2FC00D2668D /* scoreObjects.m */,
-				353030E71C897E9E004E4BA6 /* Assets.bundle */,
 				A56CD79D1C830BD7007001F7 /* ScoreViewController.h */,
 				A56CD79E1C830BD7007001F7 /* ScoreViewController.m */,
 				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
