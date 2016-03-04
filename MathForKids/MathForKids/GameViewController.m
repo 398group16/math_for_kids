@@ -43,45 +43,52 @@
     [[button1 layer] setBorderWidth:1.0f];
     [[button1 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+    [button1.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
     button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button1 setAlpha:0.72];
+    [button1 setAlpha:0.9];
 
     [[button2 layer] setCornerRadius:4.0f];
     [[button2 layer] setBorderWidth:1.0f];
     [[button2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button2 setAlpha:0.72];
+    [button2.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
+    [button2 setAlpha:0.9];
   
     [[button3 layer] setCornerRadius:4.0f];
     [[button3 layer] setBorderWidth:1.0f];
     [[button3 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button3 setAlpha:0.72];
+    [button3.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
+    [button3 setAlpha:0.9];
     
     [[button4 layer] setCornerRadius:4.0f];
     [[button4 layer] setBorderWidth:1.0f];
     [[button4 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button4 setAlpha:0.72];
+    [button4.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
+    [button4 setAlpha:0.9];
     
     [[next layer] setCornerRadius:4.0f];
     [[next layer] setBorderWidth:1.0f];
     [[next layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [next setBackgroundColor:[UIColor blackColor]];
-    [next setAlpha:0.72];
+    [next.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
+    [next setAlpha:0.83];
     
     [[finish layer] setCornerRadius:4.0f];
     [[finish layer] setBorderWidth:1.0f];
     [[finish layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [finish setBackgroundColor:[UIColor blackColor]];
-    [finish setAlpha:0.72];
+    [finish.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
+    [finish setAlpha:0.83];
     
     [[skip layer] setCornerRadius:4.0f];
     [[skip layer] setBorderWidth:1.0f];
     [[skip layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [skip.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
     [skip setBackgroundColor:[UIColor blackColor]];
     [skip setAlpha:0.72];
     
@@ -407,28 +414,28 @@
         
         if(correct == 0){
             [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-            [button1  setBackgroundColor:[UIColor greenColor]];
-            [button2  setBackgroundColor:[UIColor redColor]];
-            [button3  setBackgroundColor:[UIColor redColor]];
-            [button4  setBackgroundColor:[UIColor redColor]];
+            [button1  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         }else if(correct == 1){
             [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-            [button1  setBackgroundColor:[UIColor redColor]];
-            [button2  setBackgroundColor:[UIColor greenColor]];
-            [button3  setBackgroundColor:[UIColor redColor]];
-            [button4  setBackgroundColor:[UIColor redColor]];
+            [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button2  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         }else if(correct == 2){
             [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-            [button1  setBackgroundColor:[UIColor redColor]];
-            [button2  setBackgroundColor:[UIColor redColor]];
-            [button3  setBackgroundColor:[UIColor greenColor]];
-            [button4  setBackgroundColor:[UIColor redColor]];
+            [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button3  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         }else{
             [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-            [button1  setBackgroundColor:[UIColor redColor]];
-            [button2  setBackgroundColor:[UIColor redColor]];
-            [button3  setBackgroundColor:[UIColor redColor]];
-            [button4  setBackgroundColor:[UIColor greenColor]];
+            [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+            [button4  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         }
         button1.enabled = NO;
         button2.enabled = NO;
@@ -508,28 +515,28 @@
     
     if(correct == 0){
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-        [button1  setBackgroundColor:[UIColor greenColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
     }else if(correct == 1){
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor greenColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
     }else if(correct == 2){
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor greenColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
     }else{
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor greenColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
     }
     button1.enabled = NO;
     button2.enabled = NO;
@@ -566,38 +573,38 @@
     if(correct == 0){
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        [button1  setBackgroundColor:[UIColor greenColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         score = score+scoreTime+50;
     }else if(correct == 1){
         [button1 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor greenColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
     }else if(correct == 2){
         [button1 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor greenColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
     }else{
         [button1 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor greenColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
     }
     
@@ -638,35 +645,35 @@
     
     
     if(correct == 0){
-        [button1  setBackgroundColor:[UIColor greenColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button2 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 1){
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor greenColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
         score = score+scoreTime+50;
     }else if(correct == 2){
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor greenColor]];
-        [button4  setBackgroundColor:[UIColor redColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button2 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else{
-        [button1  setBackgroundColor:[UIColor redColor]];
-        [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor greenColor]];
+        [button1  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button2 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -708,35 +715,35 @@
     
     
     if(correct == 0){
-        [button1 setBackgroundColor:[UIColor greenColor]];
-        [button2 setBackgroundColor:[UIColor redColor]];
-        [button3 setBackgroundColor:[UIColor redColor]];
-        [button4 setBackgroundColor:[UIColor redColor]];
+        [button1 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 1){
-        [button1 setBackgroundColor:[UIColor redColor]];
-        [button2 setBackgroundColor:[UIColor greenColor]];
-        [button3 setBackgroundColor:[UIColor redColor]];
-        [button4 setBackgroundColor:[UIColor redColor]];
+        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 2){
-        [button1 setBackgroundColor:[UIColor redColor]];
-        [button2 setBackgroundColor:[UIColor redColor]];
-        [button3 setBackgroundColor:[UIColor greenColor]];
-        [button4 setBackgroundColor:[UIColor redColor]];
+        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
         score = score+scoreTime+50;
     }else{
-        [button1 setBackgroundColor:[UIColor redColor]];
-        [button2 setBackgroundColor:[UIColor redColor]];
-        [button3 setBackgroundColor:[UIColor redColor]];
-        [button4 setBackgroundColor:[UIColor greenColor]];
+        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        [button4 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -778,7 +785,7 @@
     
     
     if(correct == 0){
-        [button1 setBackgroundColor:[UIColor greenColor]];
+        [button1 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         [button2 setBackgroundColor:[UIColor redColor]];
         [button3 setBackgroundColor:[UIColor redColor]];
         [button4 setBackgroundColor:[UIColor redColor]];
@@ -787,7 +794,7 @@
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 1){
         [button1 setBackgroundColor:[UIColor redColor]];
-        [button2 setBackgroundColor:[UIColor greenColor]];
+        [button2 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         [button3 setBackgroundColor:[UIColor redColor]];
         [button4 setBackgroundColor:[UIColor redColor]];
         
@@ -796,7 +803,7 @@
     }else if(correct == 2){
         [button1  setBackgroundColor:[UIColor redColor]];
         [button2  setBackgroundColor:[UIColor redColor]];
-        [button3  setBackgroundColor:[UIColor greenColor]];
+        [button3  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
         [button4  setBackgroundColor:[UIColor redColor]];
         
         [button4 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
@@ -805,7 +812,7 @@
         [button1  setBackgroundColor:[UIColor redColor]];
         [button2  setBackgroundColor:[UIColor redColor]];
         [button3  setBackgroundColor:[UIColor redColor]];
-        [button4  setBackgroundColor:[UIColor greenColor]];
+        [button4  setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
          
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
