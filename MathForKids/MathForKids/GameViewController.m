@@ -28,17 +28,10 @@
     // Do any additional setup after loading the view.
     scoreTime = 0;
     gameCount = 0;
-    timeCount = 10;
+    timeCount = 40;
     lastNumX = [[NSMutableArray alloc] init];
-//    UIImage* image1;
-//    UIImage* image2;
-//    UIImage* image3;
-//    UIImage* image4;
-    
-//    image1.size =
+
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
-//    window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]];
-//    self.view.backgroundColor = [UIColor clearColor];
     
     kind.text = [NSString stringWithFormat:@"Category: %@", _name];
     [kind setFont:[UIFont boldSystemFontOfSize:18]];
@@ -53,7 +46,6 @@
     button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
     [button1 setAlpha:0.72];
 
-    
     [[button2 layer] setCornerRadius:4.0f];
     [[button2 layer] setBorderWidth:1.0f];
     [[button2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -105,17 +97,15 @@
 //    [UIView beginAnimations: nil context: nil];
 //    [UIView setAnimationDuration:0.75];
 //    [UIView commitAnimations];
-    
+    [time setTextColor:[UIColor greenColor]];
     time.text = [NSString stringWithFormat:@"%d", timeCount];
-    [time setFont:[UIFont boldSystemFontOfSize:18]];
+    [[time layer] setBackgroundColor:[UIColor blackColor].CGColor];
+    [time setAlpha: 0.83];
+    [time setFont:[UIFont boldSystemFontOfSize:30]];
     [[time layer] setCornerRadius:time.frame.size.width/2];
     [[time layer] setBorderWidth:2.0f];
-    [[time layer] setBorderColor:[UIColor darkGrayColor].CGColor];
+    [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
-    
-}
-
--(void)saveScoreToLocalLib:(int) score{
     
 }
 
@@ -123,23 +113,41 @@
     [question setBackgroundColor: [UIColor blackColor]];
     [question setAlpha:0.72];
     [question setTextColor:[UIColor cyanColor]];
+    [[question layer] setCornerRadius:7.0f];
+    [[question layer] setBorderWidth:2.0f];
+    [[question layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    
     if([_name isEqual:@"Counting"]){
-        [question setText:@"Please count how many items in picture: "];
-//        [question setTextColor:[UIColor blackColor]];
+        [question setText:@"Please count how many egg/eggs in picture: "];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Addition"]){
         [question setText:@"Please choose the answer of blow 2 numbers addition: "];
-//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Subtraction"]){
         [question setText:@"Please choose the answer of blow 2 numbers subtraction: "];
-//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Shape"]){
         [question setText:@"Please choose the name of shape: "];
-//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
+    
+    if ([_name isEqual:@"Counting"] || [_name isEqual:@"Shape"]) {
+        imageField.hidden = NO;
+        txtField.hidden = YES;
+        [[imageField layer] setBorderWidth:1.0f];
+        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [[imageField layer] setCornerRadius:10.0f];
+        [imageField setAlpha:0.93];
+    }else{
+        imageField.hidden = YES;
+        txtField.hidden = NO;
+        [[txtField layer] setBorderWidth:1.0f];
+        [[txtField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [[txtField layer] setCornerRadius:10.0f];
+        [txtField setAlpha:0.93];
+    }
+    
+    
     
 }
 
@@ -157,9 +165,7 @@
     [button4 setBackgroundColor:[UIColor blackColor]];
     
     if([_name isEqual:@"Counting"]){
-        
         /*set random correct answers and random wrong answers, make sure no repeat questions*/
-        
         x = arc4random_uniform(21);
         while(x == 0){ // make sure there is no zero in our question
             x = arc4random_uniform(21);
@@ -179,9 +185,14 @@
                 }
             }
         }
+        s = x;
         [lastNumX addObject:[NSNumber numberWithInteger:x]];
         NSLog(@"%d", x);
-        s = x;
+        UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"egg%d.png",s]];
+        NSLog(@"egg%d.png", s);
+        [imageField setImage:img];
+        [imageField setBackgroundColor:[UIColor blackColor]];
+        
         /*randomly set each buttons title*/
         if(s > 7 && s <= 14){
             s1 = s-3;
@@ -244,6 +255,11 @@
         
         s = x+y;
         NSLog(@"%d + %d = %d", x, y, s);
+        [txtField setBackgroundColor:[UIColor blackColor]];
+        [txtField setTextColor:[UIColor cyanColor]];
+        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
+        
+        [txtField setText:[NSString stringWithFormat:@"%d + %d = ?", x, y]];
     
         if (s <= 13) {
             s1 = s+1;
@@ -304,10 +320,15 @@
         }
         [lastNumY addObject:[NSNumber numberWithInteger:y]];
         
+        [txtField setBackgroundColor:[UIColor blackColor]];
+        [txtField setTextColor:[UIColor cyanColor]];
+        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
         if(x>y){
             s = x-y;
+            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", x, y]];
         }else{
             s = y-x;
+            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", y, x]];
         }
         
         NSLog(@"%d, %d = %d", x, y, s);
@@ -358,6 +379,24 @@
 -(void)countDown{
     timeCount -= 1;
     time.text = [NSString stringWithFormat:@"%d", timeCount];
+    
+    /*according to different remain time number, changing the color of time number*/
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.5];
+    
+    if (timeCount > 20) {
+        [time setTextColor:[UIColor greenColor]];
+        [time setFont:[UIFont boldSystemFontOfSize:30]];
+    }else if(timeCount > 10 && timeCount <= 20){
+        [time setTextColor:[UIColor orangeColor]];
+        [time setFont:[UIFont boldSystemFontOfSize:30]];
+    }else{
+        [time setTextColor:[UIColor redColor]];
+        [time setFont:[UIFont boldSystemFontOfSize:30]];
+    }
+    [UIView commitAnimations];
+    
+    /*set animation, if the time is running out*/
     if(timeCount == 0){
         [UIView beginAnimations: nil context: nil];
         [UIView setAnimationDuration:0.75];
@@ -413,6 +452,8 @@
 
 -(void)refreshView{
     gameCount++;
+    timeCount = 40;
+    [time setTextColor:[UIColor greenColor]];
     if(gameCount < 10){
         int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
         int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
@@ -426,33 +467,14 @@
         button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
         [self setQuestion];
         [self setButtons];
-        
-        timeCount = 10;
-//    [UIView beginAnimations: nil context: nil];
-//    [UIView setAnimationDuration:0.50];
     
-        time.text = [NSString stringWithFormat:@"Remain Time: %d", timeCount];
+        time.text = [NSString stringWithFormat:@"%d", timeCount];
         timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
         
-//    [UIView commitAnimations];
         button1.enabled = YES;
         button2.enabled = YES;
         button3.enabled = YES;
         button4.enabled = YES;
-    }else{
-        score = (score*100)/500;
-        NSLog(@"Your Score is: %d", score);
-//        UIAlertController *controller = [UIAlertController alertControllerWithTitle: @"Your Score:"
-//                                                                            message: [NSString stringWithFormat:@"%d", score]
-//                                                                     preferredStyle: UIAlertControllerStyleAlert];
-//        UIAlertAction *alertAction = [UIAlertAction actionWithTitle: @"OK"
-//                                                              style: UIAlertActionStyleDestructive
-//                                                            handler: ^(UIAlertAction *action) {
-//                                                                NSLog(@"OK button tapped!");
-//                                                            }];
-//        [controller addAction: alertAction];
-//        
-//        [self presentViewController: controller animated: YES completion: nil];
     }
 }
 
@@ -469,11 +491,9 @@
 }
 
 -(IBAction)nextAction:(id)sender{
-    
     next.hidden = YES;
     next.enabled = NO;
     [self refreshView];
-    
 }
 
 -(IBAction)skipAction:(id)sender{
@@ -526,19 +546,11 @@
     }
     
     [UIView commitAnimations];
-//    if(gameCount >= 10){
-//        skip.enabled = NO;
-//        finish.hidden = NO;
-//        finish.enabled = YES;
-//    }else{
-//        [self refreshView];
-//    }
-    
 }
 
 -(IBAction)button1action:(id)sender1{
     [timer invalidate];
-    scoreTime = timeCount;
+    scoreTime = timeCount/4;
 
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -559,7 +571,7 @@
         [button3  setBackgroundColor:[UIColor redColor]];
         [button4  setBackgroundColor:[UIColor redColor]];
         
-        score = score+scoreTime+40;
+        score = score+scoreTime+50;
     }else if(correct == 1){
         [button1 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -611,7 +623,7 @@
 
 -(IBAction)button2action:(id)sender2{
     [timer invalidate];
-    scoreTime = timeCount;
+    scoreTime = timeCount/4;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -641,7 +653,7 @@
         
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        score = score+scoreTime+40;
+        score = score+scoreTime+50;
     }else if(correct == 2){
         [button1  setBackgroundColor:[UIColor redColor]];
         [button2  setBackgroundColor:[UIColor redColor]];
@@ -681,7 +693,7 @@
 
 -(IBAction)button3action:(id)sender3{
     [timer invalidate];
-    scoreTime = timeCount;
+    scoreTime = timeCount/4;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -719,7 +731,7 @@
         
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        score = score+scoreTime+40;
+        score = score+scoreTime+50;
     }else{
         [button1 setBackgroundColor:[UIColor redColor]];
         [button2 setBackgroundColor:[UIColor redColor]];
@@ -751,7 +763,7 @@
 
 -(IBAction)button4action:(id)sender{
     [timer invalidate];
-    scoreTime = timeCount;
+    scoreTime = timeCount/4;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -797,7 +809,7 @@
          
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
-        score = score+scoreTime+40;
+        score = score+scoreTime+50;
     }
     
 
@@ -837,8 +849,6 @@
         NSString* temp = [NSString stringWithFormat:@"%d", score];
         [[segue destinationViewController] setScore: temp];
         [[segue destinationViewController] setUsrName:_usrName];
-        
-        
     }
 }
 
