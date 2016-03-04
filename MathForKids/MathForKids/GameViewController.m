@@ -36,51 +36,62 @@
 //    UIImage* image4;
     
 //    image1.size =
-    
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+//    window.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"Background.png"]];
+//    self.view.backgroundColor = [UIColor clearColor];
     
     kind.text = [NSString stringWithFormat:@"Category: %@", _name];
     [kind setFont:[UIFont boldSystemFontOfSize:18]];
     
-    [[button1 layer] setCornerRadius:4.0f];
-    [[button1 layer] setBorderWidth:1.0f];
-    [[button1 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
     int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
     
+    [[button1 layer] setCornerRadius:4.0f];
+    [[button1 layer] setBorderWidth:1.0f];
+    [[button1 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-//    [button1 setImageEdgeInsets:UIEdgeInsetsMake(-150, -5, -2, -2)];
+    [button1 setAlpha:0.72];
+
     
     [[button2 layer] setCornerRadius:4.0f];
     [[button2 layer] setBorderWidth:1.0f];
     [[button2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+    [button2 setAlpha:0.72];
   
     [[button3 layer] setCornerRadius:4.0f];
     [[button3 layer] setBorderWidth:1.0f];
     [[button3 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+    [button3 setAlpha:0.72];
     
     [[button4 layer] setCornerRadius:4.0f];
     [[button4 layer] setBorderWidth:1.0f];
     [[button4 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+    [button4 setAlpha:0.72];
     
     [[next layer] setCornerRadius:4.0f];
     [[next layer] setBorderWidth:1.0f];
     [[next layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [next setBackgroundColor:[UIColor blackColor]];
+    [next setAlpha:0.72];
     
     [[finish layer] setCornerRadius:4.0f];
     [[finish layer] setBorderWidth:1.0f];
     [[finish layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [finish setBackgroundColor:[UIColor blackColor]];
+    [finish setAlpha:0.72];
     
     [[skip layer] setCornerRadius:4.0f];
     [[skip layer] setBorderWidth:1.0f];
     [[skip layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [skip setBackgroundColor:[UIColor blackColor]];
+    [skip setAlpha:0.72];
     
     next.hidden = YES;
     next.enabled = NO;
@@ -99,7 +110,7 @@
     [time setFont:[UIFont boldSystemFontOfSize:18]];
     [[time layer] setCornerRadius:time.frame.size.width/2];
     [[time layer] setBorderWidth:2.0f];
-    [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [[time layer] setBorderColor:[UIColor darkGrayColor].CGColor];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
 }
@@ -109,21 +120,24 @@
 }
 
 -(void)setQuestion{
+    [question setBackgroundColor: [UIColor blackColor]];
+    [question setAlpha:0.72];
+    [question setTextColor:[UIColor cyanColor]];
     if([_name isEqual:@"Counting"]){
         [question setText:@"Please count how many items in picture: "];
-        [question setTextColor:[UIColor blackColor]];
+//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Addition"]){
         [question setText:@"Please choose the answer of blow 2 numbers addition: "];
-        [question setTextColor:[UIColor blackColor]];
+//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Subtraction"]){
         [question setText:@"Please choose the answer of blow 2 numbers subtraction: "];
-        [question setTextColor:[UIColor blackColor]];
+//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else if([_name isEqual:@"Shape"]){
         [question setText:@"Please choose the name of shape: "];
-        [question setTextColor:[UIColor blackColor]];
+//        [question setTextColor:[UIColor blackColor]];
         [question setFont:[UIFont boldSystemFontOfSize:18]];
     }
     
@@ -137,10 +151,10 @@
     int s3 = s;
     int x, y;
     
-    [button1 setBackgroundColor:[UIColor whiteColor]];
-    [button2 setBackgroundColor:[UIColor whiteColor]];
-    [button3 setBackgroundColor:[UIColor whiteColor]];
-    [button4 setBackgroundColor:[UIColor whiteColor]];
+    [button1 setBackgroundColor:[UIColor blackColor]];
+    [button2 setBackgroundColor:[UIColor blackColor]];
+    [button3 setBackgroundColor:[UIColor blackColor]];
+    [button4 setBackgroundColor:[UIColor blackColor]];
     
     if([_name isEqual:@"Counting"]){
         
@@ -353,21 +367,25 @@
         [question setFont:[UIFont boldSystemFontOfSize:18]];
         
         if(correct == 0){
+            [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
             [button1  setBackgroundColor:[UIColor greenColor]];
             [button2  setBackgroundColor:[UIColor redColor]];
             [button3  setBackgroundColor:[UIColor redColor]];
             [button4  setBackgroundColor:[UIColor redColor]];
         }else if(correct == 1){
+            [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
             [button1  setBackgroundColor:[UIColor redColor]];
             [button2  setBackgroundColor:[UIColor greenColor]];
             [button3  setBackgroundColor:[UIColor redColor]];
             [button4  setBackgroundColor:[UIColor redColor]];
         }else if(correct == 2){
+            [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
             [button1  setBackgroundColor:[UIColor redColor]];
             [button2  setBackgroundColor:[UIColor redColor]];
             [button3  setBackgroundColor:[UIColor greenColor]];
             [button4  setBackgroundColor:[UIColor redColor]];
         }else{
+            [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
             [button1  setBackgroundColor:[UIColor redColor]];
             [button2  setBackgroundColor:[UIColor redColor]];
             [button3  setBackgroundColor:[UIColor redColor]];
@@ -461,13 +479,60 @@
 -(IBAction)skipAction:(id)sender{
     [timer invalidate];
     score = score+0;
-    if(gameCount >= 10){
-        skip.enabled = NO;
+    [UIView beginAnimations: nil context: nil];
+    [UIView setAnimationDuration:0.75];
+    
+    [question setText:@"Sorry, it is wrong."];
+    [question setTextColor:[UIColor redColor]];
+    [question setFont:[UIFont boldSystemFontOfSize:18]];
+    
+    if(correct == 0){
+        [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
+        [button1  setBackgroundColor:[UIColor greenColor]];
+        [button2  setBackgroundColor:[UIColor redColor]];
+        [button3  setBackgroundColor:[UIColor redColor]];
+        [button4  setBackgroundColor:[UIColor redColor]];
+    }else if(correct == 1){
+        [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
+        [button1  setBackgroundColor:[UIColor redColor]];
+        [button2  setBackgroundColor:[UIColor greenColor]];
+        [button3  setBackgroundColor:[UIColor redColor]];
+        [button4  setBackgroundColor:[UIColor redColor]];
+    }else if(correct == 2){
+        [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
+        [button1  setBackgroundColor:[UIColor redColor]];
+        [button2  setBackgroundColor:[UIColor redColor]];
+        [button3  setBackgroundColor:[UIColor greenColor]];
+        [button4  setBackgroundColor:[UIColor redColor]];
+    }else{
+        [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
+        [button1  setBackgroundColor:[UIColor redColor]];
+        [button2  setBackgroundColor:[UIColor redColor]];
+        [button3  setBackgroundColor:[UIColor redColor]];
+        [button4  setBackgroundColor:[UIColor greenColor]];
+    }
+    button1.enabled = NO;
+    button2.enabled = NO;
+    button3.enabled = NO;
+    button4.enabled = NO;
+    skip.enabled = NO;
+    
+    if(gameCount+1 < 10){
+        next.hidden = NO;
+        next.enabled = YES;
+    }else{
         finish.hidden = NO;
         finish.enabled = YES;
-    }else{
-        [self refreshView];
     }
+    
+    [UIView commitAnimations];
+//    if(gameCount >= 10){
+//        skip.enabled = NO;
+//        finish.hidden = NO;
+//        finish.enabled = YES;
+//    }else{
+//        [self refreshView];
+//    }
     
 }
 
