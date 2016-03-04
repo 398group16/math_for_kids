@@ -32,7 +32,7 @@
     timeCount = 40;
     lastNumX = [[NSMutableArray alloc] init];
 
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"background"]];
+//    self.view.backgroundColor = [UIColor ];
     
     kind.text = [NSString stringWithFormat:@"Category: %@", _name];
     [kind setFont:[UIFont boldSystemFontOfSize:18]];
@@ -108,9 +108,9 @@
 //    [UIView commitAnimations];
     [time setTextColor:[UIColor greenColor]];
     time.text = [NSString stringWithFormat:@"%d", timeCount];
-    [[time layer] setBackgroundColor:[UIColor blackColor].CGColor];
+    [[time layer] setBackgroundColor:[UIColor whiteColor].CGColor];
     [time setAlpha: 0.83];
-    [time setFont:[UIFont boldSystemFontOfSize:30]];
+    [time setFont:[UIFont boldSystemFontOfSize:21]];
     [[time layer] setCornerRadius:time.frame.size.width/2];
     [[time layer] setBorderWidth:2.0f];
     [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -572,13 +572,13 @@
     
     if (timeCount > 20) {
         [time setTextColor:[UIColor greenColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:30]];
+        [time setFont:[UIFont boldSystemFontOfSize:21]];
     }else if(timeCount > 10 && timeCount <= 20){
         [time setTextColor:[UIColor orangeColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:30]];
+        [time setFont:[UIFont boldSystemFontOfSize:21]];
     }else{
         [time setTextColor:[UIColor redColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:30]];
+        [time setFont:[UIFont boldSystemFontOfSize:21]];
     }
     [UIView commitAnimations];
     
