@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		353030E61C89482E004E4BA6 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353030E41C89482E004E4BA6 /* YTPlayerView.m */; };
+		353030E81C897E9E004E4BA6 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 353030E71C897E9E004E4BA6 /* Assets.bundle */; };
 		41AAB924C47F0FEC976CB3D6 /* libPods-MathForKidsUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECF7697CAB967570C6FB364 /* libPods-MathForKidsUITests.a */; };
 		54459F668FAF640E3C401359 /* libPods-MathForKids.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */; };
 		6EF6B635BB132D50DD7E5350 /* libPods-MathForKidsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */; };
@@ -64,6 +65,7 @@
 		0B54DAA7FB08C6640AD9F320 /* Pods-MathForKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests.release.xcconfig"; sourceTree = "<group>"; };
 		353030E31C89482E004E4BA6 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		353030E41C89482E004E4BA6 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
+		353030E71C897E9E004E4BA6 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
 		5075CDB475CE891CF651FF7D /* Pods-MathForKidsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsUITests/Pods-MathForKidsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKidsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +214,7 @@
 				A54D34731C8458EC008453CF /* categoryList.m */,
 				A5C6F2301C83B2FC00D2668D /* scoreObjects.h */,
 				A5C6F2311C83B2FC00D2668D /* scoreObjects.m */,
+				353030E71C897E9E004E4BA6 /* Assets.bundle */,
 				A56CD79D1C830BD7007001F7 /* ScoreViewController.h */,
 				A56CD79E1C830BD7007001F7 /* ScoreViewController.m */,
 				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
@@ -398,6 +401,7 @@
 				A58CE5951C7F199E002B876E /* AdditionViewController.xib in Resources */,
 				A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */,
 				A58CE5571C7F041B002B876E /* LaunchScreen.storyboard in Resources */,
+				353030E81C897E9E004E4BA6 /* Assets.bundle in Resources */,
 				A58CE5541C7F041B002B876E /* Assets.xcassets in Resources */,
 				A58CE59A1C7F1A12002B876E /* SubtractionViewController.xib in Resources */,
 				A58CE5521C7F041B002B876E /* Main.storyboard in Resources */,
