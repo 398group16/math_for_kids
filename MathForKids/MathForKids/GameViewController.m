@@ -464,8 +464,8 @@
         correct = arc4random_uniform(4);
     }else{
         /*set random correct answers and random wrong answers, make sure no repeat questions*/
-        x = arc4random_uniform(23);
-        NSLog(@"count: %d",x);
+        x = arc4random_uniform((int)imgArray.count);
+        NSLog(@"count: %d",(int)imgArray.count);
         bool repeat = false;
         if (lastNumX.count != 0) {
             while(repeat == false ){
