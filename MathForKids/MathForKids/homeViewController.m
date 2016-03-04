@@ -7,7 +7,6 @@
 //
 
 #import "HomeViewController.h"
-#import "TutorialViewController.h"
 #import "GameCategoryViewController.h"
 
 @interface HomeViewController ()
@@ -77,17 +76,17 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"tutDetail"]) {
-        TutorialViewController* dest = segue.destinationViewController;
-        dest.title = @"Tutorial";
-    }else if([[segue identifier] isEqualToString:@"gameCateDetail"]){
-        GameCategoryViewController* dest = segue.destinationViewController;
-        dest.title = @"Game Category";
-        [[segue destinationViewController] setUsrName: _usrName];
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    if ([[segue identifier] isEqualToString:@"tutDetail"]) {
+//        TutorialViewController* dest = segue.destinationViewController;
+//        dest.title = @"Tutorial";
+//    }else if([[segue identifier] isEqualToString:@"gameCateDetail"]){
+//        GameCategoryViewController* dest = segue.destinationViewController;
+//        dest.title = @"Game Category";
+//        [[segue destinationViewController] setUsrName: _usrName];
+//    }
+//}
 
 @end

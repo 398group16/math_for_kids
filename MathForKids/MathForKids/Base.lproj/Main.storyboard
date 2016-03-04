@@ -75,7 +75,7 @@
                                 <rect key="frame" x="98" y="348" width="179" height="30"/>
                                 <state key="normal" title="Tutorial"/>
                                 <connections>
-                                    <segue destination="epW-Pm-Rsk" kind="show" identifier="tutDetail" id="Tc7-Fa-CTP"/>
+                                    <segue destination="R7a-t3-uGZ" kind="show" id="vsX-gv-xvJ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seM-CJ-ger">
@@ -109,164 +109,6 @@
             </objects>
             <point key="canvasLocation" x="1326" y="429"/>
         </scene>
-        <!--Tutorial View Controller-->
-        <scene sceneID="YKC-4f-Mlj">
-            <objects>
-                <viewController id="epW-Pm-Rsk" customClass="TutorialViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="BHf-dz-qfG"/>
-                        <viewControllerLayoutGuide type="bottom" id="hPY-ex-t9H"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CAm-Sb-q90">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxT-jA-acI">
-                                <rect key="frame" x="14" y="629" width="90" height="30"/>
-                                <state key="normal" title="Counting"/>
-                                <connections>
-                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="countDetail" id="Jix-6c-0li"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO8-jn-npj">
-                                <rect key="frame" x="207" y="629" width="70" height="30"/>
-                                <state key="normal" title="-"/>
-                                <connections>
-                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="subDetail" id="2Ww-6r-dFF"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLS-Jf-3xt">
-                                <rect key="frame" x="122" y="629" width="70" height="30"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="addDetail" id="kQh-v8-h5q"/>
-                                </connections>
-                            </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wRu-3M-7XG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="551"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJV-b5-4vt">
-                                <rect key="frame" x="290" y="629" width="70" height="30"/>
-                                <state key="normal" title="Shapes"/>
-                                <connections>
-                                    <segue destination="Ndc-Hq-UtD" kind="show" identifier="shapeDetail" id="mxj-HG-eC7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="Count" destination="pxT-jA-acI" id="5H9-KW-k4S"/>
-                        <outlet property="add" destination="MLS-Jf-3xt" id="zSl-dQ-phX"/>
-                        <outlet property="field" destination="wRu-3M-7XG" id="UZa-hm-Bir"/>
-                        <outlet property="shape" destination="rJV-b5-4vt" id="xDa-mO-w2z"/>
-                        <outlet property="sub" destination="TO8-jn-npj" id="a8B-kp-Sil"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kZe-IX-scd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1816.5" y="428.5"/>
-        </scene>
-        <!--Tut Detail View Controller-->
-        <scene sceneID="fTj-MF-Q7h">
-            <objects>
-                <viewController id="Ndc-Hq-UtD" customClass="TutDetailViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="msZ-fz-zDU"/>
-                        <viewControllerLayoutGuide type="bottom" id="Tg1-tc-HjD"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gwl-jU-d9e">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kbp-DR-1ag">
-                                <rect key="frame" x="0.0" y="123" width="375" height="493"/>
-                            </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aq0-cV-wu0">
-                                <rect key="frame" x="16" y="629" width="80" height="30"/>
-                                <state key="normal" title="Counting"/>
-                                <connections>
-                                    <action selector="toCountView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="UKc-We-ITz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="93B-12-IzT">
-                                <rect key="frame" x="110" y="629" width="70" height="30"/>
-                                <state key="normal" title="+"/>
-                                <connections>
-                                    <action selector="toAddView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="Emz-Gg-11Q"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4q-4U-OLG">
-                                <rect key="frame" x="194" y="629" width="70" height="30"/>
-                                <state key="normal" title="-"/>
-                                <connections>
-                                    <action selector="toSubView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="ZTL-A4-Jud"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKq-cC-Oc8">
-                                <rect key="frame" x="194" y="80" width="161" height="30"/>
-                                <state key="normal" title="YouTube Video"/>
-                                <connections>
-                                    <segue destination="N8v-Kd-8JJ" kind="show" identifier="videoDetail" id="80i-IY-Xnr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXn-jE-zz7">
-                                <rect key="frame" x="291" y="629" width="70" height="30"/>
-                                <state key="normal" title="Shapes"/>
-                                <connections>
-                                    <action selector="toShapeView:" destination="Ndc-Hq-UtD" eventType="touchUpInside" id="jBD-pW-gE0"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="Count" destination="Aq0-cV-wu0" id="vlN-x8-Vyl"/>
-                        <outlet property="add" destination="93B-12-IzT" id="vx8-rv-9rc"/>
-                        <outlet property="field" destination="Kbp-DR-1ag" id="Udr-Qz-oCc"/>
-                        <outlet property="shape" destination="UXn-jE-zz7" id="6Q1-95-shz"/>
-                        <outlet property="sub" destination="D4q-4U-OLG" id="o8e-l2-bOx"/>
-                        <outlet property="ytv" destination="gKq-cC-Oc8" id="4UI-V3-9Gn"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o1F-GB-9hX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2299.5" y="428.5"/>
-        </scene>
-        <!--Videos Table View Controller-->
-        <scene sceneID="CtY-Rj-tSK">
-            <objects>
-                <tableViewController id="N8v-Kd-8JJ" customClass="VideosTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Drl-4I-ynV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5kA-0i-PxH">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5kA-0i-PxH" id="jTE-HP-mda">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="R7a-t3-uGZ" kind="show" identifier="youtubeDetail" id="vhA-dJ-SLF"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="N8v-Kd-8JJ" id="K94-pn-JuI"/>
-                            <outlet property="delegate" destination="N8v-Kd-8JJ" id="IqA-GZ-w1S"/>
-                        </connections>
-                    </tableView>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="P7i-da-i87" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2776" y="429"/>
-        </scene>
         <!--Youtube View Controller-->
         <scene sceneID="boj-iO-V6z">
             <objects>
@@ -280,73 +122,77 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-8x-m7m">
-                                <rect key="frame" x="181" y="345" width="30" height="30"/>
+                                <rect key="frame" x="125" y="345" width="125" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
                                     <action selector="playVideo:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="KMF-Jj-iA8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTV-od-rQ2">
-                                <rect key="frame" x="28" y="423" width="63" height="30"/>
+                                <rect key="frame" x="28" y="423" width="179" height="30"/>
                                 <state key="normal" title="Counting"/>
                                 <connections>
                                     <action selector="playlistCountingButton:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="sfo-Ly-cT3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ar3-YC-Z0H">
-                                <rect key="frame" x="28" y="485" width="57" height="30"/>
+                                <rect key="frame" x="28" y="485" width="179" height="30"/>
                                 <state key="normal" title="Addition"/>
                                 <connections>
                                     <action selector="playlistAdditionButton:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="OXQ-qD-r7i"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVM-Pi-Vcl">
-                                <rect key="frame" x="28" y="548" width="80" height="30"/>
+                                <rect key="frame" x="28" y="548" width="179" height="30"/>
                                 <state key="normal" title="Subtraction"/>
                                 <connections>
                                     <action selector="playlistSubtractionButton:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="bNM-of-AY8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g87-8k-Ywh">
-                                <rect key="frame" x="28" y="609" width="51" height="30"/>
+                                <rect key="frame" x="28" y="609" width="179" height="30"/>
                                 <state key="normal" title="Shapes"/>
                                 <connections>
                                     <action selector="playlistShapeButton:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="nnR-ME-GtA"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BUW-Ik-9uS">
-                                <rect key="frame" x="313" y="345" width="42" height="30"/>
+                                <rect key="frame" x="250" y="345" width="120" height="30"/>
                                 <state key="normal" title="Next&gt;"/>
                                 <connections>
                                     <action selector="nextVideo:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="OjJ-mi-v0c"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-on-4TV">
-                                <rect key="frame" x="20" y="345" width="69" height="30"/>
-                                <state key="normal" title="&lt;Previous"/>
-                                <connections>
-                                    <action selector="previousVideo:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="R2X-I6-xwd"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="805-qS-ZSf" customClass="YTPlayerView">
                                 <rect key="frame" x="0.0" y="122" width="375" height="215"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-on-4TV">
+                                <rect key="frame" x="5" y="345" width="120" height="30"/>
+                                <state key="normal" title="&lt;Previous"/>
+                                <connections>
+                                    <action selector="previousVideo:" destination="R7a-t3-uGZ" eventType="touchUpInside" id="R2X-I6-xwd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BWp-07-HuN"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="playVidButton" destination="1R9-8x-m7m" id="vay-aB-hm1"/>
                         <outlet property="playerView" destination="805-qS-ZSf" id="8yK-mR-Xip"/>
                         <outlet property="playlistAdditionButton" destination="ar3-YC-Z0H" id="ZRY-5w-xtk"/>
                         <outlet property="playlistCountingButton" destination="uTV-od-rQ2" id="a7u-76-oSn"/>
                         <outlet property="playlistShapeButton" destination="g87-8k-Ywh" id="Ad4-LR-xsS"/>
                         <outlet property="playlistSubtractionButton" destination="cVM-Pi-Vcl" id="WUm-e2-Yz6"/>
+                        <outlet property="prevVidButton" destination="pf1-on-4TV" id="hKJ-p0-j0l"/>
+                        <outlet property="previousVidButton" destination="BUW-Ik-9uS" id="FfP-7M-v5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efC-wx-Y3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3255.5" y="428.5"/>
+            <point key="canvasLocation" x="1807.5" y="428.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qQ1-x9-Ajt">
@@ -408,7 +254,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-la-COB">
                                 <rect key="frame" x="98" y="566" width="179" height="30"/>
-                                <state key="normal" title="shape"/>
+                                <state key="normal" title="Shapes"/>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="shapeGdetail" id="CVU-i4-B3c"/>
                                 </connections>
@@ -630,8 +476,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mxj-HG-eC7"/>
-        <segue reference="1dC-GU-1Rd"/>
         <segue reference="J5B-oZ-Wfp"/>
+        <segue reference="HBY-Vd-UFC"/>
     </inferredMetricsTieBreakers>
 </document>
