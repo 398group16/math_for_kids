@@ -150,6 +150,8 @@
     // Do any additional setup after loading the view, typically from a nib.
     //playsinline plays vid in app rather than playing full screen
     
+    self.navigationItem.title = @"Tutorial";
+    
     //setting button layouts
     [self setButtonLayout:(_previousVidButton)];
     [self setButtonLayout:(_playVidButton)];

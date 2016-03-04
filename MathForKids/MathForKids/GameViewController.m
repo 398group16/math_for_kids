@@ -17,6 +17,7 @@
     int correct;
     NSMutableArray* lastNumX;
     NSMutableArray* lastNumY;
+    NSArray* imgArray;
 }
 
 @end
@@ -97,6 +98,7 @@
     finish.hidden = YES;
     finish.enabled = NO;
 
+    [self loadImages];
     [self setQuestion];
     [self setButtons];
     
@@ -114,6 +116,111 @@
     [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
     
+}
+
+-(void)loadImages{
+    imgArray = [NSArray arrayWithObjects:
+                         [UIImage imageNamed:@"arrow"],
+                         [UIImage imageNamed:@"circle"],
+                         [UIImage imageNamed:@"cone"],
+                         [UIImage imageNamed:@"crescent"],
+                         [UIImage imageNamed:@"cross"],
+                         [UIImage imageNamed:@"cube"],
+                         [UIImage imageNamed:@"cuboid"],
+                         [UIImage imageNamed:@"cylinder"],
+                         [UIImage imageNamed:@"heart"],
+                         [UIImage imageNamed:@"hexagon"],
+                         [UIImage imageNamed:@"hexagonalPrism"],
+                         [UIImage imageNamed:@"octagon"],
+                         [UIImage imageNamed:@"oval"],
+                         [UIImage imageNamed:@"parallelogram"],
+                         [UIImage imageNamed:@"pentagon"],
+                         [UIImage imageNamed:@"pyramid"],
+                         [UIImage imageNamed:@"rectangular"],
+                         [UIImage imageNamed:@"rhombus"],
+                         [UIImage imageNamed:@"sphere"],
+                         [UIImage imageNamed:@"star"],
+                         [UIImage imageNamed:@"trapecio"],
+                         [UIImage imageNamed:@"traingle"],
+                         [UIImage imageNamed:@"triangularPrism"],nil];
+}
+
+-(NSString*)getImageName:(int) index{
+    NSString* str;
+    switch (index) {
+        case 1:
+            str = @"Arrow";
+            break;
+        case 2:
+            str = @"Circle";
+            break;
+        case 3:
+            str = @"Cone";
+            break;
+        case 4:
+            str = @"Crescent";
+            break;
+        case 5:
+            str = @"Cross";
+            break;
+        case 6:
+            str = @"Cube";
+            break;
+        case 7:
+            str = @"Cubiod";
+            break;
+        case 8:
+            str = @"Cylinder";
+            break;
+        case 9:
+            str = @"Heart";
+            break;
+        case 10:
+            str = @"Hexagon";
+            break;
+        case 11:
+            str = @"Hexagon Prism";
+            break;
+        case 12:
+            str = @"Octagon";
+            break;
+        case 13:
+            str = @"Oval";
+            break;
+        case 14:
+            str = @"Parallelogram";
+            break;
+        case 15:
+            str = @"Pentagon";
+            break;
+        case 16:
+            str = @"Pyramid";
+            break;
+        case 17:
+            str = @"Rectangular";
+            break;
+        case 18:
+            str = @"Rhombus";
+            break;
+        case 19:
+            str = @"Sphere";
+            break;
+        case 20:
+            str = @"Star";
+            break;
+        case 21:
+            str = @"Trapecio";
+            break;
+        case 22:
+            str = @"Traingle";
+            break;
+        case 23:
+            str = @"Trangular Prism";
+            break;
+        default:
+            break;
+    }
+    return str;
 }
 
 -(void)setQuestion{
@@ -355,32 +462,104 @@
         }
         
         correct = arc4random_uniform(4);
+    }else{
+        /*set random correct answers and random wrong answers, make sure no repeat questions*/
+        x = arc4random_uniform(23);
+        NSLog(@"count: %d",x);
+        bool repeat = false;
+        if (lastNumX.count != 0) {
+            while(repeat == false ){
+                repeat = true;
+                for(int i=0; i<lastNumX.count; i++){
+                    if(x == [[lastNumX objectAtIndex:i] integerValue]){
+                        x = arc4random_uniform((int)imgArray.count);
+                        repeat = false;
+                    }
+                }
+            }
+        }
+        s = x;
+        [lastNumX addObject:[NSNumber numberWithInteger:x]];
+        NSLog(@"%d", x);
+        UIImage* img = [imgArray objectAtIndex: s];
+        [imageField setImage:img];
+        [imageField setBackgroundColor:[UIColor blackColor]];
+        
+        /*randomly set each buttons title*/
+        if(s > 7 && s <= 14){
+            s1 = s-3;
+            s2 = s+2;
+            s3 = s-1;
+        }else if(s <= 7){
+            s1 = s+1;
+            s2 = s+2;
+            s3 = s+3;
+        }else{
+            s1 = s-3;
+            s2 = s-2;
+            s3 = s-1;
+        }
+        //        NSLog(@"%d, %d, %d, %d", x, x1, x2, x3);
+        correct = arc4random_uniform(4);
+        NSString* str = [self getImageName:s+1];
+        NSString* str1 = [self getImageName:s1+1];
+        NSString* str2 = [self getImageName:s2+1];
+        NSString* str3 = [self getImageName:s3+1];
+        
+
+        if(correct == 0){
+            [button1 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            
+        }else if(correct == 1){
+            [button1 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            
+        }else if(correct == 2){
+            [button1 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            
+        }else{
+            [button1 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
+        }
+    }
+    if (![_name isEqual:@"Shape"]) {
+        
+        if(correct == 0){
+            [button1 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            
+        }else if(correct == 1){
+            [button1 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            
+        }else if(correct == 2){
+            [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            
+        }else{
+            [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+        }
     }
     
-    if(correct == 0){
-        [button1 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-        [button2 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-        [button3 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
-        
-    }else if(correct == 1){
-        [button1 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-        [button2 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-        [button3 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
-        
-    }else if(correct == 2){
-        [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-        [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-        [button3 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-        [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
-        
-    }else{
-        [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-        [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-        [button3 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
-        [button4 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-    }
 }
 
 -(void)countDown{
