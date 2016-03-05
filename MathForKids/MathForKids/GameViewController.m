@@ -24,225 +24,47 @@
 
 @implementation GameViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    scoreTime = 0;
-    gameCount = 0;
-    timeCount = 40;
-    lastNumX = [[NSMutableArray alloc] init];
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    
+    int wid = button.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
+    int hei = button.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
+    
+    [[button layer] setCornerRadius:4.0f];
+    [[button layer] setBorderWidth:1.0f];
+    [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [button setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+    button.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+    [button setAlpha:0.8];
+}
 
-//    self.view.backgroundColor = [UIColor ];
-    
-    kind.text = [NSString stringWithFormat:@"Category: %@", _name];
-    [kind setFont:[UIFont boldSystemFontOfSize:18]];
-    
-    int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
-    int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
-    
-    [[button1 layer] setCornerRadius:4.0f];
-    [[button1 layer] setBorderWidth:1.0f];
-    [[button1 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    [button1.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button1 setAlpha:0.9];
-
-    [[button2 layer] setCornerRadius:4.0f];
-    [[button2 layer] setBorderWidth:1.0f];
-    [[button2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button2.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [button2 setAlpha:0.9];
-  
-    [[button3 layer] setCornerRadius:4.0f];
-    [[button3 layer] setBorderWidth:1.0f];
-    [[button3 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button3.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [button3 setAlpha:0.9];
-    
-    [[button4 layer] setCornerRadius:4.0f];
-    [[button4 layer] setBorderWidth:1.0f];
-    [[button4 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [button4.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [button4 setAlpha:0.9];
-    
-    [[next layer] setCornerRadius:4.0f];
-    [[next layer] setBorderWidth:1.0f];
-    [[next layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [next setBackgroundColor:[UIColor blackColor]];
-    [next.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [next setAlpha:0.83];
-    
-    [[finish layer] setCornerRadius:4.0f];
-    [[finish layer] setBorderWidth:1.0f];
-    [[finish layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [finish setBackgroundColor:[UIColor blackColor]];
-    [finish.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [finish setAlpha:0.83];
-    
-    [[skip layer] setCornerRadius:4.0f];
-    [[skip layer] setBorderWidth:1.0f];
-    [[skip layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [skip.titleLabel setFont:[UIFont boldSystemFontOfSize:21]];
-    [skip setBackgroundColor:[UIColor blackColor]];
-    [skip setAlpha:0.72];
-    
-    next.hidden = YES;
-    next.enabled = NO;
-    finish.hidden = YES;
-    finish.enabled = NO;
-
-    [self loadImages];
-    [self setQuestion];
-    [self setButtons];
-    
-    /*set animation*/
-//    [UIView beginAnimations: nil context: nil];
-//    [UIView setAnimationDuration:0.75];
-//    [UIView commitAnimations];
-    [time setTextColor:[UIColor greenColor]];
-    time.text = [NSString stringWithFormat:@"%d", timeCount];
-    [[time layer] setBackgroundColor:[UIColor whiteColor].CGColor];
-    [time setAlpha: 0.83];
-    [time setFont:[UIFont boldSystemFontOfSize:21]];
-    [[time layer] setCornerRadius:time.frame.size.width/2];
-    [[time layer] setBorderWidth:2.0f];
-    [[time layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+- (void)setOtherButtonLayout:(UIButton*) button{
+    [[button layer] setCornerRadius:4.0f];
+    [[button layer] setBorderWidth:1.0f];
+    [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [button setBackgroundColor:[UIColor blackColor]];
+    [button setAlpha:0.9];
     
 }
 
--(void)loadImages{
-    imgArray = [NSArray arrayWithObjects:
-                         [UIImage imageNamed:@"arrow"],
-                         [UIImage imageNamed:@"circle"],
-                         [UIImage imageNamed:@"cone"],
-                         [UIImage imageNamed:@"crescent"],
-                         [UIImage imageNamed:@"cross"],
-                         [UIImage imageNamed:@"cube"],
-                         [UIImage imageNamed:@"cuboid"],
-                         [UIImage imageNamed:@"cylinder"],
-                         [UIImage imageNamed:@"heart"],
-                         [UIImage imageNamed:@"hexagon"],
-                         [UIImage imageNamed:@"hexagonalPrism"],
-                         [UIImage imageNamed:@"octagon"],
-                         [UIImage imageNamed:@"oval"],
-                         [UIImage imageNamed:@"parallelogram"],
-                         [UIImage imageNamed:@"pentagon"],
-                         [UIImage imageNamed:@"pyramid"],
-                         [UIImage imageNamed:@"rectangular"],
-                         [UIImage imageNamed:@"rhombus"],
-                         [UIImage imageNamed:@"sphere"],
-                         [UIImage imageNamed:@"star"],
-                         [UIImage imageNamed:@"trapecio"],
-                         [UIImage imageNamed:@"traingle"],
-                         [UIImage imageNamed:@"triangularPrism"],nil];
-}
-
--(NSString*)getImageName:(int) index{
-    NSString* str;
-    switch (index) {
-        case 1:
-            str = @"Arrow";
-            break;
-        case 2:
-            str = @"Circle";
-            break;
-        case 3:
-            str = @"Cone";
-            break;
-        case 4:
-            str = @"Crescent";
-            break;
-        case 5:
-            str = @"Cross";
-            break;
-        case 6:
-            str = @"Cube";
-            break;
-        case 7:
-            str = @"Cubiod";
-            break;
-        case 8:
-            str = @"Cylinder";
-            break;
-        case 9:
-            str = @"Heart";
-            break;
-        case 10:
-            str = @"Hexagon";
-            break;
-        case 11:
-            str = @"Hexagon Prism";
-            break;
-        case 12:
-            str = @"Octagon";
-            break;
-        case 13:
-            str = @"Oval";
-            break;
-        case 14:
-            str = @"Parallelogram";
-            break;
-        case 15:
-            str = @"Pentagon";
-            break;
-        case 16:
-            str = @"Pyramid";
-            break;
-        case 17:
-            str = @"Rectangular";
-            break;
-        case 18:
-            str = @"Rhombus";
-            break;
-        case 19:
-            str = @"Sphere";
-            break;
-        case 20:
-            str = @"Star";
-            break;
-        case 21:
-            str = @"Trapecio";
-            break;
-        case 22:
-            str = @"Traingle";
-            break;
-        case 23:
-            str = @"Trangular Prism";
-            break;
-        default:
-            break;
-    }
-    return str;
-}
 
 -(void)setQuestion{
     [question setBackgroundColor: [UIColor blackColor]];
     [question setAlpha:0.72];
-    [question setTextColor:[UIColor cyanColor]];
+    [question setTextColor:[UIColor whiteColor]];
     [[question layer] setCornerRadius:7.0f];
     [[question layer] setBorderWidth:2.0f];
     [[question layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
+    
     if([_name isEqual:@"Counting"]){
-        [question setText:@"Please count how many egg/eggs in picture: "];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"How many eggs do you think are in the picture?"];
     }else if([_name isEqual:@"Addition"]){
-        [question setText:@"Please choose the answer of blow 2 numbers addition: "];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"What would you get if you add first to the other?"];
     }else if([_name isEqual:@"Subtraction"]){
-        [question setText:@"Please choose the answer of blow 2 numbers subtraction: "];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"What would you get if you take away one from the other?"];
     }else if([_name isEqual:@"Shape"]){
-        [question setText:@"Please choose the name of shape: "];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Which shape do you think this shape is?"];
     }
     
     if ([_name isEqual:@"Counting"] || [_name isEqual:@"Shape"]) {
@@ -570,16 +392,13 @@
     [UIView beginAnimations: nil context: nil];
     [UIView setAnimationDuration:0.5];
     
-    if (timeCount > 20) {
-        [time setTextColor:[UIColor greenColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:21]];
-    }else if(timeCount > 10 && timeCount <= 20){
-        [time setTextColor:[UIColor orangeColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:21]];
-    }else{
-        [time setTextColor:[UIColor redColor]];
-        [time setFont:[UIFont boldSystemFontOfSize:21]];
-    }
+//    if (timeCount > 20) {
+//        [time setTextColor:[UIColor greenColor]];
+//    }else if(timeCount > 10 && timeCount <= 20){
+//        [time setTextColor:[UIColor orangeColor]];
+//    }else{
+//        [time setTextColor:[UIColor redColor]];
+//    }
     [UIView commitAnimations];
     
     /*set animation, if the time is running out*/
@@ -587,9 +406,8 @@
         [UIView beginAnimations: nil context: nil];
         [UIView setAnimationDuration:0.75];
         
-        [question setText:@"Sorry, it is wrong."];
-        [question setTextColor:[UIColor redColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Sorry, you ran out of time. Let's try the next question!"];
+        [question setTextColor:[UIColor whiteColor]];
         
         if(correct == 0){
             [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -638,8 +456,7 @@
 
 -(void)refreshView{
     gameCount++;
-    timeCount = 40;
-    [time setTextColor:[UIColor greenColor]];
+    timeCount = 30;
     if(gameCount < 10){
         int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
         int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
@@ -688,9 +505,8 @@
     [UIView beginAnimations: nil context: nil];
     [UIView setAnimationDuration:0.75];
     
-    [question setText:@"Sorry, it is wrong."];
-    [question setTextColor:[UIColor redColor]];
-    [question setFont:[UIFont boldSystemFontOfSize:18]];
+    [question setText:@"Awh you skipped? No worries, let's try the next question!"];
+    [question setTextColor:[UIColor whiteColor]];
     
     if(correct == 0){
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -736,7 +552,7 @@
 
 -(IBAction)button1action:(id)sender1{
     [timer invalidate];
-    scoreTime = timeCount/4;
+    scoreTime = timeCount/3;
 
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -789,12 +605,8 @@
     
     if(correct == 0){
         [question setText:@"Correct Answer! Congratulations!"];
-        [question setTextColor:[UIColor greenColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else{
-        [question setText:@"Sorry, it is wrong."];
-        [question setTextColor:[UIColor redColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Sorry, wrong answer. Lets try again!"];
     }
     
     [UIView commitAnimations];
@@ -809,7 +621,7 @@
 
 -(IBAction)button2action:(id)sender2{
     [timer invalidate];
-    scoreTime = timeCount/4;
+    scoreTime = timeCount/3;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -860,12 +672,8 @@
     
     if(correct == 1){
         [question setText:@"Correct Answer! Congratulations!"];
-        [question setTextColor:[UIColor greenColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else{
-        [question setText:@"Sorry, it is wrong."];
-        [question setTextColor:[UIColor redColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Sorry, wrong answer. Lets try again!"];
     }
     
     [UIView commitAnimations];
@@ -879,7 +687,7 @@
 
 -(IBAction)button3action:(id)sender3{
     [timer invalidate];
-    scoreTime = timeCount/4;
+    scoreTime = timeCount/3;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -930,12 +738,8 @@
     
     if(correct == 2){
         [question setText:@"Correct Answer! Congratulations!"];
-        [question setTextColor:[UIColor greenColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else{
-        [question setText:@"Sorry, it is wrong."];
-        [question setTextColor:[UIColor redColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Sorry, wrong answer. Lets try again!"];
     }
     
     [UIView commitAnimations];
@@ -949,7 +753,7 @@
 
 -(IBAction)button4action:(id)sender{
     [timer invalidate];
-    scoreTime = timeCount/4;
+    scoreTime = timeCount/3;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -1001,12 +805,8 @@
 
     if(correct == 3){
         [question setText:@"Correct Answer! Congratulations!"];
-        [question setTextColor:[UIColor greenColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
     }else{
-        [question setText:@"Sorry, it is wrong."];
-        [question setTextColor:[UIColor redColor]];
-        [question setFont:[UIFont boldSystemFontOfSize:18]];
+        [question setText:@"Sorry, wrong answer. Lets try again!"];
     }
     
     [UIView commitAnimations];
@@ -1017,6 +817,147 @@
     button4.enabled = NO;
     skip.enabled = NO;
 }
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    scoreTime = 0;
+    gameCount = 0;
+    timeCount = 30;
+    lastNumX = [[NSMutableArray alloc] init];
+    
+    [self setAnswerButtonLayout:(button1)];
+    [self setAnswerButtonLayout:(button2)];
+    [self setAnswerButtonLayout:(button3)];
+    [self setAnswerButtonLayout:(button4)];
+    
+    [self setOtherButtonLayout:next];
+    [self setOtherButtonLayout:finish];
+    [self setOtherButtonLayout:skip];
+    
+    next.hidden = YES;
+    next.enabled = NO;
+    finish.hidden = YES;
+    finish.enabled = NO;
+    
+    [self loadImages];
+    [self setQuestion];
+    [self setButtons];
+    
+    /*set animation*/
+    [time setTextColor:[UIColor blackColor]];
+    time.text = [NSString stringWithFormat:@"%d", timeCount];
+    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(countDown) userInfo:nil repeats:YES];
+    
+}
+
+-(void)loadImages{
+    imgArray = [NSArray arrayWithObjects:
+                [UIImage imageNamed:@"arrow"],
+                [UIImage imageNamed:@"circle"],
+                [UIImage imageNamed:@"cone"],
+                [UIImage imageNamed:@"crescent"],
+                [UIImage imageNamed:@"cross"],
+                [UIImage imageNamed:@"cube"],
+                [UIImage imageNamed:@"cuboid"],
+                [UIImage imageNamed:@"cylinder"],
+                [UIImage imageNamed:@"heart"],
+                [UIImage imageNamed:@"hexagon"],
+                [UIImage imageNamed:@"hexagonalPrism"],
+                [UIImage imageNamed:@"octagon"],
+                [UIImage imageNamed:@"oval"],
+                [UIImage imageNamed:@"parallelogram"],
+                [UIImage imageNamed:@"pentagon"],
+                [UIImage imageNamed:@"pyramid"],
+                [UIImage imageNamed:@"rectangular"],
+                [UIImage imageNamed:@"rhombus"],
+                [UIImage imageNamed:@"sphere"],
+                [UIImage imageNamed:@"star"],
+                [UIImage imageNamed:@"trapecio"],
+                [UIImage imageNamed:@"traingle"],
+                [UIImage imageNamed:@"triangularPrism"],nil];
+}
+
+-(NSString*)getImageName:(int) index{
+    NSString* str;
+    switch (index) {
+        case 1:
+            str = @"Arrow";
+            break;
+        case 2:
+            str = @"Circle";
+            break;
+        case 3:
+            str = @"Cone";
+            break;
+        case 4:
+            str = @"Crescent";
+            break;
+        case 5:
+            str = @"Cross";
+            break;
+        case 6:
+            str = @"Cube";
+            break;
+        case 7:
+            str = @"Cubiod";
+            break;
+        case 8:
+            str = @"Cylinder";
+            break;
+        case 9:
+            str = @"Heart";
+            break;
+        case 10:
+            str = @"Hexagon";
+            break;
+        case 11:
+            str = @"Hexagon Prism";
+            break;
+        case 12:
+            str = @"Octagon";
+            break;
+        case 13:
+            str = @"Oval";
+            break;
+        case 14:
+            str = @"Parallelogram";
+            break;
+        case 15:
+            str = @"Pentagon";
+            break;
+        case 16:
+            str = @"Pyramid";
+            break;
+        case 17:
+            str = @"Rectangular";
+            break;
+        case 18:
+            str = @"Rhombus";
+            break;
+        case 19:
+            str = @"Sphere";
+            break;
+        case 20:
+            str = @"Star";
+            break;
+        case 21:
+            str = @"Trapecio";
+            break;
+        case 22:
+            str = @"Traingle";
+            break;
+        case 23:
+            str = @"Trangular Prism";
+            break;
+        default:
+            break;
+    }
+    return str;
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -1037,6 +978,5 @@
         [[segue destinationViewController] setUsrName:_usrName];
     }
 }
-
 
 @end

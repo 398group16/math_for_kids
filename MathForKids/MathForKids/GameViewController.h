@@ -9,12 +9,13 @@
 #import <UIKit/UIKit.h>
 
 @interface GameViewController : UIViewController{
-    IBOutlet UILabel* kind;
     IBOutlet UILabel* time;
 //    IBOutlet UIView* imageField;
     IBOutlet UIImageView* imageField;
     IBOutlet UITextView* txtField;
     IBOutlet UITextView* question;
+    
+    //buttons
     IBOutlet UIButton* button1;
     IBOutlet UIButton* button2;
     IBOutlet UIButton* button3;
@@ -22,8 +23,11 @@
     IBOutlet UIButton* next;
     IBOutlet UIButton* finish;
     IBOutlet UIButton* skip;
+    
     NSTimer* timer;
 }
+
+
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSString* usrName;
 
