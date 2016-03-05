@@ -27,23 +27,23 @@
 - (void)setAnswerButtonLayout:(UIButton*) button{
     
     
-    int wid = button.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
-    int hei = button.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
-    
+//    int wid = button.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
+//    int hei = button.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
+    //    [button setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+    //    button.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
     [[button layer] setCornerRadius:4.0f];
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    button.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
     [button setAlpha:0.8];
+    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (void)setOtherButtonLayout:(UIButton*) button{
     [[button layer] setCornerRadius:4.0f];
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [button setBackgroundColor:[UIColor blackColor]];
-    [button setAlpha:0.9];
+//    [button setBackgroundColor:[UIColor blackColor]];
+//    [button setAlpha:0.9];
     
 }
 
@@ -88,7 +88,7 @@
 }
 
 -(void)setButtons{
-    skip.enabled = YES;
+    skip.hidden = NO;
     int s = 999;
     int s1 = s;
     int s2 = s;
@@ -330,55 +330,55 @@
         
 
         if(correct == 0){
-            [button1 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
             
         }else if(correct == 1){
-            [button1 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
             
         }else if(correct == 2){
-            [button1 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
             
         }else{
-            [button1 setTitle:[NSString stringWithFormat:@"%@", str2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%@", str1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%@", str3] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%@", str] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
         }
     }
     if (![_name isEqual:@"Shape"]) {
         
         if(correct == 0){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
             
         }else if(correct == 1){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
             
         }else if(correct == 2){
-            [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
             
         }else{
-            [button1 setTitle:[NSString stringWithFormat:@"%d", s2] forState:UIControlStateNormal];
-            [button2 setTitle:[NSString stringWithFormat:@"%d", s1] forState:UIControlStateNormal];
-            [button3 setTitle:[NSString stringWithFormat:@"%d", s3] forState:UIControlStateNormal];
-            [button4 setTitle:[NSString stringWithFormat:@"%d", s] forState:UIControlStateNormal];
+            [button1 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
+            [button2 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
+            [button3 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
+            [button4 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
         }
     }
     
@@ -438,7 +438,7 @@
         button2.enabled = NO;
         button3.enabled = NO;
         button4.enabled = NO;
-        skip.enabled = NO;
+        skip.hidden = YES;
         
         if(gameCount+1 < 10){
             next.hidden = NO;
@@ -458,16 +458,21 @@
     gameCount++;
     timeCount = 30;
     if(gameCount < 10){
-        int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
-        int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
-        [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-        button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-        [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-        button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-        [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-        button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-        [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-        button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+        [button1 setImage:nil forState:UIControlStateNormal];
+        [button2 setImage:nil forState:UIControlStateNormal];
+        [button3 setImage:nil forState:UIControlStateNormal];
+        [button4 setImage:nil forState:UIControlStateNormal];
+//        int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
+//        int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
+////        [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+//        
+//        button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+////        [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+//        button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+////        [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+//        button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+////        [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
+//        button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
         [self setQuestion];
         [self setButtons];
     
@@ -537,7 +542,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    skip.enabled = NO;
+    skip.hidden = YES;
     
     if(gameCount+1 < 10){
         next.hidden = NO;
@@ -615,7 +620,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    skip.enabled = NO;
+    skip.hidden = YES;
     
 }
 
@@ -682,7 +687,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    skip.enabled = NO;
+    skip.hidden = YES;
 }
 
 -(IBAction)button3action:(id)sender3{
@@ -700,37 +705,41 @@
     [UIView beginAnimations: nil context: nil];
     [UIView setAnimationDuration:0.75];
     
-    
     if(correct == 0){
-        [button1 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        
+        [self setColorToGreen:(button1)];
+        [self setColorToRed:(button2)];
+        [self setColorToRed:(button3)];
+        [self setColorToRed:(button4)];
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 1){
-        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button2 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        
+        [self setColorToGreen:(button2)];
+        [self setColorToRed:(button1)];
+        [self setColorToRed:(button3)];
+        [self setColorToRed:(button4)];
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button2 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
     }else if(correct == 2){
-        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button3 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button4 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        
+        [self setColorToGreen:(button3)];
+        [self setColorToRed:(button2)];
+        [self setColorToRed:(button1)];
+        [self setColorToRed:(button4)];
         
         [button3 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
         
         score = score+scoreTime+50;
     }else{
-        [button1 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button2 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button3 setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
-        [button4 setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+        
+        [self setColorToGreen:(button4)];
+        [self setColorToRed:(button2)];
+        [self setColorToRed:(button1)];
+        [self setColorToRed:(button3)];
+        
         
         [button3 setImage:[UIImage imageNamed: @"sad_face.png"] forState:UIControlStateNormal];
         [button4 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -748,8 +757,19 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    skip.enabled = NO;
+    skip.hidden = YES;
 }
+
+
+- (void)setColorToRed:(UIButton*) button{
+    [button setBackgroundColor:[UIColor colorWithRed:170.f/255.0f green:8.0f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+}
+
+- (void)setColorToGreen:(UIButton*) button{
+    [button setBackgroundColor:[UIColor colorWithRed:8.0f/255.0f green:170.f/255.0f blue:8.0f/255.0f alpha:1.0f]];
+}
+
+
 
 -(IBAction)button4action:(id)sender{
     [timer invalidate];
@@ -815,7 +835,7 @@
     button2.enabled = NO;
     button3.enabled = NO;
     button4.enabled = NO;
-    skip.enabled = NO;
+    skip.hidden = YES;
 }
 
 

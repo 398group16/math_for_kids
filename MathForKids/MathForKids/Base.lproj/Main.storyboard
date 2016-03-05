@@ -291,37 +291,17 @@
                                 <rect key="frame" x="21" y="483" width="150" height="40"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="button2action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="rc8-k9-LyH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-M8-ZUU">
-                                <rect key="frame" x="301" y="317" width="64" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Skip">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="skipAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="CcP-nm-yZm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-Vm-UXm">
-                                <rect key="frame" x="135" y="619" width="105" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Finish">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="fSb-YA-U3M" kind="show" identifier="scoreDetail" id="xwL-lz-9wT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J05-e2-WMB">
                                 <rect key="frame" x="203" y="552" width="150" height="40"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="button1action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="Psk-0o-acX"/>
@@ -331,7 +311,7 @@
                                 <rect key="frame" x="21" y="552" width="150" height="40"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="button3action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="H8G-YK-ZxU"/>
@@ -348,7 +328,7 @@
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMV-cJ-u1P">
                                 <rect key="frame" x="167" y="320" width="40" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -356,7 +336,7 @@
                                 <rect key="frame" x="203" y="483" width="150" height="40"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="button4action:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="gb2-Vx-Lfd"/>
@@ -364,22 +344,33 @@
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-bb-2BI">
                                 <rect key="frame" x="20" y="400" width="333" height="64"/>
-                                <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.13069127729999999" green="0.78423336119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-ar-tcH">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FE-M8-ZUU">
                                 <rect key="frame" x="135" y="619" width="105" height="33"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Skip"/>
                                 <connections>
-                                    <action selector="nextAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="AM0-y8-TbH"/>
+                                    <action selector="skipAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="CcP-nm-yZm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Veb-Vm-UXm">
+                                <rect key="frame" x="135" y="619" width="105" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <segue destination="fSb-YA-U3M" kind="show" identifier="scoreDetail" id="xwL-lz-9wT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzq-Kh-3cO">
+                                <rect key="frame" x="135" y="619" width="105" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextAction:" destination="lO0-H6-Wmd" eventType="touchUpInside" id="UTy-P9-XYs"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -393,7 +384,7 @@
                         <outlet property="button4" destination="HTB-wm-BS6" id="kCk-Tf-VIm"/>
                         <outlet property="finish" destination="Veb-Vm-UXm" id="pNf-uQ-ve8"/>
                         <outlet property="imageField" destination="0gR-rG-FWz" id="8rj-Jv-Qxz"/>
-                        <outlet property="next" destination="yWs-ar-tcH" id="oF3-YO-HX1"/>
+                        <outlet property="next" destination="kzq-Kh-3cO" id="N8B-iW-NLi"/>
                         <outlet property="question" destination="uO9-bb-2BI" id="N23-pm-Od1"/>
                         <outlet property="skip" destination="8FE-M8-ZUU" id="N4P-Da-sHz"/>
                         <outlet property="time" destination="XMV-cJ-u1P" id="Ssz-Se-J8L"/>
