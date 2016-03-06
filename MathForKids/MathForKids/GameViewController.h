@@ -14,6 +14,7 @@
     IBOutlet UIImageView* imageField;
     IBOutlet UITextView* txtField;
     IBOutlet UITextView* question;
+    __weak IBOutlet UIImageView *farmBackground;
     
     //buttons
     IBOutlet UIButton* button1;

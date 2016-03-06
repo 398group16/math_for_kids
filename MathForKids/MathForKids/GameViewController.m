@@ -69,6 +69,7 @@
     
     if ([_name isEqual:@"Counting"] || [_name isEqual:@"Shape"]) {
         imageField.hidden = NO;
+        farmBackground.hidden= NO;
         txtField.hidden = YES;
         [[imageField layer] setBorderWidth:1.0f];
         [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -76,6 +77,8 @@
         [imageField setAlpha:0.93];
     }else{
         imageField.hidden = YES;
+        
+        farmBackground.hidden= YES;
         txtField.hidden = NO;
         [[txtField layer] setBorderWidth:1.0f];
         [[txtField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -855,6 +858,8 @@
     [self setOtherButtonLayout:next];
     [self setOtherButtonLayout:finish];
     [self setOtherButtonLayout:skip];
+    
+    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
     
     next.hidden = YES;
     next.enabled = NO;
