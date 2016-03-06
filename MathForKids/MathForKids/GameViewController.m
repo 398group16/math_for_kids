@@ -35,15 +35,15 @@
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button setAlpha:0.8];
-    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+//    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (void)setOtherButtonLayout:(UIButton*) button{
     [[button layer] setCornerRadius:4.0f];
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-//    [button setBackgroundColor:[UIColor blackColor]];
-//    [button setAlpha:0.9];
+    [button setBackgroundColor:[UIColor blackColor]];
+    [button setAlpha:0.9];
     
 }
 
@@ -51,7 +51,7 @@
 -(void)setQuestion{
     [question setBackgroundColor: [UIColor blackColor]];
     [question setAlpha:0.72];
-    [question setTextColor:[UIColor whiteColor]];
+//    [question setTextColor:[UIColor whiteColor]];
     [[question layer] setCornerRadius:7.0f];
     [[question layer] setBorderWidth:2.0f];
     [[question layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -67,15 +67,40 @@
         [question setText:@"Which shape do you think this shape is?"];
     }
     
-    if ([_name isEqual:@"Counting"] || [_name isEqual:@"Shape"]) {
+    if ([_name isEqual:@"Counting"]) {
+        [farmBackground setImage:[UIImage imageNamed: @"farm"]];
         imageField.hidden = NO;
         farmBackground.hidden= NO;
         txtField.hidden = YES;
+        
         [[imageField layer] setBorderWidth:1.0f];
         [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[imageField layer] setCornerRadius:10.0f];
-        [imageField setAlpha:0.93];
-    }else{
+        [[farmBackground layer] setBorderWidth:1.0f];
+        [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [[farmBackground layer] setCornerRadius:10.0f];
+        imageField.clipsToBounds=YES;
+        farmBackground.clipsToBounds = YES;
+//        [imageField setAlpha:0.93];
+    }
+    else if ([_name isEqual:@"Shape"]) {
+        imageField.hidden = NO;
+        farmBackground.hidden= NO;
+        txtField.hidden = YES;
+
+        [[imageField layer] setBorderWidth:1.0f];
+        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [[imageField layer] setCornerRadius:10.0f];
+
+        [[farmBackground layer] setBorderWidth:1.0f];
+        [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+        [[farmBackground layer] setCornerRadius:10.0f];
+        [farmBackground setImage:[UIImage imageNamed: @"galaxy"]];
+        
+        imageField.clipsToBounds=YES;
+        farmBackground.clipsToBounds = YES;
+        //        [imageField setAlpha:0.93];
+    } else{
         imageField.hidden = YES;
         
         farmBackground.hidden= YES;
@@ -410,7 +435,7 @@
         [UIView setAnimationDuration:0.75];
         
         [question setText:@"Sorry, you ran out of time. Let's try the next question!"];
-        [question setTextColor:[UIColor whiteColor]];
+//        [question setTextColor:[UIColor whiteColor]];
         
         if(correct == 0){
             [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -514,7 +539,7 @@
     [UIView setAnimationDuration:0.75];
     
     [question setText:@"Awh you skipped? No worries, let's try the next question!"];
-    [question setTextColor:[UIColor whiteColor]];
+//    [question setTextColor:[UIColor whiteColor]];
     
     if(correct == 0){
         [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -858,8 +883,6 @@
     [self setOtherButtonLayout:next];
     [self setOtherButtonLayout:finish];
     [self setOtherButtonLayout:skip];
-    
-    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
     
     next.hidden = YES;
     next.enabled = NO;
