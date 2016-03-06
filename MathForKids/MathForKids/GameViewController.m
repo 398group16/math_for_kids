@@ -127,7 +127,7 @@
         UIImage *img = [UIImage imageNamed:[NSString stringWithFormat:@"egg%d.png",s]];
         NSLog(@"egg%d.png", s);
         [imageField setImage:img];
-        [imageField setBackgroundColor:[UIColor blackColor]];
+//        [imageField setBackgroundColor:[UIColor blackColor]];
         
         /*randomly set each buttons title*/
         if(s > 7 && s <= 14){
@@ -305,7 +305,7 @@
         NSLog(@"%d", x);
         UIImage* img = [imgArray objectAtIndex: s];
         [imageField setImage:img];
-        [imageField setBackgroundColor:[UIColor blackColor]];
+//        [imageField setBackgroundColor:[UIColor blackColor]];
         
         /*randomly set each buttons title*/
         if(s > 7 && s <= 14){
