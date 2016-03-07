@@ -276,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Graduate_Vector_Free" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-AV-keS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stone-Path-Shop-Vector" translatesAutoresizingMaskIntoConstraints="NO" id="Zuu-AV-keS">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-Z2-8Lq">
@@ -351,7 +351,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Free-School-Lunch-Vector-Pattern-#3" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-Um-yJD">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="School-Lunch-Vector-Pattern-#3" translatesAutoresizingMaskIntoConstraints="NO" id="wYD-Um-yJD">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6W-4K-pJ4">
@@ -541,9 +541,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Free-School-Lunch-Vector-Pattern-#3" width="750" height="1024"/>
         <image name="Gingerbread_House_Vector" width="750" height="1024"/>
-        <image name="Graduate_Vector_Free" width="750" height="1024"/>
+        <image name="School-Lunch-Vector-Pattern-#3" width="750" height="1024"/>
+        <image name="Stone-Path-Shop-Vector" width="750" height="1024"/>
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
