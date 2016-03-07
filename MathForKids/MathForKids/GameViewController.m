@@ -67,15 +67,16 @@
         [question setText:@"Which shape do you think this shape is?"];
     }
     
+    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
+    
     if ([_name isEqual:@"Counting"]) {
-        [farmBackground setImage:[UIImage imageNamed: @"farm"]];
         imageField.hidden = NO;
         farmBackground.hidden= NO;
         txtField.hidden = YES;
         
-        [[imageField layer] setBorderWidth:1.0f];
-        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-        [[imageField layer] setCornerRadius:10.0f];
+//        [[imageField layer] setBorderWidth:1.0f];
+//        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//        [[imageField layer] setCornerRadius:10.0f];
         [[farmBackground layer] setBorderWidth:1.0f];
         [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[farmBackground layer] setCornerRadius:10.0f];
@@ -88,14 +89,14 @@
         farmBackground.hidden= NO;
         txtField.hidden = YES;
 
-        [[imageField layer] setBorderWidth:1.0f];
-        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-        [[imageField layer] setCornerRadius:10.0f];
+//        [[imageField layer] setBorderWidth:1.0f];
+//        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//        [[imageField layer] setCornerRadius:10.0f];
 
         [[farmBackground layer] setBorderWidth:1.0f];
         [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[farmBackground layer] setCornerRadius:10.0f];
-        [farmBackground setImage:[UIImage imageNamed: @"galaxy"]];
+//        [farmBackground setImage:[UIImage imageNamed: @"galaxy"]];
         
         imageField.clipsToBounds=YES;
         farmBackground.clipsToBounds = YES;
@@ -110,9 +111,6 @@
         [[txtField layer] setCornerRadius:10.0f];
         [txtField setAlpha:0.93];
     }
-    
-    
-    
 }
 
 -(void)setButtons{
@@ -931,10 +929,10 @@
     NSString* str;
     switch (index) {
         case 1:
-            str = @"Arrow";
+            str = @"Arrow";//
             break;
         case 2:
-            str = @"Circle";
+            str = @"Circle";//
             break;
         case 3:
             str = @"Cone";
@@ -943,7 +941,7 @@
             str = @"Crescent";
             break;
         case 5:
-            str = @"Cross";
+            str = @"Cross";//
             break;
         case 6:
             str = @"Cube";
@@ -955,46 +953,47 @@
             str = @"Cylinder";
             break;
         case 9:
-            str = @"Heart";
+            str = @"Heart";//
             break;
         case 10:
-            str = @"Hexagon";
+            str = @"Hexagon";//
             break;
         case 11:
             str = @"Hexagon Prism";
             break;
         case 12:
-            str = @"Octagon";
+            str = @"Octagon";//
             break;
         case 13:
-            str = @"Oval";
+            str = @"Oval";//
             break;
         case 14:
-            str = @"Parallelogram";
+            str = @"Parallelogram";//
             break;
         case 15:
-            str = @"Pentagon";
+            str = @"Pentagon";//
             break;
         case 16:
             str = @"Pyramid";
             break;
         case 17:
-            str = @"Rectangular";
+            str = @"Rectangular";//
             break;
         case 18:
             str = @"Rhombus";
             break;
         case 19:
-            str = @"Sphere";
+            str = @"Sphere";//
             break;
         case 20:
-            str = @"Star";
+            str = @"Star";//
+            // square
             break;
         case 21:
             str = @"Trapecio";
             break;
         case 22:
-            str = @"Traingle";
+            str = @"Traingle";//
             break;
         case 23:
             str = @"Trangular Prism";
