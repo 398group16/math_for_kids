@@ -5,8 +5,6 @@
 //  Created by Shuo Yuan on 2016-02-25.
 //  Copyright © 2016 398group16. All rights reserved.
 //
-
-#import "TutorialViewController.h"
 #import "AdditionViewController.h"
 #import "CountingViewController.h"
 #import "SubtractionViewController.h"

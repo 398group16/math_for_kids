@@ -66,9 +66,13 @@
     [[compare layer] setBorderWidth:1.0f];
     [[compare layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
+    [[label2 layer] setBorderWidth:1.0f];
+    [[label2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [[label2 layer] setCornerRadius:10.0f];
     [label2 setFont:[UIFont boldSystemFontOfSize:27]];
     label2.text = [NSString stringWithFormat:@"%@", self.score];
     [label2 setFont:[UIFont boldSystemFontOfSize:21]];
+    label2.clipsToBounds=YES;
     
     [self.navigationItem setHidesBackButton:YES animated:YES];
     
@@ -185,6 +189,7 @@
     return filePath;
 }
 
+//get json
 - (NSString*)readStringFromFile{
     
     // Build the path...
