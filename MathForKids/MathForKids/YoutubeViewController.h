@@ -19,6 +19,7 @@
 
 //button plays the next video in the inline view
 - (IBAction)previousVideo:(id)sender;
+//@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 
 
 @end

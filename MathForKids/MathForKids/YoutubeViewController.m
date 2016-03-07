@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *previousVidButton;
 @property (weak, nonatomic) IBOutlet UIButton *playVidButton;
 @property (weak, nonatomic) IBOutlet UIButton *prevVidButton;
+@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 
 
 @end
@@ -63,6 +64,14 @@
     [[self playlistSubtractionButton] setEnabled:YES];
     [[self playlistShapeButton] setEnabled:YES];
     
+//    [self.playerView setBackgroundColor:[UIColor whiteColor]];
+//    
+//    NSURL *url = [[self playerView] videoUrl];
+//    [[[self thumbnailView] setImage:<#(UIImage * _Nullable)#>];
+    
+    
+    
+//    [self.playerView setImageWithURL:[NSURL URLWithString:@"http://img.youtube.com/vi/LKk6SvGmJj4/1.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder-avatar"]];
     
     if(IDnum==1){
         NSDictionary *vars = [self setVidPara];

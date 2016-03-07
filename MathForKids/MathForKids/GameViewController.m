@@ -31,10 +31,20 @@
 //    int hei = button.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
     //    [button setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
     //    button.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-    [[button layer] setCornerRadius:4.0f];
+//    [[button layer] setCornerRadius:4.0f];
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button setAlpha:0.8];
+    
+    button.layer.cornerRadius = 8.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+
+    
 //    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
