@@ -63,6 +63,7 @@
     [[self playlistSubtractionButton] setEnabled:YES];
     [[self playlistShapeButton] setEnabled:YES];
     
+    
     if(IDnum==1){
         NSDictionary *vars = [self setVidPara];
         
@@ -151,6 +152,13 @@
     //playsinline plays vid in app rather than playing full screen
     
     self.navigationItem.title = @"Tutorial";
+    
+    
+    
+    [[self.playerView layer] setBorderWidth:1.0f];
+    [[self.playerView layer] setBorderColor:[UIColor blackColor].CGColor];
+    [[self.playerView layer] setCornerRadius:10.0f];
+    self.playerView.clipsToBounds = YES;
     
     //setting button layouts
     [self setButtonLayout:(_previousVidButton)];

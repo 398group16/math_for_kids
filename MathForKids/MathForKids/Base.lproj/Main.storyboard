@@ -146,7 +146,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Gingerbread_House_Vector" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-zR-c7n">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bread juice" translatesAutoresizingMaskIntoConstraints="NO" id="VBS-zR-c7n">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1R9-8x-m7m">
@@ -210,7 +210,8 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="805-qS-ZSf" customClass="YTPlayerView">
-                                <rect key="frame" x="5" y="122" width="365" height="210"/>
+                                <rect key="frame" x="3" y="122" width="369" height="210"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pf1-on-4TV">
                                 <rect key="frame" x="5" y="345" width="120" height="30"/>
@@ -541,9 +542,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Gingerbread_House_Vector" width="750" height="1024"/>
         <image name="School-Lunch-Vector-Pattern-#3" width="750" height="1024"/>
         <image name="Stone-Path-Shop-Vector" width="750" height="1024"/>
+        <image name="bread juice" width="750" height="1206"/>
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
