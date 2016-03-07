@@ -185,6 +185,7 @@
     return filePath;
 }
 
+//get json
 - (NSString*)readStringFromFile{
     
     // Build the path...
