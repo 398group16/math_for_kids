@@ -60,19 +60,22 @@
     if([_name isEqual:@"Counting"]){
         [question setText:@"How many eggs do you think are in the picture?"];
     }else if([_name isEqual:@"Addition"]){
-        [question setText:@"What would you get if you add first to the other?"];
+        [question setText:@"What would you get if you add first number to the other?"];
     }else if([_name isEqual:@"Subtraction"]){
-        [question setText:@"What would you get if you take away one from the other?"];
+        [question setText:@"What would you get if you take away first number from the other?"];
     }else if([_name isEqual:@"Shape"]){
-        [question setText:@"Which shape do you think this shape is?"];
+        [question setText:@"Which shape do you think is in the picture?"];
     }
     
-    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
+//    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
     
     if ([_name isEqual:@"Counting"]) {
         imageField.hidden = NO;
         farmBackground.hidden= NO;
         txtField.hidden = YES;
+        
+        [farmBackground setBackgroundColor:[UIColor blackColor]];
+        [farmBackground setAlpha:0.60];
         
 //        [[imageField layer] setBorderWidth:1.0f];
 //        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -88,6 +91,9 @@
         imageField.hidden = NO;
         farmBackground.hidden= NO;
         txtField.hidden = YES;
+        
+        [farmBackground setBackgroundColor:[UIColor whiteColor]];
+        [farmBackground setAlpha:0.60];
 
 //        [[imageField layer] setBorderWidth:1.0f];
 //        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -109,7 +115,7 @@
         [[txtField layer] setBorderWidth:1.0f];
         [[txtField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[txtField layer] setCornerRadius:10.0f];
-        [txtField setAlpha:0.93];
+//        [txtField setAlpha:0.93];
     }
 }
 
@@ -217,9 +223,9 @@
         
         s = x+y;
         NSLog(@"%d + %d = %d", x, y, s);
-        [txtField setBackgroundColor:[UIColor blackColor]];
-        [txtField setTextColor:[UIColor cyanColor]];
-        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
+//        [txtField setBackgroundColor:[UIColor blackColor]];
+//        [txtField setTextColor:[UIColor whiteColor]];
+//        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
         
         [txtField setText:[NSString stringWithFormat:@"%d + %d = ?", x, y]];
     
@@ -282,9 +288,9 @@
         }
         [lastNumY addObject:[NSNumber numberWithInteger:y]];
         
-        [txtField setBackgroundColor:[UIColor blackColor]];
-        [txtField setTextColor:[UIColor cyanColor]];
-        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
+//        [txtField setBackgroundColor:[UIColor blackColor]];
+//        [txtField setTextColor:[UIColor cyanColor]];
+//        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
         if(x>y){
             s = x-y;
             [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", x, y]];
@@ -635,9 +641,9 @@
     }
     
     if(correct == 0){
-        [question setText:@"Correct Answer! Congratulations!"];
+        [question setText:@"Correct answer, good job!"];
     }else{
-        [question setText:@"Sorry, wrong answer. Lets try again!"];
+        [question setText:@"Sorry, wrong answer. Lets try the next question!"];
     }
     
     [UIView commitAnimations];
@@ -702,9 +708,9 @@
     }
     
     if(correct == 1){
-        [question setText:@"Correct Answer! Congratulations!"];
+        [question setText:@"Correct answer, good job!"];
     }else{
-        [question setText:@"Sorry, wrong answer. Lets try again!"];
+        [question setText:@"Sorry, wrong answer. Lets try the next question!"];
     }
     
     [UIView commitAnimations];
@@ -772,9 +778,9 @@
     }
     
     if(correct == 2){
-        [question setText:@"Correct Answer! Congratulations!"];
+        [question setText:@"Correct answer, good job!"];
     }else{
-        [question setText:@"Sorry, wrong answer. Lets try again!"];
+        [question setText:@"Sorry, wrong answer. Lets try the next question!"];
     }
     
     [UIView commitAnimations];
@@ -850,9 +856,9 @@
     
 
     if(correct == 3){
-        [question setText:@"Correct Answer! Congratulations!"];
+        [question setText:@"Correct answer, good job!!"];
     }else{
-        [question setText:@"Sorry, wrong answer. Lets try again!"];
+        [question setText:@"Sorry, wrong answer. Lets try the next question!"];
     }
     
     [UIView commitAnimations];
