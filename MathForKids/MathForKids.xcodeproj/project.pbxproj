@@ -22,7 +22,6 @@
 		A58CE5621C7F041B002B876E /* MathForKidsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5611C7F041B002B876E /* MathForKidsTests.m */; };
 		A58CE56D1C7F041B002B876E /* MathForKidsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE56C1C7F041B002B876E /* MathForKidsUITests.m */; };
 		A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57B1C7F0460002B876E /* RootViewController.m */; };
-		A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE57E1C7F0672002B876E /* HomeViewController.m */; };
 		A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE58D1C7F196F002B876E /* CountingViewController.m */; };
 		A58CE5901C7F196F002B876E /* CountingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE58E1C7F196F002B876E /* CountingViewController.xib */; };
 		A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5921C7F199E002B876E /* AdditionViewController.m */; };
@@ -84,8 +83,6 @@
 		A58CE56E1C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58CE57A1C7F0460002B876E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		A58CE57B1C7F0460002B876E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		A58CE57D1C7F0672002B876E /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		A58CE57E1C7F0672002B876E /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		A58CE58C1C7F196F002B876E /* CountingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountingViewController.h; sourceTree = "<group>"; };
 		A58CE58D1C7F196F002B876E /* CountingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountingViewController.m; sourceTree = "<group>"; };
 		A58CE58E1C7F196F002B876E /* CountingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CountingViewController.xib; sourceTree = "<group>"; };
@@ -202,8 +199,6 @@
 				A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */,
 				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
 				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
-				A58CE57D1C7F0672002B876E /* HomeViewController.h */,
-				A58CE57E1C7F0672002B876E /* HomeViewController.m */,
 				A58CE57A1C7F0460002B876E /* RootViewController.h */,
 				A58CE57B1C7F0460002B876E /* RootViewController.m */,
 				A5B43B4B1C803EE700A85215 /* YoutubeViewController.h */,
@@ -533,7 +528,6 @@
 				A58CE5991C7F1A12002B876E /* SubtractionViewController.m in Sources */,
 				A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */,
 				A58CE57C1C7F0460002B876E /* RootViewController.m in Sources */,
-				A58CE5801C7F0672002B876E /* HomeViewController.m in Sources */,
 				A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */,
 				A5C6F2321C83B2FC00D2668D /* scoreObjects.m in Sources */,
 			);

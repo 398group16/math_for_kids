@@ -9,6 +9,9 @@
 #import "YoutubeViewController.h"
 
 @interface YoutubeViewController ()
+//
+//@property (weak, nonatomic) IBOutlet UIImageView *youTubeView;
+
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
 //@property(nonatomic, strong) IBOutlet
@@ -24,6 +27,7 @@
 @end
 
 @implementation YoutubeViewController
+
 
 - (void)setButtonLayout:(UIButton*) button{
     
@@ -191,8 +195,6 @@
     //playsinline plays vid in app rather than playing full screen
     
     self.navigationItem.title = @"Tutorial";
-    
-    
     
     [[self.playerView layer] setBorderWidth:1.0f];
     [[self.playerView layer] setBorderColor:[UIColor blackColor].CGColor];
