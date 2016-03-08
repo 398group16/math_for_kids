@@ -38,22 +38,6 @@
     [self setAnswerButtonLayout:(add)];
     [self setAnswerButtonLayout:(sub)];
     [self setAnswerButtonLayout:(shape)];
-    
-//    [[count layer] setCornerRadius:4.0f];
-//    [[count layer] setBorderWidth:1.0f];
-//    [[count layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-//    
-//    [[add layer] setCornerRadius:4.0f];
-//    [[add layer] setBorderWidth:1.0f];
-//    [[add layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-//    [[sub layer] setCornerRadius:4.0f];
-//    [[sub layer] setBorderWidth:1.0f];
-//    [[sub layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-//    
-//    [[shape layer] setCornerRadius:4.0f];
-//    [[shape layer] setBorderWidth:1.0f];
-//    [[shape layer] setBorderColor:[UIColor lightGrayColor].CGColor];
 }
 
 -(void)setUsrName:(NSString *)newName{

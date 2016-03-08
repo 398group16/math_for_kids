@@ -74,6 +74,14 @@
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
+- (IBAction)homeButtonClick:(id)sender {
+
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    
+    id obj=[viewControllers objectAtIndex:1];
+    [[self navigationController] popToViewController:obj animated:YES];
+    //    NSLog(@"%@",viewControllers);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -84,7 +92,7 @@
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
-    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationItem setHidesBackButton:NO animated:YES];
     
     /*write json file*/
     [self loadScoreData];
