@@ -15,6 +15,7 @@
     IBOutlet UIButton* share;
     IBOutlet UIButton* compare;
 }
+
 @property (strong, nonatomic) NSString* score;
 @property (strong, nonatomic) NSString* usrName;
 

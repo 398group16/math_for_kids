@@ -33,6 +33,17 @@
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
 }
 
+- (void) setShadows: (UIButton*) button{
+    
+    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+}
+
 
 // sets video parameters
 - (NSDictionary *)setVidPara {
@@ -177,6 +188,12 @@
     [self setButtonLayout:(_playlistAdditionButton)];
     [self setButtonLayout:(_playlistSubtractionButton)];
     [self setButtonLayout:(_playlistShapeButton)];
+    
+    //setting shadows
+    [self setShadows:(_playlistCountingButton)];
+    [self setShadows:(_playlistAdditionButton)];
+    [self setShadows:(_playlistSubtractionButton)];
+    [self setShadows:(_playlistShapeButton)];
     
     // load the video
     [self loadVideo];
