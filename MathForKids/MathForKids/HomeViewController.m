@@ -17,7 +17,7 @@
 - (IBAction)startGameButtonPress:(id)sender {
     
     NSArray *viewControllers = [[self navigationController] viewControllers];
-    NSLog(@"%@",viewControllers);
+    NSLog(@"Views in the stack: %@",viewControllers);
 }
 
 - (void)setAnswerButtonLayout:(UIButton*) button{

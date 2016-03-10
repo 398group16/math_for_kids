@@ -74,25 +74,25 @@
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
-//- (IBAction)homeButtonClick:(id)sender {
-//
-//    NSArray *viewControllers = [[self navigationController] viewControllers];
-//    
-//    id obj=[viewControllers objectAtIndex:1];
-//    [[self navigationController] popToViewController:obj animated:YES];
-//    //    NSLog(@"%@",viewControllers);
-//}
+- (IBAction)homeButtonClick:(id)sender {
+
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    
+    id obj=[viewControllers objectAtIndex:1];
+    [[self navigationController] popToViewController:obj animated:YES];
+    //    NSLog(@"%@",viewControllers);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self setAnswerButtonLayout:(home)];
+    [self setAnswerButtonLayout:(home)];
     [self setAnswerButtonLayout:(share)];
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
-    [self.navigationItem setHidesBackButton:NO animated:YES];
+    [self.navigationItem setHidesBackButton:YES];
     
     /*write json file*/
     [self loadScoreData];
@@ -131,18 +131,18 @@
         NSLog(@"An error happened = %@", error);
     }
     
-    self.navigationItem.title = @"Menu";
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
-    
-    
-    self.navigationItem.leftBarButtonItem = backButton;
+//    self.navigationItem.title = @"Menu";
+//    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+//    
+//    
+//    self.navigationItem.leftBarButtonItem = backButton;
 }
 
--(void)handleBack:(id)sender{
-    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
-    [self.navigationController popToViewController:vc animated:YES];
-    
-}
+//-(void)handleBack:(id)sender{
+//    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
+//    [self.navigationController popToViewController:vc animated:YES];
+//    
+//}
 
 -(NSString*)appendJsonFile:(NSString*)oldJson
                    newJson:(NSString*)newJson{

@@ -11,7 +11,7 @@
 @interface ScoreViewController : UIViewController{
     IBOutlet UILabel* label1;
     IBOutlet UILabel* label2;
-//    IBOutlet UIButton* home;
+    IBOutlet UIButton* home;
     IBOutlet UIButton* share;
     IBOutlet UIButton* compare;
 }
