@@ -19,6 +19,30 @@
 
 @implementation ScoreViewController
 
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+//    [self setAnswerButtonLayout:(compare)];
+    button.layer.cornerRadius = 8.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+}
+
+- (void)setLabelLayout:(UILabel*) label{
+    
+    [[label layer] setBorderWidth:1.0f];
+    [[label layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [[label layer] setCornerRadius:10.0f];
+    [label setFont:[UIFont boldSystemFontOfSize:27]];
+    label.text = [NSString stringWithFormat:@"%@", self.score];
+    [label setFont:[UIFont boldSystemFontOfSize:21]];
+    label.clipsToBounds=YES;
+}
+
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -50,31 +74,25 @@
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
+//- (IBAction)homeButtonClick:(id)sender {
+//
+//    NSArray *viewControllers = [[self navigationController] viewControllers];
+//    
+//    id obj=[viewControllers objectAtIndex:1];
+//    [[self navigationController] popToViewController:obj animated:YES];
+//    //    NSLog(@"%@",viewControllers);
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[home layer] setCornerRadius:4.0f];
-    [[home layer] setBorderWidth:1.0f];
-    [[home layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
-    [[share layer] setCornerRadius:4.0f];
-    [[share layer] setBorderWidth:1.0f];
-    [[share layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    [self setAnswerButtonLayout:(home)];
+    [self setAnswerButtonLayout:(share)];
+    [self setAnswerButtonLayout:(compare)];
+    [self setLabelLayout:(label2)];
     
-    [[compare layer] setCornerRadius:4.0f];
-    [[compare layer] setBorderWidth:1.0f];
-    [[compare layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[label2 layer] setBorderWidth:1.0f];
-    [[label2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [[label2 layer] setCornerRadius:10.0f];
-    [label2 setFont:[UIFont boldSystemFontOfSize:27]];
-    label2.text = [NSString stringWithFormat:@"%@", self.score];
-    [label2 setFont:[UIFont boldSystemFontOfSize:21]];
-    label2.clipsToBounds=YES;
-    
-    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationItem setHidesBackButton:NO animated:YES];
     
     /*write json file*/
     [self loadScoreData];
@@ -112,6 +130,18 @@
     }else if (error != nil){
         NSLog(@"An error happened = %@", error);
     }
+    
+    self.navigationItem.title = @"Menu";
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+    
+    
+    self.navigationItem.leftBarButtonItem = backButton;
+}
+
+-(void)handleBack:(id)sender{
+    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
+    [self.navigationController popToViewController:vc animated:YES];
+    
 }
 
 -(NSString*)appendJsonFile:(NSString*)oldJson

@@ -14,6 +14,22 @@
 @end
 
 @implementation HomeViewController
+- (IBAction)startGameButtonPress:(id)sender {
+    
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    NSLog(@"%@",viewControllers);
+}
+
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+} //    [self setAnswerButtonLayout:(compare)];
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,21 +38,27 @@
     usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
     usrImage.layer.borderWidth = 1.0f;
     
-    [[start layer] setCornerRadius:4.0f];
-    [[start layer] setBorderWidth:1.0f];
-    [[start layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self setAnswerButtonLayout:(start)];
+    [self setAnswerButtonLayout:(tut)];
+    [self setAnswerButtonLayout:(score)];
+    [self setAnswerButtonLayout:(exit)];
     
-    [[tut layer] setCornerRadius:4.0f];
-    [[tut layer] setBorderWidth:1.0f];
-    [[tut layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[score layer] setCornerRadius:4.0f];
-    [[score layer] setBorderWidth:1.0f];
-    [[score layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[exit layer] setCornerRadius:4.0f];
-    [[exit layer] setBorderWidth:1.0f];
-    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    
+//    [[start layer] setCornerRadius:4.0f];
+//    [[start layer] setBorderWidth:1.0f];
+//    [[start layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    
+//    [[tut layer] setCornerRadius:4.0f];
+//    [[tut layer] setBorderWidth:1.0f];
+//    [[tut layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    
+//    [[score layer] setCornerRadius:4.0f];
+//    [[score layer] setBorderWidth:1.0f];
+//    [[score layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    
+//    [[exit layer] setCornerRadius:4.0f];
+//    [[exit layer] setBorderWidth:1.0f];
+//    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
     self.navigationItem.title = @"Menu";
     UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];

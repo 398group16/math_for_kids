@@ -9,6 +9,9 @@
 #import "YoutubeViewController.h"
 
 @interface YoutubeViewController ()
+//
+//@property (weak, nonatomic) IBOutlet UIImageView *youTubeView;
+
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
 //@property(nonatomic, strong) IBOutlet
@@ -16,15 +19,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *playlistAdditionButton;
 @property (weak, nonatomic) IBOutlet UIButton *playlistSubtractionButton;
 @property (weak, nonatomic) IBOutlet UIButton *playlistShapeButton;
-@property (weak, nonatomic) IBOutlet UIButton *previousVidButton;
+@property (weak, nonatomic) IBOutlet UIButton *previousVidButton;//next button
 @property (weak, nonatomic) IBOutlet UIButton *playVidButton;
 @property (weak, nonatomic) IBOutlet UIButton *prevVidButton;
-@property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 
 
 @end
 
 @implementation YoutubeViewController
+
 
 - (void)setButtonLayout:(UIButton*) button{
     
@@ -58,44 +61,72 @@
     return playerVars;
 }//F9B243
 
+
+
+- (void) setShadows: (UIButton*) button{
+    
+    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+}
+
 - (void)selectPlayList:(int) IDnum{
     [[self playlistCountingButton] setEnabled:YES];
     [[self playlistAdditionButton] setEnabled:YES];
     [[self playlistSubtractionButton] setEnabled:YES];
     [[self playlistShapeButton] setEnabled:YES];
     
-//    [self.playerView setBackgroundColor:[UIColor whiteColor]];
-//    
-//    NSURL *url = [[self playerView] videoUrl];
-//    [[[self thumbnailView] setImage:<#(UIImage * _Nullable)#>];
-    
-    
-    
-//    [self.playerView setImageWithURL:[NSURL URLWithString:@"http://img.youtube.com/vi/LKk6SvGmJj4/1.jpg"] placeholderImage:[UIImage imageNamed:@"placeholder-avatar"]];
-    
     if(IDnum==1){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYW7hT5I7RgxXwTYepUB72GY" playerVars:vars];
         [[self playlistCountingButton] setEnabled:NO];
+        _playlistCountingButton.layer.shadowRadius = 3;
+        _playlistCountingButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+//        [self setShadows:(_playlistCountingButton)];
+        [self setShadows:(_playlistAdditionButton)];
+        [self setShadows:(_playlistSubtractionButton)];
+        [self setShadows:(_playlistShapeButton)];
     }
     else if(IDnum==2){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYVbwDpLm65Chhtd-G9CTP7J" playerVars:vars];
         [[self playlistAdditionButton] setEnabled:NO];
+        _playlistAdditionButton.layer.shadowRadius = 3;
+        _playlistAdditionButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+        [self setShadows:(_playlistCountingButton)];
+//        [self setShadows:(_playlistAdditionButton)];
+        [self setShadows:(_playlistSubtractionButton)];
+        [self setShadows:(_playlistShapeButton)];
     }
     else if(IDnum==3){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYVT4eyM4GDk2nh2GdBGNo0p" playerVars:vars];
         [[self playlistSubtractionButton] setEnabled:NO];
+        _playlistSubtractionButton.layer.shadowRadius = 3;
+        _playlistSubtractionButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+        [self setShadows:(_playlistCountingButton)];
+        [self setShadows:(_playlistAdditionButton)];
+//        [self setShadows:(_playlistSubtractionButton)];
+        [self setShadows:(_playlistShapeButton)];
     }
     else if(IDnum==4){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYWisg1kIZDcnaPnen7Mj0np" playerVars:vars];
         [[self playlistShapeButton] setEnabled:NO];
+        _playlistShapeButton.layer.shadowRadius = 3;
+        _playlistShapeButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
+        [self setShadows:(_playlistCountingButton)];
+        [self setShadows:(_playlistAdditionButton)];
+        [self setShadows:(_playlistSubtractionButton)];
+//        [self setShadows:(_playlistShapeButton)];
     }
 }
 
@@ -123,6 +154,9 @@
 
 //plays video
 - (IBAction)playVideo:(id)sender {
+//    [self setShadows:(_previousVidButton)];
+//    _previousVidButton.layer.shadowRadius = 3;
+    
     [self.playerView playVideo];
 }
 
@@ -162,8 +196,6 @@
     
     self.navigationItem.title = @"Tutorial";
     
-    
-    
     [[self.playerView layer] setBorderWidth:1.0f];
     [[self.playerView layer] setBorderColor:[UIColor blackColor].CGColor];
     [[self.playerView layer] setCornerRadius:10.0f];
@@ -177,6 +209,12 @@
     [self setButtonLayout:(_playlistAdditionButton)];
     [self setButtonLayout:(_playlistSubtractionButton)];
     [self setButtonLayout:(_playlistShapeButton)];
+    
+//    //setting shadows
+    [self setShadows:(_playlistCountingButton)];
+//    [self setShadows:(_playlistAdditionButton)];
+//    [self setShadows:(_playlistSubtractionButton)];
+//    [self setShadows:(_playlistShapeButton)];
     
     // load the video
     [self loadVideo];
