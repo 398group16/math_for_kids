@@ -7,6 +7,7 @@
 //
 
 #import "ScoreViewController.h"
+#import "ScoreListViewController.h"
 #import "scoreObjects.h"
 #import "categoryList.h"
 
@@ -14,6 +15,7 @@
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
+@property (nonatomic, strong) NSDictionary* scoreDict;
 
 @end
 
@@ -164,15 +166,50 @@
             found = true;
             NSDictionary* tempScore = [one valueForKey:@"scoreList"];
             NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
+            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
             
-            for(NSDictionary* s in tempScore){
-                [arrayS addObject:s];
+            /*make sure every user name only have 10 record scores*/
+            NSArray* tempName = [tempS valueForKey:@"name"];
+            NSString* tempStr;
+            for (NSString* s in tempName) {// check there is no more exctra brackets in tempName String
+                NSCharacterSet *charsToTrim = [NSCharacterSet characterSetWithCharactersInString:@"()  \n\""];
+                tempStr = [s stringByTrimmingCharactersInSet:charsToTrim];
             }
             
-            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
+            
+            BOOL canBeAdd = true;
+            int count = 0;
+            
+            for(NSDictionary* ts in tempScore){// check how many same category scores under one user name
+                NSString* tmpName = [ts valueForKey:@"name"];
+                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
+                if ([tmpName isEqualToString:tempStr]) {
+                    count++;
+                }
+            }
+            
+            if (count > 9) {// make sure every user name only can have 10 scores in one category
+                canBeAdd = false;
+            }
+//            NSLog(@"name: %@, count:%d, category:%@", tempStr, count, newCate);
+            
+            for(NSDictionary* s in tempScore){
+                if ([s valueForKey:@"name"] == tempStr && canBeAdd == false){
+                    if (count <= 10) {
+                        canBeAdd = true;
+                    }
+                    count--;
+                }else{
+                    [arrayS addObject:s];
+                }
+                
+            }
+            /*make sure every user name only have 10 record scores*/
+            
             for(NSDictionary* s in tempS){
                 [arrayS addObject:s];
             }
+            
 //            NSLog(@"22222");
             NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
             [tempDict setValue:tempCate forKey:@"category"];
@@ -200,6 +237,11 @@
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
 //    NSLog(@"Combine JSON: %@", str);
+    
+    error = nil;
+    
+    _scoreDict = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
     return str;
 }
 
@@ -250,14 +292,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"scoreListDetail"]){
+        [[segue destinationViewController] setScoreDict:_scoreDict];
+    }
 }
-*/
+
 
 @end

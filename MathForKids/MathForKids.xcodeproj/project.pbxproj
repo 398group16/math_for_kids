@@ -35,6 +35,7 @@
 		A5C6F2321C83B2FC00D2668D /* scoreObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C6F2311C83B2FC00D2668D /* scoreObjects.m */; };
 		A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */; };
 		A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */; };
+		C1257C561C913ECD00CAAD89 /* ScoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		B2079AD1898A03B341308E14 /* Pods-MathForKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKids.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids.debug.xcconfig"; sourceTree = "<group>"; };
 		BF58B7517D101E07C376B76B /* Pods-MathForKidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C1257C541C913ECD00CAAD89 /* ScoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreListViewController.h; sourceTree = "<group>"; };
+		C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreListViewController.m; sourceTree = "<group>"; };
 		ED2E3DFB5F1E698F6828E885 /* Pods-MathForKids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKids.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -194,6 +197,8 @@
 				A54D34731C8458EC008453CF /* categoryList.m */,
 				A5C6F2301C83B2FC00D2668D /* scoreObjects.h */,
 				A5C6F2311C83B2FC00D2668D /* scoreObjects.m */,
+				C1257C541C913ECD00CAAD89 /* ScoreListViewController.h */,
+				C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */,
 				A56CD79D1C830BD7007001F7 /* ScoreViewController.h */,
 				A56CD79E1C830BD7007001F7 /* ScoreViewController.m */,
 				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
@@ -532,6 +537,7 @@
 				3592F5D31C8F6D790093901F /* HomeViewController.m in Sources */,
 				A58CE59E1C7F1A2D002B876E /* ShapeViewController.m in Sources */,
 				A58CE5991C7F1A12002B876E /* SubtractionViewController.m in Sources */,
+				C1257C561C913ECD00CAAD89 /* ScoreListViewController.m in Sources */,
 				A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */,
 				A58CE57C1C7F0460002B876E /* rootViewController.m in Sources */,
 				A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */,
