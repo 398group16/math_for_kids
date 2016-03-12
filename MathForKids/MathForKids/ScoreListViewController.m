@@ -7,6 +7,7 @@
 //
 
 #import "ScoreListViewController.h"
+#import "QuartzCore/QuartzCore.h"
 
 @interface ScoreListViewController ()
 
@@ -30,11 +31,24 @@
         _scoreDict = newDict;
     }
 }
+
+//takes a screenshot
 - (IBAction)shareButton:(id)sender {
-    NSString *shareText = @"The text I am sharing";//create a UIImage and add it to
-    //the array if you wanna share an image too
     
-    NSArray *itemsToShare = @[shareText];
+    //takes screenshot and saves in cameraroll
+    UIGraphicsBeginImageContext(self.view.bounds.size);
+    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *screenShotImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+//    UIImageWriteToSavedPhotosAlbum(screenShotImage, nil, nil, nil); //this line saces the screenshot on camera roll which we dont want
+    
+    
+    
+    
+    
+    NSString *shareText = @"Checkout my scores on Math for Kids app and go download yours too!!!";
+    
+    NSArray *itemsToShare = @[shareText, screenShotImage];
     
     UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
     
