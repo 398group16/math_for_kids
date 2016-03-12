@@ -46,7 +46,7 @@
 }
 
 - (IBAction)shareButton:(id)sender {
-    NSString *shareText = @"The text I am sharing";//create a UIImage and add it to
+    NSString *shareText = [NSString stringWithFormat:@"I scored %@ in Math for Kids!!! Go download your game from App Store now!", self.score];//create a UIImage and add it to
     //the array if you wanna share an image too
     
     NSArray *itemsToShare = @[shareText];
