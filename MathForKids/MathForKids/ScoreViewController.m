@@ -12,6 +12,7 @@
 #import "categoryList.h"
 
 @interface ScoreViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *share;
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
@@ -44,6 +45,18 @@
     label.clipsToBounds=YES;
 }
 
+- (IBAction)shareButton:(id)sender {
+    NSString *shareText = @"The text I am sharing";//create a UIImage and add it to
+    //the array if you wanna share an image too
+    
+    NSArray *itemsToShare = @[shareText];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -90,7 +103,7 @@
     // Do any additional setup after loading the view.
     
     [self setAnswerButtonLayout:(home)];
-    [self setAnswerButtonLayout:(share)];
+    [self setAnswerButtonLayout:(_share)];
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
