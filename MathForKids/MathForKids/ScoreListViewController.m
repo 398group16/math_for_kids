@@ -30,6 +30,18 @@
         _scoreDict = newDict;
     }
 }
+- (IBAction)shareButton:(id)sender {
+    NSString *shareText = @"The text I am sharing";//create a UIImage and add it to
+    //the array if you wanna share an image too
+    
+    NSArray *itemsToShare = @[shareText];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 -(void) checkScoreDictArray{
     NSMutableArray *countS;
