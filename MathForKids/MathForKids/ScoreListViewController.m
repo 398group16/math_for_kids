@@ -68,6 +68,14 @@
     NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", (unsigned long)countS.count, addS.count, subS.count, shapeS.count);
 }
 
+// allow the view to rotate
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+
+
 /*
 #pragma mark - Navigation
 

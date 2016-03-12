@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D577E041C93E99E0068B7B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D577E031C93E99E0068B7B2 /* CoreGraphics.framework */; };
+		0D577E071C93E9F40068B7B2 /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D577E061C93E9F40068B7B2 /* GraphView.m */; };
 		353030E61C89482E004E4BA6 /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 353030E41C89482E004E4BA6 /* YTPlayerView.m */; };
 		353030E81C897E9E004E4BA6 /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 353030E71C897E9E004E4BA6 /* Assets.bundle */; };
 		3592F5D31C8F6D790093901F /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3592F5D21C8F6D790093901F /* HomeViewController.m */; };
@@ -57,6 +59,9 @@
 
 /* Begin PBXFileReference section */
 		0B54DAA7FB08C6640AD9F320 /* Pods-MathForKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKidsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKidsTests/Pods-MathForKidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		0D577E031C93E99E0068B7B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D577E051C93E9F40068B7B2 /* GraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GraphView.h; sourceTree = "<group>"; };
+		0D577E061C93E9F40068B7B2 /* GraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GraphView.m; sourceTree = "<group>"; };
 		353030E31C89482E004E4BA6 /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		353030E41C89482E004E4BA6 /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		353030E71C897E9E004E4BA6 /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
@@ -119,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D577E041C93E99E0068B7B2 /* CoreGraphics.framework in Frameworks */,
 				54459F668FAF640E3C401359 /* libPods-MathForKids.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +164,7 @@
 		7F92094DD6B5E0A22838D1FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D577E031C93E99E0068B7B2 /* CoreGraphics.framework */,
 				8BE2F880AB3AF27410746EB6 /* libPods-MathForKids.a */,
 				6F9A9CCAD60EAC97FD4A3834 /* libPods-MathForKidsTests.a */,
 				8ECF7697CAB967570C6FB364 /* libPods-MathForKidsUITests.a */,
@@ -218,6 +225,8 @@
 				A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */,
 				A58CE5581C7F041B002B876E /* Info.plist */,
 				A58CE5471C7F041B002B876E /* Supporting Files */,
+				0D577E051C93E9F40068B7B2 /* GraphView.h */,
+				0D577E061C93E9F40068B7B2 /* GraphView.m */,
 			);
 			path = MathForKids;
 			sourceTree = "<group>";
@@ -541,6 +550,7 @@
 				A58CE5941C7F199E002B876E /* AdditionViewController.m in Sources */,
 				A58CE57C1C7F0460002B876E /* rootViewController.m in Sources */,
 				A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */,
+				0D577E071C93E9F40068B7B2 /* GraphView.m in Sources */,
 				A5C6F2321C83B2FC00D2668D /* scoreObjects.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

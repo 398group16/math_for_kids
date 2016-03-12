@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface ScoreListViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 
 @property (nonatomic, strong) NSDictionary* scoreDict;
 -(void)setScoreDict:(NSDictionary*) newDict;
