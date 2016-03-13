@@ -8,6 +8,7 @@
 
 #import "ScoreListViewController.h"
 #import "QuartzCore/QuartzCore.h"
+#import "GraphView.h"
 
 @interface ScoreListViewController ()
 
@@ -19,6 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self checkScoreDictArray];
+    _scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
 }
 
 - (void)didReceiveMemoryWarning {

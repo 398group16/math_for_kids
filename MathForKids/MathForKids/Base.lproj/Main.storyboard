@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -102,6 +102,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" red="0.35686274509999999" green="0.3411764706" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="yFm-a3-lIy" kind="show" id="Ctc-OJ-hVq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZCZ-kf-xfx">
                                 <rect key="frame" x="98" y="554" width="179" height="30"/>
@@ -564,21 +567,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZA-dd-UKG">
-                                <rect key="frame" x="0.0" y="52" width="375" height="571"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="400"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="GraphView" customClass="GraphView">
-                                        <rect key="frame" x="0.0" y="13" width="375" height="352"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="GraphView" customClass="GraphView">
+                                        <rect key="frame" x="0.0" y="36" width="431" height="350"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="429" id="a5z-BC-krW"/>
+                                            <constraint firstAttribute="height" constant="350" id="qvO-Fv-zZW"/>
+                                        </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
-                                        <rect key="frame" x="167" y="411" width="40" height="30"/>
-                                        <state key="normal" title="Share"/>
-                                        <connections>
-                                            <action selector="shareButton:" destination="yFm-a3-lIy" eventType="touchUpInside" id="pvj-Gk-9Pa"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
+                                <rect key="frame" x="167" y="477" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="yFm-a3-lIy" eventType="touchUpInside" id="pvj-Gk-9Pa"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -600,5 +607,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CVU-i4-B3c"/>
+        <segue reference="Ctc-OJ-hVq"/>
     </inferredMetricsTieBreakers>
 </document>

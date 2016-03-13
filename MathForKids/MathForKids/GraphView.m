@@ -11,7 +11,7 @@
 
 @implementation GraphView
 
-float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.77, 0.99, 0.55};
+float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
 
 - (void)drawBar:(CGRect)rect context:(CGContextRef)ctx
 {
