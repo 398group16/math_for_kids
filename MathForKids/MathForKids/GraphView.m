@@ -16,7 +16,7 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
 {
     CGContextBeginPath(ctx);
     
-    // prepareing the enviorment for drawing
+    // preparing the enviorment for drawing
     CGContextSetGrayFillColor(ctx, 0.2, 0.7);
     
     CGContextMoveToPoint(ctx, CGRectGetMinX(rect), CGRectGetMinY(rect));
@@ -142,5 +142,17 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44, 0.88, 0.7
     //    }
     //    CGRect barRect = CGRectMake(barX, barY, kBarWidth, barHeight);
     [self drawLineGraphWithContext:context];
+    
+    //create x axis labels
+    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+    CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
+    CGContextSetTextDrawingMode(context, kCGTextFill);
+    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+    for (int i = 1; i < sizeof(data); i++)
+    {
+        NSString *theText = [NSString stringWithFormat:@"%d", i];
+        CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
+        CGContextShowTextAtPoint(context,  i * kStepX - 45, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+    }
 }
 @end
