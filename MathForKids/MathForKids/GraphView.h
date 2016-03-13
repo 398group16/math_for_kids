@@ -24,4 +24,8 @@
 #define kCircleRadius 3  // circle redius
 @interface GraphView : UIView
 
+@property (nonatomic, strong) NSDictionary* scoreDict;
+@property (nonatomic, strong) NSString* category;
+-(void)setScoreDict:(NSDictionary*) newDict;
+
 @end
