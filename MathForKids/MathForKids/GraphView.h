@@ -10,12 +10,13 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 #define kGraphHeight 300
-#define kDefaultGraphWidth 900
+#define kDefaultGraphWidth 600
 #define kOffsetX 10
 #define kStepX 50
 #define kGraphBottom 300
 #define kGraphTop 0
-#define kStepY 50
+
+#define kStepY 70
 #define kOffsetY 10
 
 #define kBarTop 10
