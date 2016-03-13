@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-MathForKids.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MathForKidsTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-MathForKidsUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SBJson.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0E9DDC2BC8BB3B78CE01F44E99749A05</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>36240D562D1B32A59E5DA1A03B859351</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D1FE4A2479272FB1BA990D8596055A2C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F1F85D28D21F2CE8D47C2FB02BBDC805</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
