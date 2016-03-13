@@ -11,7 +11,14 @@
 
 @implementation GraphView
 
-float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
+//float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
+
+-(void)setData:(NSMutableArray*)scores{
+    if (_data != scores) {
+        _data = scores;
+    }
+
+}
 
 - (void)drawBar:(CGRect)rect context:(CGContextRef)ctx
 {
@@ -45,12 +52,12 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
     // fill the graph with color
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
-    for (int i = 1; i < sizeof(data); i++)
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+    for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
-    CGContextAddLineToPoint(ctx, kOffsetX + (sizeof(data) - 1) * kStepX, kGraphHeight);
+    CGContextAddLineToPoint(ctx, kOffsetX + (sizeof(self.data) - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
     
     CGContextDrawPath(ctx, kCGPathFill);
@@ -58,11 +65,11 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
     
     //start drawing line (path)
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * data[0]);
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * data[i]);
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -70,10 +77,10 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
     //-----------------------------------
     
     // add point to the graph
-    for (int i = 1; i < sizeof(data) - 1; i++)
+    for (int i = 1; i < self.data.count - 1; i++)
     {
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - maxGraphHeight * data[i];
+        float y = kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
@@ -149,7 +156,7 @@ float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
     CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
     CGContextSetTextDrawingMode(context, kCGTextFill);
     CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
-    for (int i = 1; i < sizeof(data); i++)
+    for (int i = 1; i < self.data.count; i++)
     {
         NSString *theText = [NSString stringWithFormat:@"%d", i];
         //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];

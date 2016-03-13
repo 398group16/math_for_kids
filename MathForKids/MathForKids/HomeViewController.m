@@ -8,6 +8,7 @@
 
 #import "HomeViewController.h"
 #import "GameCategoryViewController.h"
+#import "ScoreListViewController.h"
 
 @interface HomeViewController ()
 
@@ -109,6 +110,9 @@
 //        GameCategoryViewController* dest = segue.destinationViewController;
 //        dest.title = @"Game Category";
         [[segue destinationViewController] setUsrName: _usrName];
+    }else if([[segue identifier] isEqualToString:@"homeToScore"]){
+        ScoreListViewController* dest = segue.destinationViewController;
+        dest.title = @"Counting";
     }
 }
 

@@ -208,6 +208,8 @@
 				A54D34731C8458EC008453CF /* categoryList.m */,
 				A5C6F2301C83B2FC00D2668D /* scoreObjects.h */,
 				A5C6F2311C83B2FC00D2668D /* scoreObjects.m */,
+				0D577E051C93E9F40068B7B2 /* GraphView.h */,
+				0D577E061C93E9F40068B7B2 /* GraphView.m */,
 				C1257C541C913ECD00CAAD89 /* ScoreListViewController.h */,
 				C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */,
 				A56CD79D1C830BD7007001F7 /* ScoreViewController.h */,
@@ -228,8 +230,6 @@
 				A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */,
 				A58CE5581C7F041B002B876E /* Info.plist */,
 				A58CE5471C7F041B002B876E /* Supporting Files */,
-				0D577E051C93E9F40068B7B2 /* GraphView.h */,
-				0D577E061C93E9F40068B7B2 /* GraphView.m */,
 				A58CE5531C7F041B002B876E /* Assets.xcassets */,
 			);
 			path = MathForKids;

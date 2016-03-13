@@ -8,9 +8,15 @@
 
 #import "ScoreListViewController.h"
 #import "QuartzCore/QuartzCore.h"
-#import "GraphView.h"
 
-@interface ScoreListViewController ()
+
+@interface ScoreListViewController (){
+    NSMutableArray *countS;
+    NSMutableArray *addS;
+    NSMutableArray *subS;
+    NSMutableArray *shapeS;
+    
+}
 
 @end
 
@@ -19,8 +25,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     [self checkScoreDictArray];
+//    graph = [[GraphView alloc] init];
+    [self checkCategory];
     _scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
+    
+}
+
+-(void)checkCategory{
+    if ([self.navigationItem.title isEqualToString:@"Counting"]) {
+        [graph setData:countS];
+        [graph setNeedsDisplay];
+    }else if ([self.navigationItem.title isEqualToString:@"Addition"]) {
+        [graph setData:addS];
+        [graph setNeedsDisplay];
+    }else if ([self.navigationItem.title isEqualToString:@"Subtraction"]) {
+        [graph setData:subS];
+        [graph setNeedsDisplay];
+    }else if ([self.navigationItem.title isEqualToString:@"Shape"]) {
+        [graph setData:shapeS];
+        [graph setNeedsDisplay];
+    }else{
+        [graph setData:countS];
+        [graph setNeedsDisplay];
+    }
+    
+}
+
+-(IBAction)countAction:(id)sender{
+    self.navigationItem.title = @"Counting";
+    [self checkCategory];
+}
+-(IBAction)addAction:(id)sender{
+    self.navigationItem.title = @"Addition";
+    [self checkCategory];
+}
+-(IBAction)subAction:(id)sender{
+    self.navigationItem.title = @"Subtraction";
+    [self checkCategory];
+}
+-(IBAction)shapeAction:(id)sender{
+    self.navigationItem.title = @"Shape";
+    [self checkCategory];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,41 +106,60 @@
     [self presentViewController:activityVC animated:YES completion:nil];
 }
 
--(void) checkScoreDictArray{
-    NSMutableArray *countS;
-    NSMutableArray *addS;
-    NSMutableArray *subS;
-    NSMutableArray *shapeS;
-    NSDictionary* tempScore;
+//get json
+- (NSString*)readStringFromFile{
     
-    for (NSDictionary* one in _scoreDict){
+    // Build the path...
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileName = @"localScore.json";
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+    
+    // The main act...
+    return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
+}
+
+-(void) checkScoreDictArray{
+    NSDictionary* tempScore;
+    NSNumber* temp;
+    
+    NSString* jsonScore = [self readStringFromFile];
+    NSError* error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonScore dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    for (NSDictionary* one in dict){
         if ([[one valueForKey:@"category"] isEqualToString:@"Counting"]){
             tempScore = [one valueForKey:@"scoreList"];
             countS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                [countS addObject:s];
+                temp = [s valueForKey:@"score"];
+//                float sc = [temp floatValue];
+                [countS addObject:temp];
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Addition"]){
             tempScore = [one valueForKey:@"scoreList"];
             addS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                [addS addObject:s];
+                temp = [s valueForKey:@"score"];
+                [addS addObject:temp];
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Subtraction"]){
             tempScore = [one valueForKey:@"scoreList"];
             subS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                [subS addObject:s];
+                temp = [s valueForKey:@"score"];
+                [subS addObject:temp];
             }
         }else{
             tempScore = [one valueForKey:@"scoreList"];
             shapeS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                [shapeS addObject:s];
+                temp = [s valueForKey:@"score"];
+                [shapeS addObject:temp];
             }
         }
     }
-    NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", (unsigned long)countS.count, addS.count, subS.count, shapeS.count);
+    NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", countS.count, addS.count, subS.count, shapeS.count);
+//    NSLog(@"%f", [[countS objectAtIndex:3]floatValue]);
 }
 
 // allow the view to rotate

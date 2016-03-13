@@ -24,5 +24,6 @@
 
 #define kCircleRadius 3  // circle redius
 @interface GraphView : UIView
+@property (nonatomic,strong) NSMutableArray* data;
 
 @end
