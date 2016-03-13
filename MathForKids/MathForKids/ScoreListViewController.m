@@ -46,7 +46,7 @@
     
     
     
-    NSString *shareText = @"Checkout my scores on Math for Kids app and go download yours too!!!";
+    NSString *shareText = @"Check out my scores on Math for Kids app and go download yours too!!!";
     
     NSArray *itemsToShare = @[shareText, screenShotImage];
     
