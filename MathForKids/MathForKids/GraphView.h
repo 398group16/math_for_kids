@@ -26,4 +26,8 @@
 @interface GraphView : UIView
 @property (nonatomic,strong) NSMutableArray* data;
 
+@property (nonatomic, strong) NSDictionary* scoreDict;
+@property (nonatomic, strong) NSString* category;
+-(void)setScoreDict:(NSDictionary*) newDict;
+
 @end
