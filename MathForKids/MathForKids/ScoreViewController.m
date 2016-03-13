@@ -10,7 +10,6 @@
 #import "ScoreListViewController.h"
 #import "scoreObjects.h"
 #import "categoryList.h"
-#import "GraphView.h"
 
 @interface ScoreViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *share;
@@ -255,9 +254,6 @@
     error = nil;
     
     _scoreDict = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    GraphView* graph = [[GraphView alloc] init];
-    [graph setScoreDict: _scoreDict];
-    [graph setCategory:self.navigationItem.title];
     
     return str;
 }

@@ -10,7 +10,6 @@
 #import "ScoreListViewController.h"
 
 @implementation GraphView
-<<<<<<< HEAD
 
 //float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
 
@@ -19,27 +18,6 @@
         _data = scores;
     }
 
-}
-=======
-		
-float data[] = {0.7, 0.4, 0.9, 1.0, 0.2, 0.85, 0.11, 0.75, 0.53, 0.44};
->>>>>>> 016dda3d817251bca9c826f10d7efa1918361a5d
-
-
--(void)setDataArr:(NSArray*)newArr{
-    
-}
-
--(void)setCategory:(NSString*)newCate{
-    if (_category != newCate) {
-        _category = newCate;	
-    }
-}
-
--(void)setScoreDict:(NSDictionary*) newDict{
-    if (_scoreDict != newDict) {
-        _scoreDict = newDict;
-    }
 }
 
 - (void)drawBar:(CGRect)rect context:(CGContextRef)ctx
