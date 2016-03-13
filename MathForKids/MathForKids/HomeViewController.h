@@ -14,7 +14,7 @@
     IBOutlet UIButton* tut;
     IBOutlet UIButton* score;
     IBOutlet UIButton* exit;
-    IBOutlet UIBarButtonItem* skip;
+//    IBOutlet UIBarButtonItem* skip;
 }
 @property (strong, nonatomic) NSString* usrName;
 //-(IBAction)toTutorialView:(id)sender;

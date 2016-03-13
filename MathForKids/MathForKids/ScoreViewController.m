@@ -7,17 +7,56 @@
 //
 
 #import "ScoreViewController.h"
+#import "ScoreListViewController.h"
 #import "scoreObjects.h"
 #import "categoryList.h"
 
 @interface ScoreViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *share;
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
+@property (nonatomic, strong) NSDictionary* scoreDict;
 
 @end
 
 @implementation ScoreViewController
+
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+//    [self setAnswerButtonLayout:(compare)];
+    button.layer.cornerRadius = 8.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+}
+
+- (void)setLabelLayout:(UILabel*) label{
+    
+    [[label layer] setBorderWidth:1.0f];
+    [[label layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [[label layer] setCornerRadius:10.0f];
+    [label setFont:[UIFont boldSystemFontOfSize:27]];
+    label.text = [NSString stringWithFormat:@"%@", self.score];
+    [label setFont:[UIFont boldSystemFontOfSize:21]];
+    label.clipsToBounds=YES;
+}
+
+- (IBAction)shareButton:(id)sender {
+    NSString *shareText = [NSString stringWithFormat:@"I scored %@ in Math for Kids!!! Go download your game from the App Store now!", self.score];//create a UIImage and add it to
+    //the array if you wanna share an image too
+    
+    NSArray *itemsToShare = @[shareText];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,31 +89,25 @@
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
+- (IBAction)homeButtonClick:(id)sender {
+
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    
+    id obj=[viewControllers objectAtIndex:1];
+    [[self navigationController] popToViewController:obj animated:YES];
+    //    NSLog(@"%@",viewControllers);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[home layer] setCornerRadius:4.0f];
-    [[home layer] setBorderWidth:1.0f];
-    [[home layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
-    [[share layer] setCornerRadius:4.0f];
-    [[share layer] setBorderWidth:1.0f];
-    [[share layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self setAnswerButtonLayout:(home)];
+    [self setAnswerButtonLayout:(_share)];
+    [self setAnswerButtonLayout:(compare)];
+    [self setLabelLayout:(label2)];
     
-    [[compare layer] setCornerRadius:4.0f];
-    [[compare layer] setBorderWidth:1.0f];
-    [[compare layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[label2 layer] setBorderWidth:1.0f];
-    [[label2 layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    [[label2 layer] setCornerRadius:10.0f];
-    [label2 setFont:[UIFont boldSystemFontOfSize:27]];
-    label2.text = [NSString stringWithFormat:@"%@", self.score];
-    [label2 setFont:[UIFont boldSystemFontOfSize:21]];
-    label2.clipsToBounds=YES;
-    
-    [self.navigationItem setHidesBackButton:YES animated:YES];
+    [self.navigationItem setHidesBackButton:YES];
     
     /*write json file*/
     [self loadScoreData];
@@ -112,7 +145,19 @@
     }else if (error != nil){
         NSLog(@"An error happened = %@", error);
     }
+    
+//    self.navigationItem.title = @"Menu";
+//    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+//    
+//    
+//    self.navigationItem.leftBarButtonItem = backButton;
 }
+
+//-(void)handleBack:(id)sender{
+//    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
+//    [self.navigationController popToViewController:vc animated:YES];
+//    
+//}
 
 -(NSString*)appendJsonFile:(NSString*)oldJson
                    newJson:(NSString*)newJson{
@@ -134,15 +179,50 @@
             found = true;
             NSDictionary* tempScore = [one valueForKey:@"scoreList"];
             NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
+            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
             
-            for(NSDictionary* s in tempScore){
-                [arrayS addObject:s];
+            /*make sure every user name only have 10 record scores*/
+            NSArray* tempName = [tempS valueForKey:@"name"];
+            NSString* tempStr;
+            for (NSString* s in tempName) {// check there is no more exctra brackets in tempName String
+                NSCharacterSet *charsToTrim = [NSCharacterSet characterSetWithCharactersInString:@"()  \n\""];
+                tempStr = [s stringByTrimmingCharactersInSet:charsToTrim];
             }
             
-            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
+            
+            BOOL canBeAdd = true;
+            int count = 0;
+            
+            for(NSDictionary* ts in tempScore){// check how many same category scores under one user name
+                NSString* tmpName = [ts valueForKey:@"name"];
+//                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
+                if ([tmpName isEqualToString:tempStr]) {
+                    count++;
+                }
+            }
+            
+            if (count > 9) {// make sure every user name only can have 10 scores in one category
+                canBeAdd = false;
+            }
+//            NSLog(@"name: %@, count:%d, category:%@", tempStr, count, newCate);
+            
+            for(NSDictionary* s in tempScore){
+                if ([s valueForKey:@"name"] == tempStr && canBeAdd == false){
+                    if (count <= 10) {
+                        canBeAdd = true;
+                    }
+                    count--;
+                }else{
+                    [arrayS addObject:s];
+                }
+                
+            }
+            /*make sure every user name only have 10 record scores*/
+            
             for(NSDictionary* s in tempS){
                 [arrayS addObject:s];
             }
+            
 //            NSLog(@"22222");
             NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
             [tempDict setValue:tempCate forKey:@"category"];
@@ -170,6 +250,11 @@
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
 //    NSLog(@"Combine JSON: %@", str);
+    
+    error = nil;
+    
+    _scoreDict = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
     return str;
 }
 
@@ -220,14 +305,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"scoreListDetail"]){
+        ScoreListViewController* dest = segue.destinationViewController;
+        dest.title = self.navigationItem.title;
+        [[segue destinationViewController] setScoreDict:_scoreDict];
+    }
 }
-*/
+
 
 @end

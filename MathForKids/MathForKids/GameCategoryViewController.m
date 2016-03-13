@@ -15,6 +15,18 @@
 
 @implementation GameCategoryViewController
 
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    //    [self setAnswerButtonLayout:(compare)];
+    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -22,21 +34,10 @@
     myImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
     myImage.layer.borderWidth = 1.0f;
     
-    [[count layer] setCornerRadius:4.0f];
-    [[count layer] setBorderWidth:1.0f];
-    [[count layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[add layer] setCornerRadius:4.0f];
-    [[add layer] setBorderWidth:1.0f];
-    [[add layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[sub layer] setCornerRadius:4.0f];
-    [[sub layer] setBorderWidth:1.0f];
-    [[sub layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-    
-    [[shape layer] setCornerRadius:4.0f];
-    [[shape layer] setBorderWidth:1.0f];
-    [[shape layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self setAnswerButtonLayout:(count)];
+    [self setAnswerButtonLayout:(add)];
+    [self setAnswerButtonLayout:(sub)];
+    [self setAnswerButtonLayout:(shape)];
 }
 
 -(void)setUsrName:(NSString *)newName{

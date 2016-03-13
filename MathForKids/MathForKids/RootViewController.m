@@ -17,12 +17,25 @@
 
 @implementation RootViewController
 
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+} //    [self setAnswerButtonLayout:(compare)];
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [[signB layer] setCornerRadius:4.0f];
-    [[signB layer] setBorderWidth:1.0f];
-    [[signB layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+//    [[signB layer] setCornerRadius:4.0f];
+//    [[signB layer] setBorderWidth:1.0f];
+//    [[signB layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self setAnswerButtonLayout:(signB)];
+
     
     usrImage1.layer.cornerRadius = 45;
     usrImage1.layer.borderColor = [UIColor lightGrayColor].CGColor;
