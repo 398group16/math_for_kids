@@ -225,12 +225,12 @@
 				A5B43B4B1C803EE700A85215 /* YoutubeViewController.h */,
 				A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */,
 				A58CE5501C7F041B002B876E /* Main.storyboard */,
-				A58CE5531C7F041B002B876E /* Assets.xcassets */,
 				A58CE5551C7F041B002B876E /* LaunchScreen.storyboard */,
 				A58CE5581C7F041B002B876E /* Info.plist */,
 				A58CE5471C7F041B002B876E /* Supporting Files */,
 				0D577E051C93E9F40068B7B2 /* GraphView.h */,
 				0D577E061C93E9F40068B7B2 /* GraphView.m */,
+				A58CE5531C7F041B002B876E /* Assets.xcassets */,
 			);
 			path = MathForKids;
 			sourceTree = "<group>";
