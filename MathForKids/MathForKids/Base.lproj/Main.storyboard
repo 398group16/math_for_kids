@@ -642,6 +642,7 @@
                         <outlet property="graph" destination="4Fg-Oe-dPa" id="rGs-P7-1lA"/>
                         <outlet property="scroller" destination="jZA-dd-UKG" id="Cac-pW-Tx7"/>
                         <outlet property="shape" destination="NHx-EZ-0hy" id="tCQ-3Y-4vO"/>
+                        <outlet property="shareButton" destination="9Pw-qP-cqR" id="oeI-le-S7p"/>
                         <outlet property="sub" destination="fcL-ut-HT0" id="19s-Op-Fwd"/>
                     </connections>
                 </viewController>

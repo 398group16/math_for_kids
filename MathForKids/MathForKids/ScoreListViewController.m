@@ -17,6 +17,7 @@
     NSMutableArray *shapeS;
     
 }
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -25,6 +26,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setShadows:shape];
+    [self setShadows:add];
+    [self setShadows:sub];
+    [self setShadows:count];
+    [self setShadows:_shareButton];
     
     [self checkScoreDictArray];
 //    graph = [[GraphView alloc] init];
@@ -52,22 +58,53 @@
     }
     
 }
+- (void) setShadows: (UIButton*) button{
+    //
+    ////    button.layer.cornerRadius = 4.0f;
+    ////    button.layer.shadowRadius = 3;
+    button.layer.masksToBounds = NO;
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    //ofset defines how far shadow goes
+    button.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+}
 
 -(IBAction)countAction:(id)sender{
-    self.navigationItem.title = @"Counting";
+    self.navigationItem.title = @"Counting Scores";
     [self checkCategory];
+    
+    count.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(add)];
+    [self setShadows:(shape)];
 }
 -(IBAction)addAction:(id)sender{
-    self.navigationItem.title = @"Addition";
+    self.navigationItem.title = @"Addition Scores";
     [self checkCategory];
+    
+    add.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(count)];
+    [self setShadows:(shape)];
 }
 -(IBAction)subAction:(id)sender{
-    self.navigationItem.title = @"Subtraction";
+    self.navigationItem.title = @"Subtraction Scores";
     [self checkCategory];
+    
+    sub.layer.masksToBounds = YES;
+    [self setShadows:(count)];
+    [self setShadows:(add)];
+    [self setShadows:(shape)];
+
 }
 -(IBAction)shapeAction:(id)sender{
-    self.navigationItem.title = @"Shape";
+    self.navigationItem.title = @"Shape Scores";
     [self checkCategory];
+    
+    shape.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(add)];
+    [self setShadows:(count)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -83,6 +120,8 @@
 
 //takes a screenshot
 - (IBAction)shareButton:(id)sender {
+    
+    [[self shareButton] setHidden:YES];
     
     //takes screenshot and saves in cameraroll
     UIGraphicsBeginImageContext(self.view.bounds.size);
@@ -100,6 +139,8 @@
     activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
     
     [self presentViewController:activityVC animated:YES completion:nil];
+    
+    [[self shareButton] setHidden:NO];
 }
 
 //get json
