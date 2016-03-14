@@ -17,7 +17,6 @@
     if (_data != scores) {
         _data = scores;
     }
-
 }
 
 - (void)drawBar:(CGRect)rect context:(CGContextRef)ctx

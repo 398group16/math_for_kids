@@ -90,11 +90,7 @@
     UIImage *screenShotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 //    UIImageWriteToSavedPhotosAlbum(screenShotImage, nil, nil, nil); //this line saces the screenshot on camera roll which we dont want
-    
-    
-    
-    
-    
+ 
     NSString *shareText = @"Check out my scores on the Math for Kids app and go download your game from the App Store now!!!!";
     
     NSArray *itemsToShare = @[shareText, screenShotImage];
