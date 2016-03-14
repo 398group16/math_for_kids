@@ -51,10 +51,10 @@
     // fill the graph with color
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     CGContextAddLineToPoint(ctx, kOffsetX + (self.data.count - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
@@ -64,11 +64,11 @@
     
     //start drawing line (path)
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
     
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -80,7 +80,7 @@
     for (int i = 0; i < self.data.count ; i++)
     {
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
+        float y = kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120);
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
@@ -158,10 +158,10 @@
         CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
         for (int i = 0; i < self.data.count; i++)
         {
-            int n =i + 1;
+//            int n =i + 1;
             int maxGraphHeight = kGraphHeight - kOffsetY;
             float x = kOffsetX + i * kStepX;
-            float y = kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
+            float y = kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120);
             
 //            NSString *theText = [NSString stringWithFormat:@"%d", n];
 //            //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
