@@ -56,7 +56,7 @@
     {
         CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
-    CGContextAddLineToPoint(ctx, kOffsetX + (sizeof(self.data) - 1) * kStepX, kGraphHeight);
+    CGContextAddLineToPoint(ctx, kOffsetX + (self.data.count - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
     
     CGContextDrawPath(ctx, kCGPathFill);
@@ -148,18 +148,31 @@
     //        [self drawBar:barRect context:context];
     //    }
     //    CGRect barRect = CGRectMake(barX, barY, kBarWidth, barHeight);
-    [self drawLineGraphWithContext:context];
-    
-    //create x axis labels
-    CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
-    CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
-    CGContextSetTextDrawingMode(context, kCGTextFill);
-    CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
-    for (int i = 1; i < self.data.count; i++)
-    {
-        NSString *theText = [NSString stringWithFormat:@"%d", i];
-        //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
-        CGContextShowTextAtPoint(context,  i * kStepX - 45, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+    if (self.data.count != 0){
+        [self drawLineGraphWithContext:context];
+        
+        //create x axis labels
+        CGContextSetTextMatrix(context, CGAffineTransformMake(1.0, 0.0, 0.0, -1.0, 0.0, 0.0));
+        // CGContextSelectFont(context, "Helvetica", 18, kCGEncodingMacRoman);
+        CGContextSetTextDrawingMode(context, kCGTextFill);
+        CGContextSetFillColorWithColor(context, [[UIColor colorWithRed:0 green:0 blue:0 alpha:1.0] CGColor]);
+        for (int i = 0; i < self.data.count; i++)
+        {
+            int n =i + 1;
+            int maxGraphHeight = kGraphHeight - kOffsetY;
+            float x = kOffsetX + i * kStepX;
+            float y = kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
+            
+            NSString *theText = [NSString stringWithFormat:@"%d", n];
+            //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
+            // CGContextShowTextAtPoint(context,  i * kStepX - 45, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
+            [theText drawAtPoint:CGPointMake(i * kStepX+8,kGraphBottom - 5) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:14]}];
+            
+            NSString *score = [NSString stringWithFormat:@"%@", [self.data objectAtIndex:i]];
+            
+            [score drawAtPoint:CGPointMake(x,y-25) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
+        }
     }
 }
 @end
+

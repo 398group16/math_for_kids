@@ -16,11 +16,9 @@
 #define kGraphBottom 300
 #define kGraphTop 0
 
-#define kStepY 70
+#define kStepY 50
 #define kOffsetY 10
 
-#define kBarTop 10
-#define kBarWidth 40
 
 #define kCircleRadius 3  // circle redius
 @interface GraphView : UIView
