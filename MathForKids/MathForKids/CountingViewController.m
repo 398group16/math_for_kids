@@ -75,7 +75,7 @@
     //    ShapeViewController* myShape = [[ShapeViewController alloc] initWithNibName:@"ShapeViewController" bundle:nil];
     //
     //    [ self.navigationController pushViewController:myShape animated: YES];
-    self.navigationItem.title = @"Shape";
+    self.navigationItem.title = @"Shapes";
 }
 
 -(IBAction)toHomeView:(id)sender{
