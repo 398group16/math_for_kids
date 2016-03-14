@@ -40,16 +40,16 @@
 }
 
 -(void)checkCategory{
-    if ([self.navigationItem.title isEqualToString:@"Counting"]) {
+    if ([self.navigationItem.title isEqualToString:@"Counting Scores"]) {
         [graph setData:countS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Addition"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Addition Scores"]) {
         [graph setData:addS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Subtraction"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Subtraction Scores"]) {
         [graph setData:subS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Shape"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Shape Scores"]) {
         [graph setData:shapeS];
         [graph setNeedsDisplay];
     }else{
