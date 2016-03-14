@@ -51,10 +51,10 @@
     // fill the graph with color
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     CGContextAddLineToPoint(ctx, kOffsetX + (self.data.count - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
@@ -64,11 +64,11 @@
     
     //start drawing line (path)
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -80,7 +80,7 @@
     for (int i = 0; i < self.data.count ; i++)
     {
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120);
+        float y = kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
@@ -110,23 +110,23 @@
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
     
-//    // How many lines?
-//    int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
-//    
-//    // Here the vertical lines go
-//    for (int i = 0; i <= howMany; i++)
-//    {
-//        CGContextMoveToPoint(context, kOffsetX + i * kStepX, kGraphTop);
-//        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom-kOffsetY);
-//    }
-//    
-//    // Here the horizantal lines go
-//    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
-//    for (int i = 0; i <= howManyHorizontal+1; i++)
-//    {
-//        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
-//        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
-//    }
+    // How many lines?
+    int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
+    
+    // Here the vertical lines go
+    for (int i = 0; i <= howMany; i++)
+    {
+        CGContextMoveToPoint(context, kOffsetX + i * kStepX, kGraphTop);
+        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom-kOffsetY);
+    }
+    
+    // Here the horizantal lines go
+    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
+    for (int i = 0; i <= howManyHorizontal+1; i++)
+    {
+        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
+        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
+    }
     
     
     CGContextStrokePath(context);
