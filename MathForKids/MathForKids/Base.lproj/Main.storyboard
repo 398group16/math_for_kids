@@ -647,23 +647,6 @@
             </objects>
             <point key="canvasLocation" x="2863.5" y="1299.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="kye-j9-4tf">
-            <objects>
-                <viewController id="GE9-yk-woc" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fZM-gX-AyE"/>
-                        <viewControllerLayoutGuide type="bottom" id="GHR-3H-Z4H"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wNo-PL-9f3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yQc-gT-qKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
     </scenes>
     <resources>
         <image name="School-Lunch-Vector-Pattern-#3" width="750" height="1024"/>
