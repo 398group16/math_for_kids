@@ -570,13 +570,14 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZA-dd-UKG">
-                                <rect key="frame" x="0.0" y="64" width="375" height="300"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="320"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="graphView" customClass="GraphView">
-                                        <rect key="frame" x="0.0" y="0.0" width="650" height="300"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="400"/>
+                                        <color key="backgroundColor" red="0.24287400472546888" green="0.89522660340314131" blue="0.6840950283948668" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.26550456325158778" green="1" blue="0.83808722593426166" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
                                 <rect key="frame" x="142" y="535" width="91" height="30"/>

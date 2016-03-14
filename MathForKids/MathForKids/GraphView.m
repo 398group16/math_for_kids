@@ -73,10 +73,11 @@
     
     CGContextDrawPath(ctx, kCGPathStroke);
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
+    
     //-----------------------------------
     
     // add point to the graph
-    for (int i = 1; i < self.data.count - 1; i++)
+    for (int i = 0; i < self.data.count ; i++)
     {
         float x = kOffsetX + i * kStepX;
         float y = kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
@@ -109,20 +110,19 @@
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
     
-    
     // How many lines?
     int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
     
     // Here the vertical lines go
-    for (int i = 0; i < howMany; i++)
+    for (int i = 0; i <= howMany; i++)
     {
         CGContextMoveToPoint(context, kOffsetX + i * kStepX, kGraphTop);
-        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom);
+        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom-kOffsetY);
     }
     
     // Here the horizantal lines go
     int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
-    for (int i = 0; i <= howManyHorizontal; i++)
+    for (int i = 0; i <= howManyHorizontal+1; i++)
     {
         CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
         CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
@@ -166,11 +166,11 @@
             NSString *theText = [NSString stringWithFormat:@"%d", n];
             //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
             // CGContextShowTextAtPoint(context,  i * kStepX - 45, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
-            [theText drawAtPoint:CGPointMake(i * kStepX+8,kGraphBottom - 5) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:14]}];
+            [theText drawAtPoint:CGPointMake(i * kStepX+8,kGraphBottom-15) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:14]}];
             
             NSString *score = [NSString stringWithFormat:@"%@", [self.data objectAtIndex:i]];
             
-            [score drawAtPoint:CGPointMake(x,y-25) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
+            [score drawAtPoint:CGPointMake(x-3,y-20) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
         }
     }
 }
