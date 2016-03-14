@@ -17,6 +17,7 @@
     NSMutableArray *shapeS;
     
 }
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 
 @end
 
@@ -25,6 +26,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self setShadows:shape];
+    [self setShadows:add];
+    [self setShadows:sub];
+    [self setShadows:count];
+//    [self setShadows:_shareButton];
+    
+    
+    // gives it paper look shadow, curved under
+//    CALayer *shareButton = _shareButton.layer;
+    _shareButton.layer.masksToBounds = NO;
+    _shareButton.layer.shadowOffset = CGSizeZero;
+    _shareButton.layer.shadowColor = [[UIColor blackColor] CGColor];
+    _shareButton.layer.shadowRadius = 2.0f;
+    _shareButton.layer.shadowOpacity = 0.80f;
+    _shareButton.layer.shadowPath = [self awesomeShadow:_shareButton.layer.bounds];
+    
+    
     
     [self checkScoreDictArray];
 //    graph = [[GraphView alloc] init];
@@ -34,16 +52,16 @@
 }
 
 -(void)checkCategory{
-    if ([self.navigationItem.title isEqualToString:@"Counting"]) {
+    if ([self.navigationItem.title isEqualToString:@"Counting Scores"]) {
         [graph setData:countS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Addition"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Addition Scores"]) {
         [graph setData:addS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Subtraction"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Subtraction Scores"]) {
         [graph setData:subS];
         [graph setNeedsDisplay];
-    }else if ([self.navigationItem.title isEqualToString:@"Shape"]) {
+    }else if ([self.navigationItem.title isEqualToString:@"Shape Scores"]) {
         [graph setData:shapeS];
         [graph setNeedsDisplay];
     }else{
@@ -52,22 +70,53 @@
     }
     
 }
+- (void) setShadows: (UIButton*) button{
+    //
+    ////    button.layer.cornerRadius = 4.0f;
+    ////    button.layer.shadowRadius = 3;
+    button.layer.masksToBounds = NO;
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    //ofset defines how far shadow goes
+    button.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
+}
 
 -(IBAction)countAction:(id)sender{
-    self.navigationItem.title = @"Counting";
+    self.navigationItem.title = @"Counting Scores";
     [self checkCategory];
+    
+    count.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(add)];
+    [self setShadows:(shape)];
 }
 -(IBAction)addAction:(id)sender{
-    self.navigationItem.title = @"Addition";
+    self.navigationItem.title = @"Addition Scores";
     [self checkCategory];
+    
+    add.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(count)];
+    [self setShadows:(shape)];
 }
 -(IBAction)subAction:(id)sender{
-    self.navigationItem.title = @"Subtraction";
+    self.navigationItem.title = @"Subtraction Scores";
     [self checkCategory];
+    
+    sub.layer.masksToBounds = YES;
+    [self setShadows:(count)];
+    [self setShadows:(add)];
+    [self setShadows:(shape)];
+
 }
 -(IBAction)shapeAction:(id)sender{
-    self.navigationItem.title = @"Shape";
+    self.navigationItem.title = @"Shape Scores";
     [self checkCategory];
+    
+    shape.layer.masksToBounds = YES;
+    [self setShadows:(sub)];
+    [self setShadows:(add)];
+    [self setShadows:(count)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,17 +133,15 @@
 //takes a screenshot
 - (IBAction)shareButton:(id)sender {
     
+    [[self shareButton] setHidden:YES];
+    
     //takes screenshot and saves in cameraroll
     UIGraphicsBeginImageContext(self.view.bounds.size);
     [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *screenShotImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 //    UIImageWriteToSavedPhotosAlbum(screenShotImage, nil, nil, nil); //this line saces the screenshot on camera roll which we dont want
-    
-    
-    
-    
-    
+ 
     NSString *shareText = @"Check out my scores on the Math for Kids app and go download your game from the App Store now!!!!";
     
     NSArray *itemsToShare = @[shareText, screenShotImage];
@@ -104,6 +151,8 @@
     activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
     
     [self presentViewController:activityVC animated:YES completion:nil];
+    
+    [[self shareButton] setHidden:NO];
 }
 
 //get json
@@ -160,6 +209,22 @@
     }
     NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", countS.count, addS.count, subS.count, shapeS.count);
 //    NSLog(@"%f", [[countS objectAtIndex:3]floatValue]);
+}
+
+- (CGPathRef)awesomeShadow:(CGRect)rect
+{
+    CGSize size = rect.size;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
+    
+    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
+            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
+            controlPoint2:CGPointMake(15.0f, size.height)];
+    
+    return path.CGPath;
 }
 
 // allow the view to rotate
