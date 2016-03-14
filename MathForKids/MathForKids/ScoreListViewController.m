@@ -30,7 +30,19 @@
     [self setShadows:add];
     [self setShadows:sub];
     [self setShadows:count];
-    [self setShadows:_shareButton];
+//    [self setShadows:_shareButton];
+    
+    
+    // gives it paper look shadow, curved under
+//    CALayer *shareButton = _shareButton.layer;
+    _shareButton.layer.masksToBounds = NO;
+    _shareButton.layer.shadowOffset = CGSizeZero;
+    _shareButton.layer.shadowColor = [[UIColor blackColor] CGColor];
+    _shareButton.layer.shadowRadius = 2.0f;
+    _shareButton.layer.shadowOpacity = 0.80f;
+    _shareButton.layer.shadowPath = [self awesomeShadow:_shareButton.layer.bounds];
+    
+    
     
     [self checkScoreDictArray];
 //    graph = [[GraphView alloc] init];
@@ -197,6 +209,22 @@
     }
     NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", countS.count, addS.count, subS.count, shapeS.count);
 //    NSLog(@"%f", [[countS objectAtIndex:3]floatValue]);
+}
+
+- (CGPathRef)awesomeShadow:(CGRect)rect
+{
+    CGSize size = rect.size;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
+    
+    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
+            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
+            controlPoint2:CGPointMake(15.0f, size.height)];
+    
+    return path.CGPath;
 }
 
 // allow the view to rotate
