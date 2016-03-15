@@ -51,10 +51,10 @@
     // fill the graph with color
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     CGContextAddLineToPoint(ctx, kOffsetX + (self.data.count - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
@@ -64,11 +64,11 @@
     
     //start drawing line (path)
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -80,7 +80,7 @@
     for (int i = 0; i < self.data.count ; i++)
     {
         float x = kOffsetX + i * kStepX;
-        float y = kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120);
+        float y = kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120);
         CGRect rect = CGRectMake(x - kCircleRadius, y - kCircleRadius, 2 * kCircleRadius, 2 * kCircleRadius);
         CGContextAddEllipseInRect(ctx, rect);
     }
@@ -107,6 +107,8 @@
     // in the pattern: a dash and an empty space after it. The last parameter of
     //the CGContextSetLineDash function, 2, is the number of elements in the dash array
     
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
     
@@ -119,7 +121,7 @@
 //        CGContextMoveToPoint(context, kOffsetX + i * kStepX, kGraphTop);
 //        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom-kOffsetY);
 //    }
-//    
+    
 //    // Here the horizantal lines go
 //    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
 //    for (int i = 0; i <= howManyHorizontal+1; i++)
@@ -127,11 +129,21 @@
 //        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
 //        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
 //    }
-    
+    // Here the horizantal lines go
+//    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
+//    int n = 0;
+//    for (int i = 0; i <= howManyHorizontal+1; i++)
+//    {
+//        
+//        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+//        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+//        NSString* score = [NSString stringWithFormat:@"%d", n];
+//        [score drawAtPoint:CGPointMake(kDefaultGraphWidth+4,(kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2))-7) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
+//        n += 60;
+//    }
     
     CGContextStrokePath(context);
-    
-    // for the last line, undashed.
+        // for the last line, undashed.
     CGContextSetLineDash(context, 0, NULL, 0); // Remove the dash
     
     
