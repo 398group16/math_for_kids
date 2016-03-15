@@ -130,17 +130,17 @@
 //        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
 //    }
     // Here the horizantal lines go
-//    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
-//    int n = 0;
-//    for (int i = 0; i <= howManyHorizontal+1; i++)
-//    {
-//        
-//        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
-//        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
-//        NSString* score = [NSString stringWithFormat:@"%d", n];
-//        [score drawAtPoint:CGPointMake(kDefaultGraphWidth+4,(kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2))-7) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
-//        n += 60;
-//    }
+    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
+    int n = 0;
+    for (int i = 0; i <= howManyHorizontal+1; i++)
+    {
+        
+        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+        NSString* score = [NSString stringWithFormat:@"%d", n];
+        [score drawAtPoint:CGPointMake(kDefaultGraphWidth+5,(kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2))-7) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
+        n += 60;
+    }
     
     CGContextStrokePath(context);
         // for the last line, undashed.
