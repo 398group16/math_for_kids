@@ -107,8 +107,10 @@
     // in the pattern: a dash and an empty space after it. The last parameter of
     //the CGContextSetLineDash function, 2, is the number of elements in the dash array
     
-//    CGFloat dash[] = {2.0, 2.0};
-//    CGContextSetLineDash(context, 0.0, dash, 2);
+    CGContextSetLineWidth(context, 2.0);
+    CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
+    CGFloat dash[] = {2.0, 2.0};
+    CGContextSetLineDash(context, 0.0, dash, 2);
     
 //    // How many lines?
 //    int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
@@ -128,21 +130,20 @@
 //        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
 //    }
     // Here the horizantal lines go
-    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
-    int n = 0;
-    for (int i = 0; i <= howManyHorizontal+1; i++)
-    {
-        
-        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
-        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
-        NSString* score = [NSString stringWithFormat:@"%d", n];
-        [score drawAtPoint:CGPointMake(kDefaultGraphWidth+4,(kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2))-7) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
-        n += 60;
-    }
+//    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
+//    int n = 0;
+//    for (int i = 0; i <= howManyHorizontal+1; i++)
+//    {
+//        
+//        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+//        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2));
+//        NSString* score = [NSString stringWithFormat:@"%d", n];
+//        [score drawAtPoint:CGPointMake(kDefaultGraphWidth+4,(kGraphBottom - kOffsetY - i * ((kGraphBottom - kGraphTop - kOffsetY)/2))-7) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:12]}];
+//        n += 60;
+//    }
     
     CGContextStrokePath(context);
-    
-    // for the last line, undashed.
+        // for the last line, undashed.
     CGContextSetLineDash(context, 0, NULL, 0); // Remove the dash
     
     
