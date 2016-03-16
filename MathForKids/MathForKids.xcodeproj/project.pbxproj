@@ -36,6 +36,7 @@
 		A58CE59F1C7F1A2D002B876E /* ShapeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58CE59D1C7F1A2D002B876E /* ShapeViewController.xib */; };
 		A5B43B4D1C803EE700A85215 /* YoutubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */; };
 		A5C6F2321C83B2FC00D2668D /* scoreObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5C6F2311C83B2FC00D2668D /* scoreObjects.m */; };
+		A5E5769C1C98E8F900B25FC4 /* userObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = A5E5769B1C98E8F900B25FC4 /* userObjects.m */; };
 		A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */; };
 		A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */; };
 		C1257C561C913ECD00CAAD89 /* ScoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */; };
@@ -110,6 +111,8 @@
 		A5B43B4C1C803EE700A85215 /* YoutubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YoutubeViewController.m; sourceTree = "<group>"; };
 		A5C6F2301C83B2FC00D2668D /* scoreObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = scoreObjects.h; sourceTree = "<group>"; };
 		A5C6F2311C83B2FC00D2668D /* scoreObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = scoreObjects.m; sourceTree = "<group>"; };
+		A5E5769A1C98E8F900B25FC4 /* userObjects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userObjects.h; sourceTree = "<group>"; };
+		A5E5769B1C98E8F900B25FC4 /* userObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userObjects.m; sourceTree = "<group>"; };
 		A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCategoryViewController.h; sourceTree = "<group>"; };
 		A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCategoryViewController.m; sourceTree = "<group>"; };
 		A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				353030E71C897E9E004E4BA6 /* Assets.bundle */,
 				353030E31C89482E004E4BA6 /* YTPlayerView.h */,
 				353030E41C89482E004E4BA6 /* YTPlayerView.m */,
+				A5E5769A1C98E8F900B25FC4 /* userObjects.h */,
+				A5E5769B1C98E8F900B25FC4 /* userObjects.m */,
 				A54D34721C8458EC008453CF /* categoryList.h */,
 				A54D34731C8458EC008453CF /* categoryList.m */,
 				A5C6F2301C83B2FC00D2668D /* scoreObjects.h */,
@@ -544,6 +549,7 @@
 				353030E61C89482E004E4BA6 /* YTPlayerView.m in Sources */,
 				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
 				A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */,
+				A5E5769C1C98E8F900B25FC4 /* userObjects.m in Sources */,
 				A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */,
 				A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */,
 				A58CE5491C7F041B002B876E /* main.m in Sources */,
