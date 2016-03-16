@@ -13,11 +13,13 @@
 @property (nonatomic, strong) NSNumber* usrId;
 @property (nonatomic, strong) NSString* usrName;
 @property (nonatomic, strong) NSString* favor;
+@property (nonatomic, strong) NSString* img_name;
 
 
 -(id)initWithName:(NSString*)usrName_
             score:(NSNumber*)usrId_
-            favor:(NSString*)favor_;
+            favor:(NSString*)favor_
+            img_name:(NSString*)img_name_;
 
 -(NSMutableDictionary*)toNSDictionary;
 

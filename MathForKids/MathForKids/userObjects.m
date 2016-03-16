@@ -16,13 +16,15 @@
 
 -(id)initWithName:(NSString*)usrName_
             score:(NSNumber*)usrId_
-            favor:(NSString*)favor_{
+            favor:(NSString*)favor_
+         img_name:(NSString*)img_name_{
     self = [super init];
     if (self) {
         
-        self.usrName = @"Empty";
+        self.usrName = usrName_;
         self.usrId = usrId_;
         self.favor = favor_;
+        self.img_name = img_name_;
 //            NSLog(@"%@, %@", self.name, self.score);
         
         

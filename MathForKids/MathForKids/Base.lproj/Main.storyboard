@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -40,6 +40,7 @@
                                 </state>
                                 <connections>
                                     <action selector="toSignUpView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vww-Ay-il4"/>
+                                    <segue destination="vIn-VZ-a2I" kind="show" id="0eQ-EM-oDb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -65,24 +66,64 @@
             </objects>
             <point key="canvasLocation" x="819.5" y="428.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="q0x-EZ-Erc">
+        <!--Register View Controller-->
+        <scene sceneID="rkd-CO-Lp0">
             <objects>
-                <viewController id="QUK-u6-4yD" sceneMemberID="viewController">
+                <viewController id="kRC-62-LZI" customClass="RegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="05d-7c-L8v"/>
-                        <viewControllerLayoutGuide type="bottom" id="nmY-O3-OVR"/>
+                        <viewControllerLayoutGuide type="top" id="NKM-Uz-bqu"/>
+                        <viewControllerLayoutGuide type="bottom" id="N0t-Sd-Fcr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ojl-AE-hPv">
+                    <view key="view" contentMode="scaleToFill" id="xhJ-Vq-KJe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaK-Qu-9QP">
+                                <rect key="frame" x="67" y="94" width="240" height="240"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uyQ-XS-vY9">
+                                <rect key="frame" x="69" y="389" width="236" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jT-Jq-gDM">
+                                <rect key="frame" x="69" y="360" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourite Math:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGj-g7-cuZ">
+                                <rect key="frame" x="69" y="455" width="119" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qez-ox-eVL">
+                                <rect key="frame" x="134" y="602" width="107" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submit:" destination="kRC-62-LZI" eventType="touchUpInside" id="SEu-UZ-1z8"/>
+                                    <segue destination="kIa-qG-Rn5" kind="show" id="939-23-naW"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-vd-bL3">
+                                <rect key="frame" x="69" y="493" width="236" height="74"/>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="submit" destination="qez-ox-eVL" id="bJw-8U-La5"/>
+                        <outlet property="user_favor" destination="RnT-vd-bL3" id="daC-dB-H3h"/>
+                        <outlet property="user_img" destination="qaK-Qu-9QP" id="E3f-dm-swl"/>
+                        <outlet property="user_name" destination="uyQ-XS-vY9" id="8cm-dq-0Of"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZN7-DY-RQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJa-gf-HjG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="1046"/>
+            <point key="canvasLocation" x="819.5" y="2029.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="QdH-kM-ZMv">
@@ -95,13 +136,57 @@
                     <view key="view" contentMode="scaleToFill" id="JQy-vK-dpW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS2-d8-cN6">
+                                <rect key="frame" x="57" y="175" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="GKa-X5-otp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vQ-8F-bFk">
+                                <rect key="frame" x="237" y="175" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="VYf-mx-Fmv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-vh-OEh">
+                                <rect key="frame" x="237" y="495" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="tA8-JO-lnf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-tX-AhI">
+                                <rect key="frame" x="57" y="495" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="Y10-e4-8Nd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-WB-1gh">
+                                <rect key="frame" x="237" y="328" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="m2r-8v-wTR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwF-MY-08b">
+                                <rect key="frame" x="57" y="328" width="80" height="80"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" id="IAc-Tu-efg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-KO-o0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="1046"/>
+            <point key="canvasLocation" x="819.5" y="1238.5"/>
         </scene>
         <!--HomeViewController-->
         <scene sceneID="314-yp-Zib">
@@ -668,6 +753,8 @@
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="939-23-naW"/>
+        <segue reference="tA8-JO-lnf"/>
         <segue reference="Tqc-I1-99O"/>
         <segue reference="bba-XG-VPB"/>
     </inferredMetricsTieBreakers>
