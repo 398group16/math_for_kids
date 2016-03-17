@@ -185,10 +185,14 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)setScoreDict:(NSDictionary*) newDict{
-    if (_scoreDict != newDict) {
-        _scoreDict = newDict;
+-(void)setUserName:(NSString *)newName{
+    if (_userName != newName) {
+        _userName = newName;
     }
+    if (_userName == nil){
+        _userName = [NSString stringWithFormat:@"Empty"];
+    }
+    NSLog(@"USER NAME: %@", _userName);
 }
 
 //takes a screenshot
@@ -241,30 +245,38 @@
             tempScore = [one valueForKey:@"scoreList"];
             countS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                temp = [s valueForKey:@"score"];
-//                float sc = [temp floatValue];
-                [countS addObject:temp];
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    //                float sc = [temp floatValue];
+                    [countS addObject:temp];
+                }
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Addition"]){
             tempScore = [one valueForKey:@"scoreList"];
             addS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                temp = [s valueForKey:@"score"];
-                [addS addObject:temp];
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [addS addObject:temp];
+                }
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Subtraction"]){
             tempScore = [one valueForKey:@"scoreList"];
             subS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                temp = [s valueForKey:@"score"];
-                [subS addObject:temp];
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [subS addObject:temp];
+                }
             }
         }else{
             tempScore = [one valueForKey:@"scoreList"];
             shapeS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
-                temp = [s valueForKey:@"score"];
-                [shapeS addObject:temp];
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [shapeS addObject:temp];
+                }
             }
         }
     }

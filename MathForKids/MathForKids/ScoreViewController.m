@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
-@property (nonatomic, strong) NSDictionary* scoreDict;
 
 @end
 
@@ -253,8 +252,6 @@
     
     error = nil;
     
-    _scoreDict = [NSJSONSerialization JSONObjectWithData:[str dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-    
     return str;
 }
 
@@ -314,8 +311,8 @@
     // Pass the selected object to the new view controller.
     if([[segue identifier] isEqualToString:@"scoreListDetail"]){
         ScoreListViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUserName: _usrName];
         dest.title = [NSString stringWithFormat:@"%@ Scores", self.navigationItem.title];
-        [[segue destinationViewController] setScoreDict:_scoreDict];
     }
 }
 

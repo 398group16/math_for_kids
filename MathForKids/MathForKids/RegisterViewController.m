@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import "userObjects.h"
+#import "HomeViewController.h"
 
 @interface RegisterViewController (){
     userObjects* newUser;
@@ -54,7 +55,7 @@
 
 -(void)loadUserData{
     NSString* jsonUsers = [self readStringFromFile];
-    NSLog(@"json: %@", jsonUsers);
+//    NSLog(@"json: %@", jsonUsers);
     NSError* error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonUsers dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSNumber *temp_id = [NSNumber numberWithInteger:([dict count]+1)];
@@ -111,7 +112,10 @@
             }
         }
         if (!repeat) {
-//            NSLog(@"id: %@, name: %@, favor: %@, img:%@",temp_id, input_name, select_favor, _imgName);
+            if (_imgName == nil) {
+                _imgName = [NSString stringWithFormat:@"Empty"];
+            }
+            NSLog(@"id: %@, name: %@, favor: %@, img:%@",temp_id, input_name, select_favor, _imgName);
             newUser = [[userObjects alloc] initWithName:input_name Id:temp_id favor:select_favor img_name:_imgName];
             NSMutableDictionary* dict = [newUser toNSDictionary];
             error = nil;
@@ -128,6 +132,26 @@
             [self writeToFile:combine];
 //            NSString* temp = [self readStringFromFile];
 //            NSLog(@"read: %@", temp);
+            
+            UIAlertController * alert= [UIAlertController
+                                        alertControllerWithTitle:@"Congratulation"
+                                        message:@"Register Successfully!"
+                                        preferredStyle:UIAlertControllerStyleAlert];
+            
+            UIAlertAction* ok = [UIAlertAction
+                                 actionWithTitle:@"OK"
+                                 style:UIAlertActionStyleDefault
+                                 handler:^(UIAlertAction * action)
+                                 {
+                                     [alert dismissViewControllerAnimated:YES completion:nil];
+                                     [self.navigationController popToRootViewControllerAnimated:YES];
+                                     
+                                 }];
+            
+            [alert addAction:ok];
+            
+            UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+            [vc presentViewController:alert animated:YES completion:nil];
         }
     }
 }

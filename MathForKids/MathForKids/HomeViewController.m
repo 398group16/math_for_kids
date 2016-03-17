@@ -15,6 +15,17 @@
 @end
 
 @implementation HomeViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        //intialize our data to be stored in the json file
+//        [self viewDidLoad];
+//    }
+    return self;
+}
+
 - (IBAction)startGameButtonPress:(id)sender {
     
     NSArray *viewControllers = [[self navigationController] viewControllers];
@@ -69,10 +80,11 @@
 
 }
 
--(void)setUsrName:(NSString*)newName{
-    if(_usrName != newName){
-        _usrName = newName;
+-(void)setUsrName:(userObjects*)newUser{
+    if(_user != newUser){
+        _user = newUser;
     }
+    NSLog(@"user name (home): %@", [_user usrName]);
 }
 
 -(void)handleBack:(id) sender{
@@ -109,9 +121,11 @@
     if([[segue identifier] isEqualToString:@"gameCateDetail"]){
 //        GameCategoryViewController* dest = segue.destinationViewController;
 //        dest.title = @"Game Category";
-        [[segue destinationViewController] setUsrName: _usrName];
+        NSLog(@"%@", [_user usrName]);
+        [[segue destinationViewController] setUsrName: [_user usrName]];
     }else if([[segue identifier] isEqualToString:@"homeToScore"]){
         ScoreListViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUserName: [_user usrName]];
         dest.title = @"Counting";
     }
 }
