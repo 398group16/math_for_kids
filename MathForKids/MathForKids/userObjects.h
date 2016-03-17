@@ -17,9 +17,9 @@
 
 
 -(id)initWithName:(NSString*)usrName_
-            score:(NSNumber*)usrId_
+               Id:(NSNumber*)usrId_
             favor:(NSString*)favor_
-            img_name:(NSString*)img_name_;
+         img_name:(NSString*)img_name_;
 
 -(NSMutableDictionary*)toNSDictionary;
 
