@@ -11,88 +11,39 @@
 
 @interface RegisterViewController (){
     userObjects* newUser;
+    NSString* input_name;
+    NSString* select_favor;
 }
 
 
 @property (nonatomic, strong) NSString* filePath;
-@property (nonatomic, strong) NSDictionary* scoreDict;
-@property (nonatomic, strong) NSString* input_name;
-@property (nonatomic, strong) NSString* select_favor;
-
 
 @end
 
 @implementation RegisterViewController
-@synthesize source;
-@synthesize user_favor;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    source = [[NSMutableArray alloc] initWithObjects:@"Counting",@"Addition",@"Subtraction",@"Shapes", nil];
+    user_favor.delegate = self;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return YES;
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    self.view.backgroundColor = [UIColor yellowColor];
-    
-    self.source = [[NSMutableArray alloc] initWithObjects:@"Counting", @"Addition", @"Subtraction", @"Shapes", nil];
-    
-    UIButton *pressme = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 280, 80)];
-    [pressme setTitle:@"Press me!!!" forState:UIControlStateNormal];
-    pressme.backgroundColor = [UIColor lightGrayColor];
-    [pressme addTarget:self action:@selector(pressed) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:pressme];
-    
-    self.user_favor = [[UIPickerView alloc] initWithFrame:CGRectMake(20, 110, 280, 300)];
-    self.user_favor.delegate = self;
-    self.user_favor.dataSource = self;
-    [self.view addSubview:self.user_favor];
-    
-    //This is how you manually SET(!!) a selection!
-    [self.user_favor selectRow:2 inComponent:0 animated:YES];
-}
-
-//logs the current selection of the picker manually
--(void)pressed
-{
-    //This is how you manually GET(!!) a selection
-    NSInteger row = [self.user_favor selectedRowInComponent:0];
-    
-    NSLog(@"%@", [source objectAtIndex:row]);
-}
-
-- (NSInteger)numberOfComponentsInPickerView:
-(UIPickerView *)pickerView
-{
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 1;
 }
 
-- (NSInteger)pickerView:(UIPickerView *)pickerView
-numberOfRowsInComponent:(NSInteger)component
-{
+-(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [source count];
 }
 
-- (NSString *)pickerView:(UIPickerView *)pickerView
-             titleForRow:(NSInteger)row
-            forComponent:(NSInteger)component
-{
+-(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     return [source objectAtIndex:row];
 }
 
-#pragma mark -
-#pragma mark PickerView Delegate
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
-      inComponent:(NSInteger)component
-{
-    //    NSLog(@"%@", [source objectAtIndex:row]);
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
+    select_favor = [source objectAtIndex:row];
+    NSLog(@"%@", select_favor);
 }
 
 -(void)setImgName:(NSString *)newName{
@@ -101,12 +52,117 @@ numberOfRowsInComponent:(NSInteger)component
     }
 }
 
--(void)loadScoreData{
+-(void)loadUserData{
     NSString* jsonUsers = [self readStringFromFile];
+    NSLog(@"json: %@", jsonUsers);
     NSError* error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonUsers dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSNumber *temp_id = [NSNumber numberWithInteger:([dict count]+1)];
-    newUser = [[userObjects alloc] initWithName:_input_name Id:temp_id favor:_select_favor img_name:_imgName];
+
+    if (input_name == nil || select_favor == nil) {
+        UIAlertController * alert= [UIAlertController
+                                    alertControllerWithTitle:@"Error"
+                                    message:@"User Name and Favourite Math cannot be empty!"
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+        
+        [alert addAction:ok];
+        
+        UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+        [vc presentViewController:alert animated:YES completion:nil];
+        
+    }else{
+        bool repeat = NO;
+        for (NSDictionary* one in dict) {
+            NSString* temp_name = [one valueForKey:@"name"];
+            
+            NSCharacterSet *charsToTrim = [NSCharacterSet characterSetWithCharactersInString:@"()  \n\""];
+            NSString* tempStr = [temp_name stringByTrimmingCharactersInSet:charsToTrim];
+            input_name = [input_name stringByTrimmingCharactersInSet:charsToTrim];
+            
+            if ([input_name isEqualToString:tempStr]) {
+                UIAlertController * alert= [UIAlertController
+                                            alertControllerWithTitle:@"Error"
+                                            message:@"User Name cannot be repeated!"
+                                            preferredStyle:UIAlertControllerStyleAlert];
+                
+                UIAlertAction* ok = [UIAlertAction
+                                     actionWithTitle:@"OK"
+                                     style:UIAlertActionStyleDefault
+                                     handler:^(UIAlertAction * action)
+                                     {
+                                         [alert dismissViewControllerAnimated:YES completion:nil];
+                                         
+                                     }];
+                
+                [alert addAction:ok];
+                
+                UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
+                [vc presentViewController:alert animated:YES completion:nil];
+                repeat = YES;
+            }
+        }
+        if (!repeat) {
+//            NSLog(@"id: %@, name: %@, favor: %@, img:%@",temp_id, input_name, select_favor, _imgName);
+            newUser = [[userObjects alloc] initWithName:input_name Id:temp_id favor:select_favor img_name:_imgName];
+            NSMutableDictionary* dict = [newUser toNSDictionary];
+            error = nil;
+            NSData* jsonData = [NSJSONSerialization
+                                dataWithJSONObject:dict
+                                options:NSJSONWritingPrettyPrinted
+                                error:&error];
+            NSString *str;
+            if ([jsonData length] > 0 && error == nil) {
+                str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+            }
+//            NSLog(@"test: %@", str);
+            NSString* combine = [self appendJsonFile:jsonUsers newJson:str];
+            [self writeToFile:combine];
+//            NSString* temp = [self readStringFromFile];
+//            NSLog(@"read: %@", temp);
+        }
+    }
+}
+
+-(NSString*)appendJsonFile:(NSString*)oldJson
+                   newJson:(NSString*)newJson{
+    NSError* error;
+    NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[oldJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    error = nil;
+    NSDictionary* new_dict = [NSJSONSerialization JSONObjectWithData:[newJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    if ([old_dict count] > 0) {
+        for(NSDictionary* one in old_dict){
+            [array addObject:one];
+        }
+    }
+    
+    [array addObject:new_dict];
+    
+    
+    error = nil;
+    NSData* jsonData = [NSJSONSerialization
+                        dataWithJSONObject:array
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    NSString *str;
+    if ([jsonData length] > 0 && error == nil) {
+        str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    NSLog(@"combine users: %@", str);
+    return str;
+    
 }
 
 -(NSString*)writeToFile:(NSString*)string{
@@ -132,13 +188,15 @@ numberOfRowsInComponent:(NSInteger)component
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    
+    NSLog(@"%@", filePath);
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
 -(IBAction)submit:(id)sender{
-    self.input_name = [user_name text];
+    input_name = [user_name text];
+    [self loadUserData];
+    
     
 }
 

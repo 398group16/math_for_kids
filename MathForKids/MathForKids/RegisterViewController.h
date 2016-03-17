@@ -12,15 +12,11 @@
     IBOutlet UIImageView* user_img;
     IBOutlet UITextField* user_name;
     IBOutlet UIButton* submit;
-    
-    UIPickerView* user_favor;
+    IBOutlet UIPickerView* user_favor;
     NSMutableArray *source;
 }
 
 @property (nonatomic, strong) NSString* imgName;
-
-@property (nonatomic,retain) UIPickerView *user_favor;
-@property (nonatomic,retain) NSMutableArray *source;
 
 -(IBAction)submit:(id)sender;
 
