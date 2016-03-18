@@ -134,8 +134,8 @@
 //            NSLog(@"read: %@", temp);
             
             UIAlertController * alert= [UIAlertController
-                                        alertControllerWithTitle:@"Congratulation"
-                                        message:@"Register Successfully!"
+                                        alertControllerWithTitle:@"Congratulations"
+                                        message:@"Registered Successfully!"
                                         preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction
