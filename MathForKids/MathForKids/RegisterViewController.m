@@ -63,7 +63,7 @@
     if (input_name == nil || select_favor == nil) {
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
-                                    message:@"User Name and Favourite Math cannot be empty!"
+                                    message:@"User Name and Favourite Mode cannot be empty!"
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
