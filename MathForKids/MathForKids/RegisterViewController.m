@@ -28,6 +28,9 @@
     // Do any additional setup after loading the view.
     source = [[NSMutableArray alloc] initWithObjects:@"Counting",@"Addition",@"Subtraction",@"Shapes", nil];
     user_favor.delegate = self;
+    UIImage* img = [UIImage imageNamed:_imgName];
+    [user_img setImage:img];
+    
 }
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
@@ -144,6 +147,7 @@
                                  handler:^(UIAlertAction * action)
                                  {
                                      [alert dismissViewControllerAnimated:YES completion:nil];
+                                     
                                      [self.navigationController popToRootViewControllerAnimated:YES];
                                      
                                  }];

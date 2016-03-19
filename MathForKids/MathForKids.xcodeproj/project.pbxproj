@@ -41,6 +41,7 @@
 		A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */; };
 		C10CC2871C9A11F400C153CD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10CC2861C9A11F400C153CD /* RegisterViewController.m */; };
 		C1257C561C913ECD00CAAD89 /* ScoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */; };
+		C12A711D1C9DFFA900F23B48 /* userCells.m in Sources */ = {isa = PBXBuildFile; fileRef = C12A711C1C9DFFA900F23B48 /* userCells.m */; };
 		C1606DF51C9CE2DD0079CFEF /* AvartarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		C10CC2861C9A11F400C153CD /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		C1257C541C913ECD00CAAD89 /* ScoreListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreListViewController.h; sourceTree = "<group>"; };
 		C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreListViewController.m; sourceTree = "<group>"; };
+		C12A711B1C9DFFA900F23B48 /* userCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userCells.h; sourceTree = "<group>"; };
+		C12A711C1C9DFFA900F23B48 /* userCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userCells.m; sourceTree = "<group>"; };
 		C1606DF31C9CE2DD0079CFEF /* AvartarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvartarsViewController.h; sourceTree = "<group>"; };
 		C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvartarsViewController.m; sourceTree = "<group>"; };
 		ED2E3DFB5F1E698F6828E885 /* Pods-MathForKids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MathForKids.release.xcconfig"; path = "Pods/Target Support Files/Pods-MathForKids/Pods-MathForKids.release.xcconfig"; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				353030E71C897E9E004E4BA6 /* Assets.bundle */,
 				353030E31C89482E004E4BA6 /* YTPlayerView.h */,
 				353030E41C89482E004E4BA6 /* YTPlayerView.m */,
+				C12A711B1C9DFFA900F23B48 /* userCells.h */,
+				C12A711C1C9DFFA900F23B48 /* userCells.m */,
 				A5E5769A1C98E8F900B25FC4 /* userObjects.h */,
 				A5E5769B1C98E8F900B25FC4 /* userObjects.m */,
 				A54D34721C8458EC008453CF /* categoryList.h */,
@@ -560,6 +565,7 @@
 				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
 				A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */,
 				A5E5769C1C98E8F900B25FC4 /* userObjects.m in Sources */,
+				C12A711D1C9DFFA900F23B48 /* userCells.m in Sources */,
 				C1606DF51C9CE2DD0079CFEF /* AvartarsViewController.m in Sources */,
 				A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */,
 				A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */,

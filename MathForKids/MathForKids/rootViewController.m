@@ -8,6 +8,8 @@
 
 #import "RootViewController.h"
 #import "HomeViewController.h"
+#import "userObjects.h"
+#import "userCells.h"
 
 @interface RootViewController (){
     NSString* userName;
@@ -16,6 +18,15 @@
 @end
 
 @implementation RootViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+            //intialize our data to be stored in the json file
+    }
+    return self;
+}
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
     
@@ -34,22 +45,38 @@
 //    [[signB layer] setCornerRadius:4.0f];
 //    [[signB layer] setBorderWidth:1.0f];
 //    [[signB layer] setBorderColor:[UIColor lightGrayColor].CGColor];
+    [self loadUserData];
     [self setAnswerButtonLayout:(signB)];
-
+    [user_col setDataSource:self];
+    [user_col setDelegate:self];
     
-    usrImage1.layer.cornerRadius = 45;
-    usrImage1.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    usrImage1.layer.borderWidth = 1.0f;
-    
-    usrImage2.layer.cornerRadius = 45;
-    usrImage2.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    usrImage2.layer.borderWidth = 1.0f;
-    
-    usrImage3.layer.cornerRadius = 45;
-    usrImage3.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    usrImage3.layer.borderWidth = 1.0f;
+//    usrImage1.layer.cornerRadius = 45;
+//    usrImage1.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    usrImage1.layer.borderWidth = 1.0f;
+//    
+//    usrImage2.layer.cornerRadius = 45;
+//    usrImage2.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    usrImage2.layer.borderWidth = 1.0f;
+//    
+//    usrImage3.layer.cornerRadius = 45;
+//    usrImage3.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    usrImage3.layer.borderWidth = 1.0f;
     
     self.navigationItem.title = @"Math For Kids";
+}
+
+-(void)loadUserData{
+    NSString* json_users = [self readStringFromFile];
+    NSError* error;
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[json_users dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+
+    userAccounts = [[NSMutableArray alloc] init];
+    
+    if ([dict count] > 0) {
+        for(NSDictionary* one in dict){
+            [userAccounts addObject:one];
+        }
+    }
 }
 
 //get json
@@ -73,11 +100,34 @@
                       completion: nil ];
 }
 
+-(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return [userAccounts count];
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSDictionary* one = userAccounts[indexPath.row];
+    NSString* name = [one valueForKey:@"name"];
+    NSString* img = [one valueForKey:@"img"];
+    
+    userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
+    [cell loadCellLabel:name];
+    [cell loadCellButton:img];
+    
+    return cell;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"homeDetail"]) {
-
         [[segue destinationViewController] setUsrName: userName];
     }
+//    else if([[segue identifier] isEqualToString:@"homeUserDetail"]){
+//        [[segue destinationViewController] setUsrName: userName];
+//        [[segue destinationViewController] setUser_img: userImg];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

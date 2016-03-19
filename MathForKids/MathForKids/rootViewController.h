@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RootViewController : UIViewController{
+@interface RootViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>{
     IBOutlet UIButton* signB;
-    IBOutlet UIImageView* usrImage1;
-    IBOutlet UIImageView* usrImage2;
-    IBOutlet UIImageView* usrImage3;
+    
+    NSMutableArray* userAccounts;
+    IBOutlet UICollectionView* user_col;
 }
 
 

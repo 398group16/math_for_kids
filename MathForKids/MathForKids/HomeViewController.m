@@ -46,9 +46,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    usrImage.layer.cornerRadius = 45;
-    usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    usrImage.layer.borderWidth = 1.0f;
+//    usrImage.layer.cornerRadius = 45;
+//    usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    usrImage.layer.borderWidth = 1.0f;
+    
+    UIImage* userImg = [UIImage imageNamed:_user_img];
+    [usrImage setImage:userImg];
     
     [self setAnswerButtonLayout:(start)];
     [self setAnswerButtonLayout:(tut)];
@@ -80,11 +83,17 @@
 
 }
 
--(void)setUsrName:(userObjects*)newUser{
-    if(_user != newUser){
-        _user = newUser;
+-(void)setUsrName:(NSString*)newName{
+    if(_user_name != newName){
+        _user_name = newName;
     }
-    NSLog(@"user name (home): %@", [_user usrName]);
+    NSLog(@"user name (home): %@", newName);
+}
+
+-(void)setUser_img:(NSString*)newImg{
+    if(_user_img != newImg){
+        _user_img = newImg;
+    }
 }
 
 -(void)handleBack:(id) sender{
@@ -121,11 +130,11 @@
     if([[segue identifier] isEqualToString:@"gameCateDetail"]){
 //        GameCategoryViewController* dest = segue.destinationViewController;
 //        dest.title = @"Game Category";
-        NSLog(@"%@", [_user usrName]);
-        [[segue destinationViewController] setUsrName: [_user usrName]];
+//        NSLog(@"%@", [_user usrName]);
+        [[segue destinationViewController] setUsrName: _user_name];
     }else if([[segue identifier] isEqualToString:@"homeToScore"]){
         ScoreListViewController* dest = segue.destinationViewController;
-        [[segue destinationViewController] setUserName: [_user usrName]];
+        [[segue destinationViewController] setUserName: _user_name];
         dest.title = @"Counting";
     }
 }
