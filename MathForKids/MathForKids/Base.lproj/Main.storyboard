@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -89,7 +89,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jT-Jq-gDM">
                                 <rect key="frame" x="69" y="326" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-vd-bL3">
@@ -106,7 +106,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Favourite Mode:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yGj-g7-cuZ">
                                 <rect key="frame" x="69" y="421" width="198" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -124,10 +124,10 @@
             </objects>
             <point key="canvasLocation" x="819.5" y="2029.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Avartars View Controller-->
         <scene sceneID="QdH-kM-ZMv">
             <objects>
-                <viewController id="vIn-VZ-a2I" sceneMemberID="viewController">
+                <viewController id="vIn-VZ-a2I" customClass="AvartarsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="4XD-nC-g3n"/>
                         <viewControllerLayoutGuide type="bottom" id="sYz-Yf-13y"/>
@@ -140,21 +140,21 @@
                                 <rect key="frame" x="57" y="175" width="80" height="80"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="kRC-62-LZI" kind="show" id="GKa-X5-otp"/>
+                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage1" id="GKa-X5-otp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vQ-8F-bFk">
                                 <rect key="frame" x="237" y="175" width="80" height="80"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="kRC-62-LZI" kind="show" id="VYf-mx-Fmv"/>
+                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage2" id="VYf-mx-Fmv"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-vh-OEh">
                                 <rect key="frame" x="237" y="495" width="80" height="80"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="kRC-62-LZI" kind="show" id="tA8-JO-lnf"/>
+                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage6" id="tA8-JO-lnf"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-tX-AhI">
@@ -175,7 +175,7 @@
                                 <rect key="frame" x="57" y="328" width="80" height="80"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="kRC-62-LZI" kind="show" id="IAc-Tu-efg"/>
+                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage3" id="IAc-Tu-efg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -752,8 +752,8 @@
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="GKa-X5-otp"/>
         <segue reference="Ctc-OJ-hVq"/>
+        <segue reference="GKa-X5-otp"/>
         <segue reference="J5B-oZ-Wfp"/>
     </inferredMetricsTieBreakers>
 </document>
