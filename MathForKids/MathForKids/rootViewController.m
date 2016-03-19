@@ -117,6 +117,8 @@
     [cell loadCellLabel:name];
     [cell loadCellImg:img];
     
+    
+    
     return cell;
 }
 
