@@ -17,7 +17,6 @@
 
 
 //-(IBAction)imageToHomeView:(id)sender;
--(IBAction)toSignUpView:(id)sender;
 
 
 @end

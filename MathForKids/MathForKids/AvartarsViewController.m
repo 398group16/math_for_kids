@@ -33,7 +33,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"showImage1"]) {
-       
         [[segue destinationViewController] setImgName:@"usrImage1"];
     }else if ([[segue identifier] isEqualToString:@"showImage2"]) {
         [[segue destinationViewController] setImgName:@"usrImage2"];
