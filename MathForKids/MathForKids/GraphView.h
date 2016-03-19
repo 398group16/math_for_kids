@@ -10,9 +10,15 @@
 #import <CoreGraphics/CoreGraphics.h>
 
 #define kGraphHeight 310
+<<<<<<< HEAD
 #define kDefaultGraphWidth 352
 #define kOffsetX 10
 #define kStepX 38
+=======
+#define kDefaultGraphWidth 343
+#define kOffsetX 10
+#define kStepX 37
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
 #define kGraphBottom 315
 #define kGraphTop 5
 

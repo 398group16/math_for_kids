@@ -52,8 +52,21 @@
     self.navigationItem.title = @"Math For Kids";
 }
 
+<<<<<<< HEAD
 -(IBAction)toSignUpView:(id)sender{
     
+=======
+//get json
+- (NSString*)readStringFromFile{
+    
+    // Build the path...
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileName = @"users.json";
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+    NSLog(@"%@", filePath);
+    // The main act...
+    return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
 }
 
 -(IBAction)skipToHomeView:(id)sender{

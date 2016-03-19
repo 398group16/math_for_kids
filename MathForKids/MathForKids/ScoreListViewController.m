@@ -18,13 +18,77 @@
     
 }
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
+<<<<<<< HEAD
+=======
+@property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCatagories;
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
 
 @end
 
 @implementation ScoreListViewController
 
+<<<<<<< HEAD
 - (void)viewDidLoad {
     [super viewDidLoad];
+=======
+- (IBAction)segmentedCatagoriesAction:(id)sender {
+    
+    // for counting
+    if(_segmentedCatagories.selectedSegmentIndex == 0){
+        self.navigationItem.title = @"Counting Scores";
+        [self checkCategory];
+        
+    }//for addition
+    else if(_segmentedCatagories.selectedSegmentIndex == 1){
+        self.navigationItem.title = @"Addition Scores";
+        [self checkCategory];
+        
+    }//for subtraction
+    else if (_segmentedCatagories.selectedSegmentIndex == 2){
+        self.navigationItem.title = @"Subtraction Scores";
+        [self checkCategory];
+        
+    }//for shapes
+    else if (_segmentedCatagories.selectedSegmentIndex == 3){
+        self.navigationItem.title = @"Shape Scores";
+        [self checkCategory];
+        
+    }//DEFAULT for counting
+    else {
+        self.navigationItem.title = @"Counting Scores";
+        [self checkCategory];
+        
+        //        count.layer.masksToBounds = YES;
+        //        [self setShadows:(sub)];
+        //        [self setShadows:(add)];
+        //        [self setShadows:(shape)];
+    }
+    
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    // setting up colors for segmented list
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIColor whiteColor],
+                                NSForegroundColorAttributeName,
+                                nil];
+    NSDictionary *highlightedAttributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                           [UIColor whiteColor],
+                                           NSForegroundColorAttributeName,
+                                           nil];
+    [_segmentedCatagories setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    [_segmentedCatagories setTitleTextAttributes:highlightedAttributes forState:UIControlStateSelected];
+    _segmentedCatagories.layer.cornerRadius = 0.0;
+    _segmentedCatagories.layer.borderWidth = 1.0f;
+    
+//    _segmentedCatagories.layer.backgroundColor = [UIColor greenColor].CGColor;
+    _segmentedCatagories.layer.masksToBounds = YES;
+    
+    
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
     // Do any additional setup after loading the view.
     [self setShadows:shape];
     [self setShadows:add];
@@ -55,6 +119,7 @@
     if ([self.navigationItem.title isEqualToString:@"Counting Scores"]) {
         [graph setData:countS];
         [graph setNeedsDisplay];
+<<<<<<< HEAD
     }else if ([self.navigationItem.title isEqualToString:@"Addition Scores"]) {
         [graph setData:addS];
         [graph setNeedsDisplay];
@@ -67,6 +132,25 @@
     }else{
         [graph setData:countS];
         [graph setNeedsDisplay];
+=======
+        _segmentedCatagories.selectedSegmentIndex = 0;
+    }else if ([self.navigationItem.title isEqualToString:@"Addition Scores"]) {
+        [graph setData:addS];
+        [graph setNeedsDisplay];
+        _segmentedCatagories.selectedSegmentIndex = 1;
+    }else if ([self.navigationItem.title isEqualToString:@"Subtraction Scores"]) {
+        [graph setData:subS];
+        [graph setNeedsDisplay];
+        _segmentedCatagories.selectedSegmentIndex = 2;
+    }else if ([self.navigationItem.title isEqualToString:@"Shape Scores"]) {
+        [graph setData:shapeS];
+        [graph setNeedsDisplay];
+        _segmentedCatagories.selectedSegmentIndex = 3;
+    }else{
+        [graph setData:countS];
+        [graph setNeedsDisplay];
+        _segmentedCatagories.selectedSegmentIndex = 0;
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
     }
     
 }
@@ -124,10 +208,21 @@
     // Dispose of any resources that can be recreated.
 }
 
+<<<<<<< HEAD
 -(void)setScoreDict:(NSDictionary*) newDict{
     if (_scoreDict != newDict) {
         _scoreDict = newDict;
     }
+=======
+-(void)setUserName:(NSString *)newName{
+    if (_userName != newName) {
+        _userName = newName;
+    }
+    if (_userName == nil){
+        _userName = [NSString stringWithFormat:@"Empty"];
+    }
+    NSLog(@"USER NAME: %@", _userName);
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
 }
 
 //takes a screenshot
@@ -180,30 +275,59 @@
             tempScore = [one valueForKey:@"scoreList"];
             countS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
+<<<<<<< HEAD
                 temp = [s valueForKey:@"score"];
 //                float sc = [temp floatValue];
                 [countS addObject:temp];
+=======
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    //                float sc = [temp floatValue];
+                    [countS addObject:temp];
+                }
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Addition"]){
             tempScore = [one valueForKey:@"scoreList"];
             addS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
+<<<<<<< HEAD
                 temp = [s valueForKey:@"score"];
                 [addS addObject:temp];
+=======
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [addS addObject:temp];
+                }
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
             }
         }else if ([[one valueForKey:@"category"] isEqualToString:@"Subtraction"]){
             tempScore = [one valueForKey:@"scoreList"];
             subS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
+<<<<<<< HEAD
                 temp = [s valueForKey:@"score"];
                 [subS addObject:temp];
+=======
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [subS addObject:temp];
+                }
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
             }
         }else{
             tempScore = [one valueForKey:@"scoreList"];
             shapeS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             for (NSDictionary* s in tempScore){
+<<<<<<< HEAD
                 temp = [s valueForKey:@"score"];
                 [shapeS addObject:temp];
+=======
+                if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
+                    temp = [s valueForKey:@"score"];
+                    [shapeS addObject:temp];
+                }
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
             }
         }
     }

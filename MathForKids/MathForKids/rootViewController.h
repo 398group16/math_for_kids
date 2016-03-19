@@ -17,7 +17,10 @@
 
 
 //-(IBAction)imageToHomeView:(id)sender;
+<<<<<<< HEAD
 -(IBAction)toSignUpView:(id)sender;
+=======
+>>>>>>> 581e9c799916e29fff14b14be8c1402b1d80e6bd
 
 
 @end
