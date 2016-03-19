@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AvartarsViewController : UIViewController
+@interface AvartarsViewController : UIViewController{
+    IBOutlet UIButton* button1;
+    IBOutlet UIButton* button2;
+    IBOutlet UIButton* button3;
+    IBOutlet UIButton* button4;
+    IBOutlet UIButton* button5;
+    IBOutlet UIButton* button6;
+}
 
 @end

@@ -137,50 +137,52 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS2-d8-cN6">
                                 <rect key="frame" x="57" y="175" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="kRC-62-LZI" kind="show" identifier="showImage1" id="GKa-X5-otp"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4vQ-8F-bFk">
                                 <rect key="frame" x="237" y="175" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="kRC-62-LZI" kind="show" identifier="showImage2" id="VYf-mx-Fmv"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-vh-OEh">
-                                <rect key="frame" x="237" y="495" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage6" id="tA8-JO-lnf"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pqj-tX-AhI">
                                 <rect key="frame" x="57" y="495" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="kRC-62-LZI" kind="show" identifier="showImage5" id="Y10-e4-8Nd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amQ-WB-1gh">
                                 <rect key="frame" x="237" y="328" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="kRC-62-LZI" kind="show" identifier="showImage4" id="m2r-8v-wTR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwF-MY-08b">
                                 <rect key="frame" x="57" y="328" width="80" height="80"/>
-                                <state key="normal" title="Button"/>
                                 <connections>
                                     <segue destination="kRC-62-LZI" kind="show" identifier="showImage3" id="IAc-Tu-efg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu4-vh-OEh">
+                                <rect key="frame" x="237" y="495" width="80" height="80"/>
+                                <connections>
+                                    <segue destination="kRC-62-LZI" kind="show" identifier="showImage6" id="tA8-JO-lnf"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="dS2-d8-cN6" id="Eyu-KZ-AuI"/>
+                        <outlet property="button2" destination="4vQ-8F-bFk" id="lgj-5m-X7Y"/>
+                        <outlet property="button3" destination="JwF-MY-08b" id="Kv9-4r-COf"/>
+                        <outlet property="button4" destination="amQ-WB-1gh" id="75j-o6-mTs"/>
+                        <outlet property="button5" destination="pqj-tX-AhI" id="pNm-vU-GI2"/>
+                        <outlet property="button6" destination="Xu4-vh-OEh" id="qqV-da-DX4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GqT-KO-o0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
