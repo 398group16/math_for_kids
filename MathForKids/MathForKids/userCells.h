@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 
 @interface userCells : UICollectionViewCell{
-    IBOutlet UIButton* user_img;
+    IBOutlet UIImageView* user_img;
     IBOutlet UILabel* user_name;
 }
 
 -(void)loadCellLabel:(NSString*)newName;
--(void)loadCellButton:(NSString*)newImg;
+-(void)loadCellImg:(NSString*)newImg;
+
 
 @end

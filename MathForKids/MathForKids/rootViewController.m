@@ -115,7 +115,7 @@
     
     userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
     [cell loadCellLabel:name];
-    [cell loadCellButton:img];
+    [cell loadCellImg:img];
     
     return cell;
 }

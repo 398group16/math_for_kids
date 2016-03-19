@@ -27,9 +27,9 @@
     [user_name setText:newName];
     userName = newName;
 }
--(void)loadCellButton:(NSString *)newImg{
+-(void)loadCellImg:(NSString *)newImg{
     UIImage* img = [UIImage imageNamed:newImg];
-    [user_img setBackgroundImage:img forState:UIControlStateNormal];
+    [user_img setImage:img];
     userImg = newImg;
 }
 

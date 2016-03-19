@@ -47,26 +47,24 @@
                                             <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXo-t3-7gr">
-                                                    <rect key="frame" x="25" y="42" width="90" height="90"/>
-                                                    <connections>
-                                                        <segue destination="kIa-qG-Rn5" kind="show" identifier="homeUserDetail" id="SOr-zi-lEx"/>
-                                                    </connections>
-                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIf-dR-yTH">
                                                     <rect key="frame" x="12" y="8" width="117" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6yO-U1-LwQ">
+                                                    <rect key="frame" x="25" y="42" width="90" height="90"/>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <size key="customSize" width="140" height="140"/>
                                         <connections>
-                                            <outlet property="user_img" destination="gXo-t3-7gr" id="263-94-lNf"/>
+                                            <outlet property="user_img" destination="6yO-U1-LwQ" id="g5U-0E-QTO"/>
                                             <outlet property="user_name" destination="VIf-dR-yTH" id="t3s-LB-DvM"/>
+                                            <segue destination="kIa-qG-Rn5" kind="show" identifier="homeUserDetail" id="0Oa-VJ-jCe"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -218,7 +216,7 @@
         <!--HomeViewController-->
         <scene sceneID="314-yp-Zib">
             <objects>
-                <viewController title="HomeViewController" id="kIa-qG-Rn5" customClass="HomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeview" title="HomeViewController" id="kIa-qG-Rn5" customClass="HomeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ivE-iz-7lk"/>
                         <viewControllerLayoutGuide type="bottom" id="xxh-2t-JYZ"/>
@@ -781,7 +779,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Ctc-OJ-hVq"/>
-        <segue reference="SOr-zi-lEx"/>
+        <segue reference="0Oa-VJ-jCe"/>
         <segue reference="tA8-JO-lnf"/>
         <segue reference="J5B-oZ-Wfp"/>
     </inferredMetricsTieBreakers>
