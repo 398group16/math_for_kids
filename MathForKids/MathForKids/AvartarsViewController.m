@@ -15,9 +15,34 @@
 
 @implementation AvartarsViewController
 
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    //    button.layer.cornerRadius = 45;
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    button.layer.borderWidth = 1.0f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+} //    [self setAnswerButtonLayout:(button)];
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"Select your avatar";
+    
+    [self setAnswerButtonLayout:(button1)];
+    [self setAnswerButtonLayout:(button2)];
+    [self setAnswerButtonLayout:(button3)];
+    [self setAnswerButtonLayout:(button4)];
+    [self setAnswerButtonLayout:(button5)];
+    [self setAnswerButtonLayout:(button6)];
     
     [self setButton:button1];
     [button1 setBackgroundImage:[UIImage imageNamed:@"usrImage1"] forState:UIControlStateNormal];

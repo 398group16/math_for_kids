@@ -13,6 +13,7 @@
     IBOutlet UITextField* user_name;
     IBOutlet UIButton* submit;
     IBOutlet UIPickerView* user_favor;
+    __weak IBOutlet UIButton *shadowButton;
     NSMutableArray *source;
 }
 

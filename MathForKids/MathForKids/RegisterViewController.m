@@ -23,13 +23,58 @@
 
 @implementation RegisterViewController
 
+
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    //    button.layer.cornerRadius = 45;
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    button.layer.borderWidth = 1.0f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+} //    [self setAnswerButtonLayout:(button)];
+
+
+- (CGPathRef)awesomeShadow:(CGRect)rect
+{
+    CGSize size = rect.size;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
+    
+    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
+            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
+            controlPoint2:CGPointMake(15.0f, size.height)];
+    
+    return path.CGPath;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    submit.layer.masksToBounds = NO;
+    submit.layer.shadowOffset = CGSizeZero;
+    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
+    submit.layer.shadowRadius = 2.0f;
+    submit.layer.shadowOpacity = 0.80f;
+    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
+    
+    [self setAnswerButtonLayout:(shadowButton)];
+    
     source = [[NSMutableArray alloc] initWithObjects:@"Counting",@"Addition",@"Subtraction",@"Shapes", nil];
     user_favor.delegate = self;
     UIImage* img = [UIImage imageNamed:_imgName];
     [user_img setImage:img];
+//    user_favor.layer.backgroundColor = [[UIColor whiteColor] CGColor];
+    user_favor.layer.cornerRadius = 4.0f;
+    [self->user_favor selectRow:2 inComponent:0 animated:YES];
     
 }
 
@@ -62,11 +107,12 @@
     NSError* error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[jsonUsers dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSNumber *temp_id = [NSNumber numberWithInteger:([dict count]+1)];
+    select_favor = [source objectAtIndex:2];
 
     if (input_name == nil || select_favor == nil) {
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
-                                    message:@"User Name and Favourite Mode cannot be empty!"
+                                    message:@"Please enter your name!"
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
@@ -95,7 +141,7 @@
             if ([input_name isEqualToString:tempStr]) {
                 UIAlertController * alert= [UIAlertController
                                             alertControllerWithTitle:@"Error"
-                                            message:@"User Name cannot be repeated!"
+                                            message:@"Please select a different name. This name is already in use."
                                             preferredStyle:UIAlertControllerStyleAlert];
                 
                 UIAlertAction* ok = [UIAlertAction
@@ -137,8 +183,8 @@
 //            NSLog(@"read: %@", temp);
             
             UIAlertController * alert= [UIAlertController
-                                        alertControllerWithTitle:@"Congratulations"
-                                        message:@"Registered Successfully!"
+                                        alertControllerWithTitle:@"Congratulations!"
+                                        message:@"Profile registered. You can now play the game!"
                                         preferredStyle:UIAlertControllerStyleAlert];
             
             UIAlertAction* ok = [UIAlertAction
@@ -151,12 +197,44 @@
                                      
                                      id obj=[viewControllers objectAtIndex:0];
                                      [[self navigationController] popToViewController:obj animated:YES];
-// VISHAL, HERE
-//                                     [self.navigationController popToRootViewControllerAnimated:YES];
+                                     
+                                     viewControllers = [[self navigationController] viewControllers];
+                                     NSLog(@"Views in the stack at user registration: %@",viewControllers);
                                      
                                  }];
             
             [alert addAction:ok];
+
+            
+//            UIAlertAction* ok = [UIAlertAction
+//                                 actionWithTitle:@"OK"
+//                                 style:UIAlertActionStyleDefault
+//                                 handler:^(UIAlertAction * action)
+//                                 {
+//                                     UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"rootID"];
+//                                     [self.navigationController pushViewController:controller animated:YES];
+//                                     
+//                                     NSArray *viewControllers = [[self navigationController] viewControllers];
+//                                      NSLog(@"Views in the stack at user registration after pressing SUBMIT: %@",viewControllers);
+//                                     
+//                                     // TO DO
+//                                     // send straigh to homeview instead of root view
+//                                     // and transfer data to that view
+//                                     
+//                                     
+////                                     [alert dismissViewControllerAnimated:YES completion:nil];
+////                                     NSArray *viewControllers = [[self navigationController] viewControllers];
+////                                     
+////                                     id obj=[viewControllers objectAtIndex:0];
+////                                     [[self navigationController] pushViewController:obj animated:YES];
+////// VISHAL, HERE
+//////                                     [self.navigationController popToRootViewControllerAnimated:YES];
+////                                     
+////                                     viewControllers = [[self navigationController] viewControllers];
+////                                     NSLog(@"Views in the stack at user registration: %@",viewControllers);
+//                                 }];
+//            
+//            [alert addAction:ok];
             
             UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
             [vc presentViewController:alert animated:YES completion:nil];

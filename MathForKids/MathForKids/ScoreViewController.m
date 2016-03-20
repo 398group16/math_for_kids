@@ -85,7 +85,10 @@
 }
 - (IBAction)homeButtonClick:(id)sender {
 
+    
     NSArray *viewControllers = [[self navigationController] viewControllers];
+    
+    NSLog(@"Views in the stack at scoreview: %@",viewControllers);
     
     id obj=[viewControllers objectAtIndex:1];
     [[self navigationController] popToViewController:obj animated:YES];
