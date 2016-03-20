@@ -151,7 +151,7 @@
                                      
                                      id obj=[viewControllers objectAtIndex:0];
                                      [[self navigationController] popToViewController:obj animated:YES];
-                                     
+// VISHAL, HERE
 //                                     [self.navigationController popToRootViewControllerAnimated:YES];
                                      
                                  }];
