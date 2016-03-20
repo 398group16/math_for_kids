@@ -118,7 +118,7 @@
             if (_imgName == nil) {
                 _imgName = [NSString stringWithFormat:@"Empty"];
             }
-            NSLog(@"id: %@, name: %@, favor: %@, img:%@",temp_id, input_name, select_favor, _imgName);
+//            NSLog(@"id: %@, name: %@, favor: %@, img:%@",temp_id, input_name, select_favor, _imgName);
             newUser = [[userObjects alloc] initWithName:input_name Id:temp_id favor:select_favor img_name:_imgName];
             NSMutableDictionary* dict = [newUser toNSDictionary];
             error = nil;
@@ -192,7 +192,7 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    NSLog(@"combine users: %@", str);
+//    NSLog(@"combine users: %@", str);
     return str;
     
 }
@@ -215,12 +215,11 @@
 
 //get json
 - (NSString*)readStringFromFile{
-    
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    NSLog(@"%@", filePath);
+//    NSLog(@"%@", filePath);
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
@@ -228,8 +227,6 @@
 -(IBAction)submit:(id)sender{
     input_name = [user_name text];
     [self loadUserData];
-    
-    
 }
 
 - (void)didReceiveMemoryWarning {

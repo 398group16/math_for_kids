@@ -30,7 +30,6 @@
 }
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
-    
     button.layer.cornerRadius = 4.0f;
     button.layer.masksToBounds = NO;
     
@@ -50,18 +49,6 @@
     [self setAnswerButtonLayout:(signB)];
     [user_col setDataSource:self];
     [user_col setDelegate:self];
-    
-//    usrImage1.layer.cornerRadius = 45;
-//    usrImage1.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    usrImage1.layer.borderWidth = 1.0f;
-//    
-//    usrImage2.layer.cornerRadius = 45;
-//    usrImage2.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    usrImage2.layer.borderWidth = 1.0f;
-//    
-//    usrImage3.layer.cornerRadius = 45;
-//    usrImage3.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    usrImage3.layer.borderWidth = 1.0f;
     
     self.navigationItem.title = @"Math For Kids";
 }
@@ -87,7 +74,7 @@
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    NSLog(@"%@", filePath);
+//    NSLog(@"%@", filePath);
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
@@ -117,8 +104,6 @@
     userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
     [cell loadCellLabel:name];
     [cell loadCellImg:img];
-    
-    
     
     return cell;
 }

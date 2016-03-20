@@ -35,7 +35,6 @@
 }
 
 -(void)setButton:(UIButton*) but{
-    
     [[but layer] setBorderWidth:1.0f];
 }
 

@@ -22,7 +22,6 @@
 @implementation ScoreViewController
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
-    
 //    [self setAnswerButtonLayout:(compare)];
     button.layer.cornerRadius = 8.0f;
     button.layer.masksToBounds = NO;
@@ -34,7 +33,6 @@
 }
 
 - (void)setLabelLayout:(UILabel*) label{
-    
     [[label layer] setBorderWidth:1.0f];
     [[label layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [[label layer] setCornerRadius:10.0f];
@@ -68,7 +66,6 @@
 }
 
 -(void)loadScoreData{
-    
     self.cateList = [[categoryList alloc] init];
     
     NSMutableArray* scoreList = [[NSMutableArray alloc] init];
@@ -79,12 +76,10 @@
     NSNumber* num = [f numberFromString:_score];
     
     scoreObjects* score = [[scoreObjects alloc] initWithName:_usr_Name score:num];
-//    NSLog(@"33   %@, %@", score.name, score.score);
     [scoreList addObject:score];
     
     categoryList* cate = [[categoryList alloc] init];
     cate.category = self.navigationItem.title;
-//    NSLog(@"22   %@", cate.category);
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
@@ -94,7 +89,6 @@
     
     id obj=[viewControllers objectAtIndex:1];
     [[self navigationController] popToViewController:obj animated:YES];
-    //    NSLog(@"%@",viewControllers);
 }
 
 - (void)viewDidLoad {
@@ -123,18 +117,13 @@
         NSString *str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
 
         /*save file to */
-        
         NSString* temp = [self readStringFromFile];
         if (nil == temp) {
             [self writeToFile:str];
         }else{
-//            NSLog(@"%@", temp);
             NSString* combine = [self appendJsonFile:temp newJson:str];
-            NSLog(@"Combine: %@", combine);
             [self writeToFile:combine];
         }
-        
-        
 //        NSString *read = [self readStringFromFile];
 //        NSLog(@"%@", read);
         
@@ -147,8 +136,6 @@
     
 //    self.navigationItem.title = @"Menu";
 //    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
-//    
-//    
 //    self.navigationItem.leftBarButtonItem = backButton;
 }
 
@@ -203,7 +190,6 @@
             if (count > 9) {// make sure every user name only can have 10 scores in one category
                 canBeAdd = false;
             }
-//            NSLog(@"name: %@, count:%d, category:%@", tempStr, count, newCate);
             
             for(NSDictionary* s in tempScore){
                 if ([s valueForKey:@"name"] == tempStr && canBeAdd == false){
@@ -221,18 +207,14 @@
             for(NSDictionary* s in tempS){
                 [arrayS addObject:s];
             }
-            
-//            NSLog(@"22222");
+        
             NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
             [tempDict setValue:tempCate forKey:@"category"];
             [tempDict setValue:arrayS forKey:@"scoreList"];
-//            NSLog(@"11111");
             [array addObject:tempDict];
         }else{
             [array addObject:one];
         }
-        
-        
     }
     /*if new json have a new value of category, then add new json*/
     if (!found) {
@@ -273,12 +255,10 @@
 
 //get json
 - (NSString*)readStringFromFile{
-    
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"localScore.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
@@ -288,7 +268,6 @@
     if(_usr_Name != newName){
         _usr_Name = newName;
     }
-    
 }
 
 - (void)setScore:(NSString*)newScore{

@@ -192,7 +192,7 @@
     if (_userName == nil){
         _userName = [NSString stringWithFormat:@"Empty"];
     }
-    NSLog(@"USER NAME: %@", _userName);
+//    NSLog(@"USER NAME: %@", _userName);
 }
 
 //takes a screenshot
