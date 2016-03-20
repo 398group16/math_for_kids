@@ -78,7 +78,7 @@
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber* num = [f numberFromString:_score];
     
-    scoreObjects* score = [[scoreObjects alloc] initWithName:_usrName score:num];
+    scoreObjects* score = [[scoreObjects alloc] initWithName:_usr_Name score:num];
 //    NSLog(@"33   %@, %@", score.name, score.score);
     [scoreList addObject:score];
     
@@ -283,11 +283,12 @@
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
--(void)setUsrName:(NSString*)newName{
-//    NSLog(@"%@", newName);
-    if(_usrName != newName){
-        _usrName = newName;
+-(void)setUsr_Name:(NSString*)newName{
+    NSLog(@"%@", newName);
+    if(_usr_Name != newName){
+        _usr_Name = newName;
     }
+    
 }
 
 - (void)setScore:(NSString*)newScore{
@@ -311,7 +312,7 @@
     // Pass the selected object to the new view controller.
     if([[segue identifier] isEqualToString:@"scoreListDetail"]){
         ScoreListViewController* dest = segue.destinationViewController;
-        [[segue destinationViewController] setUserName: _usrName];
+        [[segue destinationViewController] setUserName: _usr_Name];
         dest.title = [NSString stringWithFormat:@"%@ Scores", self.navigationItem.title];
     }
 }

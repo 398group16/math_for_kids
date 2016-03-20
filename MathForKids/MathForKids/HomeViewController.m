@@ -50,8 +50,8 @@
 //    usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //    usrImage.layer.borderWidth = 1.0f;
     
-    UIImage* userImg = [UIImage imageNamed:_user_img];
-    [usrImage setImage:userImg];
+//    UIImage* userImg = [UIImage imageNamed:_user_img];
+    [usrImage setImage:_user_img];
     
     [self setAnswerButtonLayout:(start)];
     [self setAnswerButtonLayout:(tut)];
@@ -87,10 +87,10 @@
     if(_user_name != newName){
         _user_name = newName;
     }
-    NSLog(@"user name (home): %@", newName);
+    NSLog(@"user name (home)   : %@", _user_name);
 }
 
--(void)setUser_img:(NSString*)newImg{
+-(void)setUser_img:(UIImage*)newImg{
     if(_user_img != newImg){
         _user_img = newImg;
     }
@@ -131,7 +131,10 @@
 //        GameCategoryViewController* dest = segue.destinationViewController;
 //        dest.title = @"Game Category";
 //        NSLog(@"%@", [_user usrName]);
+        NSLog(@"%@", _user_name);
+        [[segue destinationViewController] setUserImg: _user_img];
         [[segue destinationViewController] setUsrName: _user_name];
+        
     }else if([[segue identifier] isEqualToString:@"homeToScore"]){
         ScoreListViewController* dest = segue.destinationViewController;
         [[segue destinationViewController] setUserName: _user_name];

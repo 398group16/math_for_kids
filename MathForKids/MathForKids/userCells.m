@@ -10,8 +10,7 @@
 #import "HomeViewController.h"
 
 @implementation userCells{
-    NSString* userName;
-    NSString* userImg;
+    
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -33,12 +32,12 @@
     userImg = newImg;
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"11111");
-    if([[segue identifier] isEqualToString:@"homeUserDetail"]){
-        
-        [[segue destinationViewController] setUsrName: userName];
-        [[segue destinationViewController] setUser_img: userImg];
-    }
-}
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    NSLog(@"11111");
+//    if([[segue identifier] isEqualToString:@"homeUserDetail"]){
+//        
+//        [[segue destinationViewController] setUsrName: userName];
+//        [[segue destinationViewController] setUser_img: userImg];
+//    }
+//}
 @end

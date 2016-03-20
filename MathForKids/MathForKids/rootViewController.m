@@ -13,6 +13,7 @@
 
 @interface RootViewController (){
     NSString* userName;
+    NSString* userImg;
 }
 
 @end
@@ -125,11 +126,18 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"homeDetail"]) {
         [[segue destinationViewController] setUsrName: userName];
+    }else if([[segue identifier] isEqualToString:@"homeUserDetail"]){
+        
+        NSArray *indexPaths = [user_col indexPathsForSelectedItems];
+//        HomeViewController *dest = segue.destinationViewController;
+        NSIndexPath *indexPath = [indexPaths objectAtIndex:0];
+        UICollectionViewCell *select_cell = [user_col cellForItemAtIndexPath:indexPath];
+        UILabel* cell_lab = (UILabel*)[select_cell viewWithTag:1];
+        UIImageView* cell_img = (UIImageView*)[select_cell viewWithTag:2];
+//        NSLog(@"%@", cell_lab.text);
+        [[segue destinationViewController] setUsrName: [cell_lab text]];
+        [[segue destinationViewController] setUser_img: [cell_img image]];
     }
-//    else if([[segue identifier] isEqualToString:@"homeUserDetail"]){
-//        [[segue destinationViewController] setUsrName: userName];
-//        [[segue destinationViewController] setUser_img: userImg];
-//    }
 }
 
 - (void)didReceiveMemoryWarning {

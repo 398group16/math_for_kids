@@ -147,8 +147,12 @@
                                  handler:^(UIAlertAction * action)
                                  {
                                      [alert dismissViewControllerAnimated:YES completion:nil];
+                                     NSArray *viewControllers = [[self navigationController] viewControllers];
                                      
-                                     [self.navigationController popToRootViewControllerAnimated:YES];
+                                     id obj=[viewControllers objectAtIndex:0];
+                                     [[self navigationController] popToViewController:obj animated:YES];
+                                     
+//                                     [self.navigationController popToRootViewControllerAnimated:YES];
                                      
                                  }];
             

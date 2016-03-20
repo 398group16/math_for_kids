@@ -18,7 +18,7 @@
 //    IBOutlet UIBarButtonItem* skip;
 }
 @property (strong, nonatomic) NSString* user_name;
-@property (strong, nonatomic) NSString* user_img;
+@property (strong, nonatomic) UIImage* user_img;
 //-(IBAction)toTutorialView:(id)sender;
 
 @end

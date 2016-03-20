@@ -11,6 +11,8 @@
 @interface userCells : UICollectionViewCell{
     IBOutlet UIImageView* user_img;
     IBOutlet UILabel* user_name;
+    NSString* userName;
+    NSString* userImg;
 }
 
 -(void)loadCellLabel:(NSString*)newName;

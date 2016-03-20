@@ -651,9 +651,10 @@
     }
 }
 
--(void)setUsrName:(NSString *)newName{
-    if(_usrName != newName){
-        _usrName = newName;
+-(void)setUsr_name:(NSString *)newName{
+        NSLog(@"%@", newName);
+    if(_usr_name != newName){
+        _usr_name = newName;
     }
 }
 
@@ -1165,7 +1166,7 @@
         dest.title = [NSString stringWithFormat:@"%@", _name];
         NSString* temp = [NSString stringWithFormat:@"%d", score];
         [[segue destinationViewController] setScore: temp];
-        [[segue destinationViewController] setUsrName:_usrName];
+        [[segue destinationViewController] setUsr_Name:_usr_name];
     }
 }
 
