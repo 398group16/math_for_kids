@@ -322,4 +322,7 @@
 }
 */
 
+- (IBAction)textFieldDimiss:(id)sender {
+    [user_name resignFirstResponder];
+}
 @end

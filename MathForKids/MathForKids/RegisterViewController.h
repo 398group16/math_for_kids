@@ -16,6 +16,7 @@
     __weak IBOutlet UIButton *shadowButton;
     NSMutableArray *source;
 }
+- (IBAction)textFieldDimiss:(id)sender;
 
 @property (nonatomic, strong) NSString* imgName;
 
