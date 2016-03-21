@@ -8,16 +8,29 @@
 
 #import "HomeViewController.h"
 #import "GameCategoryViewController.h"
+#import "ScoreListViewController.h"
 
 @interface HomeViewController ()
 
+//@property (weak, nonatomic) IBOutlet UILabel *userLableName;
 @end
 
 @implementation HomeViewController
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        //intialize our data to be stored in the json file
+//        [self viewDidLoad];
+//    }
+    return self;
+}
+
 - (IBAction)startGameButtonPress:(id)sender {
     
     NSArray *viewControllers = [[self navigationController] viewControllers];
-    NSLog(@"%@",viewControllers);
+    NSLog(@"Views in the stack at home menu: %@",viewControllers);
 }
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
@@ -33,10 +46,34 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [usrLabel setText:_user_name];
+//    self.userLableName.text = self.user_name;
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    NSLog(@"Views in the stack at Menu: %@",viewControllers);
+    
+    /*
+     In addition to removing the back button (using the methods already recommended), don't forget the user can still 'pop' to the previous screen with a left-to-right swipe gesture in iOS 7 and later.
+     
+     To disable that (when appropriate), implement the following (in viewDidLoad for example):
+     
+     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
+     */
+    
+    
+    //although rootview is still in UIView array but the registering part is not
+    [self.navigationItem setHidesBackButton:YES];
+    
+//    self.navigationItem.leftBarButtonItem = nil;
+    
+    
     // Do any additional setup after loading the view from its nib.
-    usrImage.layer.cornerRadius = 45;
-    usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    usrImage.layer.borderWidth = 1.0f;
+//    usrImage.layer.cornerRadius = 45;
+//    usrImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    usrImage.layer.borderWidth = 1.0f;
+    
+//    UIImage* userImg = [UIImage imageNamed:_user_img];
+    [usrImage setImage:_user_img];
     
     [self setAnswerButtonLayout:(start)];
     [self setAnswerButtonLayout:(tut)];
@@ -61,22 +98,29 @@
 //    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
     self.navigationItem.title = @"Menu";
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
-
-
-    self.navigationItem.leftBarButtonItem = backButton;
+//    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleDone target:self action:@selector(handleBack:)];
+//
+//
+//    self.navigationItem.leftBarButtonItem = backButton;
 
 }
 
 -(void)setUsrName:(NSString*)newName{
-    if(_usrName != newName){
-        _usrName = newName;
+    if(_user_name != newName){
+        _user_name = newName;
+    }
+    NSLog(@"user name (home)   : %@", _user_name);
+}
+
+-(void)setUser_img:(UIImage*)newImg{
+    if(_user_img != newImg){
+        _user_img = newImg;
     }
 }
 
--(void)handleBack:(id) sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+//-(void)handleBack:(id) sender{
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+//}
 
 //-(IBAction)toTutorialView:(id)sender{
 //    TutorialViewController* myTut = [[TutorialViewController alloc] initWithNibName:@"TutorialViewController" bundle:nil];
@@ -98,17 +142,26 @@
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 //    if ([[segue identifier] isEqualToString:@"tutDetail"]) {
 //        TutorialViewController* dest = segue.destinationViewController;
 //        dest.title = @"Tutorial";
-//    }else if([[segue identifier] isEqualToString:@"gameCateDetail"]){
+//    }else
+    if([[segue identifier] isEqualToString:@"gameCateDetail"]){
 //        GameCategoryViewController* dest = segue.destinationViewController;
 //        dest.title = @"Game Category";
-//        [[segue destinationViewController] setUsrName: _usrName];
-//    }
-//}
+//        NSLog(@"%@", [_user usrName]);
+        NSLog(@"%@", _user_name);
+        [[segue destinationViewController] setUserImg: _user_img];
+        [[segue destinationViewController] setUsrName: _user_name];
+        
+    }else if([[segue identifier] isEqualToString:@"homeToScore"]){
+        ScoreListViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUserName: _user_name];
+        dest.title = @"Counting";
+    }
+}
 
 @end

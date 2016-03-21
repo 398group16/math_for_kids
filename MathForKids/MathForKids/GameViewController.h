@@ -30,7 +30,7 @@
 
 
 @property (strong, nonatomic) NSString* name;
-@property (strong, nonatomic) NSString* usrName;
+@property (strong, nonatomic) NSString* usr_name;
 
 -(IBAction)button1action:(id)sender;
 -(IBAction)button2action:(id)sender;

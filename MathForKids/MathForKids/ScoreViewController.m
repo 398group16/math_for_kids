@@ -7,10 +7,12 @@
 //
 
 #import "ScoreViewController.h"
+#import "ScoreListViewController.h"
 #import "scoreObjects.h"
 #import "categoryList.h"
 
 @interface ScoreViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *share;
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
@@ -20,7 +22,6 @@
 @implementation ScoreViewController
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
-    
 //    [self setAnswerButtonLayout:(compare)];
     button.layer.cornerRadius = 8.0f;
     button.layer.masksToBounds = NO;
@@ -32,7 +33,6 @@
 }
 
 - (void)setLabelLayout:(UILabel*) label{
-    
     [[label layer] setBorderWidth:1.0f];
     [[label layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [[label layer] setCornerRadius:10.0f];
@@ -42,6 +42,18 @@
     label.clipsToBounds=YES;
 }
 
+- (IBAction)shareButton:(id)sender {
+    NSString *shareText = [NSString stringWithFormat:@"I scored %@ in Math for Kids!!! Go download your game from the App Store now!", self.score];//create a UIImage and add it to
+    //the array if you wanna share an image too
+    
+    NSArray *itemsToShare = @[shareText];
+    
+    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
+    
+    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
+    
+    [self presentViewController:activityVC animated:YES completion:nil];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,7 +66,6 @@
 }
 
 -(void)loadScoreData{
-    
     self.cateList = [[categoryList alloc] init];
     
     NSMutableArray* scoreList = [[NSMutableArray alloc] init];
@@ -64,35 +75,35 @@
     f.numberStyle = NSNumberFormatterDecimalStyle;
     NSNumber* num = [f numberFromString:_score];
     
-    scoreObjects* score = [[scoreObjects alloc] initWithName:_usrName score:num];
-//    NSLog(@"33   %@, %@", score.name, score.score);
+    scoreObjects* score = [[scoreObjects alloc] initWithName:_usr_Name score:num];
     [scoreList addObject:score];
     
     categoryList* cate = [[categoryList alloc] init];
     cate.category = self.navigationItem.title;
-//    NSLog(@"22   %@", cate.category);
     cate.scoreList = scoreList;
     self.cateList = cate;
 }
-//- (IBAction)homeButtonClick:(id)sender {
-//
-//    NSArray *viewControllers = [[self navigationController] viewControllers];
-//    
-//    id obj=[viewControllers objectAtIndex:1];
-//    [[self navigationController] popToViewController:obj animated:YES];
-//    //    NSLog(@"%@",viewControllers);
-//}
+- (IBAction)homeButtonClick:(id)sender {
+
+    
+    NSArray *viewControllers = [[self navigationController] viewControllers];
+    
+    NSLog(@"Views in the stack at scoreview: %@",viewControllers);
+    
+    id obj=[viewControllers objectAtIndex:1];
+    [[self navigationController] popToViewController:obj animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self setAnswerButtonLayout:(home)];
-    [self setAnswerButtonLayout:(share)];
+    [self setAnswerButtonLayout:(home)];
+    [self setAnswerButtonLayout:(_share)];
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
-    [self.navigationItem setHidesBackButton:NO animated:YES];
+    [self.navigationItem setHidesBackButton:YES];
     
     /*write json file*/
     [self loadScoreData];
@@ -109,18 +120,13 @@
         NSString *str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
 
         /*save file to */
-        
         NSString* temp = [self readStringFromFile];
         if (nil == temp) {
             [self writeToFile:str];
         }else{
-//            NSLog(@"%@", temp);
             NSString* combine = [self appendJsonFile:temp newJson:str];
-            NSLog(@"Combine: %@", combine);
             [self writeToFile:combine];
         }
-        
-        
 //        NSString *read = [self readStringFromFile];
 //        NSLog(@"%@", read);
         
@@ -131,18 +137,16 @@
         NSLog(@"An error happened = %@", error);
     }
     
-    self.navigationItem.title = @"Menu";
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
-    
-    
-    self.navigationItem.leftBarButtonItem = backButton;
+//    self.navigationItem.title = @"Menu";
+//    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+//    self.navigationItem.leftBarButtonItem = backButton;
 }
 
--(void)handleBack:(id)sender{
-    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
-    [self.navigationController popToViewController:vc animated:YES];
-    
-}
+//-(void)handleBack:(id)sender{
+//    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
+//    [self.navigationController popToViewController:vc animated:YES];
+//    
+//}
 
 -(NSString*)appendJsonFile:(NSString*)oldJson
                    newJson:(NSString*)newJson{
@@ -164,26 +168,56 @@
             found = true;
             NSDictionary* tempScore = [one valueForKey:@"scoreList"];
             NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
+            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
             
-            for(NSDictionary* s in tempScore){
-                [arrayS addObject:s];
+            /*make sure every user name only have 10 record scores*/
+            NSArray* tempName = [tempS valueForKey:@"name"];
+            NSString* tempStr;
+            for (NSString* s in tempName) {// check there is no more exctra brackets in tempName String
+                NSCharacterSet *charsToTrim = [NSCharacterSet characterSetWithCharactersInString:@"()  \n\""];
+                tempStr = [s stringByTrimmingCharactersInSet:charsToTrim];
             }
             
-            NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
+            
+            BOOL canBeAdd = true;
+            int count = 0;
+            
+            for(NSDictionary* ts in tempScore){// check how many same category scores under one user name
+                NSString* tmpName = [ts valueForKey:@"name"];
+//                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
+                if ([tmpName isEqualToString:tempStr]) {
+                    count++;
+                }
+            }
+            
+            if (count > 9) {// make sure every user name only can have 10 scores in one category
+                canBeAdd = false;
+            }
+            
+            for(NSDictionary* s in tempScore){
+                if ([s valueForKey:@"name"] == tempStr && canBeAdd == false){
+                    if (count <= 10) {
+                        canBeAdd = true;
+                    }
+                    count--;
+                }else{
+                    [arrayS addObject:s];
+                }
+                
+            }
+            /*make sure every user name only have 10 record scores*/
+            
             for(NSDictionary* s in tempS){
                 [arrayS addObject:s];
             }
-//            NSLog(@"22222");
+        
             NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
             [tempDict setValue:tempCate forKey:@"category"];
             [tempDict setValue:arrayS forKey:@"scoreList"];
-//            NSLog(@"11111");
             [array addObject:tempDict];
         }else{
             [array addObject:one];
         }
-        
-        
     }
     /*if new json have a new value of category, then add new json*/
     if (!found) {
@@ -200,6 +234,9 @@
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
 //    NSLog(@"Combine JSON: %@", str);
+    
+    error = nil;
+    
     return str;
 }
 
@@ -221,20 +258,18 @@
 
 //get json
 - (NSString*)readStringFromFile{
-    
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"localScore.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
--(void)setUsrName:(NSString*)newName{
-//    NSLog(@"%@", newName);
-    if(_usrName != newName){
-        _usrName = newName;
+-(void)setUsr_Name:(NSString*)newName{
+    NSLog(@"%@", newName);
+    if(_usr_Name != newName){
+        _usr_Name = newName;
     }
 }
 
@@ -250,14 +285,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if([[segue identifier] isEqualToString:@"scoreListDetail"]){
+        ScoreListViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUserName: _usr_Name];
+        dest.title = [NSString stringWithFormat:@"%@ Scores", self.navigationItem.title];
+    }
 }
-*/
+
 
 @end

@@ -11,12 +11,11 @@
 @interface ScoreViewController : UIViewController{
     IBOutlet UILabel* label1;
     IBOutlet UILabel* label2;
-//    IBOutlet UIButton* home;
-    IBOutlet UIButton* share;
+    IBOutlet UIButton* home;
     IBOutlet UIButton* compare;
 }
 
 @property (strong, nonatomic) NSString* score;
-@property (strong, nonatomic) NSString* usrName;
+@property (strong, nonatomic) NSString* usr_Name;
 
 @end
