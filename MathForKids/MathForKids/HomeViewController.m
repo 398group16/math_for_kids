@@ -46,7 +46,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
+    [usrLabel setText:_user_name];
     NSArray *viewControllers = [[self navigationController] viewControllers];
     NSLog(@"Views in the stack at Menu: %@",viewControllers);
     
@@ -97,10 +97,10 @@
 //    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
     self.navigationItem.title = @"Menu";
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
-
-
-    self.navigationItem.leftBarButtonItem = backButton;
+//    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+//
+//
+//    self.navigationItem.leftBarButtonItem = backButton;
 
 }
 
@@ -117,9 +117,9 @@
     }
 }
 
--(void)handleBack:(id) sender{
-    [self.navigationController popToRootViewControllerAnimated:YES];
-}
+//-(void)handleBack:(id) sender{
+//    [self.navigationController popToRootViewControllerAnimated:YES];
+//}
 
 //-(IBAction)toTutorialView:(id)sender{
 //    TutorialViewController* myTut = [[TutorialViewController alloc] initWithNibName:@"TutorialViewController" bundle:nil];

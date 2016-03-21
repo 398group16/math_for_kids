@@ -11,6 +11,7 @@
 
 @interface HomeViewController : UIViewController{
     IBOutlet UIImageView* usrImage;
+    IBOutlet UILabel* usrLabel;
     IBOutlet UIButton* start;
     IBOutlet UIButton* tut;
     IBOutlet UIButton* score;
