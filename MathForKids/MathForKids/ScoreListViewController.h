@@ -18,8 +18,8 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
-@property (nonatomic, strong) NSDictionary* scoreDict;
--(void)setScoreDict:(NSDictionary*) newDict;
+@property (nonatomic, strong) NSString* userName;
+-(void)setUserName:(NSString *)newName;
 -(IBAction)countAction:(id)sender;
 -(IBAction)addAction:(id)sender;
 -(IBAction)subAction:(id)sender;

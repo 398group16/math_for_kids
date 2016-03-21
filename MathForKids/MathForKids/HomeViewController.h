@@ -7,16 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "userObjects.h"
 
 @interface HomeViewController : UIViewController{
     IBOutlet UIImageView* usrImage;
+    IBOutlet UILabel* usrLabel;
     IBOutlet UIButton* start;
     IBOutlet UIButton* tut;
     IBOutlet UIButton* score;
     IBOutlet UIButton* exit;
 //    IBOutlet UIBarButtonItem* skip;
 }
-@property (strong, nonatomic) NSString* usrName;
+@property (strong, nonatomic) NSString* user_name;
+@property (strong, nonatomic) UIImage* user_img;
 //-(IBAction)toTutorialView:(id)sender;
 
 @end

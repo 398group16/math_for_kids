@@ -30,9 +30,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    myImage.layer.cornerRadius = 45;
-    myImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
-    myImage.layer.borderWidth = 1.0f;
+//    myImage.layer.cornerRadius = 45;
+//    myImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
+//    myImage.layer.borderWidth = 1.0f;
+    
+    [myImage setImage:_userImg];
     
     [self setAnswerButtonLayout:(count)];
     [self setAnswerButtonLayout:(add)];
@@ -41,8 +43,15 @@
 }
 
 -(void)setUsrName:(NSString *)newName{
+    NSLog(@"name: %@", newName);
     if(_usrName != newName){
         _usrName = newName;
+    }
+}
+
+-(void)setUserImg:(UIImage*)newImg{
+    if(_userImg != newImg){
+        _userImg = newImg;
     }
 }
 
@@ -62,25 +71,25 @@
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Counting Game";
         [[segue destinationViewController] setCategory:@"Counting"];
-        [[segue destinationViewController] setUsrName:_usrName];
+        [[segue destinationViewController] setUsr_name:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"addGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Addtion Game";
         [[segue destinationViewController] setCategory:@"Addition"];
-        [[segue destinationViewController] setUsrName:_usrName];
+        [[segue destinationViewController] setUsr_name:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"subGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Subtraction Game";
         [[segue destinationViewController] setCategory:@"Subtraction"];
-        [[segue destinationViewController] setUsrName:_usrName];
+        [[segue destinationViewController] setUsr_name:_usrName];
         
     }else if([[segue identifier] isEqualToString:@"shapeGdetail"]){
         GameViewController* dest = segue.destinationViewController;
         dest.title = @"Shape Game";
         [[segue destinationViewController] setCategory:@"Shape"];
-        [[segue destinationViewController] setUsrName:_usrName];
+        [[segue destinationViewController] setUsr_name:_usrName];
     }
 }
 
