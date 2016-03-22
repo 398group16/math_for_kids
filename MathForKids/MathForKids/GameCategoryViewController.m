@@ -35,6 +35,7 @@
 //    myImage.layer.borderWidth = 1.0f;
     
     [myImage setImage:_userImg];
+    [usrLabel setText:_usrName];
     
     [self setAnswerButtonLayout:(count)];
     [self setAnswerButtonLayout:(add)];
