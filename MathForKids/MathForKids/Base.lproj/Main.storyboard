@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QdA-Rj-xt3">
-                                <rect key="frame" x="20" y="136" width="335" height="498"/>
+                                <rect key="frame" x="20" y="136" width="335" height="472"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="14" minimumInteritemSpacing="14" id="1w8-8f-R5B">
                                     <size key="itemSize" width="90" height="115"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
