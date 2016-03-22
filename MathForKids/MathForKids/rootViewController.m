@@ -10,6 +10,7 @@
 #import "HomeViewController.h"
 #import "userObjects.h"
 #import "userCells.h"
+#import "addCells.h"
 
 @interface RootViewController (){
     NSString* userName;
@@ -148,33 +149,56 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return [userAccounts count];
+    return [userAccounts count]+1;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    NSDictionary* one = userAccounts[indexPath.row];
-    NSString* name = [one valueForKey:@"name"];
-    NSString* img = [one valueForKey:@"img"];
     
-    userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
-    [cell loadCellLabel:name];
+//    NSDictionary* one = userAccounts[indexPath.row];
+//    NSString* name = [one valueForKey:@"name"];
+//    NSString* img = [one valueForKey:@"img"];
     
+    if (indexPath.row == 0) {
+        addCells* cell = (addCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"addCells" forIndexPath:indexPath];
+        [cell loadCellTitle:@"Add User"];
+        [cell loadCellImg:@"addUser"];
+        
+        cell.layer.masksToBounds = NO;
+        [[cell layer] setBorderWidth:1.0f];
+        [[cell layer] setBorderColor:[UIColor blackColor].CGColor];
+        
+        [cell.layer setShadowColor:[UIColor blackColor].CGColor];
+        [cell.layer setShadowOpacity:0.8];
+        [cell.layer setShadowRadius:3.0];
+        [cell.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+        return cell;
+        
+    }else{
+        NSDictionary* one = userAccounts[indexPath.row-1];
+        NSString* name = [one valueForKey:@"name"];
+        NSString* img = [one valueForKey:@"img"];
+        
+        userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
+        [cell loadCellLabel:name];
+        
+        
+        cell.layer.masksToBounds = NO;
+        [[cell layer] setBorderWidth:1.0f];
+        [[cell layer] setBorderColor:[UIColor blackColor].CGColor];
+        
+        [cell.layer setShadowColor:[UIColor blackColor].CGColor];
+        [cell.layer setShadowOpacity:0.8];
+        [cell.layer setShadowRadius:3.0];
+        [cell.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+        //    [[cell layer] setCornerRadius:10.0f];
+        //    cell.clipsToBounds=YES;
+        
+        
+        [cell loadCellImg:img];
+        return cell;
+    }
     
-    cell.layer.masksToBounds = NO;
-    [[cell layer] setBorderWidth:1.0f];
-    [[cell layer] setBorderColor:[UIColor blackColor].CGColor];
-    
-    [cell.layer setShadowColor:[UIColor blackColor].CGColor];
-    [cell.layer setShadowOpacity:0.8];
-    [cell.layer setShadowRadius:3.0];
-    [cell.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
-//    [[cell layer] setCornerRadius:10.0f];
-//    cell.clipsToBounds=YES;
-    
-    
-    [cell loadCellImg:img];
-    
-    return cell;
+//    return cell;
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
