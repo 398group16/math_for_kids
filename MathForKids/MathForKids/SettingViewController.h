@@ -13,9 +13,12 @@
     IBOutlet UIButton* add;
     IBOutlet UIButton* del;
     IBOutlet UIButton* about;
+    IBOutlet UIImageView* userImage;
+    IBOutlet UILabel* userlabel;
 }
 
 @property (strong,nonatomic) NSString* user_name;
+@property (strong,nonatomic) UIImage* img_name;
 
 -(IBAction)addSelect:(id)sender;
 -(IBAction)delSelect:(id)sender;

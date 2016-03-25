@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
@@ -220,7 +221,7 @@
                                 <rect key="frame" x="58" y="249" width="258" height="58"/>
                                 <state key="normal" title="Change User Setting"/>
                                 <connections>
-                                    <segue destination="n19-Wz-WvK" kind="show" id="g78-7K-n6v"/>
+                                    <segue destination="n19-Wz-WvK" kind="show" identifier="changeUserInfo" id="g78-7K-n6v"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-8n-uyM">
@@ -241,16 +242,18 @@
                         <outlet property="add" destination="ZSm-JE-oas" id="JpH-Q7-kll"/>
                         <outlet property="change" destination="i6s-Qf-488" id="td4-8e-PDf"/>
                         <outlet property="del" destination="aJs-oK-rdm" id="2xn-0C-4O8"/>
+                        <outlet property="userImage" destination="UIm-8n-uyM" id="Tr2-we-Sms"/>
+                        <outlet property="userlabel" destination="8rq-Lj-T6V" id="f94-Rd-ht5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAL-RW-EiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1333.5" y="2040.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Set View Controller-->
         <scene sceneID="Pp9-Pe-XP3">
             <objects>
-                <viewController id="n19-Wz-WvK" sceneMemberID="viewController">
+                <viewController id="n19-Wz-WvK" customClass="SetViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hZ4-8H-UTc"/>
                         <viewControllerLayoutGuide type="bottom" id="C69-UF-sdV"/>
@@ -273,22 +276,26 @@
                                 <rect key="frame" x="103" y="391" width="169" height="30"/>
                                 <state key="normal" title="Change User Image"/>
                                 <connections>
-                                    <segue destination="HIh-hb-vO8" kind="show" id="BmJ-Cb-GrB"/>
+                                    <segue destination="HIh-hb-vO8" kind="show" identifier="changeImage" id="BmJ-Cb-GrB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="43N-qm-pES" id="qpt-A6-s85"/>
+                        <outlet property="button2" destination="6HB-uQ-i4F" id="jxd-si-hG1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pPO-Ww-r50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1837.5" y="2040.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Change View Controller-->
         <scene sceneID="Stj-yA-ON9">
             <objects>
-                <viewController id="HIh-hb-vO8" sceneMemberID="viewController">
+                <viewController id="HIh-hb-vO8" customClass="ChangeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="s2c-gE-Cyl"/>
                         <viewControllerLayoutGuide type="bottom" id="LFb-l4-tev"/>
@@ -299,32 +306,52 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jyt-QT-16k">
                                 <rect key="frame" x="28" y="106" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button1action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="Qr5-uK-QqX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HxZ-Za-9mW">
                                 <rect key="frame" x="216" y="106" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button2action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="VRg-wn-O9e"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hBd-j0-fHn">
                                 <rect key="frame" x="28" y="280" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button3action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="rk5-uZ-YBg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ChF-yz-D9E">
                                 <rect key="frame" x="216" y="280" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button4action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="Whf-nh-m4U"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-cL-iQ7">
                                 <rect key="frame" x="28" y="462" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button5action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="dQG-dY-hfY"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AJ2-Zz-fXi">
                                 <rect key="frame" x="216" y="462" width="130" height="130"/>
-                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button6action:" destination="HIh-hb-vO8" eventType="touchUpInside" id="Gxw-qS-yhz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="button1" destination="Jyt-QT-16k" id="KVh-vv-aUt"/>
+                        <outlet property="button2" destination="HxZ-Za-9mW" id="FIg-kQ-ZY3"/>
+                        <outlet property="button3" destination="hBd-j0-fHn" id="Ibj-sD-H1e"/>
+                        <outlet property="button4" destination="ChF-yz-D9E" id="u7H-Bq-QYH"/>
+                        <outlet property="button5" destination="Whf-cL-iQ7" id="m8X-11-kNB"/>
+                        <outlet property="button6" destination="AJ2-Zz-fXi" id="qjA-7I-alz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQH-IM-wpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

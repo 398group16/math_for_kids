@@ -164,6 +164,7 @@
     }else if([[segue identifier] isEqualToString:@"showSet"]){
         SettingViewController* dest = segue.destinationViewController;
         [[segue destinationViewController] setUser_name: _user_name];
+        [[segue destinationViewController] setImg_name: _user_img];
         dest.title = @"Setting";
     }
 }

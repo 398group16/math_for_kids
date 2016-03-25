@@ -17,11 +17,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [userImage setImage:_img_name];
+    [userlabel setText:_user_name];
 }
 
 -(void)setUser_name:(NSString *)new_name{
     if(_user_name != new_name){
         _user_name = new_name;
+    }
+}
+
+-(void)setImg_name:(UIImage*)new_name{
+    if(_img_name != new_name){
+        _img_name = new_name;
     }
 }
 
@@ -85,7 +93,7 @@
 
 -(IBAction)delSelect:(id)sender{
     UIAlertController * alert= [UIAlertController
-                                alertControllerWithTitle:@"Error"
+                                alertControllerWithTitle:@"Warning"
                                 message:@"Are you sure you wanna delete this user account!"
                                 preferredStyle:UIAlertControllerStyleAlert];
     
@@ -119,14 +127,17 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([[segue identifier] isEqualToString:@"changeUserInfo"]) {
+        [[segue destinationViewController] setUser_name:_user_name];
+    }
 }
-*/
+
 
 @end
