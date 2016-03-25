@@ -266,7 +266,7 @@
                                 <rect key="frame" x="103" y="220" width="169" height="30"/>
                                 <state key="normal" title="Change User Name"/>
                                 <connections>
-                                    <segue destination="UB3-7B-NIu" kind="show" id="BCF-JB-eth"/>
+                                    <segue destination="UB3-7B-NIu" kind="show" identifier="changeName" id="BCF-JB-eth"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-1D-zzh">
@@ -1007,10 +1007,10 @@
             </objects>
             <point key="canvasLocation" x="2863.5" y="1299.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Set Name View Controller-->
         <scene sceneID="gXK-4j-UfJ">
             <objects>
-                <viewController id="UB3-7B-NIu" sceneMemberID="viewController">
+                <viewController id="UB3-7B-NIu" customClass="SetNameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d4a-0t-CAv"/>
                         <viewControllerLayoutGuide type="bottom" id="MnX-4s-yfS"/>
@@ -1035,20 +1035,34 @@
                                 <rect key="frame" x="29" y="139" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard1:" destination="UB3-7B-NIu" eventType="editingDidEndOnExit" id="rf8-Zw-b5Y"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Spv-iC-IlF">
                                 <rect key="frame" x="29" y="239" width="316" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="dismissKeyboard2:" destination="UB3-7B-NIu" eventType="editingDidEndOnExit" id="aKa-5s-5pc"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V89-4t-JZa">
                                 <rect key="frame" x="101" y="414" width="173" height="30"/>
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitAction:" destination="UB3-7B-NIu" eventType="touchUpInside" id="qWu-du-Rr8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="field1" destination="qjE-5c-6bc" id="Kng-Bu-hgV"/>
+                        <outlet property="field2" destination="Spv-iC-IlF" id="AEj-1N-LMP"/>
+                        <outlet property="submit" destination="V89-4t-JZa" id="QMp-Ce-qHO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSs-34-jed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

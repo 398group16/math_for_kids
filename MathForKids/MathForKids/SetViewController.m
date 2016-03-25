@@ -40,6 +40,8 @@
     // Pass the selected object to the new view controller.
     if ([[segue identifier] isEqualToString:@"changeImage"]) {
         [[segue destinationViewController] setUser_name:_user_name];
+    }else if ([[segue identifier] isEqualToString:@"changeName"]) {
+        [[segue destinationViewController] setUser_name:_user_name];
     }
 }
 

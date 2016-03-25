@@ -45,6 +45,7 @@
 		C140488A1CA4BD930096E8C8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14048891CA4BD930096E8C8 /* SettingViewController.m */; };
 		C140488D1CA4E7230096E8C8 /* ChangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C140488C1CA4E7230096E8C8 /* ChangeViewController.m */; };
 		C14048901CA4EBB30096E8C8 /* SetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C140488F1CA4EBB30096E8C8 /* SetViewController.m */; };
+		C14048931CA4F68A0096E8C8 /* SetNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14048921CA4F6890096E8C8 /* SetNameViewController.m */; };
 		C1606DF51C9CE2DD0079CFEF /* AvartarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */; };
 		C1F6C5F31CA0F44600EA3481 /* addCells.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C5F21CA0F44600EA3481 /* addCells.m */; };
 /* End PBXBuildFile section */
@@ -138,6 +139,8 @@
 		C140488C1CA4E7230096E8C8 /* ChangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeViewController.m; sourceTree = "<group>"; };
 		C140488E1CA4EBB30096E8C8 /* SetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetViewController.h; sourceTree = "<group>"; };
 		C140488F1CA4EBB30096E8C8 /* SetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetViewController.m; sourceTree = "<group>"; };
+		C14048911CA4F6890096E8C8 /* SetNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetNameViewController.h; sourceTree = "<group>"; };
+		C14048921CA4F6890096E8C8 /* SetNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetNameViewController.m; sourceTree = "<group>"; };
 		C1606DF31C9CE2DD0079CFEF /* AvartarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvartarsViewController.h; sourceTree = "<group>"; };
 		C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvartarsViewController.m; sourceTree = "<group>"; };
 		C1F6C5F11CA0F44600EA3481 /* addCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addCells.h; sourceTree = "<group>"; };
@@ -250,6 +253,8 @@
 				A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */,
 				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
 				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
+				C14048911CA4F6890096E8C8 /* SetNameViewController.h */,
+				C14048921CA4F6890096E8C8 /* SetNameViewController.m */,
 				C140488E1CA4EBB30096E8C8 /* SetViewController.h */,
 				C140488F1CA4EBB30096E8C8 /* SetViewController.m */,
 				C140488B1CA4E7230096E8C8 /* ChangeViewController.h */,
@@ -583,6 +588,7 @@
 				A56CD79F1C830BD7007001F7 /* ScoreViewController.m in Sources */,
 				353030E61C89482E004E4BA6 /* YTPlayerView.m in Sources */,
 				A58CE54C1C7F041B002B876E /* AppDelegate.m in Sources */,
+				C14048931CA4F68A0096E8C8 /* SetNameViewController.m in Sources */,
 				A5EDD2AC1C8285060037EEE1 /* GameCategoryViewController.m in Sources */,
 				A5E5769C1C98E8F900B25FC4 /* userObjects.m in Sources */,
 				C12A711D1C9DFFA900F23B48 /* userCells.m in Sources */,
