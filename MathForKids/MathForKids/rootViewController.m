@@ -16,6 +16,7 @@
     NSString* userName;
     NSString* userImg;
 }
+@property (weak, nonatomic) IBOutlet UIButton *backgroundLabel;
 
 @end
 
@@ -56,6 +57,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    _backgroundLabel.layer.cornerRadius = 4.0f;
     
     /* Get the current array of View Controllers */
     NSArray *currentControllers = self.navigationController.viewControllers;
@@ -160,7 +164,7 @@
     
     if (indexPath.row == 0) {
         addCells* cell = (addCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"addCells" forIndexPath:indexPath];
-        [cell loadCellTitle:@"Add User"];
+        [cell loadCellTitle:@"Add user"];
         [cell loadCellImg:@"addUser"];
         
         cell.layer.masksToBounds = NO;

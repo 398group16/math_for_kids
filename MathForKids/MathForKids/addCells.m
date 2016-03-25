@@ -21,6 +21,8 @@
 
 -(void)loadCellImg:(NSString *)newImg{
     UIImage* img = [UIImage imageNamed:newImg];
+    
+    add_img.layer.masksToBounds = YES;
     [add_img setImage:img];
 }
 
