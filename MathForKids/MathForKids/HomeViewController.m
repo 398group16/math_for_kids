@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "GameCategoryViewController.h"
 #import "ScoreListViewController.h"
+#import "SettingViewController.h"
 
 @interface HomeViewController ()
 
@@ -160,6 +161,10 @@
         ScoreListViewController* dest = segue.destinationViewController;
         [[segue destinationViewController] setUserName: _user_name];
         dest.title = @"Counting";
+    }else if([[segue identifier] isEqualToString:@"showSet"]){
+        SettingViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUser_name: _user_name];
+        dest.title = @"Setting";
     }
 }
 

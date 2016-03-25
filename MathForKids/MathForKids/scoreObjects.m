@@ -21,16 +21,10 @@
         if(name_ == nil){
             self.name = @"Empty";
             self.score = score_;
-//            NSLog(@"%@, %@", self.name, self.score);
         }else{
             self.score = score_;
             self.name = name_;
         }
-        
-//        self.score = score_;
-//        self.name = name_;
-//        NSLog(@"%@, %@", self.name, self.score);
-        
     }
     return self;
 }

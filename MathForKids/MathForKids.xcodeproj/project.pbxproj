@@ -42,6 +42,7 @@
 		C10CC2871C9A11F400C153CD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C10CC2861C9A11F400C153CD /* RegisterViewController.m */; };
 		C1257C561C913ECD00CAAD89 /* ScoreListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */; };
 		C12A711D1C9DFFA900F23B48 /* userCells.m in Sources */ = {isa = PBXBuildFile; fileRef = C12A711C1C9DFFA900F23B48 /* userCells.m */; };
+		C140488A1CA4BD930096E8C8 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C14048891CA4BD930096E8C8 /* SettingViewController.m */; };
 		C1606DF51C9CE2DD0079CFEF /* AvartarsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */; };
 		C1F6C5F31CA0F44600EA3481 /* addCells.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F6C5F21CA0F44600EA3481 /* addCells.m */; };
 /* End PBXBuildFile section */
@@ -129,6 +130,8 @@
 		C1257C551C913ECD00CAAD89 /* ScoreListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreListViewController.m; sourceTree = "<group>"; };
 		C12A711B1C9DFFA900F23B48 /* userCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = userCells.h; sourceTree = "<group>"; };
 		C12A711C1C9DFFA900F23B48 /* userCells.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = userCells.m; sourceTree = "<group>"; };
+		C14048881CA4BD930096E8C8 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		C14048891CA4BD930096E8C8 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		C1606DF31C9CE2DD0079CFEF /* AvartarsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvartarsViewController.h; sourceTree = "<group>"; };
 		C1606DF41C9CE2DD0079CFEF /* AvartarsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvartarsViewController.m; sourceTree = "<group>"; };
 		C1F6C5F11CA0F44600EA3481 /* addCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addCells.h; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */,
 				A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */,
 				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
+				C14048881CA4BD930096E8C8 /* SettingViewController.h */,
+				C14048891CA4BD930096E8C8 /* SettingViewController.m */,
 				3592F5D11C8F6D790093901F /* HomeViewController.h */,
 				3592F5D21C8F6D790093901F /* HomeViewController.m */,
 				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
@@ -574,6 +579,7 @@
 				C1F6C5F31CA0F44600EA3481 /* addCells.m in Sources */,
 				C1606DF51C9CE2DD0079CFEF /* AvartarsViewController.m in Sources */,
 				A5EDD2AF1C82925B0037EEE1 /* GameViewController.m in Sources */,
+				C140488A1CA4BD930096E8C8 /* SettingViewController.m in Sources */,
 				A58CE58F1C7F196F002B876E /* CountingViewController.m in Sources */,
 				C10CC2871C9A11F400C153CD /* RegisterViewController.m in Sources */,
 				A58CE5491C7F041B002B876E /* main.m in Sources */,
