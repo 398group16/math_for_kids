@@ -51,7 +51,7 @@
     NSArray *viewControllers = [[self navigationController] viewControllers];
     NSLog(@"Views in the stack at Menu: %@",viewControllers);
     
-    self.navigationItem.title = @"Select your game category";
+    self.navigationItem.title = @"Home";
     
     /*
      In addition to removing the back button (using the methods already recommended), don't forget the user can still 'pop' to the previous screen with a left-to-right swipe gesture in iOS 7 and later.
@@ -99,7 +99,7 @@
 //    [[exit layer] setBorderWidth:1.0f];
 //    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
-    self.navigationItem.title = @"Menu";
+//    self.navigationItem.title = @"Menu";
 //    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
 //
 //

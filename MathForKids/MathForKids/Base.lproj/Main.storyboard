@@ -255,6 +255,9 @@
                                 <state key="normal" title="About Us" image="chevron-right">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TsP-rn-niR" kind="show" id="CpF-Sa-DC6"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UIm-8n-uyM">
                                 <rect key="frame" x="29" y="92" width="90" height="90"/>
@@ -284,57 +287,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAL-RW-EiJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1274.5" y="2040.5"/>
-        </scene>
-        <!--Set View Controller-->
-        <scene sceneID="Pp9-Pe-XP3">
-            <objects>
-                <viewController id="n19-Wz-WvK" customClass="SetViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hZ4-8H-UTc"/>
-                        <viewControllerLayoutGuide type="bottom" id="C69-UF-sdV"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bRz-km-gNZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eggsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="DgT-v5-8QD">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="43N-qm-pES">
-                                <rect key="frame" x="103" y="220" width="169" height="42"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Change User Name">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="UB3-7B-NIu" kind="show" identifier="changeName" id="BCF-JB-eth"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-1D-zzh">
-                                <rect key="frame" x="103" y="526" width="169" height="30"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6HB-uQ-i4F">
-                                <rect key="frame" x="103" y="391" width="169" height="42"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Change User Image">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="HIh-hb-vO8" kind="show" identifier="changeImage" id="BmJ-Cb-GrB"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="button1" destination="43N-qm-pES" id="qpt-A6-s85"/>
-                        <outlet property="button2" destination="6HB-uQ-i4F" id="jxd-si-hG1"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pPO-Ww-r50" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3239.5" y="2040.5"/>
         </scene>
         <!--Change View Controller-->
         <scene sceneID="Stj-yA-ON9">
@@ -409,6 +361,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQH-IM-wpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1274.5" y="2845.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="amW-OG-YYa">
+            <objects>
+                <viewController id="TsP-rn-niR" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8zk-jv-PH9"/>
+                        <viewControllerLayoutGuide type="bottom" id="zGY-oU-l8r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1GP-S8-Z0c">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eggsBackground" translatesAutoresizingMaskIntoConstraints="NO" id="kp4-fe-bp3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" text="This app was developed by a group of students at UofS as a part of class project. Hope you enjoy our app." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-yz-zbk">
+                                <rect key="frame" x="20" y="80" width="335" height="205"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgg-Zj-rQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807.5" y="2532.5"/>
         </scene>
         <!--Avartars View Controller-->
         <scene sceneID="QdH-kM-ZMv">
@@ -1136,7 +1119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSs-34-jed" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843.5" y="2040.5"/>
+            <point key="canvasLocation" x="2373.5" y="2040.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1148,8 +1131,6 @@
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aRJ-af-pbt"/>
-        <segue reference="2DS-52-GD0"/>
         <segue reference="J5B-oZ-Wfp"/>
         <segue reference="bba-XG-VPB"/>
         <segue reference="tA8-JO-lnf"/>

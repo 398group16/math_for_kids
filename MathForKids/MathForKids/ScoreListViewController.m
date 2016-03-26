@@ -63,8 +63,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.title = @"Scores";
-    
     // setting up colors for segmented list
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIColor whiteColor],
@@ -81,14 +79,6 @@
     
 //    _segmentedCatagories.layer.backgroundColor = [UIColor greenColor].CGColor;
     _segmentedCatagories.layer.masksToBounds = YES;
-    
-    
-    // Do any additional setup after loading the view.
-    [self setShadows:shape];
-    [self setShadows:add];
-    [self setShadows:sub];
-    [self setShadows:count];
-//    [self setShadows:_shareButton];
     
     
     // gives it paper look shadow, curved under
@@ -142,44 +132,6 @@
     button.layer.shadowOpacity = 0.8;
     //ofset defines how far shadow goes
     button.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
-}
-
--(IBAction)countAction:(id)sender{
-    self.navigationItem.title = @"Counting Scores";
-    [self checkCategory];
-    
-    count.layer.masksToBounds = YES;
-    [self setShadows:(sub)];
-    [self setShadows:(add)];
-    [self setShadows:(shape)];
-}
--(IBAction)addAction:(id)sender{
-    self.navigationItem.title = @"Addition Scores";
-    [self checkCategory];
-    
-    add.layer.masksToBounds = YES;
-    [self setShadows:(sub)];
-    [self setShadows:(count)];
-    [self setShadows:(shape)];
-}
--(IBAction)subAction:(id)sender{
-    self.navigationItem.title = @"Subtraction Scores";
-    [self checkCategory];
-    
-    sub.layer.masksToBounds = YES;
-    [self setShadows:(count)];
-    [self setShadows:(add)];
-    [self setShadows:(shape)];
-
-}
--(IBAction)shapeAction:(id)sender{
-    self.navigationItem.title = @"Shape Scores";
-    [self checkCategory];
-    
-    shape.layer.masksToBounds = YES;
-    [self setShadows:(sub)];
-    [self setShadows:(add)];
-    [self setShadows:(count)];
 }
 
 - (void)didReceiveMemoryWarning {

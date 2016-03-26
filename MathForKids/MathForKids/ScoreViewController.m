@@ -103,9 +103,6 @@
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
-    self.navigationItem.title = @"Score";
-    
-    
     [self.navigationItem setHidesBackButton:YES];
     
     /*write json file*/

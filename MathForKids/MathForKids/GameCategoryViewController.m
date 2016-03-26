@@ -25,7 +25,7 @@
     button.layer.shadowOpacity = 0.8;
     button.layer.shadowRadius = 12;
     button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
-}//[self setAnswerButtonLayout:(count)];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,9 +34,6 @@
 //    myImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
 //    myImage.layer.borderWidth = 1.0f;
     
-    
-    self.navigationItem.title = @"Select category";
-    
     [myImage setImage:_userImg];
     [usrLabel setText:_usrName];
     
@@ -44,6 +41,10 @@
     [self setAnswerButtonLayout:(add)];
     [self setAnswerButtonLayout:(sub)];
     [self setAnswerButtonLayout:(shape)];
+    
+    
+    
+    self.navigationItem.title = @"Select game category";
 }
 
 -(void)setUsrName:(NSString *)newName{
