@@ -1005,13 +1005,22 @@
 }
 
 
+-(void)handleBack:(id)sender{
+    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:2];
+    [self.navigationController popToViewController:vc animated:YES];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 //    dispatch_async(queue, ^){
-//        
+//
 //    }
+    
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Categories" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+    self.navigationItem.leftBarButtonItem = backButton;
     scoreTime = 0;
     gameCount = 0;
     timeCount = 30;

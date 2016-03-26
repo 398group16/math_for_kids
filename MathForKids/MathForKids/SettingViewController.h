@@ -10,6 +10,7 @@
 
 @interface SettingViewController : UIViewController{
     IBOutlet UIButton* change;
+    IBOutlet UIButton *changeImage;
     IBOutlet UIButton* add;
     IBOutlet UIButton* del;
     IBOutlet UIButton* about;

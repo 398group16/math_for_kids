@@ -103,6 +103,9 @@
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
+    self.navigationItem.title = @"Score";
+    
+    
     [self.navigationItem setHidesBackButton:YES];
     
     /*write json file*/
@@ -137,13 +140,13 @@
         NSLog(@"An error happened = %@", error);
     }
     
-    self.navigationItem.title = @"Menu";
-    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+//    self.navigationItem.title = @"Menu";
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Categories" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
     self.navigationItem.leftBarButtonItem = backButton;
 }
 
 -(void)handleBack:(id)sender{
-    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:1];
+    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:2];
     [self.navigationController popToViewController:vc animated:YES];
     
 }

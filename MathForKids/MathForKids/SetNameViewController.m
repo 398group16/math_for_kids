@@ -16,9 +16,38 @@
 
 @implementation SetNameViewController
 
+- (CGPathRef)awesomeShadow:(CGRect)rect
+{
+    CGSize size = rect.size;
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    
+    [path moveToPoint:CGPointZero];
+    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
+    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
+    
+    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
+            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
+            controlPoint2:CGPointMake(15.0f, size.height)];
+    
+    return path.CGPath;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"Change username";
+    
+    submit.layer.masksToBounds = NO;
+    submit.layer.shadowOffset = CGSizeZero;
+    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
+    submit.layer.shadowRadius = 2.0f;
+    submit.layer.shadowOpacity = 0.80f;
+    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
 }
 
 -(void)setUser_name:(NSString *)new_name{
@@ -28,10 +57,14 @@
 }
 
 -(IBAction)submitAction:(id)sender{
-    if ([field1 text] == nil || field2 == nil || (![[field2 text] isEqualToString:_user_name])) {
+    
+    field2.text = _user_name;
+    
+    if ([[field1 text]  isEqual: @""]) {
+        
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
-                                    message:@"Information you entered is wrong please check again!"
+                                    message:@"Please enter a username"
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
@@ -49,7 +82,7 @@
         newName = [field1 text];
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Warning"
-                                    message:@"Are you sure you wanna change the user name!"
+                                    message:@"Are you sure you wanna change the user name?"
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction

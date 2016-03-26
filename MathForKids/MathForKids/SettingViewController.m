@@ -9,14 +9,71 @@
 #import "SettingViewController.h"
 
 @interface SettingViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *upperAboutShadow;
 
 @end
 
 @implementation SettingViewController
 
+
+- (void)setAnswerButtonLayout:(UIButton*) button{
+    
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.borderWidth = 0.2f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 1;
+    button.layer.shadowRadius = 5;
+    button.layer.shadowOffset = CGSizeMake(0.0f, 6.0f);
+}//[self setAnswerButtonLayout:(count)];
+
+- (void)setAnswerButtonLayout2:(UIButton*) button{
+    
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.borderWidth = 0.2f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 1;
+    button.layer.shadowRadius = 5;
+    button.layer.shadowOffset = CGSizeMake(0.0f, 6.0f);
+}//[self setAnswerButtonLayout:(count)];
+
+- (void)addIcon:(UIButton*) button1{
+    
+    
+//    [button1 setImage:[UIImage imageNamed: @"chevron-right"] forState:UIControlStateNormal];
+            int wid = button1.frame.size.width - [UIImage imageNamed: @"chevron-right"].size.width;
+            int hei = button1.frame.size.height - [UIImage imageNamed: @"chevron-right"].size.height;
+    
+            button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"Settings";
+    
+    [self setAnswerButtonLayout:(change)];
+    [self setAnswerButtonLayout:(add)];
+    [self setAnswerButtonLayout:(del)];
+    [self setAnswerButtonLayout:(changeImage)];
+    [self setAnswerButtonLayout2:(_upperAboutShadow)];
+    
+    
+    [self addIcon:(change)];
+    [self addIcon:(add)];
+    [self addIcon:(del)];
+    [self addIcon:(changeImage)];
+    [self addIcon:(about)];
+    
+    
     [userImage setImage:_img_name];
     [userlabel setText:_user_name];
 }
@@ -127,17 +184,29 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    if ([[segue identifier] isEqualToString:@"changeUserInfo"]) {
+    if ([[segue identifier] isEqualToString:@"changeImage"]) {
+        [[segue destinationViewController] setUser_name:_user_name];
+    }else if ([[segue identifier] isEqualToString:@"changeName"]) {
         [[segue destinationViewController] setUser_name:_user_name];
     }
 }
+
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    if ([[segue identifier] isEqualToString:@"changeUserInfo"]) {
+//        [[segue destinationViewController] setUser_name:_user_name];
+//    }
+//}
 
 
 @end

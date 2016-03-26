@@ -63,6 +63,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"Scores";
+    
     // setting up colors for segmented list
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIColor whiteColor],

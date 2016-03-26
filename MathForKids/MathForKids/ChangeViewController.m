@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"Change Image";
+    self.navigationItem.title = @"Select Image";
     
     [self setAnswerButtonLayout:(button1)];
     [self setAnswerButtonLayout:(button2)];

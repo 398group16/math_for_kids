@@ -20,17 +20,6 @@
     self.navigationItem.title = @"Change User Info";
 }
 
--(void)setUser_name:(NSString *)new_name{
-    if(_user_name != new_name){
-        _user_name = new_name;
-    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 #pragma mark - Navigation
 
@@ -45,5 +34,16 @@
     }
 }
 
+
+-(void)setUser_name:(NSString *)new_name{
+    if(_user_name != new_name){
+        _user_name = new_name;
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 @end
