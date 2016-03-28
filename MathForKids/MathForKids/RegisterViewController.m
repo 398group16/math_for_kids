@@ -59,6 +59,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+<<<<<<< HEAD
+=======
+    
+    self.navigationItem.title = @"Enter user info";
+    
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     submit.layer.masksToBounds = NO;
     submit.layer.shadowOffset = CGSizeZero;
     submit.layer.shadowColor = [[UIColor blackColor] CGColor];

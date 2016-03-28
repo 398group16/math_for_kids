@@ -138,6 +138,7 @@
     }
     
 //    self.navigationItem.title = @"Menu";
+<<<<<<< HEAD
 //    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Home" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
 //    self.navigationItem.leftBarButtonItem = backButton;
 }
@@ -147,6 +148,17 @@
 //    [self.navigationController popToViewController:vc animated:YES];
 //    
 //}
+=======
+    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Categories" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
+    self.navigationItem.leftBarButtonItem = backButton;
+}
+
+-(void)handleBack:(id)sender{
+    UIViewController* vc =[[self.navigationController viewControllers]objectAtIndex:2];
+    [self.navigationController popToViewController:vc animated:YES];
+    
+}
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 
 -(NSString*)appendJsonFile:(NSString*)oldJson
                    newJson:(NSString*)newJson{

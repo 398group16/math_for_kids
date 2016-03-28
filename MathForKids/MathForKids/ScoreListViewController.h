@@ -10,19 +10,25 @@
 
 @interface ScoreListViewController : UIViewController{
     IBOutlet GraphView* graph;
+<<<<<<< HEAD
 
     IBOutlet UIButton* count;
     IBOutlet UIButton* add;
     IBOutlet UIButton* sub;
     IBOutlet UIButton* shape;
+=======
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 }
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (nonatomic, strong) NSString* userName;
 -(void)setUserName:(NSString *)newName;
+<<<<<<< HEAD
 -(IBAction)countAction:(id)sender;
 -(IBAction)addAction:(id)sender;
 -(IBAction)subAction:(id)sender;
 -(IBAction)shapeAction:(id)sender;
+=======
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 
 @end

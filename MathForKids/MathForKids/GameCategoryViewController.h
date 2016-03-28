@@ -10,6 +10,10 @@
 
 @interface GameCategoryViewController : UIViewController{
     IBOutlet UIImageView* myImage;
+<<<<<<< HEAD
+=======
+    IBOutlet UILabel* usrLabel;
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     IBOutlet UIButton* count;
     IBOutlet UIButton* add;
     IBOutlet UIButton* sub;

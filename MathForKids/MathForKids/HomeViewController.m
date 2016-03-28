@@ -9,6 +9,10 @@
 #import "HomeViewController.h"
 #import "GameCategoryViewController.h"
 #import "ScoreListViewController.h"
+<<<<<<< HEAD
+=======
+#import "SettingViewController.h"
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 
 @interface HomeViewController ()
 
@@ -50,6 +54,11 @@
     NSArray *viewControllers = [[self navigationController] viewControllers];
     NSLog(@"Views in the stack at Menu: %@",viewControllers);
     
+<<<<<<< HEAD
+=======
+    self.navigationItem.title = @"Home";
+    
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     /*
      In addition to removing the back button (using the methods already recommended), don't forget the user can still 'pop' to the previous screen with a left-to-right swipe gesture in iOS 7 and later.
      
@@ -96,7 +105,11 @@
 //    [[exit layer] setBorderWidth:1.0f];
 //    [[exit layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     
+<<<<<<< HEAD
     self.navigationItem.title = @"Menu";
+=======
+//    self.navigationItem.title = @"Menu";
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 //    UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
 //
 //
@@ -160,6 +173,14 @@
         ScoreListViewController* dest = segue.destinationViewController;
         [[segue destinationViewController] setUserName: _user_name];
         dest.title = @"Counting";
+<<<<<<< HEAD
+=======
+    }else if([[segue identifier] isEqualToString:@"showSet"]){
+        SettingViewController* dest = segue.destinationViewController;
+        [[segue destinationViewController] setUser_name: _user_name];
+        [[segue destinationViewController] setImg_name: _user_img];
+        dest.title = @"Setting";
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     }
 }
 

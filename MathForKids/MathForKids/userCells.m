@@ -28,6 +28,11 @@
 }
 -(void)loadCellImg:(NSString *)newImg{
     UIImage* img = [UIImage imageNamed:newImg];
+<<<<<<< HEAD
+=======
+    
+    user_img.layer.masksToBounds = YES;
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     [user_img setImage:img];
     userImg = newImg;
 }

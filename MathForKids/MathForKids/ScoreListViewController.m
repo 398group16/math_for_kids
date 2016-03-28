@@ -81,6 +81,7 @@
     _segmentedCatagories.layer.masksToBounds = YES;
     
     
+<<<<<<< HEAD
     // Do any additional setup after loading the view.
     [self setShadows:shape];
     [self setShadows:add];
@@ -89,6 +90,8 @@
 //    [self setShadows:_shareButton];
     
     
+=======
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     // gives it paper look shadow, curved under
 //    CALayer *shareButton = _shareButton.layer;
     _shareButton.layer.masksToBounds = NO;
@@ -142,6 +145,7 @@
     button.layer.shadowOffset = CGSizeMake(0.0f, 2.0f);
 }
 
+<<<<<<< HEAD
 -(IBAction)countAction:(id)sender{
     self.navigationItem.title = @"Counting Scores";
     [self checkCategory];
@@ -180,6 +184,8 @@
     [self setShadows:(count)];
 }
 
+=======
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

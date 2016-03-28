@@ -10,11 +10,19 @@
 #import "HomeViewController.h"
 #import "userObjects.h"
 #import "userCells.h"
+<<<<<<< HEAD
+=======
+#import "addCells.h"
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 
 @interface RootViewController (){
     NSString* userName;
     NSString* userImg;
 }
+<<<<<<< HEAD
+=======
+@property (weak, nonatomic) IBOutlet UIButton *backgroundLabel;
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 
 @end
 
@@ -56,6 +64,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+<<<<<<< HEAD
+=======
+    
+    _backgroundLabel.layer.cornerRadius = 4.0f;
+    
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
     /* Get the current array of View Controllers */
     NSArray *currentControllers = self.navigationController.viewControllers;
     
@@ -148,6 +162,7 @@
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+<<<<<<< HEAD
     return [userAccounts count];
 }
 
@@ -175,6 +190,58 @@
     [cell loadCellImg:img];
     
     return cell;
+=======
+    return [userAccounts count]+1;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+//    NSDictionary* one = userAccounts[indexPath.row];
+//    NSString* name = [one valueForKey:@"name"];
+//    NSString* img = [one valueForKey:@"img"];
+    
+    if (indexPath.row == 0) {
+        addCells* cell = (addCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"addCells" forIndexPath:indexPath];
+        [cell loadCellTitle:@"Add user"];
+        [cell loadCellImg:@"addUser"];
+        
+        cell.layer.masksToBounds = NO;
+        [[cell layer] setBorderWidth:1.0f];
+        [[cell layer] setBorderColor:[UIColor blackColor].CGColor];
+        
+        [cell.layer setShadowColor:[UIColor blackColor].CGColor];
+        [cell.layer setShadowOpacity:0.8];
+        [cell.layer setShadowRadius:3.0];
+        [cell.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+        return cell;
+        
+    }else{
+        NSDictionary* one = userAccounts[indexPath.row-1];
+        NSString* name = [one valueForKey:@"name"];
+        NSString* img = [one valueForKey:@"img"];
+        
+        userCells* cell = (userCells*)[collectionView dequeueReusableCellWithReuseIdentifier:@"userCells" forIndexPath:indexPath];
+        [cell loadCellLabel:name];
+        
+        
+        cell.layer.masksToBounds = NO;
+        [[cell layer] setBorderWidth:1.0f];
+        [[cell layer] setBorderColor:[UIColor blackColor].CGColor];
+        
+        [cell.layer setShadowColor:[UIColor blackColor].CGColor];
+        [cell.layer setShadowOpacity:0.8];
+        [cell.layer setShadowRadius:3.0];
+        [cell.layer setShadowOffset:CGSizeMake(2.0, 2.0)];
+        //    [[cell layer] setCornerRadius:10.0f];
+        //    cell.clipsToBounds=YES;
+        
+        
+        [cell loadCellImg:img];
+        return cell;
+    }
+    
+//    return cell;
+>>>>>>> cdbd5e68f5f623f3f41a0e84d4938da320f6ec5b
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
