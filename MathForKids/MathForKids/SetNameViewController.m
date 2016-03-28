@@ -82,7 +82,7 @@
         newName = [field1 text];
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Warning"
-                                    message:@"Are you sure you wanna change the user name?"
+                                    message:@"Are you sure you want to change your username?"
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction
