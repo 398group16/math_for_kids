@@ -51,7 +51,7 @@
 -(void)showAlert{
     UIAlertController * alert= [UIAlertController
                                 alertControllerWithTitle:@"Warning"
-                                message:@"Are you sure you wanna change the user image!"
+                                message:@"Are you sure you wanna change the user image?"
                                 preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* ok = [UIAlertAction
