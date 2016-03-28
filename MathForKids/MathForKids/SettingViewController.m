@@ -90,6 +90,72 @@
     }
 }
 
+-(NSString*)writeToScore:(NSString*)string{
+    
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileName = @"localScore.json";
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:fileAtPath]) {
+        [[NSFileManager defaultManager] createFileAtPath:fileAtPath contents:nil attributes:nil];
+    }
+    
+    NSLog(@"%@", filePath);
+    
+    [[string dataUsingEncoding:NSUTF8StringEncoding] writeToFile:fileAtPath atomically:NO];
+    return filePath;
+}
+
+//get json
+- (NSString*)readStringFromScore{
+    // Build the path...
+    NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* fileName = @"localScore.json";
+    NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
+    //    NSLog(@"%@", filePath);
+    // The main act...
+    return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
+}
+
+-(NSString*)deleteJsonScore:(NSString*)old_json{
+    NSError* error;
+    NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[old_json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
+    
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    
+    
+    for(NSDictionary* one in old_dict){
+        NSDictionary* tempScore = [one valueForKey:@"scoreList"];
+        NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
+        
+        for(NSDictionary* ts in tempScore){
+            NSString* tmpName = [ts valueForKey:@"name"];
+            //                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
+            if (![tmpName isEqualToString:_user_name]) {
+                [arrayS addObject:ts];
+            }
+        }
+        
+        NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
+        [tempDict setValue:[one valueForKey:@"category"] forKey:@"category"];
+        [tempDict setValue:arrayS forKey:@"scoreList"];
+        [array addObject:tempDict];
+    }
+    
+    error = nil;
+    NSData* jsonData = [NSJSONSerialization
+                        dataWithJSONObject:array
+                        options:NSJSONWritingPrettyPrinted
+                        error:&error];
+    NSString *str;
+    if ([jsonData length] > 0 && error == nil) {
+        str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    }
+    //    NSLog(@"combine users: %@", str);
+    return str;
+}
+
+
 -(NSString*)writeToFile:(NSString*)string{
     
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -105,6 +171,8 @@
     [[string dataUsingEncoding:NSUTF8StringEncoding] writeToFile:fileAtPath atomically:NO];
     return filePath;
 }
+
+
 
 //get json
 - (NSString*)readStringFromFile{
@@ -161,6 +229,8 @@
                          {
                              NSString* str = [self readStringFromFile];
                              [self writeToFile:[self deleteJson:str]];
+                             NSString* score = [self readStringFromScore];
+                             [self writeToScore:[self deleteJsonScore:score]];
                              [self.navigationController popToRootViewControllerAnimated:YES];
                              [alert dismissViewControllerAnimated:YES completion:nil];   
                          }];
