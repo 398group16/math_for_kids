@@ -219,7 +219,7 @@
 -(IBAction)delSelect:(id)sender{
     UIAlertController * alert= [UIAlertController
                                 alertControllerWithTitle:@"Warning"
-                                message:@"Are you sure you wanna delete this user account!"
+                                message:@"Are you sure you want to delete this user account?"
                                 preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* ok = [UIAlertAction
