@@ -1,0 +1,723 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D9BB6D3CDA04CF3961896A51ADB4830 /* SBJson4StreamWriterState.h in Headers */ = {isa = PBXBuildFile; fileRef = 837D556A8B5E57B326DCD26F9F6A0E08 /* SBJson4StreamWriterState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2A4264CB66E9BD37A422A7922EDFD397 /* SBJson4StreamWriter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B87110CC0943E655BA606599346CC2E /* SBJson4StreamWriter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2EE71248871B1A36EDDC310BCD72EEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		38997BAD8F300B6AFF989F103D0EE251 /* Pods-MathForKids-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E00E2A838915BD5BF5E99EB2ED51BC /* Pods-MathForKids-dummy.m */; };
+		3D8176628A20523FA1DECFA321DCEECE /* SBJson4StreamParserState.h in Headers */ = {isa = PBXBuildFile; fileRef = 22B3601406A0CF51605BFA81AD6D8A64 /* SBJson4StreamParserState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		50EA9F2069F4CA281E9E0102A2D80978 /* SBJson4StreamTokeniser.h in Headers */ = {isa = PBXBuildFile; fileRef = 18DC0E50846CABC33DC183BD3EBFCD6F /* SBJson4StreamTokeniser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		60F6B42962B14757F034A1B56F356095 /* SBJson4StreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 448FD52FE8535D57FA57BB7764912C58 /* SBJson4StreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C0EF6E2F01157523B89691B76866EDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		8C37CD1E73DBA5E47EE53D6FF11AA2AA /* SBJson4StreamTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFB268AC1F4D19E34AFFE5A5F461E7C /* SBJson4StreamTokeniser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		94C16058781999C0CD23E129D58E0D0C /* SBJson4StreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BAF3B8DFC2ED3800C740ECDBE6514E8B /* SBJson4StreamParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9CC95558D62571C4E6E6BEB041800B9C /* SBJson4StreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = EF4A0DA729375C2319944BBE50CBC19B /* SBJson4StreamParserState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B8D95CA446D12B01B0826C134D2761DE /* Pods-MathForKidsUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D04075504E1E3042C3A55FC96D7322C3 /* Pods-MathForKidsUITests-dummy.m */; };
+		BC154FCBE703BAD2DD13F0A1094DFDED /* Pods-MathForKidsTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 377CC4D971CF1EC836E9A9443281AE7A /* Pods-MathForKidsTests-dummy.m */; };
+		BCA596DC18E46E8EC4485FBA6AD53404 /* SBJson4StreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 401E18009859E4CFF4544C34B971175B /* SBJson4StreamWriter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		BFCCBB0D9600EF357503FFDE88933B17 /* SBJson4.h in Headers */ = {isa = PBXBuildFile; fileRef = F4A1ADC2D6279CD319310E4D360DB448 /* SBJson4.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD9C2B5C377C5741CB55AB537F54CE10 /* SBJson4StreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = BDEDA4DA88B1ADBDF010EFB98F5312F1 /* SBJson4StreamWriterState.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D11E0DF46F5B06062EE2FD4B6B494636 /* SBJson4Writer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D54842A21AC5367A413480A8A7AF90 /* SBJson4Writer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		D67CAEEAA1269C9A95083EDF1E747367 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D91344B5A93C6E20D86747DC7498FBCE /* SBJson4Parser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6DD10912D851DFED60C1C62077C60C /* SBJson4Parser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DE3B0627F09877D530D14C0F10CF1394 /* SBJson4Writer.h in Headers */ = {isa = PBXBuildFile; fileRef = D65C669FFB0F3F1FED7AE526E4E89E54 /* SBJson4Writer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E53F82675D66977EF28C826A08B2DFE1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E7101AB525FFB85465D986E91F74BBC4 /* SBJson-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E58ED60A5FFEFFAFD55A04BE833CD4D5 /* SBJson-dummy.m */; };
+		FEDCFA0AE8FDD5284FC74FA9FE8E9186 /* SBJson4Parser.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0B8D12394742A384B39BE5965A7DF9 /* SBJson4Parser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8112C476F26FB761479CF391ED2F9B69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9DDC2BC8BB3B78CE01F44E99749A05;
+			remoteInfo = SBJson;
+		};
+		C0900EFC440EC5D06EDD9D135EB39978 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9DDC2BC8BB3B78CE01F44E99749A05;
+			remoteInfo = SBJson;
+		};
+		D9F6DF946B80180577EE3E197CB7C5E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E9DDC2BC8BB3B78CE01F44E99749A05;
+			remoteInfo = SBJson;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02A225DA3067A96443515C12E147F1CA /* libPods-MathForKidsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKidsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04BA1FD93ADC933E088D5369D8334F1A /* Pods-MathForKids.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKids.debug.xcconfig"; sourceTree = "<group>"; };
+		0C00CFC8D28886F698D3B54A60C686DB /* Pods-MathForKidsTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MathForKidsTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0FFB268AC1F4D19E34AFFE5A5F461E7C /* SBJson4StreamTokeniser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4StreamTokeniser.m; path = src/main/objc/SBJson4StreamTokeniser.m; sourceTree = "<group>"; };
+		17D54842A21AC5367A413480A8A7AF90 /* SBJson4Writer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4Writer.m; path = src/main/objc/SBJson4Writer.m; sourceTree = "<group>"; };
+		18DC0E50846CABC33DC183BD3EBFCD6F /* SBJson4StreamTokeniser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4StreamTokeniser.h; path = src/main/objc/SBJson4StreamTokeniser.h; sourceTree = "<group>"; };
+		22B3601406A0CF51605BFA81AD6D8A64 /* SBJson4StreamParserState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4StreamParserState.h; path = src/main/objc/SBJson4StreamParserState.h; sourceTree = "<group>"; };
+		30E00E2A838915BD5BF5E99EB2ED51BC /* Pods-MathForKids-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MathForKids-dummy.m"; sourceTree = "<group>"; };
+		377CC4D971CF1EC836E9A9443281AE7A /* Pods-MathForKidsTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MathForKidsTests-dummy.m"; sourceTree = "<group>"; };
+		3A6DD10912D851DFED60C1C62077C60C /* SBJson4Parser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4Parser.m; path = src/main/objc/SBJson4Parser.m; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		401E18009859E4CFF4544C34B971175B /* SBJson4StreamWriter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4StreamWriter.m; path = src/main/objc/SBJson4StreamWriter.m; sourceTree = "<group>"; };
+		448FD52FE8535D57FA57BB7764912C58 /* SBJson4StreamParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4StreamParser.h; path = src/main/objc/SBJson4StreamParser.h; sourceTree = "<group>"; };
+		520620D75E50FA83CBA4A7B5BDDC25F3 /* Pods-MathForKids.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKids.release.xcconfig"; sourceTree = "<group>"; };
+		5C07ECB9F55B1BB4F43123BB2B27AA78 /* Pods-MathForKids-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKids-frameworks.sh"; sourceTree = "<group>"; };
+		5D9E80C2A1423A2CDB9382C19E41E0D0 /* Pods-MathForKids-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKids-resources.sh"; sourceTree = "<group>"; };
+		646C03137ECBCB627F0AE7F39A5C80E2 /* Pods-MathForKidsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKidsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6A273B9CB7F043A9B450F5A4289BADF9 /* SBJson-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SBJson-prefix.pch"; sourceTree = "<group>"; };
+		837D556A8B5E57B326DCD26F9F6A0E08 /* SBJson4StreamWriterState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4StreamWriterState.h; path = src/main/objc/SBJson4StreamWriterState.h; sourceTree = "<group>"; };
+		84A4A95316390C8A9ABB50122CC35B0B /* Pods-MathForKidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKidsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		86D72458C7A8FB1E2458C4CDCB88CCBA /* libSBJson.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSBJson.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		89ADCC35490FBD41AC0564BA5F19A3B0 /* Pods-MathForKidsTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKidsTests-resources.sh"; sourceTree = "<group>"; };
+		8B87110CC0943E655BA606599346CC2E /* SBJson4StreamWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4StreamWriter.h; path = src/main/objc/SBJson4StreamWriter.h; sourceTree = "<group>"; };
+		8F0B8D12394742A384B39BE5965A7DF9 /* SBJson4Parser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4Parser.h; path = src/main/objc/SBJson4Parser.h; sourceTree = "<group>"; };
+		963139E82D85D6C15211D793EC0A8672 /* SBJson.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SBJson.xcconfig; sourceTree = "<group>"; };
+		968071CFBE018C01406DC0619ADAE96F /* Pods-MathForKidsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKidsTests.release.xcconfig"; sourceTree = "<group>"; };
+		9687939E5A228E11C67D4207314A247F /* Pods-MathForKidsTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MathForKidsTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A15F7DB13B98F5C6DF8D3BDAE354E58 /* Pods-MathForKids-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MathForKids-acknowledgements.plist"; sourceTree = "<group>"; };
+		9EF9011E4AEE56A872438BC5C1BBDDEB /* Pods-MathForKidsUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKidsUITests-frameworks.sh"; sourceTree = "<group>"; };
+		A274A7FD8D25F0FCE3AAD564C24ECA84 /* Pods-MathForKidsUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKidsUITests-resources.sh"; sourceTree = "<group>"; };
+		A5F238B33092B6A5137E109430B5694D /* Pods-MathForKidsUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MathForKidsUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAF3B8DFC2ED3800C740ECDBE6514E8B /* SBJson4StreamParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4StreamParser.m; path = src/main/objc/SBJson4StreamParser.m; sourceTree = "<group>"; };
+		BDEDA4DA88B1ADBDF010EFB98F5312F1 /* SBJson4StreamWriterState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4StreamWriterState.m; path = src/main/objc/SBJson4StreamWriterState.m; sourceTree = "<group>"; };
+		CFE4B4BC75F3102CA165EE45C9FA66E9 /* libPods-MathForKids.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKids.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D04075504E1E3042C3A55FC96D7322C3 /* Pods-MathForKidsUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MathForKidsUITests-dummy.m"; sourceTree = "<group>"; };
+		D0603D5CF4D42F767C6DFC18819747A2 /* Pods-MathForKids-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MathForKids-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D65C669FFB0F3F1FED7AE526E4E89E54 /* SBJson4Writer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4Writer.h; path = src/main/objc/SBJson4Writer.h; sourceTree = "<group>"; };
+		E12BC23564836CD188AEBEC61AB2C16C /* Pods-MathForKidsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MathForKidsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E58ED60A5FFEFFAFD55A04BE833CD4D5 /* SBJson-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SBJson-dummy.m"; sourceTree = "<group>"; };
+		EBDCA23BB03F3CE060E214554A31AD9A /* libPods-MathForKidsUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MathForKidsUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF4A0DA729375C2319944BBE50CBC19B /* SBJson4StreamParserState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SBJson4StreamParserState.m; path = src/main/objc/SBJson4StreamParserState.m; sourceTree = "<group>"; };
+		F4A1ADC2D6279CD319310E4D360DB448 /* SBJson4.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SBJson4.h; path = src/main/objc/SBJson4.h; sourceTree = "<group>"; };
+		F5C561A44FF270029963275D9781CA35 /* Pods-MathForKidsTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MathForKidsTests-frameworks.sh"; sourceTree = "<group>"; };
+		F9EAC2818EC34DE9C90E19754E23B2D5 /* Pods-MathForKidsUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MathForKidsUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E6AE04B3FBFCC4505FD412CBA4DAAFA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C0EF6E2F01157523B89691B76866EDA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		888E8ADD12F75068A57B50BD538CFF96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E53F82675D66977EF28C826A08B2DFE1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92DAEF0FEB15BFA07CF75C6D20DB26BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2EE71248871B1A36EDDC310BCD72EEEB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE005DDBE5477089DEEC1BAECE85E0EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67CAEEAA1269C9A95083EDF1E747367 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04904F859522C2691FD723AAA61C266C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFE4B4BC75F3102CA165EE45C9FA66E9 /* libPods-MathForKids.a */,
+				02A225DA3067A96443515C12E147F1CA /* libPods-MathForKidsTests.a */,
+				EBDCA23BB03F3CE060E214554A31AD9A /* libPods-MathForKidsUITests.a */,
+				86D72458C7A8FB1E2458C4CDCB88CCBA /* libSBJson.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		116F317BB90D538E37B3F9CC7C3AFF03 /* Pods-MathForKidsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A5F238B33092B6A5137E109430B5694D /* Pods-MathForKidsUITests-acknowledgements.markdown */,
+				F9EAC2818EC34DE9C90E19754E23B2D5 /* Pods-MathForKidsUITests-acknowledgements.plist */,
+				D04075504E1E3042C3A55FC96D7322C3 /* Pods-MathForKidsUITests-dummy.m */,
+				9EF9011E4AEE56A872438BC5C1BBDDEB /* Pods-MathForKidsUITests-frameworks.sh */,
+				A274A7FD8D25F0FCE3AAD564C24ECA84 /* Pods-MathForKidsUITests-resources.sh */,
+				E12BC23564836CD188AEBEC61AB2C16C /* Pods-MathForKidsUITests.debug.xcconfig */,
+				646C03137ECBCB627F0AE7F39A5C80E2 /* Pods-MathForKidsUITests.release.xcconfig */,
+			);
+			name = "Pods-MathForKidsUITests";
+			path = "Target Support Files/Pods-MathForKidsUITests";
+			sourceTree = "<group>";
+		};
+		714E8AA84B062148E20CC3D83412363B /* Pods-MathForKidsTests */ = {
+			isa = PBXGroup;
+			children = (
+				0C00CFC8D28886F698D3B54A60C686DB /* Pods-MathForKidsTests-acknowledgements.markdown */,
+				9687939E5A228E11C67D4207314A247F /* Pods-MathForKidsTests-acknowledgements.plist */,
+				377CC4D971CF1EC836E9A9443281AE7A /* Pods-MathForKidsTests-dummy.m */,
+				F5C561A44FF270029963275D9781CA35 /* Pods-MathForKidsTests-frameworks.sh */,
+				89ADCC35490FBD41AC0564BA5F19A3B0 /* Pods-MathForKidsTests-resources.sh */,
+				84A4A95316390C8A9ABB50122CC35B0B /* Pods-MathForKidsTests.debug.xcconfig */,
+				968071CFBE018C01406DC0619ADAE96F /* Pods-MathForKidsTests.release.xcconfig */,
+			);
+			name = "Pods-MathForKidsTests";
+			path = "Target Support Files/Pods-MathForKidsTests";
+			sourceTree = "<group>";
+		};
+		73541893804D8EB6F1A3C5CF6FE41A28 /* SBJson */ = {
+			isa = PBXGroup;
+			children = (
+				F4A1ADC2D6279CD319310E4D360DB448 /* SBJson4.h */,
+				8F0B8D12394742A384B39BE5965A7DF9 /* SBJson4Parser.h */,
+				3A6DD10912D851DFED60C1C62077C60C /* SBJson4Parser.m */,
+				448FD52FE8535D57FA57BB7764912C58 /* SBJson4StreamParser.h */,
+				BAF3B8DFC2ED3800C740ECDBE6514E8B /* SBJson4StreamParser.m */,
+				22B3601406A0CF51605BFA81AD6D8A64 /* SBJson4StreamParserState.h */,
+				EF4A0DA729375C2319944BBE50CBC19B /* SBJson4StreamParserState.m */,
+				18DC0E50846CABC33DC183BD3EBFCD6F /* SBJson4StreamTokeniser.h */,
+				0FFB268AC1F4D19E34AFFE5A5F461E7C /* SBJson4StreamTokeniser.m */,
+				8B87110CC0943E655BA606599346CC2E /* SBJson4StreamWriter.h */,
+				401E18009859E4CFF4544C34B971175B /* SBJson4StreamWriter.m */,
+				837D556A8B5E57B326DCD26F9F6A0E08 /* SBJson4StreamWriterState.h */,
+				BDEDA4DA88B1ADBDF010EFB98F5312F1 /* SBJson4StreamWriterState.m */,
+				D65C669FFB0F3F1FED7AE526E4E89E54 /* SBJson4Writer.h */,
+				17D54842A21AC5367A413480A8A7AF90 /* SBJson4Writer.m */,
+				DA6F26A062C4B8C4F95378708C1D9F36 /* Support Files */,
+			);
+			path = SBJson;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				B35A2BA193447E4ED908EA5A444644C2 /* Pods */,
+				04904F859522C2691FD723AAA61C266C /* Products */,
+				AEBFBB1DBA70DEF36DA0AB8198C01414 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AEBFBB1DBA70DEF36DA0AB8198C01414 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EED701F9EEE74839018D9BEDC9146ED6 /* Pods-MathForKids */,
+				714E8AA84B062148E20CC3D83412363B /* Pods-MathForKidsTests */,
+				116F317BB90D538E37B3F9CC7C3AFF03 /* Pods-MathForKidsUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B35A2BA193447E4ED908EA5A444644C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73541893804D8EB6F1A3C5CF6FE41A28 /* SBJson */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DA6F26A062C4B8C4F95378708C1D9F36 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				963139E82D85D6C15211D793EC0A8672 /* SBJson.xcconfig */,
+				E58ED60A5FFEFFAFD55A04BE833CD4D5 /* SBJson-dummy.m */,
+				6A273B9CB7F043A9B450F5A4289BADF9 /* SBJson-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SBJson";
+			sourceTree = "<group>";
+		};
+		EED701F9EEE74839018D9BEDC9146ED6 /* Pods-MathForKids */ = {
+			isa = PBXGroup;
+			children = (
+				D0603D5CF4D42F767C6DFC18819747A2 /* Pods-MathForKids-acknowledgements.markdown */,
+				9A15F7DB13B98F5C6DF8D3BDAE354E58 /* Pods-MathForKids-acknowledgements.plist */,
+				30E00E2A838915BD5BF5E99EB2ED51BC /* Pods-MathForKids-dummy.m */,
+				5C07ECB9F55B1BB4F43123BB2B27AA78 /* Pods-MathForKids-frameworks.sh */,
+				5D9E80C2A1423A2CDB9382C19E41E0D0 /* Pods-MathForKids-resources.sh */,
+				04BA1FD93ADC933E088D5369D8334F1A /* Pods-MathForKids.debug.xcconfig */,
+				520620D75E50FA83CBA4A7B5BDDC25F3 /* Pods-MathForKids.release.xcconfig */,
+			);
+			name = "Pods-MathForKids";
+			path = "Target Support Files/Pods-MathForKids";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		F476861C29AF4D1209EB18737ACC21DE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFCCBB0D9600EF357503FFDE88933B17 /* SBJson4.h in Headers */,
+				FEDCFA0AE8FDD5284FC74FA9FE8E9186 /* SBJson4Parser.h in Headers */,
+				60F6B42962B14757F034A1B56F356095 /* SBJson4StreamParser.h in Headers */,
+				3D8176628A20523FA1DECFA321DCEECE /* SBJson4StreamParserState.h in Headers */,
+				50EA9F2069F4CA281E9E0102A2D80978 /* SBJson4StreamTokeniser.h in Headers */,
+				2A4264CB66E9BD37A422A7922EDFD397 /* SBJson4StreamWriter.h in Headers */,
+				0D9BB6D3CDA04CF3961896A51ADB4830 /* SBJson4StreamWriterState.h in Headers */,
+				DE3B0627F09877D530D14C0F10CF1394 /* SBJson4Writer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E9DDC2BC8BB3B78CE01F44E99749A05 /* SBJson */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C1D029B9C87E0BE5A6B489AE4900258 /* Build configuration list for PBXNativeTarget "SBJson" */;
+			buildPhases = (
+				B5E84CFB580376654FC4372B07CAEE04 /* Sources */,
+				BE005DDBE5477089DEEC1BAECE85E0EA /* Frameworks */,
+				F476861C29AF4D1209EB18737ACC21DE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SBJson;
+			productName = SBJson;
+			productReference = 86D72458C7A8FB1E2458C4CDCB88CCBA /* libSBJson.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		36240D562D1B32A59E5DA1A03B859351 /* Pods-MathForKidsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C6E0F964975F5866D5BCA73DB660A3F /* Build configuration list for PBXNativeTarget "Pods-MathForKidsUITests" */;
+			buildPhases = (
+				F5CA384F29F74991BF85FAE55A1DE0F7 /* Sources */,
+				888E8ADD12F75068A57B50BD538CFF96 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5FE8F31D778B35449126E41C9BBE906 /* PBXTargetDependency */,
+			);
+			name = "Pods-MathForKidsUITests";
+			productName = "Pods-MathForKidsUITests";
+			productReference = EBDCA23BB03F3CE060E214554A31AD9A /* libPods-MathForKidsUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D1FE4A2479272FB1BA990D8596055A2C /* Pods-MathForKids */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB6C98AF83761519681825795260F36C /* Build configuration list for PBXNativeTarget "Pods-MathForKids" */;
+			buildPhases = (
+				82ED96B897E5553F685398BE17A3C1EE /* Sources */,
+				4E6AE04B3FBFCC4505FD412CBA4DAAFA /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B38C3F7A1D71642AFB3EE02D2ADD8F02 /* PBXTargetDependency */,
+			);
+			name = "Pods-MathForKids";
+			productName = "Pods-MathForKids";
+			productReference = CFE4B4BC75F3102CA165EE45C9FA66E9 /* libPods-MathForKids.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		F1F85D28D21F2CE8D47C2FB02BBDC805 /* Pods-MathForKidsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85B7461865F29FB0085B8CD4328EB8D8 /* Build configuration list for PBXNativeTarget "Pods-MathForKidsTests" */;
+			buildPhases = (
+				7A17B027410D90D2BABBC88BDBD2216E /* Sources */,
+				92DAEF0FEB15BFA07CF75C6D20DB26BD /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				287E50C173FE195F6B19B97884EE21FD /* PBXTargetDependency */,
+			);
+			name = "Pods-MathForKidsTests";
+			productName = "Pods-MathForKidsTests";
+			productReference = 02A225DA3067A96443515C12E147F1CA /* libPods-MathForKidsTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0720;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 04904F859522C2691FD723AAA61C266C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D1FE4A2479272FB1BA990D8596055A2C /* Pods-MathForKids */,
+				F1F85D28D21F2CE8D47C2FB02BBDC805 /* Pods-MathForKidsTests */,
+				36240D562D1B32A59E5DA1A03B859351 /* Pods-MathForKidsUITests */,
+				0E9DDC2BC8BB3B78CE01F44E99749A05 /* SBJson */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7A17B027410D90D2BABBC88BDBD2216E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC154FCBE703BAD2DD13F0A1094DFDED /* Pods-MathForKidsTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82ED96B897E5553F685398BE17A3C1EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38997BAD8F300B6AFF989F103D0EE251 /* Pods-MathForKids-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E84CFB580376654FC4372B07CAEE04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7101AB525FFB85465D986E91F74BBC4 /* SBJson-dummy.m in Sources */,
+				D91344B5A93C6E20D86747DC7498FBCE /* SBJson4Parser.m in Sources */,
+				94C16058781999C0CD23E129D58E0D0C /* SBJson4StreamParser.m in Sources */,
+				9CC95558D62571C4E6E6BEB041800B9C /* SBJson4StreamParserState.m in Sources */,
+				8C37CD1E73DBA5E47EE53D6FF11AA2AA /* SBJson4StreamTokeniser.m in Sources */,
+				BCA596DC18E46E8EC4485FBA6AD53404 /* SBJson4StreamWriter.m in Sources */,
+				CD9C2B5C377C5741CB55AB537F54CE10 /* SBJson4StreamWriterState.m in Sources */,
+				D11E0DF46F5B06062EE2FD4B6B494636 /* SBJson4Writer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5CA384F29F74991BF85FAE55A1DE0F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8D95CA446D12B01B0826C134D2761DE /* Pods-MathForKidsUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		287E50C173FE195F6B19B97884EE21FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SBJson;
+			target = 0E9DDC2BC8BB3B78CE01F44E99749A05 /* SBJson */;
+			targetProxy = C0900EFC440EC5D06EDD9D135EB39978 /* PBXContainerItemProxy */;
+		};
+		B38C3F7A1D71642AFB3EE02D2ADD8F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SBJson;
+			target = 0E9DDC2BC8BB3B78CE01F44E99749A05 /* SBJson */;
+			targetProxy = 8112C476F26FB761479CF391ED2F9B69 /* PBXContainerItemProxy */;
+		};
+		D5FE8F31D778B35449126E41C9BBE906 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SBJson;
+			target = 0E9DDC2BC8BB3B78CE01F44E99749A05 /* SBJson */;
+			targetProxy = D9F6DF946B80180577EE3E197CB7C5E7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0C5BF810AF2A793D02DCAF6AFB12A4A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963139E82D85D6C15211D793EC0A8672 /* SBJson.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SBJson/SBJson-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		7EF4516056562417C4FEAE0A5393B18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 963139E82D85D6C15211D793EC0A8672 /* SBJson.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SBJson/SBJson-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		941B96B11BA0A8DD75F3AFB28A8C7E28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04BA1FD93ADC933E088D5369D8334F1A /* Pods-MathForKids.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A7E70F9B896D4B81A7934CA22262A735 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 646C03137ECBCB627F0AE7F39A5C80E2 /* Pods-MathForKidsUITests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		B4B1073CCD1CAB41F196123E71C71A5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12BC23564836CD188AEBEC61AB2C16C /* Pods-MathForKidsUITests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B8A762B631AD2849850D533D4B783EAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84A4A95316390C8A9ABB50122CC35B0B /* Pods-MathForKidsTests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C2EC3AF61178457B72F2ADE36CF83F8B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 968071CFBE018C01406DC0619ADAE96F /* Pods-MathForKidsTests.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C78D177DD0AAE47BFE7AD4EBC4161329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 520620D75E50FA83CBA4A7B5BDDC25F3 /* Pods-MathForKids.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C6E0F964975F5866D5BCA73DB660A3F /* Build configuration list for PBXNativeTarget "Pods-MathForKidsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4B1073CCD1CAB41F196123E71C71A5C /* Debug */,
+				A7E70F9B896D4B81A7934CA22262A735 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C1D029B9C87E0BE5A6B489AE4900258 /* Build configuration list for PBXNativeTarget "SBJson" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF4516056562417C4FEAE0A5393B18C /* Debug */,
+				0C5BF810AF2A793D02DCAF6AFB12A4A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85B7461865F29FB0085B8CD4328EB8D8 /* Build configuration list for PBXNativeTarget "Pods-MathForKidsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A762B631AD2849850D533D4B783EAD /* Debug */,
+				C2EC3AF61178457B72F2ADE36CF83F8B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB6C98AF83761519681825795260F36C /* Build configuration list for PBXNativeTarget "Pods-MathForKids" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				941B96B11BA0A8DD75F3AFB28A8C7E28 /* Debug */,
+				C78D177DD0AAE47BFE7AD4EBC4161329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
