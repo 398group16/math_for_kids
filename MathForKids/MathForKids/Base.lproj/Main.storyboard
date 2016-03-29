@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -1550,7 +1550,7 @@
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="addGdetail" id="7kS-wa-OmH"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-la-COB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cO-la-COB">
                                 <rect key="frame" x="83" y="488" width="154" height="35"/>
                                 <color key="backgroundColor" red="0.25882352941176467" green="0.68235294117647061" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Shapes">
@@ -1578,7 +1578,7 @@
                                     <constraint firstAttribute="width" constant="75" id="jwp-f5-U37"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-tw-inD">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZ6-tw-inD">
                                 <rect key="frame" x="83" y="393" width="154" height="35"/>
                                 <color key="backgroundColor" red="0.25882352941176467" green="0.68235294117647061" blue="0.1803921568627451" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Subtraction">
@@ -1608,7 +1608,7 @@
                             <constraint firstItem="kkt-Y6-0Tw" firstAttribute="top" secondItem="WtF-Z2-8Lq" secondAttribute="bottom" constant="-1" id="TNM-Zy-Fg9"/>
                             <constraint firstItem="4cO-la-COB" firstAttribute="width" secondItem="kZ6-tw-inD" secondAttribute="width" id="XA2-lH-6X9"/>
                             <constraint firstItem="5FY-QD-UhM" firstAttribute="top" secondItem="Zuu-AV-keS" secondAttribute="bottom" id="b8Q-xW-mYB"/>
-                            <constraint firstItem="Zuu-AV-keS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4cO-la-COB" secondAttribute="bottom" constant="45" id="cGf-bL-qBu"/>
+                            <constraint firstItem="Zuu-AV-keS" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4cO-la-COB" secondAttribute="bottom" constant="35" id="cGf-bL-qBu"/>
                             <constraint firstItem="4cO-la-COB" firstAttribute="height" secondItem="kZ6-tw-inD" secondAttribute="height" id="eBM-vR-gj3"/>
                             <constraint firstItem="kZ6-tw-inD" firstAttribute="top" secondItem="npl-3O-MRO" secondAttribute="bottom" priority="750" constant="60" id="eHh-4I-v0Y"/>
                             <constraint firstItem="faf-NM-fTv" firstAttribute="height" secondItem="npl-3O-MRO" secondAttribute="height" id="hUM-HX-cS1"/>
@@ -1635,7 +1635,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2l-8l-oNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274.5" y="1299.5"/>
+            <point key="canvasLocation" x="1225" y="1232"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="bj3-dG-bZ1">
@@ -1995,7 +1995,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ees-jG-LwZ"/>
                                     <constraint firstAttribute="width" secondItem="4Fg-Oe-dPa" secondAttribute="height" multiplier="1:1" id="pod-q1-rNy"/>
                                 </constraints>
-                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="-3" y="0.0" width="375" height="400"/>
                                 </variation>
                             </view>
@@ -2215,6 +2215,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="J5B-oZ-Wfp"/>
         <segue reference="tA8-JO-lnf"/>
-        <segue reference="bba-XG-VPB"/>
+        <segue reference="Ctc-OJ-hVq"/>
     </inferredMetricsTieBreakers>
 </document>
