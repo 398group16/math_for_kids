@@ -972,8 +972,8 @@
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" canCancelContentTouches="NO" bouncesZoom="NO" keyboardDismissMode="interactive" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M7H-yz-zbk">
                                 <rect key="frame" x="20" y="80" width="335" height="205"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">This app is created by a group of students (Bengin Lee, Vishal Tomar, Shuo Yuan, Juanjuan Zhao) at the University of Saskatchewan as a class project to provide kids a fun and interactive way to learn mathematics. 
-Thanks for the download, hope you enjoy the app!</string>
+                                <string key="text">This app was created by a group of students (Bengin Lee, Vishal Tomar, Shuo Yuan, Juanjuan Zhao) to provide kids with a fun and interactive way to learn mathematics. 
+Thanks for the download and we hope you enjoy the app!</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
