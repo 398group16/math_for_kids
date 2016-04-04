@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -72,7 +73,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCells" id="xwR-5g-yeB" customClass="userCells">
-                                        <rect key="frame" x="122.5" y="10" width="90" height="115"/>
+                                        <rect key="frame" x="123" y="10" width="90" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="115"/>
@@ -208,6 +209,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="textFieldDimiss:" destination="kRC-62-LZI" eventType="editingDidEndOnExit" id="6t5-dN-tXN"/>
+                                    <outlet property="delegate" destination="kRC-62-LZI" id="6E0-C9-kGu"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter your name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2jT-Jq-gDM">
@@ -624,6 +626,9 @@
                                 <exclude reference="2dU-pH-1iQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="BJe-rB-Ll3"/>
+                                <exclude reference="XJk-6B-dA4"/>
+                                <exclude reference="itG-aM-nDd"/>
                                 <exclude reference="Esl-uR-XPh"/>
                                 <exclude reference="Qpo-Pb-RBe"/>
                                 <exclude reference="bIu-gj-PMa"/>
@@ -645,9 +650,6 @@
                                 <exclude reference="DbR-V6-l29"/>
                                 <exclude reference="MHS-Xm-xtf"/>
                                 <exclude reference="fKk-J2-NOZ"/>
-                                <exclude reference="BJe-rB-Ll3"/>
-                                <exclude reference="XJk-6B-dA4"/>
-                                <exclude reference="itG-aM-nDd"/>
                                 <exclude reference="B6A-J3-36J"/>
                                 <exclude reference="EfG-24-kZC"/>
                                 <exclude reference="Pph-Jw-QtJ"/>
@@ -662,6 +664,9 @@
                                 <include reference="2dU-pH-1iQ"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="BJe-rB-Ll3"/>
+                                <include reference="XJk-6B-dA4"/>
+                                <include reference="itG-aM-nDd"/>
                                 <include reference="Esl-uR-XPh"/>
                                 <include reference="Qpo-Pb-RBe"/>
                                 <include reference="bIu-gj-PMa"/>
@@ -683,9 +688,6 @@
                                 <include reference="DbR-V6-l29"/>
                                 <include reference="MHS-Xm-xtf"/>
                                 <include reference="fKk-J2-NOZ"/>
-                                <include reference="BJe-rB-Ll3"/>
-                                <include reference="XJk-6B-dA4"/>
-                                <include reference="itG-aM-nDd"/>
                                 <include reference="B6A-J3-36J"/>
                                 <include reference="EfG-24-kZC"/>
                                 <include reference="Pph-Jw-QtJ"/>
