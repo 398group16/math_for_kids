@@ -1986,11 +1986,11 @@
                                     <constraint firstAttribute="width" secondItem="SPF-Cn-nw5" secondAttribute="height" multiplier="1:1" id="Abv-c5-39Y"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-bb-2BI">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uO9-bb-2BI">
                                 <rect key="frame" x="20" y="416" width="333" height="64"/>
                                 <color key="tintColor" red="0.13069127729999999" green="0.78423336119999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="uO9-bb-2BI" secondAttribute="height" multiplier="333:64" id="Iai-ug-gr9"/>
+                                    <constraint firstAttribute="width" secondItem="uO9-bb-2BI" secondAttribute="height" multiplier="333:70" id="Iai-ug-gr9"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -2024,13 +2024,12 @@
                         <constraints>
                             <constraint firstItem="R6W-4K-pJ4" firstAttribute="width" secondItem="wYD-Um-yJD" secondAttribute="height" multiplier="50:201" id="0Ls-pb-ifD"/>
                             <constraint firstItem="8FE-M8-ZUU" firstAttribute="bottom" secondItem="wYD-Um-yJD" secondAttribute="bottom" constant="-5" id="0NX-3a-Phv"/>
-                            <constraint firstItem="R6W-4K-pJ4" firstAttribute="top" secondItem="uO9-bb-2BI" secondAttribute="bottom" constant="8" id="2dG-82-aOH"/>
+                            <constraint firstItem="R6W-4K-pJ4" firstAttribute="top" secondItem="uO9-bb-2BI" secondAttribute="bottom" constant="5" id="2dG-82-aOH"/>
                             <constraint firstItem="J05-e2-WMB" firstAttribute="trailing" secondItem="HTB-wm-BS6" secondAttribute="trailing" id="2et-Fa-Q4s"/>
                             <constraint firstItem="0gR-rG-FWz" firstAttribute="width" secondItem="SPF-Cn-nw5" secondAttribute="width" multiplier="167:172" id="30y-Zw-AHZ"/>
                             <constraint firstItem="XMV-cJ-u1P" firstAttribute="top" secondItem="wYD-Um-yJD" secondAttribute="bottom" constant="-45" id="8cl-ty-Y0g"/>
                             <constraint firstItem="V4V-Oa-ed5" firstAttribute="leading" secondItem="R6W-4K-pJ4" secondAttribute="leading" id="8dj-V4-GTZ"/>
                             <constraint firstItem="HTB-wm-BS6" firstAttribute="width" secondItem="R6W-4K-pJ4" secondAttribute="width" id="9zt-O5-n3q"/>
-                            <constraint firstItem="uO9-bb-2BI" firstAttribute="leading" secondItem="0gR-rG-FWz" secondAttribute="leading" id="B4o-Z2-j7D"/>
                             <constraint firstItem="VSm-7v-sFb" firstAttribute="centerX" secondItem="SPF-Cn-nw5" secondAttribute="centerX" id="CI5-nM-etk"/>
                             <constraint firstItem="0gR-rG-FWz" firstAttribute="centerX" secondItem="SPF-Cn-nw5" secondAttribute="centerX" id="CcI-5W-z6c"/>
                             <constraint firstItem="Veb-Vm-UXm" firstAttribute="centerX" secondItem="8FE-M8-ZUU" secondAttribute="centerX" id="DW9-DQ-wjI"/>
@@ -2041,6 +2040,7 @@
                             <constraint firstItem="Veb-Vm-UXm" firstAttribute="width" secondItem="8FE-M8-ZUU" secondAttribute="width" id="Ivu-jB-pyO"/>
                             <constraint firstItem="Veb-Vm-UXm" firstAttribute="height" secondItem="8FE-M8-ZUU" secondAttribute="height" id="J19-JO-Jl9"/>
                             <constraint firstItem="V4V-Oa-ed5" firstAttribute="width" secondItem="R6W-4K-pJ4" secondAttribute="width" id="Jxc-D0-LOB"/>
+                            <constraint firstItem="uO9-bb-2BI" firstAttribute="centerX" secondItem="wYD-Um-yJD" secondAttribute="centerX" id="KKL-3c-VVk"/>
                             <constraint firstItem="kzq-Kh-3cO" firstAttribute="width" secondItem="wYD-Um-yJD" secondAttribute="height" multiplier="47:201" id="MX5-Wp-zfL"/>
                             <constraint firstItem="J05-e2-WMB" firstAttribute="height" secondItem="R6W-4K-pJ4" secondAttribute="height" id="NdU-RS-KeJ"/>
                             <constraint firstItem="wYD-Um-yJD" firstAttribute="top" secondItem="SPF-Cn-nw5" secondAttribute="top" constant="-4" id="NnG-S4-T1P"/>
@@ -2066,15 +2066,17 @@
                             <constraint firstItem="wYD-Um-yJD" firstAttribute="top" secondItem="eEu-Ck-iVW" secondAttribute="bottom" id="ofc-Pq-mpT"/>
                             <constraint firstItem="VSm-7v-sFb" firstAttribute="width" secondItem="SPF-Cn-nw5" secondAttribute="height" multiplier="355:344" id="s0A-YC-uPD"/>
                             <constraint firstItem="uO9-bb-2BI" firstAttribute="width" secondItem="SPF-Cn-nw5" secondAttribute="width" id="tcT-3Y-XWi"/>
-                            <constraint firstItem="V4V-Oa-ed5" firstAttribute="top" secondItem="R6W-4K-pJ4" secondAttribute="bottom" constant="20" id="wKi-Lw-gBO"/>
+                            <constraint firstItem="V4V-Oa-ed5" firstAttribute="top" secondItem="R6W-4K-pJ4" secondAttribute="bottom" constant="18" id="wKi-Lw-gBO"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="KKL-3c-VVk"/>
                                 <exclude reference="MX5-Wp-zfL"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
+                                <include reference="KKL-3c-VVk"/>
                                 <include reference="MX5-Wp-zfL"/>
                             </mask>
                         </variation>
@@ -2236,14 +2238,17 @@
                         <viewControllerLayoutGuide type="bottom" id="1gz-AE-vMB"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ixF-hz-h5H">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Stone-Path-Shop-Vector" translatesAutoresizingMaskIntoConstraints="NO" id="Qor-OX-F6I">
-                                <rect key="frame" x="-4" y="64" width="383" height="603"/>
+                                <rect key="frame" x="-4" y="64" width="328" height="416"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="-4" y="64" width="545" height="603"/>
+                                </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
-                                <rect key="frame" x="123" y="541" width="128" height="42"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
+                                <rect key="frame" x="96" y="541" width="128" height="42"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="2ee-Kz-bgf"/>
@@ -2254,14 +2259,14 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="96" y="541" width="128" height="42"/>
+                                    <rect key="frame" x="205" y="541" width="128" height="42"/>
                                 </variation>
                                 <connections>
                                     <action selector="shareButton:" destination="yFm-a3-lIy" eventType="touchUpInside" id="pvj-Gk-9Pa"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MuL-7v-iL6">
-                                <rect key="frame" x="12" y="74" width="351" height="29"/>
+                                <rect key="frame" x="12" y="74" width="296" height="29"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="oWo-n3-IgA"/>
@@ -2273,17 +2278,23 @@
                                     <segment title="Shapes"/>
                                 </segments>
                                 <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="12" y="74" width="513" height="29"/>
+                                </variation>
                                 <connections>
                                     <action selector="segmentedCatagoriesAction:" destination="yFm-a3-lIy" eventType="valueChanged" id="Vu5-fC-ywK"/>
                                 </connections>
                             </segmentedControl>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="graphView" customClass="GraphView">
-                                <rect key="frame" x="12" y="102" width="351" height="351"/>
+                                <rect key="frame" x="12" y="102" width="296" height="296"/>
                                 <color key="backgroundColor" red="0.24287400472546888" green="0.89522660340314131" blue="0.6840950283948668" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ees-jG-LwZ"/>
                                     <constraint firstAttribute="width" secondItem="4Fg-Oe-dPa" secondAttribute="height" multiplier="1:1" id="pod-q1-rNy"/>
                                 </constraints>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="12" y="102" width="513" height="513"/>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2305,7 +2316,7 @@
                             <constraint firstItem="MuL-7v-iL6" firstAttribute="bottom" secondItem="4Fg-Oe-dPa" secondAttribute="top" id="xwy-ar-Ot4"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="graph" destination="4Fg-Oe-dPa" id="rGs-P7-1lA"/>
                         <outlet property="segmentedCatagories" destination="MuL-7v-iL6" id="IQu-a8-QEd"/>
@@ -2499,8 +2510,8 @@
         <image name="snowhouse" width="750" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tA8-JO-lnf"/>
-        <segue reference="Ctc-OJ-hVq"/>
         <segue reference="J5B-oZ-Wfp"/>
+        <segue reference="tA8-JO-lnf"/>
+        <segue reference="bba-XG-VPB"/>
     </inferredMetricsTieBreakers>
 </document>
