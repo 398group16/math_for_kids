@@ -332,7 +332,7 @@
 {
     // Assign new frame to your view
     originFrame = self.view.frame;
-    [self.view setFrame:CGRectMake(0,-110,320,460)]; //here taken -110 for example i.e. your view will be scrolled to -110. change its value according to your requirement.
+    [self.view setFrame:CGRectMake(0,-110,originFrame.size.width,originFrame.size.height)]; //here taken -110 for example i.e. your view will be scrolled to -110. change its value according to your requirement.
     
 }
 
