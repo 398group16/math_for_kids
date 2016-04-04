@@ -16,21 +16,21 @@
 
 @implementation SetNameViewController
 
-- (CGPathRef)awesomeShadow:(CGRect)rect
-{
-    CGSize size = rect.size;
-    UIBezierPath *path = [UIBezierPath bezierPath];
+
+- (void)setAnswerButtonLayout:(UIButton*) button{
     
-    [path moveToPoint:CGPointZero];
-    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
-    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
+    //    button.layer.cornerRadius = 45;
+    button.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    button.layer.borderWidth = 1.0f;
     
-    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
-            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
-            controlPoint2:CGPointMake(15.0f, size.height)];
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
     
-    return path.CGPath;
-}
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 1;
+    button.layer.shadowRadius = 12;
+    button.layer.shadowOffset = CGSizeMake(0.0f, 12.0f);
+} //    [self setAnswerButtonLayout:(button)];
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,13 +41,14 @@
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = @"Change username";
-    
-    submit.layer.masksToBounds = NO;
-    submit.layer.shadowOffset = CGSizeZero;
-    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
-    submit.layer.shadowRadius = 2.0f;
-    submit.layer.shadowOpacity = 0.80f;
-    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
+
+    [self setAnswerButtonLayout:(submit)];
+//    submit.layer.masksToBounds = NO;
+//    submit.layer.shadowOffset = CGSizeZero;
+//    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    submit.layer.shadowRadius = 2.0f;
+//    submit.layer.shadowOpacity = 0.80f;
+//    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
 }
 
 -(void)setUser_name:(NSString *)new_name{
@@ -64,7 +65,7 @@
         
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
-                                    message:@"Please enter a username"
+                                    message:@"Please enter a username."
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction

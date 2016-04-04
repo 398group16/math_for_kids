@@ -34,40 +34,23 @@
     button.layer.masksToBounds = NO;
     
     button.layer.shadowColor = [UIColor blackColor].CGColor;
-    button.layer.shadowOpacity = 0.8;
+    button.layer.shadowOpacity = 1;
     button.layer.shadowRadius = 12;
-    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+    button.layer.shadowOffset = CGSizeMake(0.0f, 12.0f);
 } //    [self setAnswerButtonLayout:(button)];
-
-
-- (CGPathRef)awesomeShadow:(CGRect)rect
-{
-    CGSize size = rect.size;
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    
-    [path moveToPoint:CGPointZero];
-    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
-    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
-    
-    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
-            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
-            controlPoint2:CGPointMake(15.0f, size.height)];
-    
-    return path.CGPath;
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
     self.navigationItem.title = @"Enter user info";
-    
-    submit.layer.masksToBounds = NO;
-    submit.layer.shadowOffset = CGSizeZero;
-    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
-    submit.layer.shadowRadius = 2.0f;
-    submit.layer.shadowOpacity = 0.80f;
-    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
+    [self setAnswerButtonLayout:(submit)];
+//    submit.layer.masksToBounds = NO;
+//    submit.layer.shadowOffset = CGSizeZero;
+//    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    submit.layer.shadowRadius = 2.0f;
+//    submit.layer.shadowOpacity = 0.80f;
+//    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
     
     [self setAnswerButtonLayout:(shadowButton)];
     
@@ -112,10 +95,10 @@
     NSNumber *temp_id = [NSNumber numberWithInteger:([dict count]+1)];
     select_favor = [source objectAtIndex:2];
 
-    if (input_name == nil || select_favor == nil) {
+    if ([input_name  isEqual: @""] || select_favor == nil) {
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
-                                    message:@"Please enter your name!"
+                                    message:@"Please enter a name."
                                     preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* ok = [UIAlertAction

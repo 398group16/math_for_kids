@@ -44,6 +44,12 @@
     return self;
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    // Return YES for supported orientations
+    return NO;
+}
+
 - (void)setAnswerButtonLayout:(UIButton*) button{
     button.layer.cornerRadius = 4.0f;
     button.layer.masksToBounds = NO;

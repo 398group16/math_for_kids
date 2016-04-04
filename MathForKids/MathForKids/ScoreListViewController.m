@@ -234,7 +234,7 @@
             }
         }
     }
-    NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", countS.count, addS.count, subS.count, shapeS.count);
+    NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", (unsigned long)countS.count, (unsigned long)addS.count, (unsigned long)subS.count, (unsigned long)shapeS.count);
 //    NSLog(@"%f", [[countS objectAtIndex:3]floatValue]);
 }
 
