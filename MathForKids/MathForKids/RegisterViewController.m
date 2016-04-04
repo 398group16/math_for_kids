@@ -338,6 +338,6 @@
 
 -(void)keyboardDidHide:(NSNotification *)notification
 {
-    [self.view setFrame:originFrame];
+    [self.view setFrame:CGRectMake(0,0,originFrame.size.width,originFrame.size.height)];
 }
 @end
