@@ -44,17 +44,19 @@
     CGContextSetStrokeColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     
     
-    int maxGraphHeight = kGraphHeight - kOffsetY;
+    float maxGraphHeight = kGraphHeight - kGraphTop;
     
     // define the color for filling the graph
     CGContextSetFillColorWithColor(ctx, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:0.5] CGColor]);
     // fill the graph with color
     CGContextBeginPath(ctx);
     CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight);
-    CGContextAddLineToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+   // CGContextAddLineToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextAddLineToPoint(ctx, kOffsetX, kGraphHeight - maxGraphHeight * [[self.data objectAtIndex:0] floatValue]/120);
+
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     CGContextAddLineToPoint(ctx, kOffsetX + (self.data.count - 1) * kStepX, kGraphHeight);
     CGContextClosePath(ctx);
@@ -64,11 +66,11 @@
     
     //start drawing line (path)
     CGContextBeginPath(ctx);
-    CGContextMoveToPoint(ctx, kOffsetX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
+    CGContextMoveToPoint(ctx, kOffsetX, kGraphHeight- maxGraphHeight * ([[self.data objectAtIndex:0] floatValue]/120));
     
     for (int i = 1; i < self.data.count; i++)
     {
-        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphBottom - kOffsetY - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
+        CGContextAddLineToPoint(ctx, kOffsetX + i * kStepX, kGraphHeight - maxGraphHeight * ([[self.data objectAtIndex:i] floatValue]/120));
     }
     
     CGContextDrawPath(ctx, kCGPathStroke);
@@ -106,6 +108,7 @@
     //make the line dashed.  The dash array specifies that there are two elements
     // in the pattern: a dash and an empty space after it. The last parameter of
     //the CGContextSetLineDash function, 2, is the number of elements in the dash array
+    NSLog(@" data %f",self.frame.size.width-35);
     
     CGContextSetLineWidth(context, 2.0);
     CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);

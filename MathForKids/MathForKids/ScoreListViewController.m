@@ -95,7 +95,7 @@
     [self checkScoreDictArray];
 //    graph = [[GraphView alloc] init];
     [self checkCategory];
-    _scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
+   // _scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
     
 }
 
