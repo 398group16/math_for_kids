@@ -22,20 +22,40 @@
 @property (weak, nonatomic) IBOutlet UIButton *previousVidButton;//next button
 @property (weak, nonatomic) IBOutlet UIButton *playVidButton;
 @property (weak, nonatomic) IBOutlet UIButton *prevVidButton;
+@property (weak, nonatomic) IBOutlet UIButton *bottomShadow;
 
 
 @end
 
 @implementation YoutubeViewController
 
-
-- (void)setButtonLayout:(UIButton*) button{
+- (void)setAnswerButtonLayout:(UIButton*) button{
     
-    [[button layer] setCornerRadius:4.0f];
-    [[button layer] setBorderWidth:1.0f];
-    [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-}
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.borderWidth = 0.2f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 1;
+    button.layer.shadowRadius = 5;
+    button.layer.shadowOffset = CGSizeMake(0.0f, 6.0f);
+}//[self setAnswerButtonLayout:(count)];
 
+- (void)setAnswerButtonLayout2:(UIButton*) button{
+    
+    button.layer.borderColor = [UIColor blackColor].CGColor;
+    button.layer.borderWidth = 0.2f;
+    
+    //    button.layer.cornerRadius = 4.0f;
+    button.layer.masksToBounds = NO;
+    
+    button.layer.shadowColor = [UIColor blackColor].CGColor;
+    button.layer.shadowOpacity = 1;
+    button.layer.shadowRadius = 5;
+    button.layer.shadowOffset = CGSizeMake(0.0f, 6.0f);
+}//[self setAnswerButtonLayout:(count)];
 
 // sets video parameters
 - (NSDictionary *)setVidPara {
@@ -61,17 +81,19 @@
     return playerVars;
 }//F9B243
 
-
-
-- (void) setShadows: (UIButton*) button{
+-(void)setCheck:(UIButton*)butt {
     
-    button.layer.cornerRadius = 4.0f;
-    button.layer.masksToBounds = NO;
     
-    button.layer.shadowColor = [UIColor blackColor].CGColor;
-    button.layer.shadowOpacity = 0.8;
-    button.layer.shadowRadius = 12;
-    button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
+    [[self playlistCountingButton] setImage:nil forState:UIControlStateNormal];
+    [[self playlistAdditionButton] setImage:nil forState:UIControlStateNormal];
+    [[self playlistShapeButton] setImage:nil forState:UIControlStateNormal];
+    [[self playlistSubtractionButton] setImage:nil forState:UIControlStateNormal];
+    
+    int wid = butt.frame.size.width - [UIImage imageNamed: @"happy_face"].size.width;
+    int hei = butt.frame.size.height - [UIImage imageNamed: @"happy_face"].size.height;
+    
+    butt.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+    [butt setImage:[UIImage imageNamed: @"happy_face"] forState:UIControlStateNormal];
 }
 
 - (void)selectPlayList:(int) IDnum{
@@ -82,51 +104,30 @@
     
     if(IDnum==1){
         NSDictionary *vars = [self setVidPara];
-        
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYW7hT5I7RgxXwTYepUB72GY" playerVars:vars];
         [[self playlistCountingButton] setEnabled:NO];
-        _playlistCountingButton.layer.shadowRadius = 3;
-        _playlistCountingButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-//        [self setShadows:(_playlistCountingButton)];
-        [self setShadows:(_playlistAdditionButton)];
-        [self setShadows:(_playlistSubtractionButton)];
-        [self setShadows:(_playlistShapeButton)];
+        [self setCheck:_playlistCountingButton];
     }
     else if(IDnum==2){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYVbwDpLm65Chhtd-G9CTP7J" playerVars:vars];
         [[self playlistAdditionButton] setEnabled:NO];
-        _playlistAdditionButton.layer.shadowRadius = 3;
-        _playlistAdditionButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-        [self setShadows:(_playlistCountingButton)];
-//        [self setShadows:(_playlistAdditionButton)];
-        [self setShadows:(_playlistSubtractionButton)];
-        [self setShadows:(_playlistShapeButton)];
+        [self setCheck:_playlistAdditionButton];
     }
     else if(IDnum==3){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYVT4eyM4GDk2nh2GdBGNo0p" playerVars:vars];
         [[self playlistSubtractionButton] setEnabled:NO];
-        _playlistSubtractionButton.layer.shadowRadius = 3;
-        _playlistSubtractionButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-        [self setShadows:(_playlistCountingButton)];
-        [self setShadows:(_playlistAdditionButton)];
-//        [self setShadows:(_playlistSubtractionButton)];
-        [self setShadows:(_playlistShapeButton)];
+        [self setCheck:_playlistSubtractionButton];
     }
     else if(IDnum==4){
         NSDictionary *vars = [self setVidPara];
         
         [self.playerView loadWithPlaylistId:@"PLbyOj3J9avYWisg1kIZDcnaPnen7Mj0np" playerVars:vars];
         [[self playlistShapeButton] setEnabled:NO];
-        _playlistShapeButton.layer.shadowRadius = 3;
-        _playlistShapeButton.layer.shadowOffset = CGSizeMake(2.0f, 2.0f);
-        [self setShadows:(_playlistCountingButton)];
-        [self setShadows:(_playlistAdditionButton)];
-        [self setShadows:(_playlistSubtractionButton)];
-//        [self setShadows:(_playlistShapeButton)];
+        [self setCheck:_playlistShapeButton];
     }
 }
 
@@ -138,56 +139,59 @@
 //plays counting playlist
 - (IBAction)playlistCountingButton:(id)sender {
     [self selectPlayList:1];
+    videoPlaying=FALSE;
+    [self playVideo:self];
 }
 
 - (IBAction)playlistAdditionButton:(id)sender {
     [self selectPlayList:2];
+    videoPlaying=FALSE;
+    [self playVideo:self];
 }
 
 - (IBAction)playlistSubtractionButton:(id)sender {
     [self selectPlayList:3];
+    videoPlaying=FALSE;
+    [self playVideo:self];
 }
 
 - (IBAction)playlistShapeButton:(id)sender {
     [self selectPlayList:4];
+    videoPlaying=FALSE;
+    [self playVideo:self];
 }
 
 //plays video
+
+BOOL videoPlaying=TRUE;
 - (IBAction)playVideo:(id)sender {
-//    [self setShadows:(_previousVidButton)];
-//    _previousVidButton.layer.shadowRadius = 3;
-    
-    [self.playerView playVideo];
+    if(videoPlaying==FALSE){
+        [self.playerView pauseVideo];
+        [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
+        videoPlaying=TRUE;
+    }else{
+        
+        [self.playerView playVideo];
+        [[self playVidButton] setTitle:@"Pause" forState:UIControlStateNormal];
+        videoPlaying=FALSE;
+    }
 }
 
 //plays next video in playlist
 - (IBAction)nextVideo:(id)sender {
     [self.playerView nextVideo];
     [self.playerView stopVideo];
+    videoPlaying=TRUE;
+    [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
 }
 
 //plays video
 - (IBAction)previousVideo:(id)sender {
     [self.playerView previousVideo];
     [self.playerView stopVideo];
+    videoPlaying=TRUE;
+    [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
 }
-
-/*
- player.getPlayerState():Number
- Returns the state of the player. Possible values are:
- -1 – unstarted
- 0 – ended
- 1 – playing
- 2 – paused
- 3 – buffering
- 5 – video cued
- 
- */
-
-//
-//- (IBAction)stopVideo:(id)sender {
-//    [self.playerView stopVideo];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -198,23 +202,13 @@
     
     [[self.playerView layer] setBorderWidth:1.0f];
     [[self.playerView layer] setBorderColor:[UIColor blackColor].CGColor];
-    [[self.playerView layer] setCornerRadius:10.0f];
     self.playerView.clipsToBounds = YES;
     
     //setting button layouts
-    [self setButtonLayout:(_previousVidButton)];
-    [self setButtonLayout:(_playVidButton)];
-    [self setButtonLayout:(_prevVidButton)];
-    [self setButtonLayout:(_playlistCountingButton)];
-    [self setButtonLayout:(_playlistAdditionButton)];
-    [self setButtonLayout:(_playlistSubtractionButton)];
-    [self setButtonLayout:(_playlistShapeButton)];
-    
-//    //setting shadows
-    [self setShadows:(_playlistCountingButton)];
-//    [self setShadows:(_playlistAdditionButton)];
-//    [self setShadows:(_playlistSubtractionButton)];
-//    [self setShadows:(_playlistShapeButton)];
+    [self setAnswerButtonLayout:(_playlistCountingButton)];
+    [self setAnswerButtonLayout:(_playlistAdditionButton)];
+    [self setAnswerButtonLayout:(_playlistSubtractionButton)];
+    [self setAnswerButtonLayout2:(_bottomShadow)];
     
     // load the video
     [self loadVideo];
@@ -222,7 +216,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

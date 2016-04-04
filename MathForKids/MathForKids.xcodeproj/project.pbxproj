@@ -249,9 +249,9 @@
 				A56CD79E1C830BD7007001F7 /* ScoreViewController.m */,
 				A5EDD2AD1C82925B0037EEE1 /* GameViewController.h */,
 				A5EDD2AE1C82925B0037EEE1 /* GameViewController.m */,
+				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
 				A5EDD2AA1C8285060037EEE1 /* GameCategoryViewController.h */,
 				A5EDD2AB1C8285060037EEE1 /* GameCategoryViewController.m */,
-				A58CE54A1C7F041B002B876E /* AppDelegate.h */,
 				A58CE54B1C7F041B002B876E /* AppDelegate.m */,
 				C14048911CA4F6890096E8C8 /* SetNameViewController.h */,
 				C14048921CA4F6890096E8C8 /* SetNameViewController.m */,
@@ -393,7 +393,7 @@
 				TargetAttributes = {
 					A58CE5431C7F041B002B876E = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 3TK3R9439N;
+						DevelopmentTeam = 9Y4E3432MY;
 					};
 					A58CE55C1C7F041B002B876E = {
 						CreatedOnToolsVersion = 7.2.1;
