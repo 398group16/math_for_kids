@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -73,7 +73,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCells" id="xwR-5g-yeB" customClass="userCells">
-                                        <rect key="frame" x="123" y="10" width="90" height="115"/>
+                                        <rect key="frame" x="122.5" y="10" width="90" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="115"/>
@@ -740,8 +740,7 @@
                                         <exclude reference="kYE-NW-5GP"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="201" y="139" width="153" height="153"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="kYE-NW-5GP"/>
                                     </mask>
@@ -761,8 +760,7 @@
                                         <exclude reference="Xwd-2s-Taw"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="21" y="312" width="153" height="152"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Xwd-2s-Taw"/>
                                     </mask>
@@ -782,8 +780,7 @@
                                         <exclude reference="Ead-5k-VMF"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="201" y="312" width="153" height="152"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Ead-5k-VMF"/>
                                     </mask>
@@ -843,8 +840,7 @@
                                         <exclude reference="Xgw-ef-qII"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="21" y="139" width="153" height="153"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Xgw-ef-qII"/>
                                     </mask>
@@ -1928,9 +1924,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <state key="normal" title="Shapes">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="72" y="457" width="176" height="44"/>
-                                </variation>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="shapeGdetail" id="CVU-i4-B3c"/>
                                 </connections>
@@ -2281,9 +2274,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="82" y="211" width="213" height="70"/>
-                                </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38p-d4-qFX">
                                 <rect key="frame" x="81" y="288" width="213" height="75"/>
@@ -2295,9 +2285,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="82" y="329" width="213" height="75"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-t6-Wcw">
                                 <rect key="frame" x="259" y="469" width="91" height="30"/>
@@ -2305,9 +2292,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <state key="normal" title="Compare">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="254" y="484" width="103" height="33"/>
-                                </variation>
                                 <connections>
                                     <segue destination="yFm-a3-lIy" kind="show" identifier="scoreListDetail" id="bba-XG-VPB"/>
                                 </connections>
@@ -2326,8 +2310,7 @@ Thanks for the download, hope you enjoy the app!</string>
                                         <exclude reference="mWq-r6-WhX"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="136" y="484" width="103" height="33"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="mWq-r6-WhX"/>
                                     </mask>
@@ -2342,9 +2325,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <state key="normal" title="Share">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="19" y="484" width="102" height="33"/>
-                                </variation>
                                 <connections>
                                     <action selector="shareButton:" destination="fSb-YA-U3M" eventType="touchUpInside" id="xdF-fD-h1V"/>
                                 </connections>
@@ -2428,17 +2408,17 @@ Thanks for the download, hope you enjoy the app!</string>
                                     <action selector="shareButton:" destination="yFm-a3-lIy" eventType="touchUpInside" id="pvj-Gk-9Pa"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MuL-7v-iL6">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="MuL-7v-iL6">
                                 <rect key="frame" x="12" y="74" width="296" height="29"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="oWo-n3-IgA"/>
                                 </constraints>
                                 <segments>
-                                    <segment title="Counting"/>
-                                    <segment title="Addition"/>
-                                    <segment title="Subtraction"/>
-                                    <segment title="Shapes"/>
+                                    <segment title="" image="format-list-numbers"/>
+                                    <segment title="" image="plus-box"/>
+                                    <segment title="" image="minus-box"/>
+                                    <segment title="" image="solid cube"/>
                                 </segments>
                                 <color key="tintColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -2664,8 +2644,12 @@ Thanks for the download, hope you enjoy the app!</string>
         <image name="bread juice" width="750" height="1206"/>
         <image name="chevron-right" width="48" height="48"/>
         <image name="eggsBackground" width="562" height="1000"/>
+        <image name="format-list-numbers" width="24" height="24"/>
         <image name="happy_face" width="48" height="48"/>
+        <image name="minus-box" width="24" height="24"/>
+        <image name="plus-box" width="24" height="24"/>
         <image name="snowhouse" width="750" height="1024"/>
+        <image name="solid cube" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="J5B-oZ-Wfp"/>

@@ -50,11 +50,6 @@
     else {
         self.navigationItem.title = @"Counting Scores";
         [self checkCategory];
-        
-        //        count.layer.masksToBounds = YES;
-        //        [self setShadows:(sub)];
-        //        [self setShadows:(add)];
-        //        [self setShadows:(shape)];
     }
     
 }
@@ -233,8 +228,6 @@
             }
         }
     }
- //   NSLog(@"Counting scores count:%lu, Addition scores count:%lu, Subtraction scores count:%lu, Shape scores count:%lu", (unsigned long)countS.count, (unsigned long)addS.count, (unsigned long)subS.count, (unsigned long)shapeS.count);
-//    NSLog(@"%f", [[countS objectAtIndex:3]floatValue]);
 }
 
 - (CGPathRef)awesomeShadow:(CGRect)rect
@@ -259,16 +252,5 @@
 {
     return YES;
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

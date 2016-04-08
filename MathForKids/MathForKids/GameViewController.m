@@ -67,8 +67,6 @@
         [question setText:@"Which shape do you think is in the picture?"];
     }
     
-//    [farmBackground setImage:[UIImage imageNamed: @"farm"]];
-    
     if ([_name isEqual:@"Counting"]) {
         imageField.hidden = NO;
         farmBackground.hidden= NO;
@@ -76,16 +74,11 @@
         
         [farmBackground setBackgroundColor:[UIColor blackColor]];
         [farmBackground setAlpha:0.60];
-        
-//        [[imageField layer] setBorderWidth:1.0f];
-//        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-//        [[imageField layer] setCornerRadius:10.0f];
         [[farmBackground layer] setBorderWidth:1.0f];
         [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[farmBackground layer] setCornerRadius:10.0f];
         imageField.clipsToBounds=YES;
         farmBackground.clipsToBounds = YES;
-//        [imageField setAlpha:0.93];
     }
     else if ([_name isEqual:@"Shape"]) {
         imageField.hidden = NO;
@@ -95,18 +88,13 @@
         [farmBackground setBackgroundColor:[UIColor whiteColor]];
         [farmBackground setAlpha:0.60];
 
-//        [[imageField layer] setBorderWidth:1.0f];
-//        [[imageField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
-//        [[imageField layer] setCornerRadius:10.0f];
 
         [[farmBackground layer] setBorderWidth:1.0f];
         [[farmBackground layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[farmBackground layer] setCornerRadius:10.0f];
-//        [farmBackground setImage:[UIImage imageNamed: @"galaxy"]];
         
         imageField.clipsToBounds=YES;
         farmBackground.clipsToBounds = YES;
-        //        [imageField setAlpha:0.93];
     } else{
         imageField.hidden = YES;
         
@@ -115,7 +103,6 @@
         [[txtField layer] setBorderWidth:1.0f];
         [[txtField layer] setBorderColor:[UIColor lightGrayColor].CGColor];
         [[txtField layer] setCornerRadius:10.0f];
-//        [txtField setAlpha:0.93];
     }
 }
 
@@ -177,7 +164,6 @@
                 s2 = s-2;
                 s3 = s-1;
             }
-            //        NSLog(@"%d, %d, %d, %d", x, x1, x2, x3);
             correct = arc4random_uniform(4);
             
         }else if([_name isEqual:@"Addition"]){

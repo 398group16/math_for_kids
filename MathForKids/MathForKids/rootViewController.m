@@ -74,30 +74,6 @@
     NSInteger size = [currentControllers count];
     NSLog(@"there are %ld objects in the array", (long)size);
     
-//    if([currentControllers count]==4){
-//        /* Create a mutable array out of this array */
-//        NSMutableArray *newControllers = [NSMutableArray
-//                                          arrayWithArray:currentControllers];
-//        
-//        NSLog(@"Views in mutable array before deletion: %@",newControllers);
-//        
-//        /* Remove the last object from the array */
-//        [newControllers removeObjectAtIndex:0];
-//        [newControllers removeObjectAtIndex:0];
-//        [newControllers removeObjectAtIndex:0];
-//        
-//        
-//        NSLog(@"Views in mutable array after deletion: %@",newControllers);
-//        /* Assign this array to the Navigation Controller */
-//        
-//        
-//        [self.navigationController setViewControllers:newControllers
-//                                             animated:YES];
-//        self.navigationController.viewControllers = newControllers;
-//        
-//        NSLog(@"Views in vieController array after deletion: %@",self.navigationController.viewControllers);
-//    }
-    
     NSArray *viewControllers = [[self navigationController] viewControllers];
     NSLog(@"Views in the stack at user rootView: %@",viewControllers);
     
@@ -109,8 +85,6 @@
     [user_col setDataSource:self];
     [user_col setDelegate:self];
     
-    
-//    [user_col setAlpha:0.0];
     [[user_col layer] setBorderColor:[UIColor clearColor].CGColor];
     [[user_col layer] setBorderWidth:1.0f];
     [[user_col layer] setBorderColor:[UIColor lightGrayColor].CGColor];
@@ -144,15 +118,6 @@
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
-
-//-(IBAction)skipToHomeView:(id)sender{
-//    HomeViewController* myHome = [[HomeViewController alloc] initWithNibName:@"HomeViewController" bundle:nil];
-//    
-//    UINavigationController* enclosingNav = [ [ UINavigationController alloc ] initWithRootViewController: myHome ];
-//    
-//    [ self presentViewController: enclosingNav animated: YES
-//                      completion: nil ];
-//}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
@@ -224,15 +189,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

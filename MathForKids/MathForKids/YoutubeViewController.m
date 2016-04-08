@@ -9,12 +9,9 @@
 #import "YoutubeViewController.h"
 
 @interface YoutubeViewController ()
-//
-//@property (weak, nonatomic) IBOutlet UIImageView *youTubeView;
 
 
 @property(nonatomic, strong) IBOutlet YTPlayerView *playerView;
-//@property(nonatomic, strong) IBOutlet
 @property (weak, nonatomic) IBOutlet UIButton *playlistCountingButton;
 @property (weak, nonatomic) IBOutlet UIButton *playlistAdditionButton;
 @property (weak, nonatomic) IBOutlet UIButton *playlistSubtractionButton;
@@ -48,7 +45,6 @@
     button.layer.borderColor = [UIColor blackColor].CGColor;
     button.layer.borderWidth = 0.2f;
     
-    //    button.layer.cornerRadius = 4.0f;
     button.layer.masksToBounds = NO;
     
     button.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -139,58 +135,36 @@
 //plays counting playlist
 - (IBAction)playlistCountingButton:(id)sender {
     [self selectPlayList:1];
-    videoPlaying=FALSE;
-    [self playVideo:self];
 }
 
 - (IBAction)playlistAdditionButton:(id)sender {
     [self selectPlayList:2];
-    videoPlaying=FALSE;
-    [self playVideo:self];
 }
 
 - (IBAction)playlistSubtractionButton:(id)sender {
     [self selectPlayList:3];
-    videoPlaying=FALSE;
-    [self playVideo:self];
 }
 
 - (IBAction)playlistShapeButton:(id)sender {
     [self selectPlayList:4];
-    videoPlaying=FALSE;
-    [self playVideo:self];
 }
 
 //plays video
 
-BOOL videoPlaying=TRUE;
 - (IBAction)playVideo:(id)sender {
-    if(videoPlaying==FALSE){
-        [self.playerView pauseVideo];
-        [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
-        videoPlaying=TRUE;
-    }else{
-        
         [self.playerView playVideo];
-        [[self playVidButton] setTitle:@"Pause" forState:UIControlStateNormal];
-        videoPlaying=FALSE;
-    }
 }
 
 //plays next video in playlist
 - (IBAction)nextVideo:(id)sender {
     [self.playerView nextVideo];
     [self.playerView stopVideo];
-    videoPlaying=TRUE;
-    [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
 }
 
 //plays video
 - (IBAction)previousVideo:(id)sender {
     [self.playerView previousVideo];
     [self.playerView stopVideo];
-    videoPlaying=TRUE;
-    [[self playVidButton] setTitle:@"Play" forState:UIControlStateNormal];
 }
 
 - (void)viewDidLoad {

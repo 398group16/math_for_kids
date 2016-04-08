@@ -29,10 +29,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    myImage.layer.cornerRadius = 45;
-//    myImage.layer.borderColor = [UIColor lightGrayColor].CGColor;
-//    myImage.layer.borderWidth = 1.0f;
     
     [myImage setImage:_userImg];
     [usrLabel setText:_usrName];

@@ -43,12 +43,6 @@
     self.navigationItem.title = @"Change username";
 
     [self setAnswerButtonLayout:(submit)];
-//    submit.layer.masksToBounds = NO;
-//    submit.layer.shadowOffset = CGSizeZero;
-//    submit.layer.shadowColor = [[UIColor blackColor] CGColor];
-//    submit.layer.shadowRadius = 2.0f;
-//    submit.layer.shadowOpacity = 0.80f;
-//    submit.layer.shadowPath = [self awesomeShadow:submit.layer.bounds];
 }
 
 -(void)setUser_name:(NSString *)new_name{
@@ -253,15 +247,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

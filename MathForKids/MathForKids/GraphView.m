@@ -96,14 +96,6 @@
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     
-    // Draw the background image
-    
-    //    UIImage *image = [UIImage imageNamed:@"background.png"];
-    //    CGRect imageRect = CGRectMake(0, 0, image.size.width, image.size.height);
-    //    CGContextDrawImage(context, imageRect, image.CGImage);
-    //    CGContextSetLineWidth(context, 0.6);
-    //    CGContextSetStrokeColorWithColor(context, [[UIColor lightGrayColor] CGColor]);
-    
     
     //make the line dashed.  The dash array specifies that there are two elements
     // in the pattern: a dash and an empty space after it. The last parameter of
@@ -114,24 +106,7 @@
     CGContextSetStrokeColorWithColor(context, [[UIColor colorWithRed:1.0 green:0.5 blue:0 alpha:1.0] CGColor]);
     CGFloat dash[] = {2.0, 2.0};
     CGContextSetLineDash(context, 0.0, dash, 2);
-    
-//    // How many lines?
-//    int howMany = (kDefaultGraphWidth - kOffsetX) / kStepX;
-//    
-//    // Here the vertical lines go
-//    for (int i = 0; i <= howMany; i++)
-//    {
-//        CGContextMoveToPoint(context, kOffsetX + i * kStepX, kGraphTop);
-//        CGContextAddLineToPoint(context, kOffsetX + i * kStepX, kGraphBottom-kOffsetY);
-//    }
-    
-//    // Here the horizantal lines go
-//    int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / kStepY;
-//    for (int i = 0; i <= howManyHorizontal+1; i++)
-//    {
-//        CGContextMoveToPoint(context, kOffsetX, kGraphBottom - kOffsetY - i * kStepY);
-//        CGContextAddLineToPoint(context, kDefaultGraphWidth, kGraphBottom - kOffsetY - i * kStepY);
-//    }
+
     // Here the horizantal lines go
     int howManyHorizontal = (kGraphBottom - kGraphTop - kOffsetY) / ((kGraphBottom - kGraphTop - kOffsetY)/2);
     int n = 0;
@@ -149,20 +124,6 @@
         // for the last line, undashed.
     CGContextSetLineDash(context, 0, NULL, 0); // Remove the dash
     
-    
-    // Draw the bars
-    //    float maxBarHeight = kGraphHeight - kBarTop - kOffsetY;
-    //
-    //    for (int i = 0; i < sizeof(data); i++)
-    //    {
-    //        float barX = kOffsetX + kStepX + i * kStepX - kBarWidth / 2;
-    //        float barY = kBarTop + maxBarHeight - maxBarHeight * data[i];
-    //        float barHeight = maxBarHeight * data[i];
-    //
-    //        CGRect barRect = CGRectMake(barX, barY, kBarWidth, barHeight);
-    //        [self drawBar:barRect context:context];
-    //    }
-    //    CGRect barRect = CGRectMake(barX, barY, kBarWidth, barHeight);
     if (self.data.count != 0){
         [self drawLineGraphWithContext:context];
         
@@ -177,11 +138,6 @@
             int maxGraphHeight = kGraphHeight - kOffsetY;
             float x = kOffsetX + i * kStepX;
             float y = kGraphHeight - (maxGraphHeight-30) * ([[self.data objectAtIndex:i] floatValue]/120);
-            
-//            NSString *theText = [NSString stringWithFormat:@"%d", n];
-//            //CGSize labelSize = [theText sizeWithFont:[UIFont fontWithName:@"Helvetica" size:18]];
-//            // CGContextShowTextAtPoint(context,  i * kStepX - 45, kGraphBottom - 5, [theText cStringUsingEncoding:NSUTF8StringEncoding], [theText length]);
-//            [theText drawAtPoint:CGPointMake(i * kStepX+8,kGraphBottom-15) withAttributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica"size:14]}];
             
             NSString *score = [NSString stringWithFormat:@"%@", [self.data objectAtIndex:i]];
             
