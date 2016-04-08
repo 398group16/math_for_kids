@@ -57,12 +57,10 @@
     }
 }
 
+/*check user input name is vaild or not*/
 -(IBAction)submitAction:(id)sender{
-    
     field2.text = _user_name;
-    
     if ([[field1 text]  isEqual: @""]) {
-        
         UIAlertController * alert= [UIAlertController
                                     alertControllerWithTitle:@"Error"
                                     message:@"Please enter a username."
@@ -115,6 +113,7 @@
     }
 }
 
+/**/
 -(NSString*)writeToFile:(NSString*)string{
     
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -147,7 +146,6 @@
     NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[old_json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    
     
     for(NSDictionary* one in old_dict){
         if ([[one valueForKey:@"name"] isEqualToString:_user_name]) {
@@ -198,7 +196,6 @@
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"localScore.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    //    NSLog(@"%@", filePath);
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
@@ -214,7 +211,7 @@
         NSDictionary* tempScore = [one valueForKey:@"scoreList"];
         NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
         
-        for(NSDictionary* ts in tempScore){
+        for(NSDictionary* ts in tempScore){// set new user name
             NSString* tmpName = [ts valueForKey:@"name"];
             if ([tmpName isEqualToString:_user_name]) {
                 NSMutableDictionary *temp = [[NSMutableDictionary alloc] init];
@@ -241,7 +238,6 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    //    NSLog(@"combine users: %@", str);
     return str;
 }
 

@@ -48,6 +48,7 @@
     }
 }
 
+/*if user press submit button then our app will give user a warning. let user make sure they really wanna change their user name*/
 -(void)showAlert{
     UIAlertController * alert= [UIAlertController
                                 alertControllerWithTitle:@"Warning"
@@ -123,8 +124,8 @@
     button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
 }
 
+/*store new json string about user account to local user account json library*/
 -(NSString*)writeToFile:(NSString*)string{
-    
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
@@ -139,25 +140,25 @@
     return filePath;
 }
 
-//get json
+/*get all user account information from local user json account*/
 - (NSString*)readStringFromFile{
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    //    NSLog(@"%@", filePath);
+
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
+/*modify new user image which got from user*/
 -(NSString*)changeJson:(NSString*)old_json{
     NSError* error;
     NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[old_json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
     
-    
-    for(NSDictionary* one in old_dict){
+    for(NSDictionary* one in old_dict){ // change user name
         if ([[one valueForKey:@"name"] isEqualToString:_user_name]) {
             NSMutableDictionary *temp = [[NSMutableDictionary alloc] init];
             [temp setValue:_user_name forKey:@"name"];
@@ -168,7 +169,6 @@
         }else{
             [array addObject:one];
         }
-        
     }
     
     error = nil;
@@ -180,7 +180,7 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    //    NSLog(@"combine users: %@", str);
+
     return str;
 }
 

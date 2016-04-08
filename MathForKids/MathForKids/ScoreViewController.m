@@ -127,8 +127,6 @@
             NSString* combine = [self appendJsonFile:temp newJson:str];
             [self writeToFile:combine];
         }
-//        NSString *read = [self readStringFromFile];
-//        NSLog(@"%@", read);
         
     }else if ([jsonData length] == 0 &&
               error == nil){
@@ -137,7 +135,6 @@
         NSLog(@"An error happened = %@", error);
     }
     
-//    self.navigationItem.title = @"Menu";
     UIBarButtonItem* backButton = [[UIBarButtonItem alloc] initWithTitle:@"< Categories" style:UIBarButtonItemStylePlain target:self action:@selector(handleBack:)];
     self.navigationItem.leftBarButtonItem = backButton;
 }
@@ -150,8 +147,6 @@
 
 -(NSString*)appendJsonFile:(NSString*)oldJson
                    newJson:(NSString*)newJson{
-//    NSData* data = [oldJson dataUsingEncoding:NSUTF8StringEncoding];
-//    NSMutableArray* arr = [NSJSONSerialization JSONObjectWithData:data options:nil error:&error];
     NSError* error;
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:[oldJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     NSMutableArray *array = [NSMutableArray arrayWithCapacity:[dict count]];
@@ -274,7 +269,6 @@
 }
 
 - (void)setScore:(NSString*)newScore{
-//    NSLog(@"%@", newScore);
     if (_score != newScore) {
         _score = newScore;
     }

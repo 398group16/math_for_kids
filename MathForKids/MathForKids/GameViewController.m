@@ -10,7 +10,7 @@
 #import "ScoreViewController.h"
 
 @interface GameViewController (){
-    int scoreTime;
+    int scoreTime;  // every questions extra time score
     int score;
     int gameCount;
     int timeCount;
@@ -25,13 +25,6 @@
 @implementation GameViewController
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
-    
-    
-//    int wid = button.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
-//    int hei = button.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
-    //    [button setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-    //    button.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-//    [[button layer] setCornerRadius:4.0f];
     [[button layer] setBorderWidth:1.0f];
     [[button layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [button setAlpha:0.8];
@@ -43,9 +36,6 @@
     button.layer.shadowOpacity = 0.8;
     button.layer.shadowRadius = 12;
     button.layer.shadowOffset = CGSizeMake(12.0f, 12.0f);
-
-    
-//    [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
 - (void)setOtherButtonLayout:(UIButton*) button{
@@ -143,6 +133,7 @@
     [button3 setBackgroundColor:[UIColor blackColor]];
     [button4 setBackgroundColor:[UIColor blackColor]];
     
+    /*multithreads*/
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     dispatch_async(queue, ^{
         if([_name isEqual:@"Counting"]){
@@ -171,8 +162,6 @@
             NSLog(@"%d", x);
             img = [UIImage imageNamed:[NSString stringWithFormat:@"egg%d.png",s]];
             NSLog(@"egg%d.png", s);
-            //        [imageField setImage:img];
-            //        [imageField setBackgroundColor:[UIColor blackColor]];
             
             /*randomly set each buttons title*/
             if(s > 7 && s <= 14){
@@ -233,14 +222,8 @@
             }
             [lastNumY addObject:[NSNumber numberWithInteger:y]];
             
-            
             s = x+y;
             NSLog(@"%d + %d = %d", x, y, s);
-            //        [txtField setBackgroundColor:[UIColor blackColor]];
-            //        [txtField setTextColor:[UIColor whiteColor]];
-            //        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
-            
-            //        [txtField setText:[NSString stringWithFormat:@"%d + %d = ?", x, y]];
             
             if (s <= 13) {
                 s1 = s+1;
@@ -301,15 +284,10 @@
             }
             [lastNumY addObject:[NSNumber numberWithInteger:y]];
             
-            //        [txtField setBackgroundColor:[UIColor blackColor]];
-            //        [txtField setTextColor:[UIColor cyanColor]];
-            //        [txtField setFont:[UIFont boldSystemFontOfSize:50]];
             if(x>y){
                 s = x-y;
-                //            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", x, y]];
             }else{
                 s = y-x;
-                //            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", y, x]];
             }
             
             NSLog(@"%d, %d = %d", x, y, s);
@@ -349,8 +327,6 @@
             [lastNumX addObject:[NSNumber numberWithInteger:x]];
             NSLog(@"%d", x);
             img = [imgArray objectAtIndex: s];
-            //        [imageField setImage:img];
-            //        [imageField setBackgroundColor:[UIColor blackColor]];
             
             /*randomly set each buttons title*/
             if(s > 7 && s <= 14){
@@ -368,36 +344,6 @@
             }
             //        NSLog(@"%d, %d, %d, %d", x, x1, x2, x3);
             correct = arc4random_uniform(4);
-            //        NSString* str = [self getImageName:s+1];
-            //        NSString* str1 = [self getImageName:s1+1];
-            //        NSString* str2 = [self getImageName:s2+1];
-            //        NSString* str3 = [self getImageName:s3+1];
-            //
-            //
-            //        if(correct == 0){
-            //            [button1 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-            //            [button2 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-            //            [button3 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-            //            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-            //
-            //        }else if(correct == 1){
-            //            [button1 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-            //            [button2 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-            //            [button3 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-            //            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-            //            
-            //        }else if(correct == 2){
-            //            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-            //            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-            //            [button3 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-            //            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-            //            
-            //        }else{
-            //            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-            //            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-            //            [button3 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-            //            [button4 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-            //        }
         }
     
     
@@ -476,77 +422,6 @@
 
         });
     });
-//    if ([_name isEqualToString:@"Subtraction"]) {
-//        if(x>y){
-//            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", x, y]];
-//        }else{
-//            [txtField setText:[NSString stringWithFormat:@"%d - %d = ?", y, x]];
-//        }
-//    }else if([_name isEqualToString:@"Addition"]){
-//        [txtField setText:[NSString stringWithFormat:@"%d + %d = ?", x, y]];
-//    }
-//    [imageField setImage:img];
-//    
-//    if (![_name isEqual:@"Shape"]) {
-//        
-//        if(correct == 0){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
-//            
-//        }else if(correct == 1){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
-//            
-//        }else if(correct == 2){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
-//            
-//        }else{
-//            [button1 setTitle:[NSString stringWithFormat:@"  %d", s2] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %d", s1] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %d", s3] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %d", s] forState:UIControlStateNormal];
-//        }
-//    }else{
-//        NSString* str = [self getImageName:s+1];
-//        NSString* str1 = [self getImageName:s1+1];
-//        NSString* str2 = [self getImageName:s2+1];
-//        NSString* str3 = [self getImageName:s3+1];
-//        
-//        
-//        if(correct == 0){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-//            
-//        }else if(correct == 1){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-//            
-//        }else if(correct == 2){
-//            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-//            
-//        }else{
-//            [button1 setTitle:[NSString stringWithFormat:@"  %@", str2] forState:UIControlStateNormal];
-//            [button2 setTitle:[NSString stringWithFormat:@"  %@", str1] forState:UIControlStateNormal];
-//            [button3 setTitle:[NSString stringWithFormat:@"  %@", str3] forState:UIControlStateNormal];
-//            [button4 setTitle:[NSString stringWithFormat:@"  %@", str] forState:UIControlStateNormal];
-//        }
-//
-//    }
-    
 }
 
 -(void)countDown{
@@ -557,13 +432,6 @@
     [UIView beginAnimations: nil context: nil];
     [UIView setAnimationDuration:0.5];
     
-//    if (timeCount > 20) {
-//        [time setTextColor:[UIColor greenColor]];
-//    }else if(timeCount > 10 && timeCount <= 20){
-//        [time setTextColor:[UIColor orangeColor]];
-//    }else{
-//        [time setTextColor:[UIColor redColor]];
-//    }
     [UIView commitAnimations];
     
     /*set animation, if the time is running out*/
@@ -572,7 +440,6 @@
         [UIView setAnimationDuration:0.75];
         
         [question setText:@"Sorry, you ran out of time. Let's try the next question!"];
-//        [question setTextColor:[UIColor whiteColor]];
         
         if(correct == 0){
             [button1 setImage:[UIImage imageNamed: @"happy_face.png"] forState:UIControlStateNormal];
@@ -627,17 +494,7 @@
         [button2 setImage:nil forState:UIControlStateNormal];
         [button3 setImage:nil forState:UIControlStateNormal];
         [button4 setImage:nil forState:UIControlStateNormal];
-//        int wid = button1.frame.size.width - [UIImage imageNamed: @"normal_face"].size.width;
-//        int hei = button1.frame.size.height - [UIImage imageNamed: @"normal_face"].size.height;
-////        [button1 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-//        
-//        button1.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-////        [button2 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-//        button2.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-////        [button3 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-//        button3.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
-////        [button4 setImage:[UIImage imageNamed: @"normal_face"] forState:UIControlStateNormal];
-//        button4.imageEdgeInsets = UIEdgeInsetsMake(hei/2, wid-10, hei/2, 10);
+
         [self setQuestion];
         [self setButtons];
     
@@ -1008,10 +865,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-//    dispatch_async(queue, ^){
-//        
-//    }
     scoreTime = 0;
     gameCount = 0;
     timeCount = 30;
@@ -1155,8 +1008,6 @@
     }
     return str;
 }
-
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

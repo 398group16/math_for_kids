@@ -147,14 +147,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-//    if ([[segue identifier] isEqualToString:@"tutDetail"]) {
-//        TutorialViewController* dest = segue.destinationViewController;
-//        dest.title = @"Tutorial";
-//    }else
+
     if([[segue identifier] isEqualToString:@"gameCateDetail"]){
-//        GameCategoryViewController* dest = segue.destinationViewController;
-//        dest.title = @"Game Category";
-//        NSLog(@"%@", [_user usrName]);
         NSLog(@"%@", _user_name);
         [[segue destinationViewController] setUserImg: _user_img];
         [[segue destinationViewController] setUsrName: _user_name];

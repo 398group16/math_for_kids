@@ -45,8 +45,6 @@
 }//[self setAnswerButtonLayout:(count)];
 
 - (void)addIcon:(UIButton*) button1{
-    
-    
 //    [button1 setImage:[UIImage imageNamed: @"chevron-right"] forState:UIControlStateNormal];
             int wid = button1.frame.size.width - [UIImage imageNamed: @"chevron-right"].size.width;
             int hei = button1.frame.size.height - [UIImage imageNamed: @"chevron-right"].size.height;
@@ -66,13 +64,11 @@
     [self setAnswerButtonLayout:(changeImage)];
     [self setAnswerButtonLayout2:(_upperAboutShadow)];
     
-    
     [self addIcon:(change)];
     [self addIcon:(add)];
     [self addIcon:(del)];
     [self addIcon:(changeImage)];
     [self addIcon:(about)];
-    
     
     [userImage setImage:_img_name];
     [userlabel setText:_user_name];
@@ -90,6 +86,7 @@
     }
 }
 
+/*write json string to local score json library*/
 -(NSString*)writeToScore:(NSString*)string{
     
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -106,7 +103,7 @@
     return filePath;
 }
 
-//get json
+/*get local score json library*/
 - (NSString*)readStringFromScore{
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
@@ -117,6 +114,7 @@
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
+/*if user delete their user account all the scores in that user also should be deleted*/
 -(NSString*)deleteJsonScore:(NSString*)old_json{
     NSError* error;
     NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[old_json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
@@ -130,7 +128,6 @@
         
         for(NSDictionary* ts in tempScore){
             NSString* tmpName = [ts valueForKey:@"name"];
-            //                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
             if (![tmpName isEqualToString:_user_name]) {
                 [arrayS addObject:ts];
             }
@@ -151,13 +148,11 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    //    NSLog(@"combine users: %@", str);
     return str;
 }
 
-
+/* write new json string about user accouts into local user accout library*/
 -(NSString*)writeToFile:(NSString*)string{
-    
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
@@ -174,23 +169,22 @@
 
 
 
-//get json
+//get all the user accounts from local json library
 - (NSString*)readStringFromFile{
     // Build the path...
     NSString* filePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     NSString* fileName = @"users.json";
     NSString* fileAtPath = [filePath stringByAppendingPathComponent:fileName];
-    //    NSLog(@"%@", filePath);
     // The main act...
     return [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:fileAtPath] encoding:NSUTF8StringEncoding];
 }
 
+/*delete user account in local user account json library*/
 -(NSString*)deleteJson:(NSString*)old_json{
     NSError* error;
     NSDictionary *old_dict = [NSJSONSerialization JSONObjectWithData:[old_json dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
     
     NSMutableArray *array = [[NSMutableArray alloc] init];
-    
     
     for(NSDictionary* one in old_dict){
         if (![[one valueForKey:@"name"] isEqualToString:_user_name]) {
@@ -207,7 +201,6 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-    //    NSLog(@"combine users: %@", str);
     return str;
 }
 
@@ -216,6 +209,7 @@
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
+/*if user press delete user button then we will show an alert warning to let user make sure they wanna delete this one*/
 -(IBAction)delSelect:(id)sender{
     UIAlertController * alert= [UIAlertController
                                 alertControllerWithTitle:@"Warning"
@@ -266,17 +260,4 @@
         [[segue destinationViewController] setUser_name:_user_name];
     }
 }
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    if ([[segue identifier] isEqualToString:@"changeUserInfo"]) {
-//        [[segue destinationViewController] setUser_name:_user_name];
-//    }
-//}
-
-
 @end

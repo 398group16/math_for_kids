@@ -102,7 +102,7 @@
 -(void)checkCategory{
     if ([self.navigationItem.title isEqualToString:@"Counting Scores"]) {
         [graph setData:countS];
-        [graph setNeedsDisplay];
+        [graph setNeedsDisplay];// let scores graph view refresh themselves
         _segmentedCatagories.selectedSegmentIndex = 0;
     }else if ([self.navigationItem.title isEqualToString:@"Addition Scores"]) {
         [graph setData:addS];
@@ -201,7 +201,6 @@
             for (NSDictionary* s in tempScore){
                 if ([_userName isEqualToString:[s valueForKey:@"name"]]) {
                     temp = [s valueForKey:@"score"];
-                    //                float sc = [temp floatValue];
                     [countS addObject:temp];
                 }
             }
