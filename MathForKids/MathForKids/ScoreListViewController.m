@@ -19,6 +19,10 @@
 }
 @property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCatagories;
+@property (weak, nonatomic) IBOutlet UIImageView *num;
+@property (weak, nonatomic) IBOutlet UIImageView *plus;
+@property (weak, nonatomic) IBOutlet UIImageView *minus;
+@property (weak, nonatomic) IBOutlet UIImageView *shape;
 
 @end
 

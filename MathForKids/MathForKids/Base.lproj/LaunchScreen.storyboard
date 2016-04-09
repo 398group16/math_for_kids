@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,18 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="de6-Iq-SDA">
-                                <rect key="frame" x="93" y="240" width="188" height="188"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="de6-Iq-SDA" secondAttribute="height" multiplier="1:1" id="8v8-sT-MWe"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opening screen_EDIT" translatesAutoresizingMaskIntoConstraints="NO" id="L71-jk-1Kl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470588235294" green="0.81960784313725488" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="de6-Iq-SDA" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="L8N-4m-acm"/>
-                            <constraint firstItem="de6-Iq-SDA" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="1:2" id="aHa-3Y-VNn"/>
-                            <constraint firstItem="de6-Iq-SDA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xpD-Zc-HAi"/>
+                            <constraint firstAttribute="trailing" secondItem="L71-jk-1Kl" secondAttribute="trailing" id="4lf-cD-qbS"/>
+                            <constraint firstItem="L71-jk-1Kl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="P2M-DF-Uc7"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="L71-jk-1Kl" secondAttribute="bottom" id="b6m-BX-I6b"/>
+                            <constraint firstItem="L71-jk-1Kl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lQj-aP-SOq"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -38,10 +34,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="374.5"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="180" height="180"/>
+        <image name="opening screen_EDIT" width="562" height="1000"/>
     </resources>
 </document>
