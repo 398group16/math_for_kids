@@ -179,12 +179,12 @@
             
             for(NSDictionary* ts in tempScore){// check how many same category scores under one user name
                 NSString* tmpName = [ts valueForKey:@"name"];
-//                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
+                NSLog(@"temp name:%@, name:%@", tempStr, tmpName);
                 if ([tmpName isEqualToString:tempStr]) {
                     count++;
                 }
             }
-            
+            NSLog(@"%d",count);
             if (count > 9) {// make sure every user name only can have 10 scores in one category
                 canBeAdd = false;
             }
