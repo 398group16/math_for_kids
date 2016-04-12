@@ -154,13 +154,13 @@
     error = nil;
     NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[newJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
      /*combine old and new*/
-    bool found = false;
+    bool found = NO;
     for (NSDictionary* one in dict){
         NSString* tempCate = [one valueForKey:@"category"];
         NSString* newCate = [newDict valueForKey:@"category"];
         
         if ([tempCate isEqualToString:newCate]) {
-            found = true;
+            found = YES;
             NSDictionary* tempScore = [one valueForKey:@"scoreList"];
             NSMutableArray *arrayS = [NSMutableArray arrayWithCapacity:[tempScore count]];
             NSDictionary* tempS = [newDict valueForKey:@"scoreList"];
@@ -174,7 +174,7 @@
             }
             
             
-            BOOL canBeAdd = true;
+            BOOL canBeAdd = YES;
             int count = 0;
             
             for(NSDictionary* ts in tempScore){// check how many same category scores under one user name
@@ -184,18 +184,22 @@
                     count++;
                 }
             }
-            NSLog(@"%d",count);
+//            NSLog(@"%d",count);
             if (count > 9) {// make sure every user name only can have 10 scores in one category
-                canBeAdd = false;
+                canBeAdd = NO;
             }
             
             for(NSDictionary* s in tempScore){
-                if ([s valueForKey:@"name"] == tempStr && canBeAdd == false){
+                NSLog(@"%@", [s valueForKey:@"name"]);
+                NSLog(@"%@", tempStr);
+                if ([[s valueForKey:@"name"] isEqualToString:tempStr] && canBeAdd == NO){
+                    NSLog(@"111");
                     if (count <= 10) {
-                        canBeAdd = true;
+                        canBeAdd = YES;
                     }
                     count--;
                 }else{
+                    NSLog(@"%d",count);
                     [arrayS addObject:s];
                 }
                 
