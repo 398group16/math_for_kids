@@ -90,7 +90,7 @@
     [[user_col layer] setBorderColor:[UIColor lightGrayColor].CGColor];
     [[user_col layer] setCornerRadius:10.0f];
     
-    self.navigationItem.title = @"Math For Kids";
+    self.navigationItem.title = @"Math and Kids";
 }
 
 -(void)loadUserData{

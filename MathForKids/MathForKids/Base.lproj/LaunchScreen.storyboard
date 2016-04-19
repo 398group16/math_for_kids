@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,16 +18,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="opening screen_EDIT" translatesAutoresizingMaskIntoConstraints="NO" id="L71-jk-1Kl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="openingScreen" translatesAutoresizingMaskIntoConstraints="NO" id="jJ2-7v-4un">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.81176470588235294" green="0.81960784313725488" blue="0.792156862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="L71-jk-1Kl" secondAttribute="trailing" id="4lf-cD-qbS"/>
-                            <constraint firstItem="L71-jk-1Kl" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="P2M-DF-Uc7"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="L71-jk-1Kl" secondAttribute="bottom" id="b6m-BX-I6b"/>
-                            <constraint firstItem="L71-jk-1Kl" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="lQj-aP-SOq"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jJ2-7v-4un" secondAttribute="bottom" id="CB7-Ze-nqD"/>
+                            <constraint firstItem="jJ2-7v-4un" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="Gkm-j3-HxZ"/>
+                            <constraint firstItem="jJ2-7v-4un" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="VcO-3s-b7Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jJ2-7v-4un" secondAttribute="trailing" constant="-20" id="c7C-th-TeH"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -38,6 +39,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="opening screen_EDIT" width="562" height="1000"/>
+        <image name="openingScreen" width="562" height="1000"/>
     </resources>
 </document>
