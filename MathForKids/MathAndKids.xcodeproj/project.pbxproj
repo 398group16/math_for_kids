@@ -87,7 +87,7 @@
 		A54D34731C8458EC008453CF /* categoryList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = categoryList.m; sourceTree = "<group>"; };
 		A56CD79D1C830BD7007001F7 /* ScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreViewController.h; sourceTree = "<group>"; };
 		A56CD79E1C830BD7007001F7 /* ScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreViewController.m; sourceTree = "<group>"; };
-		A58CE5441C7F041B002B876E /* MathForKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathForKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE5441C7F041B002B876E /* MathAndKids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathAndKids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CE5481C7F041B002B876E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A58CE54A1C7F041B002B876E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A58CE54B1C7F041B002B876E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -95,10 +95,10 @@
 		A58CE5531C7F041B002B876E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A58CE5561C7F041B002B876E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A58CE5581C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE55D1C7F041B002B876E /* MathAndKids.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathAndKids.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CE5611C7F041B002B876E /* MathForKidsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsTests.m; sourceTree = "<group>"; };
 		A58CE5631C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathForKidsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A58CE5681C7F041B002B876E /* MathAndKids.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MathAndKids.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58CE56C1C7F041B002B876E /* MathForKidsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MathForKidsUITests.m; sourceTree = "<group>"; };
 		A58CE56E1C7F041B002B876E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58CE57A1C7F0460002B876E /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
@@ -218,9 +218,9 @@
 		A58CE5451C7F041B002B876E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A58CE5441C7F041B002B876E /* MathForKids.app */,
-				A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */,
-				A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */,
+				A58CE5441C7F041B002B876E /* MathAndKids.app */,
+				A58CE55D1C7F041B002B876E /* MathAndKids.xctest */,
+				A58CE5681C7F041B002B876E /* MathAndKids.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,9 +321,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A58CE5431C7F041B002B876E /* MathForKids */ = {
+		A58CE5431C7F041B002B876E /* MathAndKids */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKids" */;
+			buildConfigurationList = A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKids" */;
 			buildPhases = (
 				B9B802021D4C33AAA4A92226 /* Check Pods Manifest.lock */,
 				A58CE5401C7F041B002B876E /* Sources */,
@@ -336,14 +336,14 @@
 			);
 			dependencies = (
 			);
-			name = MathForKids;
+			name = MathAndKids;
 			productName = MathForKids;
-			productReference = A58CE5441C7F041B002B876E /* MathForKids.app */;
+			productReference = A58CE5441C7F041B002B876E /* MathAndKids.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A58CE55C1C7F041B002B876E /* MathForKidsTests */ = {
+		A58CE55C1C7F041B002B876E /* MathAndKidsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */;
+			buildConfigurationList = A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKidsTests" */;
 			buildPhases = (
 				3943401C5D7BE77166C3DBA8 /* Check Pods Manifest.lock */,
 				A58CE5591C7F041B002B876E /* Sources */,
@@ -357,14 +357,14 @@
 			dependencies = (
 				A58CE55F1C7F041B002B876E /* PBXTargetDependency */,
 			);
-			name = MathForKidsTests;
+			name = MathAndKidsTests;
 			productName = MathForKidsTests;
-			productReference = A58CE55D1C7F041B002B876E /* MathForKidsTests.xctest */;
+			productReference = A58CE55D1C7F041B002B876E /* MathAndKids.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A58CE5671C7F041B002B876E /* MathForKidsUITests */ = {
+		A58CE5671C7F041B002B876E /* MathAndKidsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */;
+			buildConfigurationList = A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKidsUITests" */;
 			buildPhases = (
 				4C256EC2A43572A3C8F18791 /* Check Pods Manifest.lock */,
 				A58CE5641C7F041B002B876E /* Sources */,
@@ -377,9 +377,9 @@
 			dependencies = (
 				A58CE56A1C7F041B002B876E /* PBXTargetDependency */,
 			);
-			name = MathForKidsUITests;
+			name = MathAndKidsUITests;
 			productName = MathForKidsUITests;
-			productReference = A58CE5681C7F041B002B876E /* MathForKidsUITests.xctest */;
+			productReference = A58CE5681C7F041B002B876E /* MathAndKids.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -393,7 +393,7 @@
 				TargetAttributes = {
 					A58CE5431C7F041B002B876E = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 3TK3R9439N;
+						DevelopmentTeam = 9Y4E3432MY;
 					};
 					A58CE55C1C7F041B002B876E = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -405,7 +405,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathForKids" */;
+			buildConfigurationList = A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathAndKids" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -418,9 +418,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A58CE5431C7F041B002B876E /* MathForKids */,
-				A58CE55C1C7F041B002B876E /* MathForKidsTests */,
-				A58CE5671C7F041B002B876E /* MathForKidsUITests */,
+				A58CE5431C7F041B002B876E /* MathAndKids */,
+				A58CE55C1C7F041B002B876E /* MathAndKidsTests */,
+				A58CE5671C7F041B002B876E /* MathAndKidsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -635,12 +635,12 @@
 /* Begin PBXTargetDependency section */
 		A58CE55F1C7F041B002B876E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A58CE5431C7F041B002B876E /* MathForKids */;
+			target = A58CE5431C7F041B002B876E /* MathAndKids */;
 			targetProxy = A58CE55E1C7F041B002B876E /* PBXContainerItemProxy */;
 		};
 		A58CE56A1C7F041B002B876E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A58CE5431C7F041B002B876E /* MathForKids */;
+			target = A58CE5431C7F041B002B876E /* MathAndKids */;
 			targetProxy = A58CE5691C7F041B002B876E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -756,7 +756,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKids";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MathAndKids;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -772,7 +772,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKids";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MathAndKids;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -785,8 +785,8 @@
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
+				PRODUCT_NAME = MathAndKids;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathAndKids.app/MathAndKids";
 			};
 			name = Debug;
 		};
@@ -798,8 +798,8 @@
 				INFOPLIST_FILE = MathForKidsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathForKids.app/MathForKids";
+				PRODUCT_NAME = MathAndKids;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MathAndKids.app/MathAndKids";
 			};
 			name = Release;
 		};
@@ -810,7 +810,7 @@
 				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MathAndKids;
 				TEST_TARGET_NAME = MathForKids;
 				USES_XCTRUNNER = YES;
 			};
@@ -823,7 +823,7 @@
 				INFOPLIST_FILE = MathForKidsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-98group16.MathForKidsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MathAndKids;
 				TEST_TARGET_NAME = MathForKids;
 				USES_XCTRUNNER = YES;
 			};
@@ -832,7 +832,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathForKids" */ = {
+		A58CE53F1C7F041B002B876E /* Build configuration list for PBXProject "MathAndKids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58CE56F1C7F041B002B876E /* Debug */,
@@ -841,7 +841,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKids" */ = {
+		A58CE5711C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKids" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58CE5721C7F041B002B876E /* Debug */,
@@ -850,7 +850,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsTests" */ = {
+		A58CE5741C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKidsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58CE5751C7F041B002B876E /* Debug */,
@@ -859,7 +859,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathForKidsUITests" */ = {
+		A58CE5771C7F041B002B876E /* Build configuration list for PBXNativeTarget "MathAndKidsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A58CE5781C7F041B002B876E /* Debug */,

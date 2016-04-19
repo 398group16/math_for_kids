@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MathForKids.xcodeproj">
+      location = "group:/Users/vishaltomar/Documents/math_for_kids/MathForKids/MathAndKids.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
