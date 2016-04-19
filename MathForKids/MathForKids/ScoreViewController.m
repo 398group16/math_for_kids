@@ -12,7 +12,6 @@
 #import "categoryList.h"
 
 @interface ScoreViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *share;
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
@@ -40,19 +39,6 @@
     label.text = [NSString stringWithFormat:@"%@", self.score];
     [label setFont:[UIFont boldSystemFontOfSize:21]];
     label.clipsToBounds=YES;
-}
-
-- (IBAction)shareButton:(id)sender {
-    NSString *shareText = [NSString stringWithFormat:@"I scored %@ in Math for Kids!!! Go download your game from the App Store now!", self.score];//create a UIImage and add it to
-    //the array if you wanna share an image too
-    
-    NSArray *itemsToShare = @[shareText];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-    
-    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
-    
-    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -99,7 +85,6 @@
     // Do any additional setup after loading the view.
     
     [self setAnswerButtonLayout:(home)];
-    [self setAnswerButtonLayout:(_share)];
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
@@ -184,7 +169,6 @@
                     count++;
                 }
             }
-//            NSLog(@"%d",count);
             if (count > 9) {// make sure every user name only can have 10 scores in one category
                 canBeAdd = NO;
             }
@@ -232,7 +216,6 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-//    NSLog(@"Combine JSON: %@", str);
     
     error = nil;
     

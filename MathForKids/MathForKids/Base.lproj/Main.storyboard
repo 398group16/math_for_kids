@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rre-dU-wN4">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -73,7 +73,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCells" id="xwR-5g-yeB" customClass="userCells">
-                                        <rect key="frame" x="123" y="10" width="90" height="115"/>
+                                        <rect key="frame" x="122.5" y="10" width="90" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="90" height="115"/>
@@ -740,8 +740,7 @@
                                         <exclude reference="kYE-NW-5GP"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="201" y="139" width="153" height="153"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="kYE-NW-5GP"/>
                                     </mask>
@@ -761,8 +760,7 @@
                                         <exclude reference="Xwd-2s-Taw"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="21" y="312" width="153" height="152"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Xwd-2s-Taw"/>
                                     </mask>
@@ -782,8 +780,7 @@
                                         <exclude reference="Ead-5k-VMF"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="201" y="312" width="153" height="152"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Ead-5k-VMF"/>
                                     </mask>
@@ -843,8 +840,7 @@
                                         <exclude reference="Xgw-ef-qII"/>
                                     </mask>
                                 </variation>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="21" y="139" width="153" height="153"/>
+                                <variation key="heightClass=regular">
                                     <mask key="constraints">
                                         <include reference="Xgw-ef-qII"/>
                                     </mask>
@@ -1928,9 +1924,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <state key="normal" title="Shapes">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="72" y="457" width="176" height="44"/>
-                                </variation>
                                 <connections>
                                     <segue destination="lO0-H6-Wmd" kind="show" identifier="shapeGdetail" id="CVU-i4-B3c"/>
                                 </connections>
@@ -2293,53 +2286,50 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-t6-Wcw">
-                                <rect key="frame" x="259" y="469" width="91" height="30"/>
-                                <color key="backgroundColor" red="0.29411764705882354" green="0.72156862745098038" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Compare">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="254" y="483" width="102" height="34"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="yFm-a3-lIy" kind="show" identifier="scoreListDetail" id="bba-XG-VPB"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cht-Fl-DCN">
                                 <rect key="frame" x="142" y="469" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="cht-Fl-DCN" secondAttribute="height" multiplier="91:30" id="mWq-r6-WhX"/>
+                                    <constraint firstAttribute="width" secondItem="cht-Fl-DCN" secondAttribute="height" multiplier="3:1" id="wJs-YS-DZV"/>
                                 </constraints>
                                 <state key="normal" title="Home">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="mWq-r6-WhX"/>
+                                        <exclude reference="wJs-YS-DZV"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
                                     <mask key="constraints">
-                                        <include reference="mWq-r6-WhX"/>
+                                        <include reference="wJs-YS-DZV"/>
                                     </mask>
                                 </variation>
                                 <connections>
                                     <action selector="homeButtonClick:" destination="fSb-YA-U3M" eventType="touchUpInside" id="aOH-cz-ibz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXQ-h1-5J7">
-                                <rect key="frame" x="25" y="469" width="91" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3T-t6-Wcw">
+                                <rect key="frame" x="259" y="469" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.29411764705882354" green="0.72156862745098038" blue="0.32549019607843138" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Share">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="J3T-t6-Wcw" secondAttribute="height" multiplier="3:1" id="dZf-Lk-nz4"/>
+                                </constraints>
+                                <state key="normal" title="Compare">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="19" y="483" width="102" height="34"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dZf-Lk-nz4"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="dZf-Lk-nz4"/>
+                                    </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="shareButton:" destination="fSb-YA-U3M" eventType="touchUpInside" id="xdF-fD-h1V"/>
+                                    <segue destination="yFm-a3-lIy" kind="show" identifier="scoreListDetail" id="bba-XG-VPB"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2347,32 +2337,43 @@ Thanks for the download, hope you enjoy the app!</string>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="Sj2-aU-gxf" secondAttribute="trailing" constant="-20" id="0GG-nR-8Lg"/>
                             <constraint firstItem="38p-d4-qFX" firstAttribute="centerX" secondItem="Sj2-aU-gxf" secondAttribute="centerX" id="28U-gT-MWk"/>
-                            <constraint firstItem="cht-Fl-DCN" firstAttribute="top" secondItem="38p-d4-qFX" secondAttribute="bottom" constant="80" id="5ea-iO-0mO"/>
+                            <constraint firstItem="cht-Fl-DCN" firstAttribute="top" secondItem="38p-d4-qFX" secondAttribute="bottom" constant="79" id="5ea-iO-0mO"/>
                             <constraint firstItem="cht-Fl-DCN" firstAttribute="centerX" secondItem="Sj2-aU-gxf" secondAttribute="centerX" id="8Ht-Kx-VFF"/>
                             <constraint firstItem="J3T-t6-Wcw" firstAttribute="top" secondItem="cht-Fl-DCN" secondAttribute="top" id="DwM-cO-qAL"/>
-                            <constraint firstItem="bXQ-h1-5J7" firstAttribute="top" secondItem="cht-Fl-DCN" secondAttribute="top" id="Ei0-bG-zKv"/>
-                            <constraint firstItem="bXQ-h1-5J7" firstAttribute="height" secondItem="cht-Fl-DCN" secondAttribute="height" id="Fxn-1L-YDs"/>
-                            <constraint firstItem="bXQ-h1-5J7" firstAttribute="width" secondItem="cht-Fl-DCN" secondAttribute="width" id="QLT-P0-Xci"/>
                             <constraint firstItem="38p-d4-qFX" firstAttribute="centerY" secondItem="Sj2-aU-gxf" secondAttribute="centerY" id="VB0-GL-Xmf"/>
+                            <constraint firstItem="J3T-t6-Wcw" firstAttribute="centerX" secondItem="QZ0-ST-csQ" secondAttribute="centerX" constant="106.5" id="asZ-SQ-Iam"/>
                             <constraint firstItem="Sj2-aU-gxf" firstAttribute="top" secondItem="BSL-2C-I7w" secondAttribute="bottom" id="bOR-0H-0Ye"/>
                             <constraint firstItem="sPe-Cx-dbP" firstAttribute="centerX" secondItem="Sj2-aU-gxf" secondAttribute="centerX" id="dF1-rE-ITu"/>
                             <constraint firstItem="38p-d4-qFX" firstAttribute="top" secondItem="sPe-Cx-dbP" secondAttribute="bottom" constant="48" id="eay-kg-mlo"/>
                             <constraint firstItem="J3T-t6-Wcw" firstAttribute="height" secondItem="cht-Fl-DCN" secondAttribute="height" id="hJH-fU-ddr"/>
                             <constraint firstItem="Sj2-aU-gxf" firstAttribute="leading" secondItem="QZ0-ST-csQ" secondAttribute="leadingMargin" constant="-20" id="ikt-L4-7r2"/>
                             <constraint firstItem="Sj2-aU-gxf" firstAttribute="bottom" secondItem="QZ0-ST-csQ" secondAttribute="bottomMargin" id="jR8-O9-dNj"/>
-                            <constraint firstItem="cht-Fl-DCN" firstAttribute="leading" secondItem="bXQ-h1-5J7" secondAttribute="trailing" constant="15" id="nZD-Hn-i9S"/>
+                            <constraint firstItem="J3T-t6-Wcw" firstAttribute="centerY" secondItem="QZ0-ST-csQ" secondAttribute="centerY" constant="165.5" id="oCa-q2-RMs"/>
                             <constraint firstItem="J3T-t6-Wcw" firstAttribute="width" secondItem="cht-Fl-DCN" secondAttribute="width" id="oCx-Ca-0dn"/>
-                            <constraint firstItem="cht-Fl-DCN" firstAttribute="width" secondItem="Sj2-aU-gxf" secondAttribute="width" multiplier="8:30" id="pdW-3t-g2T"/>
+                            <constraint firstItem="cht-Fl-DCN" firstAttribute="centerX" secondItem="QZ0-ST-csQ" secondAttribute="centerX" constant="-106.5" id="oGn-l1-Y0m"/>
                             <constraint firstItem="J3T-t6-Wcw" firstAttribute="leading" secondItem="cht-Fl-DCN" secondAttribute="trailing" constant="15" id="sLk-my-qVB"/>
+                            <constraint firstItem="cht-Fl-DCN" firstAttribute="centerY" secondItem="QZ0-ST-csQ" secondAttribute="centerY" constant="165.5" id="uDt-9Z-X31"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="pdW-3t-g2T"/>
+                                <exclude reference="oGn-l1-Y0m"/>
+                                <exclude reference="uDt-9Z-X31"/>
+                                <exclude reference="asZ-SQ-Iam"/>
+                                <exclude reference="oCa-q2-RMs"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="constraints">
-                                <include reference="pdW-3t-g2T"/>
+                                <exclude reference="5ea-iO-0mO"/>
+                                <exclude reference="8Ht-Kx-VFF"/>
+                                <include reference="oGn-l1-Y0m"/>
+                                <include reference="uDt-9Z-X31"/>
+                                <exclude reference="DwM-cO-qAL"/>
+                                <include reference="asZ-SQ-Iam"/>
+                                <exclude reference="hJH-fU-ddr"/>
+                                <include reference="oCa-q2-RMs"/>
+                                <exclude reference="oCx-Ca-0dn"/>
+                                <exclude reference="sLk-my-qVB"/>
                             </mask>
                         </variation>
                     </view>
@@ -2384,7 +2385,6 @@ Thanks for the download, hope you enjoy the app!</string>
                         <outlet property="home" destination="cht-Fl-DCN" id="QPB-9A-scq"/>
                         <outlet property="label1" destination="sPe-Cx-dbP" id="aUH-TS-X9k"/>
                         <outlet property="label2" destination="38p-d4-qFX" id="dO1-Sa-5Yf"/>
-                        <outlet property="share" destination="bXQ-h1-5J7" id="gpd-2N-Igp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fa6-Ap-JbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2407,29 +2407,6 @@ Thanks for the download, hope you enjoy the app!</string>
                                 <rect key="frame" x="-4" y="64" width="328" height="603"/>
                                 <color key="tintColor" red="0.80392156862745101" green="0.9882352941176471" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Pw-qP-cqR">
-                                <rect key="frame" x="96" y="541" width="128" height="42"/>
-                                <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="42" id="2ee-Kz-bgf"/>
-                                    <constraint firstAttribute="width" constant="128" id="i4S-sR-reL"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="Share">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="shareButton:" destination="yFm-a3-lIy" eventType="touchUpInside" id="pvj-Gk-9Pa"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="graphView" customClass="GraphView">
-                                <rect key="frame" x="12" y="102" width="296" height="296"/>
-                                <color key="backgroundColor" red="0.24287400472546888" green="0.89522660340314131" blue="0.6840950283948668" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ees-jG-LwZ"/>
-                                    <constraint firstAttribute="width" secondItem="4Fg-Oe-dPa" secondAttribute="height" multiplier="1:1" id="pod-q1-rNy"/>
-                                </constraints>
-                            </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="MuL-7v-iL6">
                                 <rect key="frame" x="12" y="74" width="296" height="29"/>
                                 <color key="backgroundColor" red="0.29411764709999999" green="0.72156862749999995" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2443,30 +2420,31 @@ Thanks for the download, hope you enjoy the app!</string>
                                     <segment title="" image="cube70"/>
                                 </segments>
                                 <color key="tintColor" red="0.80392156859999997" green="0.98823529409999999" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="12" y="72" width="351" height="29"/>
-                                </variation>
                                 <connections>
                                     <action selector="segmentedCatagoriesAction:" destination="yFm-a3-lIy" eventType="valueChanged" id="Vu5-fC-ywK"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fg-Oe-dPa" userLabel="graphView" customClass="GraphView">
+                                <rect key="frame" x="12" y="102" width="296" height="296"/>
+                                <color key="backgroundColor" red="0.24287400472546888" green="0.89522660340314131" blue="0.6840950283948668" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ees-jG-LwZ"/>
+                                    <constraint firstAttribute="width" secondItem="4Fg-Oe-dPa" secondAttribute="height" multiplier="1:1" id="pod-q1-rNy"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Fg-Oe-dPa" firstAttribute="centerX" secondItem="Qor-OX-F6I" secondAttribute="centerX" id="2be-gJ-Wyr"/>
                             <constraint firstItem="Qor-OX-F6I" firstAttribute="top" secondItem="PNb-uz-K4K" secondAttribute="bottom" id="4M3-D4-hGy"/>
                             <constraint firstItem="Qor-OX-F6I" firstAttribute="leading" secondItem="ixF-hz-h5H" secondAttribute="leadingMargin" constant="-20" id="5PW-bS-LlP"/>
-                            <constraint firstItem="9Pw-qP-cqR" firstAttribute="centerX" secondItem="Qor-OX-F6I" secondAttribute="centerX" id="6Cr-hD-jBR"/>
-                            <constraint firstItem="1gz-AE-vMB" firstAttribute="top" secondItem="9Pw-qP-cqR" secondAttribute="bottom" priority="750" constant="40" id="8Jl-6J-S1V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="4Fg-Oe-dPa" secondAttribute="trailing" constant="-4" id="J60-SS-VFb"/>
                             <constraint firstItem="4Fg-Oe-dPa" firstAttribute="leading" secondItem="ixF-hz-h5H" secondAttribute="leadingMargin" constant="-4" id="KoC-qs-GLC"/>
                             <constraint firstItem="MuL-7v-iL6" firstAttribute="width" secondItem="4Fg-Oe-dPa" secondAttribute="width" id="McM-WG-6dY"/>
                             <constraint firstItem="Qor-OX-F6I" firstAttribute="bottom" secondItem="ixF-hz-h5H" secondAttribute="bottomMargin" id="QtK-OG-IWQ"/>
                             <constraint firstItem="MuL-7v-iL6" firstAttribute="top" secondItem="PNb-uz-K4K" secondAttribute="bottom" constant="10" id="Tl5-RT-e2Y"/>
-                            <constraint firstItem="9Pw-qP-cqR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="4Fg-Oe-dPa" secondAttribute="bottom" constant="5" id="bIN-rc-fbb"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qor-OX-F6I" secondAttribute="trailing" constant="-20" id="c1W-fj-afo"/>
                             <constraint firstItem="MuL-7v-iL6" firstAttribute="centerX" secondItem="Qor-OX-F6I" secondAttribute="centerX" id="eEP-cF-fk2"/>
-                            <constraint firstItem="1gz-AE-vMB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="9Pw-qP-cqR" secondAttribute="bottom" constant="5" id="kvx-uV-qdF"/>
                             <constraint firstItem="MuL-7v-iL6" firstAttribute="bottom" secondItem="4Fg-Oe-dPa" secondAttribute="top" id="xwy-ar-Ot4"/>
                         </constraints>
                     </view>
@@ -2474,7 +2452,6 @@ Thanks for the download, hope you enjoy the app!</string>
                     <connections>
                         <outlet property="graph" destination="4Fg-Oe-dPa" id="rGs-P7-1lA"/>
                         <outlet property="segmentedCatagories" destination="MuL-7v-iL6" id="IQu-a8-QEd"/>
-                        <outlet property="shareButton" destination="9Pw-qP-cqR" id="oeI-le-S7p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5W-Gp-Ja7" userLabel="First Responder" sceneMemberID="firstResponder"/>

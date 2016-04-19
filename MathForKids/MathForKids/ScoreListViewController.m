@@ -17,13 +17,7 @@
     NSMutableArray *shapeS;
     
 }
-@property (weak, nonatomic) IBOutlet UIButton *shareButton;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedCatagories;
-@property (weak, nonatomic) IBOutlet UIImageView *num;
-@property (weak, nonatomic) IBOutlet UIImageView *plus;
-@property (weak, nonatomic) IBOutlet UIImageView *minus;
-@property (weak, nonatomic) IBOutlet UIImageView *shape;
-
 @end
 
 @implementation ScoreListViewController
@@ -76,26 +70,10 @@
     _segmentedCatagories.layer.cornerRadius = 0.0;
     _segmentedCatagories.layer.borderWidth = 1.0f;
     
-//    _segmentedCatagories.layer.backgroundColor = [UIColor greenColor].CGColor;
     _segmentedCatagories.layer.masksToBounds = YES;
     
-    
-    // gives it paper look shadow, curved under
-//    CALayer *shareButton = _shareButton.layer;
-    _shareButton.layer.masksToBounds = NO;
-    _shareButton.layer.shadowOffset = CGSizeZero;
-    _shareButton.layer.shadowColor = [[UIColor blackColor] CGColor];
-    _shareButton.layer.shadowRadius = 2.0f;
-    _shareButton.layer.shadowOpacity = 0.80f;
-    _shareButton.layer.shadowPath = [self awesomeShadow:_shareButton.layer.bounds];
-    
-    
-    
     [self checkScoreDictArray];
-//    graph = [[GraphView alloc] init];
     [self checkCategory];
-   // _scroller.contentSize = CGSizeMake(kDefaultGraphWidth, kGraphHeight);
-    
 }
 
 -(void)checkCategory{
@@ -123,9 +101,6 @@
     
 }
 - (void) setShadows: (UIButton*) button{
-    //
-    ////    button.layer.cornerRadius = 4.0f;
-    ////    button.layer.shadowRadius = 3;
     button.layer.masksToBounds = NO;
     button.layer.shadowColor = [UIColor blackColor].CGColor;
     button.layer.shadowOpacity = 0.8;
@@ -146,31 +121,6 @@
         _userName = [NSString stringWithFormat:@"Empty"];
     }
 //    NSLog(@"USER NAME: %@", _userName);
-}
-
-//takes a screenshot
-- (IBAction)shareButton:(id)sender {
-    
-    [[self shareButton] setHidden:YES];
-    
-    //takes screenshot and saves in cameraroll
-    UIGraphicsBeginImageContext(self.view.bounds.size);
-    [self.view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage *screenShotImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-//    UIImageWriteToSavedPhotosAlbum(screenShotImage, nil, nil, nil); //this line saces the screenshot on camera roll which we dont want
- 
-    NSString *shareText = @"Check out my scores on the Math for Kids app and go download your game from the App Store now!!!!";
-    
-    NSArray *itemsToShare = @[shareText, screenShotImage];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-    
-    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
-    
-    [self presentViewController:activityVC animated:YES completion:nil];
-    
-    [[self shareButton] setHidden:NO];
 }
 
 //get json
@@ -232,22 +182,6 @@
             }
         }
     }
-}
-
-- (CGPathRef)awesomeShadow:(CGRect)rect
-{
-    CGSize size = rect.size;
-    UIBezierPath *path = [UIBezierPath bezierPath];
-    
-    [path moveToPoint:CGPointZero];
-    [path addLineToPoint:CGPointMake(size.width, 0.0f)];
-    [path addLineToPoint:CGPointMake(size.width, size.height + 15.0f)];
-    
-    [path addCurveToPoint:CGPointMake(0.0, size.height + 15.0f)
-            controlPoint1:CGPointMake(size.width - 15.0f, size.height)
-            controlPoint2:CGPointMake(15.0f, size.height)];
-    
-    return path.CGPath;
 }
 
 // allow the view to rotate
