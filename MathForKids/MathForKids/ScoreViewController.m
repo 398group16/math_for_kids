@@ -12,7 +12,6 @@
 #import "categoryList.h"
 
 @interface ScoreViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *share;
 
 @property (nonatomic, strong) categoryList* cateList;
 @property (nonatomic, strong) NSString* filePath;
@@ -22,7 +21,7 @@
 @implementation ScoreViewController
 
 - (void)setAnswerButtonLayout:(UIButton*) button{
-//    [self setAnswerButtonLayout:(compare)];
+    //    [self setAnswerButtonLayout:(compare)];
     button.layer.cornerRadius = 8.0f;
     button.layer.masksToBounds = NO;
     
@@ -40,19 +39,6 @@
     label.text = [NSString stringWithFormat:@"%@", self.score];
     [label setFont:[UIFont boldSystemFontOfSize:21]];
     label.clipsToBounds=YES;
-}
-
-- (IBAction)shareButton:(id)sender {
-    NSString *shareText = [NSString stringWithFormat:@"I scored %@ in Math for Kids!!! Go download your game from the App Store now!", self.score];//create a UIImage and add it to
-    //the array if you wanna share an image too
-    
-    NSArray *itemsToShare = @[shareText];
-    
-    UIActivityViewController *activityVC = [[UIActivityViewController alloc] initWithActivityItems:itemsToShare applicationActivities:nil];
-    
-    activityVC.excludedActivityTypes = @[UIActivityTypePostToTencentWeibo,UIActivityTypePostToFlickr, UIActivityTypeCopyToPasteboard, UIActivityTypePostToVimeo, UIActivityTypeAddToReadingList, UIActivityTypeAirDrop, UIActivityTypeAssignToContact, UIActivityTypePrint];
-    
-    [self presentViewController:activityVC animated:YES completion:nil];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -84,7 +70,7 @@
     self.cateList = cate;
 }
 - (IBAction)homeButtonClick:(id)sender {
-
+    
     
     NSArray *viewControllers = [[self navigationController] viewControllers];
     
@@ -99,7 +85,6 @@
     // Do any additional setup after loading the view.
     
     [self setAnswerButtonLayout:(home)];
-    [self setAnswerButtonLayout:(_share)];
     [self setAnswerButtonLayout:(compare)];
     [self setLabelLayout:(label2)];
     
@@ -118,7 +103,7 @@
     
     if ([jsonData length] > 0 && error == nil) {
         NSString *str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
-
+        
         /*save file to */
         NSString* temp = [self readStringFromFile];
         if (nil == temp) {
@@ -153,7 +138,7 @@
     
     error = nil;
     NSDictionary *newDict = [NSJSONSerialization JSONObjectWithData:[newJson dataUsingEncoding:NSUTF8StringEncoding] options:kNilOptions error:&error];
-     /*combine old and new*/
+    /*combine old and new*/
     bool found = NO;
     for (NSDictionary* one in dict){
         NSString* tempCate = [one valueForKey:@"category"];
@@ -184,7 +169,6 @@
                     count++;
                 }
             }
-//            NSLog(@"%d",count);
             if (count > 9) {// make sure every user name only can have 10 scores in one category
                 canBeAdd = NO;
             }
@@ -209,7 +193,7 @@
             for(NSDictionary* s in tempS){
                 [arrayS addObject:s];
             }
-        
+            
             NSMutableDictionary* tempDict = [[NSMutableDictionary alloc] init];
             [tempDict setValue:tempCate forKey:@"category"];
             [tempDict setValue:arrayS forKey:@"scoreList"];
@@ -232,7 +216,6 @@
     if ([jsonData length] > 0 && error == nil) {
         str = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
     }
-//    NSLog(@"Combine JSON: %@", str);
     
     error = nil;
     
